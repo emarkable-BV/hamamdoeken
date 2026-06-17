@@ -1,0 +1,138 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "breadcrumb_iBGXJi": {
+      "type": "breadcrumb",
+      "settings": {
+        "brc_container": "container",
+        "brc_text_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collapsible_tabs_3L6UTG": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "image_card_m9bmnK": {
+          "type": "image_card",
+          "settings": {
+            "image_position": "left",
+            "image_alignment": "start",
+            "image_width": 33,
+            "layout": "layout6",
+            "text_color": "#ffffff",
+            "image_ratio": "adapt",
+            "image_overlay_opacity": 20,
+            "sub_heading": "",
+            "heading": "Still need help?",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h2",
+            "heading_color": "",
+            "description": "<p>Shoot our team an email & we’ll get<br/> back to you ASAP</p>",
+            "button_label": "CONTACT US",
+            "button_style": "btn--white",
+            "animations": "inherit"
+          }
+        },
+        "1655868348d34715f4-0": {
+          "type": "content",
+          "settings": {
+            "icon": "none",
+            "title": "How long does it take to process an order?",
+            "content": "<p>Order processing times vary depending on the product and location. Typically, it takes <strong>1-3 business days</strong> to process an order before it is shipped. You will receive a confirmation email with tracking details once your order has been dispatched.</p>",
+            "custom_liquid": "",
+            "content_page": "",
+            "open": true
+          }
+        },
+        "1655868348d34715f4-1": {
+          "type": "content",
+          "settings": {
+            "icon": "none",
+            "title": "How long will it take to ship my order?",
+            "content": "<p>Shipping times vary depending on your location and the shipping method selected. Typically, orders are processed within [X] business days and delivered within [X] to [X] days. You will receive a tracking number once your order has shipped.</p>",
+            "custom_liquid": "",
+            "content_page": "",
+            "open": false
+          }
+        },
+        "9891166a-7648-4555-84e2-cfb0e9832a21": {
+          "type": "content",
+          "settings": {
+            "icon": "none",
+            "title": "What is your return policy?",
+            "content": "<p>Our return policy allows returns within <strong>[X] days</strong> of purchase, as long as the item is <strong>unused and in its original packaging</strong>. Some exclusions may apply. Please visit our <strong>Return Policy</strong> page for full details.</p>",
+            "custom_liquid": "",
+            "content_page": "",
+            "open": false
+          }
+        },
+        "18680409-0b8f-43b1-97dc-07c8957da9f8": {
+          "type": "content",
+          "settings": {
+            "icon": "none",
+            "title": "How do I choose the right size?",
+            "content": "<p>We recommend checking our <strong>size chart</strong> for detailed measurements and fit guidance. If you’re unsure, feel free to reach out for assistance.</p>",
+            "custom_liquid": "",
+            "content_page": "",
+            "open": false
+          }
+        },
+        "content_AG6CUJ": {
+          "type": "content",
+          "settings": {
+            "icon": "none",
+            "title": "What are your sizing options?",
+            "content": "<p>We offer a variety of sizing options, ranging from <strong>[XS to XXL]</strong> (or custom sizes depending on the product). Please check our <strong>size chart</strong> for exact measurements and guidance on finding the best fit.</p>",
+            "custom_liquid": "",
+            "content_page": "",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "image_card_m9bmnK",
+        "1655868348d34715f4-0",
+        "1655868348d34715f4-1",
+        "9891166a-7648-4555-84e2-cfb0e9832a21",
+        "18680409-0b8f-43b1-97dc-07c8957da9f8",
+        "content_AG6CUJ"
+      ],
+      "custom_css": [],
+      "settings": {
+        "container": "container",
+        "color_schema": "",
+        "section_header_padding_bottom": "large",
+        "section_header_content_spacing": "small",
+        "heading": "Discover more in our FAQ",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h-xl",
+        "heading_color": "",
+        "subheading": "",
+        "description": "<p>Have a question or comment? Don't be shy: Reach out and say hi! <br/>Support hours: Monday-Friday, 7am-3pm</p>",
+        "item_heading_font": "heading",
+        "item_heading_size": "h4",
+        "column_gap": "extra-large",
+        "content_width": "narrow",
+        "padding_top": 36,
+        "padding_bottom": 100,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "breadcrumb_iBGXJi",
+    "collapsible_tabs_3L6UTG"
+  ]
+}

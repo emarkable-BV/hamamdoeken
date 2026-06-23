@@ -1,0 +1,384 @@
+{%- comment -%}
+  CUSTOM (Hamamdoeken): FAQ / Veelgestelde vragen.
+  Bron van de vragen (instelbaar):
+    - "metafield": leest een lijst FAQ-metaobjecten uit een metaveld op de huidige resource
+      (article / page / product / collection). Standaard metaveld: custom.faqs.
+    - "blocks": handmatig toegevoegde items in de editor.
+    - "auto": metaveld indien gevuld, anders de handmatige blocks (fallback).
+  Hergebruikt het thema-accordion (snippet 'collapsible-item' + collapsible-tab.js, globaal geladen in theme.liquid).
+{%- endcomment -%}
+{{ 'collapsible-tabs.css' | asset_url | stylesheet_tag }}
+{{ 'faq.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign section_id = section.settings.custom_id | default: section.id
+  assign custom_class = section.settings.custom_class
+  unless custom_class == blank
+    assign custom_class = custom_class | prepend: ' '
+  endunless
+
+  assign animation_effect = settings.animations
+  if animation_effect != 'none' and section.settings.animations != 'inherit'
+    assign animation_effect = section.settings.animations
+  endif
+
+  assign item_font_family = section.settings.item_heading_font | default: 'body'
+  assign item_heading_size = section.settings.item_heading_size | default: 'h6'
+  assign item_trigger_class = ' font-' | append: item_font_family | append: ' ' | append: item_heading_size
+
+  # Bepaal de huidige resource voor het metaveld
+  assign resource = null
+  if article != blank
+    assign resource = article
+  elsif page != blank
+    assign resource = page
+  elsif product != blank
+    assign resource = product
+  elsif collection != blank
+    assign resource = collection
+  endif
+
+  assign ns = section.settings.metafield_namespace | default: 'custom'
+  assign key = section.settings.metafield_key | default: 'faqs'
+  assign question_key = section.settings.metaobject_question_key | default: 'vraag'
+  assign answer_key = section.settings.metaobject_answer_key | default: 'antwoord'
+
+  assign faq_entries = null
+  if resource != blank and section.settings.source != 'blocks'
+    assign faq_entries = resource.metafields[ns][key].value
+  endif
+
+  # Beslis welke bron we renderen
+  assign use_metafield = false
+  if faq_entries != blank and faq_entries != empty
+    assign use_metafield = true
+  endif
+  if section.settings.source == 'blocks'
+    assign use_metafield = false
+  endif
+-%}
+{% render 'divider',
+  show_divider: section.settings.show_section_divider,
+  divider_width: section.settings.divider_width
+%}
+<div
+  id="{{ section_id }}"
+  class="faq-section collapsible-tabs f-section-padding color-{{ section.settings.color_schema }}{{ custom_class }}"
+  data-section-id="{{ section.id }}"
+  style="--section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="{{ section.settings.container }}">
+    {%- if section.settings.heading != blank -%}
+      <div class="faq-section__header text-{{ section.settings.heading_alignment }}">
+        <h2 class="faq-section__heading {{ section.settings.heading_size }}">
+          <motion-element class="block" data-motion="{{ animation_effect }}">
+            {{ section.settings.heading | escape }}
+          </motion-element>
+        </h2>
+      </div>
+    {%- endif -%}
+
+    <div
+      class="faq-section__list collapsible-tabs__content-{{ section.settings.content_width }}"
+      data-collapsible-parent
+    >
+      {%- liquid
+        assign motion_delay = 0
+        assign has_items = false
+      -%}
+
+      {%- if use_metafield -%}
+        {%- for entry in faq_entries -%}
+          {%- capture q -%}{{ entry[question_key] }}{%- endcapture -%}
+          {%- assign q = q | strip -%}
+          {%- if q != blank -%}
+            {%- assign has_items = true -%}
+            {%- capture content -%}<div class="rte">{{ entry[answer_key] | metafield_tag }}</div>{%- endcapture -%}
+            {% render 'collapsible-item',
+              title: q,
+              trigger_button_text_class: item_trigger_class,
+              content: content,
+              open: false,
+              id: entry.system.id,
+              animation_effect: animation_effect,
+              motion_delay: motion_delay,
+              index: forloop.index
+            %}
+            {%- assign motion_delay = motion_delay | plus: 50 -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- else -%}
+        {%- for block in section.blocks -%}
+          {%- if block.settings.title != blank -%}
+            {%- assign has_items = true -%}
+            {%- capture content -%}{{ block.settings.content }}{%- endcapture -%}
+            {% render 'collapsible-item',
+              title: block.settings.title,
+              trigger_button_text_class: item_trigger_class,
+              content: content,
+              open: block.settings.open,
+              id: block.id,
+              attrs: block.shopify_attributes,
+              animation_effect: animation_effect,
+              motion_delay: motion_delay,
+              index: forloop.index
+            %}
+            {%- assign motion_delay = motion_delay | plus: 50 -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      {%- if has_items == false and request.design_mode -%}
+        <p class="faq-section__empty text-subtext">
+          Geen FAQ's gevonden. Selecteer FAQ-items via het metaveld op deze pagina, of voeg ze handmatig toe in deze sectie.
+        </p>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "FAQ",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container breedte",
+      "default": "container",
+      "options": [
+        { "value": "container", "label": "Vast" },
+        { "value": "container-fluid", "label": "Uitgerekt" },
+        { "value": "container-full", "label": "Volledige breedte" },
+        { "value": "container-narrow", "label": "Smal" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "content_width",
+      "label": "Breedte van de vragenlijst",
+      "default": "full",
+      "options": [
+        { "value": "full", "label": "Volledig" },
+        { "value": "narrow", "label": "Smal" }
+      ]
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_schema",
+      "label": "Kleurschema",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "Titel"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titel",
+      "default": "Veelgestelde vragen"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Titelgrootte",
+      "default": "h2",
+      "options": [
+        { "value": "h4", "label": "H4" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h1", "label": "H1" },
+        { "value": "h0", "label": "H0" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Uitlijning titel",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Links" },
+        { "value": "center", "label": "Midden" },
+        { "value": "right", "label": "Rechts" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Vraag-stijl"
+    },
+    {
+      "type": "select",
+      "id": "item_heading_font",
+      "label": "Lettertype vraag",
+      "default": "body",
+      "options": [
+        { "value": "body", "label": "Body" },
+        { "value": "heading", "label": "Heading" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "item_heading_size",
+      "label": "Grootte vraag",
+      "default": "h6",
+      "options": [
+        { "value": "h6", "label": "H6" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h2", "label": "H2" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Bron van de vragen"
+    },
+    {
+      "type": "select",
+      "id": "source",
+      "label": "Bron",
+      "default": "auto",
+      "info": "Automatisch = metaveld indien gevuld, anders de handmatige items hieronder.",
+      "options": [
+        { "value": "auto", "label": "Automatisch (metaveld, anders handmatig)" },
+        { "value": "metafield", "label": "Alleen metaveld" },
+        { "value": "blocks", "label": "Alleen handmatig" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "metafield_namespace",
+      "label": "Metaveld namespace",
+      "default": "custom"
+    },
+    {
+      "type": "text",
+      "id": "metafield_key",
+      "label": "Metaveld key",
+      "default": "faqs",
+      "info": "Lijst-metaveld dat verwijst naar FAQ-metaobjecten (bijv. custom.faqs op de pagina/het artikel)."
+    },
+    {
+      "type": "text",
+      "id": "metaobject_question_key",
+      "label": "Metaobject veld: vraag",
+      "default": "vraag"
+    },
+    {
+      "type": "text",
+      "id": "metaobject_answer_key",
+      "label": "Metaobject veld: antwoord",
+      "default": "antwoord"
+    },
+    {
+      "type": "header",
+      "content": "Sectie-padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding boven",
+      "default": 60,
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding onder",
+      "default": 60,
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Divider"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_section_divider",
+      "label": "Toon divider boven sectie",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "divider_width",
+      "label": "Breedte divider",
+      "default": "container",
+      "options": [
+        { "value": "container", "label": "Vast" },
+        { "value": "container-fluid", "label": "Uitgerekt" },
+        { "value": "container-full", "label": "Volledige breedte" }
+      ],
+      "visible_if": "{{ section.settings.show_section_divider == true }}"
+    },
+    {
+      "type": "header",
+      "content": "Geavanceerd"
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Custom ID"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom class"
+    },
+    {
+      "type": "select",
+      "id": "animations",
+      "label": "Animatie",
+      "default": "inherit",
+      "options": [
+        { "value": "inherit", "label": "Overnemen van thema" },
+        { "value": "fade-in", "label": "Fade in" },
+        { "value": "fade-in-up", "label": "Fade in omhoog" },
+        { "value": "fade-in-left", "label": "Fade in links" },
+        { "value": "fade-in-right", "label": "Fade in rechts" }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "Vraag (handmatig)",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Vraag",
+          "default": "Hier een veelgestelde vraag"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Antwoord",
+          "default": "<p>Vul hier het antwoord op de vraag in.</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "open",
+          "label": "Standaard geopend",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ",
+      "blocks": [
+        { "type": "faq_item" },
+        { "type": "faq_item" },
+        { "type": "faq_item" }
+      ]
+    }
+  ]
+}
+{% endschema %}

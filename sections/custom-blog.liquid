@@ -1,0 +1,398 @@
+{%- comment -%}
+  CUSTOM (Hamamdoeken): gecombineerde blog-sectie.
+  Smalle teal-header (heading + tekst + tag-filters) + artikel-grid in één web-component scope,
+  zodat de filters de artikelen client-side, real-time en zonder reload kunnen filteren.
+  Vervangt de losse rich-text header + main-blog op de blog-template.
+  Filters = native Shopify article-tags (handmatig samengesteld via blocks, herordenbaar in de editor).
+{%- endcomment -%}
+{%- liquid
+  assign section_id = section.settings.custom_id | default: section.id
+
+  assign columns = section.settings.posts_per_row
+  assign columns_tablet = columns
+  if columns > 3 and request.design_mode == false
+    assign columns_tablet = columns | divided_by: 2.0 | ceil | at_least: 3
+  endif
+
+  assign animation_effect = settings.animations
+  if animation_effect != 'none' and section.settings.animations != 'inherit'
+    assign animation_effect = section.settings.animations
+  endif
+-%}
+{{ 'blog.css' | asset_url | stylesheet_tag }}
+{{ 'custom-blog.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'blog-filter.js' | asset_url }}" defer="defer"></script>
+
+<blog-filter
+  id="{{ section_id }}"
+  class="f-blog2{% if section.settings.custom_class != blank %} {{ section.settings.custom_class }}{% endif %}"
+>
+  {%- comment -%} ---------- Header ---------- {%- endcomment -%}
+  <div
+    class="f-blog2__header f-section-padding color-{{ section.settings.color_schema }}"
+    style="--section-padding-top: {{ section.settings.header_padding_top }}px; --section-padding-bottom: {{ section.settings.header_padding_bottom }}px;"
+  >
+    <div class="container">
+      <div
+        class="f-blog2__header-inner text-{{ section.settings.text_alignment }}"
+        style="--content-max-width: {{ section.settings.content_width }}px;"
+      >
+        {%- if section.settings.heading != blank -%}
+          <motion-element class="block" data-motion="{{ animation_effect }}">
+            <h1 class="f-blog2__heading {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h1>
+          </motion-element>
+        {%- endif -%}
+
+        {%- if section.settings.description != blank -%}
+          <motion-element
+            class="block f-blog2__description rte"
+            data-motion="{{ animation_effect }}"
+            data-motion-delay="50"
+          >
+            {{ section.settings.description }}
+          </motion-element>
+        {%- endif -%}
+
+        {%- if section.blocks.size > 0 -%}
+          <motion-element
+            class="block"
+            data-motion="{{ animation_effect }}"
+            data-motion-delay="100"
+          >
+            <div class="f-blog2__filters" role="group" aria-label="Filter op onderwerp">
+              {%- for block in section.blocks -%}
+                {%- assign pill_tag = block.settings.tag | default: block.settings.label -%}
+                {%- if pill_tag != blank -%}
+                  <button
+                    type="button"
+                    class="f-blog2__pill"
+                    data-blog-filter-pill
+                    data-tag="{{ pill_tag | strip | downcase | escape }}"
+                    aria-pressed="false"
+                    {{ block.shopify_attributes }}
+                  >
+                    {{ block.settings.label | default: pill_tag | escape }}
+                  </button>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </motion-element>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+  {%- comment -%} ---------- Artikel-grid ---------- {%- endcomment -%}
+  <div
+    class="f-blog2__body {{ section.settings.container }} f-section-padding"
+    style="--section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+  >
+    {%- paginate blog.articles by section.settings.posts_to_show -%}
+      {%- if blog.articles_count > 0 -%}
+        <grid-list
+          data-motion="{{ animation_effect }}"
+          class="f-blog-articles f-blog2__grid f-grid md:f-grid-{{ columns_tablet }}-cols lg:f-grid-{{ columns }}-cols f-grid--gap-{{ section.settings.column_gap }} f-grid--row-gap-{{ section.settings.row_gap }}"
+          data-blog-filter-grid
+        >
+          {%- for article in blog.articles -%}
+            <div
+              class="f-column f-blog2__item"
+              data-blog-filter-item
+              data-tags="{{ article.tags | join: '||' | strip | downcase | escape }}"
+            >
+              {%- render 'article-card',
+                article: article,
+                image_aspect_ratio: section.settings.article_image_aspect_ratio,
+                show_date: section.settings.show_date,
+                show_excerpt: section.settings.show_excerpt,
+                show_readmore: section.settings.show_readmore,
+                heading_size: section.settings.article_heading_size,
+                index: forloop.index
+              -%}
+            </div>
+          {%- endfor -%}
+        </grid-list>
+
+        <div class="f-blog2__empty text-center" data-blog-filter-empty hidden>
+          Geen artikelen gevonden voor dit filter.
+        </div>
+      {%- else -%}
+        <div class="f-blog-empty text-center">
+          {{ 'blogs.article.empty_blog_post' | t }}
+        </div>
+      {%- endif -%}
+
+      {%- if paginate.pages > 1 -%}
+        <div class="f-blog-pagination f-pagination__wrapper text-center">
+          {%- render 'pagination', paginate: paginate -%}
+        </div>
+      {%- endif -%}
+    {%- endpaginate -%}
+  </div>
+</blog-filter>
+
+{% schema %}
+{
+  "name": "Blog (custom)",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_schema",
+      "label": "Kleurschema header",
+      "default": "scheme-5"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titel",
+      "default": "Blogs"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Titelgrootte",
+      "default": "h-xl",
+      "options": [
+        { "value": "h3", "label": "Klein (H3)" },
+        { "value": "h2", "label": "Medium (H2)" },
+        { "value": "h1", "label": "Groot (H1)" },
+        { "value": "h0", "label": "Extra groot (H0)" },
+        { "value": "h-xl", "label": "Display (XL)" }
+      ]
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Omschrijving",
+      "default": "<p>Ontdek onze blogs vol inspiratie, tips en verhalen rondom hamamdoeken, wellness en ontspanning.</p>"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Uitlijning",
+      "default": "center",
+      "options": [
+        { "value": "left", "label": "Links" },
+        { "value": "center", "label": "Midden" },
+        { "value": "right", "label": "Rechts" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "label": "Max. breedte content",
+      "min": 480,
+      "max": 1100,
+      "step": 20,
+      "unit": "px",
+      "default": 760
+    },
+    {
+      "type": "range",
+      "id": "header_padding_top",
+      "label": "Padding boven (header)",
+      "default": 92,
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "header_padding_bottom",
+      "label": "Padding onder (header)",
+      "default": 64,
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Artikel-grid"
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "options": [
+        { "value": "container", "label": "Vast" },
+        { "value": "container-fluid", "label": "Uitgerekt" },
+        { "value": "container-full", "label": "Volledige breedte" }
+      ],
+      "default": "container",
+      "label": "Container breedte"
+    },
+    {
+      "type": "range",
+      "id": "posts_to_show",
+      "label": "Aantal artikelen laden",
+      "info": "Filters werken client-side: zet dit hoog genoeg zodat alle artikelen in één keer laden.",
+      "default": 24,
+      "min": 2,
+      "max": 50,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "posts_per_row",
+      "label": "Artikelen per rij",
+      "default": 3,
+      "min": 2,
+      "max": 4,
+      "step": 1
+    },
+    {
+      "type": "select",
+      "id": "column_gap",
+      "label": "Tussenruimte kolommen",
+      "options": [
+        { "label": "Geen", "value": "none" },
+        { "label": "Extra klein", "value": "extra-small" },
+        { "label": "Klein", "value": "small" },
+        { "label": "Medium", "value": "medium" },
+        { "label": "Groot", "value": "large" },
+        { "label": "Extra groot", "value": "extra-large" }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "select",
+      "id": "row_gap",
+      "label": "Tussenruimte rijen",
+      "options": [
+        { "label": "Geen", "value": "none" },
+        { "label": "Extra klein", "value": "extra-small" },
+        { "label": "Klein", "value": "small" },
+        { "label": "Medium", "value": "medium" },
+        { "label": "Groot", "value": "large" },
+        { "label": "Extra groot", "value": "extra-large" }
+      ],
+      "default": "large"
+    },
+    {
+      "type": "select",
+      "id": "article_image_aspect_ratio",
+      "label": "Beeldverhouding",
+      "default": "4/3",
+      "options": [
+        { "value": "adapt", "label": "Origineel" },
+        { "value": "1/1", "label": "Vierkant (1:1)" },
+        { "value": "3/4", "label": "Portret (3:4)" },
+        { "value": "4/3", "label": "Liggend (4:3)" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "article_heading_size",
+      "default": "h3",
+      "label": "Titelgrootte artikel",
+      "options": [
+        { "value": "h6", "label": "H6" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h2", "label": "H2" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "label": "Toon datum",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_excerpt",
+      "label": "Toon samenvatting",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_readmore",
+      "label": "Toon 'lees verder'",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding boven (grid)",
+      "default": 72,
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding onder (grid)",
+      "default": 100,
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Geavanceerd"
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Custom ID"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom class"
+    },
+    {
+      "type": "select",
+      "id": "animations",
+      "label": "Animatie",
+      "default": "inherit",
+      "options": [
+        { "value": "inherit", "label": "Overnemen van thema" },
+        { "value": "fade-in", "label": "Fade in" },
+        { "value": "fade-in-up", "label": "Fade in omhoog" },
+        { "value": "fade-in-left", "label": "Fade in links" },
+        { "value": "fade-in-right", "label": "Fade in rechts" }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "filter",
+      "name": "Filter (tag)",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "info": "Tekst die op de knop verschijnt."
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag",
+          "info": "De exacte article-tag waarop gefilterd wordt (hoofdletterongevoelig). Leeg = gebruik het label als tag."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog (custom)",
+      "blocks": [
+        { "type": "filter" },
+        { "type": "filter" },
+        { "type": "filter" }
+      ]
+    }
+  ]
+}
+{% endschema %}

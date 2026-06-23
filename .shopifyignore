@@ -5,3 +5,11 @@ CLAUDE.md
 README.md
 .shopifyignore
 .gitignore
+
+# Tijdelijke bestanden van editors/CLI (veroorzaken "illegal characters" / "Must have a .liquid file extension")
+*.tmp
+*.tmp.*
+*~
+*.swp
+*.bak
+.DS_Store

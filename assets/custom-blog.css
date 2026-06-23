@@ -1,0 +1,90 @@
+/* CUSTOM (Hamamdoeken): blog header (smalle content) + tag-filter pills + grid-filter animatie */
+
+/* ---------- Header ---------- */
+.f-blog2__header-inner {
+  max-width: var(--content-max-width, 760px);
+  margin-inline: auto;
+}
+.f-blog2__heading {
+  margin: 0;
+}
+.f-blog2__description {
+  margin-top: 1.6rem;
+}
+.f-blog2__description > :first-child {
+  margin-top: 0;
+}
+.f-blog2__description > :last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Filter pills ---------- */
+.f-blog2__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 3.2rem;
+}
+.f-blog2__header-inner.text-center .f-blog2__filters {
+  justify-content: center;
+}
+.f-blog2__header-inner.text-right .f-blog2__filters {
+  justify-content: flex-end;
+}
+
+.f-blog2__pill {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  font: inherit;
+  line-height: 1;
+  padding: 1.1rem 2rem;
+  border-radius: 6px;
+  border: 1px solid rgba(var(--color-foreground), 0.4);
+  background: transparent;
+  color: rgb(var(--color-foreground));
+  text-transform: none;
+  letter-spacing: normal;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.f-blog2__pill:hover {
+  border-color: rgb(var(--color-foreground));
+  background: rgba(var(--color-foreground), 0.08);
+}
+.f-blog2__pill:focus-visible {
+  outline: 2px solid rgb(var(--color-foreground));
+  outline-offset: 2px;
+}
+.f-blog2__pill.is-active {
+  background: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  border-color: var(--color-btn-bg);
+}
+
+/* ---------- Grid-filter animatie ---------- */
+.f-blog2__item {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.f-blog2__item.is-filtering-out {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.f-blog2__empty {
+  margin: 5rem 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .f-blog2__item {
+    transition: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .f-blog2__filters {
+    margin-top: 2.4rem;
+    gap: 1rem;
+  }
+  .f-blog2__pill {
+    padding: 1rem 1.6rem;
+  }
+}

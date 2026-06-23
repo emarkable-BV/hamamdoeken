@@ -1,1 +1,723 @@
-{"sections":{"main":{"type":"main-product","blocks":{"c67b7c41-4a92-419d-85c6-c970bb43bf2d":{"type":"badge","settings":{}},"title":{"type":"title","settings":{"heading_size":"h1"}},"59ca3415-b1aa-4301-b178-ad6e434ba477":{"type":"inventory_status","settings":{"inventory_threshold":10,"show_as_progress":true,"enable_inventory_transfer":true}},"c9d012f0-f3f5-4c1b-b197-e7c8f9de13ac":{"type":"richtext","settings":{"text":"{{ product.metafields.custom.korte_beschrijving_product | metafield_tag }}"}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button","variant_picker_show_selected":true,"variant_picker_dont_select_the_default_variant":false,"size_title":"Maattabel","size_chart_from_page":"maattabel"}},"4813cc96-81ff-4094-bd6a-4bf96eab69e9":{"type":"complementary","settings":{"block_heading":"Bestel samen met:","make_collapsible_row":false,"icon":"none","product_list_limit":4,"products_per_page":1,"enable_slider":true,"image_ratio":"1\/1","enable_quick_add":true,"enable_quick_view":true,"pcard_show_color_swatch":true}},"price":{"type":"price","settings":{"show_sale_badge":false,"sale_badge_type":"percentage"}},"quantity_selector":{"type":"quantity_selector","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_atc_button":true,"show_dynamic_checkout":false,"show_gift_card_recipient":true}},"staffelkorting_app_staffel_table_K83nrr":{"type":"shopify:\/\/apps\/staffelkorting-app\/blocks\/staffel_table\/019e4a4f-34ea-740e-bbeb-ba82012ff376","settings":{}},"text_iihwrL":{"type":"text","settings":{"icon":"check_mark","text":"Niet relaxed? Geld terug","text_style":"body"}},"text_KkwrDm":{"type":"text","settings":{"icon":"box","text":"Gratis verstuurd vanaf €40 (NL)","text_style":"body"}},"text_QKhr8X":{"type":"text","settings":{"icon":"truck","text":"Voor 12:00 uur besteld = morgen bezorgd","text_style":"body"}},"text_8aczyU":{"type":"text","settings":{"icon":"heart","text":"Grietje helpt je graag!","text_style":"body"}},"f11043ac-1746-42ad-a36b-91ff4cc9f432":{"type":"collapsible_tab","disabled":true,"settings":{"icon":"none","heading":"SIZE & SPECS","content":"<p>Use this accordion to add info such as Materials, Sizing, Features, and Specifications.<\/p>","liquid":"","page":"","default_open":false}},"0bd176fb-80b2-42ce-ae4e-db8cb55fe024":{"type":"collapsible_tab","disabled":true,"settings":{"icon":"none","heading":"CORE FEATURES","content":"","liquid":"{{ product.description }}","page":"","default_open":true}},"e303936e-d82d-4e37-8b83-e227d48fbb3d":{"type":"collapsible_tab","disabled":true,"settings":{"icon":"none","heading":"SHIPPING & RETURN","content":"","liquid":"","page":"shipping-return","default_open":false}},"addons":{"type":"addons","disabled":true,"settings":{"show_share":true,"show_ask_question":true}}},"block_order":["c67b7c41-4a92-419d-85c6-c970bb43bf2d","title","59ca3415-b1aa-4301-b178-ad6e434ba477","c9d012f0-f3f5-4c1b-b197-e7c8f9de13ac","variant_picker","4813cc96-81ff-4094-bd6a-4bf96eab69e9","price","quantity_selector","buy_buttons","staffelkorting_app_staffel_table_K83nrr","text_iihwrL","text_KkwrDm","text_QKhr8X","text_8aczyU","f11043ac-1746-42ad-a36b-91ff4cc9f432","0bd176fb-80b2-42ce-ae4e-db8cb55fe024","e303936e-d82d-4e37-8b83-e227d48fbb3d","addons"],"custom_css":[],"settings":{"container":"container","show_breadcrumb":true,"enable_sticky_info":true,"media_layout":"carousel","media_size":"medium","mobile_thumbnails":"hide","enable_image_zoom":true,"enable_video_looping":false,"show_featured_media":false}},"73c8e618-10a0-43bf-b1d9-fa6707a4b913":{"type":"scrolling-promotion","blocks":{"74dc4299-fedb-45c6-9455-f3dd358440e7":{"type":"image","settings":{"image_height":24,"image_link":"","use_custom_spacing":true,"margin_left":0,"margin_right":10,"margin_left_mobile":0,"margin_right_mobile":10}},"c31917cb-ef90-4fe6-8c66-6d4f3a7d8874":{"type":"announcement","settings":{"text":"Made From Recycled Materials","font_family":"body","text_size":15,"text_link":"","use_custom_spacing":true,"margin_left":0,"margin_right":60,"margin_left_mobile":0,"margin_right_mobile":40}},"26b52c8a-5533-4cee-a9e2-b2cfc3830b8a":{"type":"image","settings":{"image_height":24,"image_link":"","use_custom_spacing":true,"margin_left":0,"margin_right":10,"margin_left_mobile":0,"margin_right_mobile":10}},"8d95b262-4168-4c7f-9457-5897c7935129":{"type":"announcement","settings":{"text":"Ethically Made In Certified Factories","font_family":"body","text_size":15,"text_link":"","use_custom_spacing":true,"margin_left":0,"margin_right":60,"margin_left_mobile":0,"margin_right_mobile":40}}},"block_order":["74dc4299-fedb-45c6-9455-f3dd358440e7","c31917cb-ef90-4fe6-8c66-6d4f3a7d8874","26b52c8a-5533-4cee-a9e2-b2cfc3830b8a","8d95b262-4168-4c7f-9457-5897c7935129"],"disabled":true,"custom_css":[],"settings":{"container":"container-full","color_schema":"","section_header_padding_bottom":"medium","section_header_content_spacing":"medium","heading":"","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h2","heading_color":"","subheading":"","description":"","alignment":"center","direction":"left","pause_on_hover":true,"speed":0.3,"item_gap":50,"item_gap_mobile":30,"padding_top":18,"padding_bottom":18,"use_custom_mobile_padding":true,"padding_top_mobile":18,"padding_bottom_mobile":18,"show_section_divider":false,"divider_width":"container","custom_id":"","custom_class":"border-top border-bottom"}},"collapsible_tabs_VXwmxt":{"type":"collapsible-tabs","blocks":{"content_FMQy4B":{"type":"content","settings":{"icon":"none","title":"Product beschrijving","content":"{{ product.description }}","custom_liquid":"","content_page":"","open":true}},"content_xqAhEC":{"type":"content","settings":{"icon":"none","title":"Wasvoorschriften","content":"{{ product.metafields.custom.wasvoorschriften | metafield_tag }}","custom_liquid":"","content_page":"","open":false}},"content_LJLLJm":{"type":"content","settings":{"icon":"none","title":"Specificaties","content":"","custom_liquid":"","content_page":"","open":false}}},"block_order":["content_FMQy4B","content_xqAhEC","content_LJLLJm"],"name":"Collapsible tabs","settings":{"container":"container-narrow","color_schema":"background-2","section_header_padding_bottom":"medium","section_header_content_spacing":"medium","heading":"Over dit product","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h1","heading_color":"","subheading":"","description":"","item_heading_font":"body","item_heading_size":"h6","column_gap":"medium","content_width":"full","padding_top":84,"padding_bottom":84,"show_section_divider":false,"divider_width":"container","custom_id":"","custom_class":"","animations":"inherit"}},"layered_images_UJjPRV":{"type":"layered-images","blocks":{"row_GF9Wbh":{"type":"row","settings":{"image":"shopify:\/\/shop_images\/ambachtelijk-geweven_19ddb75a-7bf7-4b91-b9ad-c66fb00cf77e.png","heading":"Ambachtelijk geweven <em> in kleine oplages<\/em>","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h1","heading_color":"","subheading":"Waarom kiezen voor hamamdoeken?","description":"","button_label":"","button_link":"","button_style":"btn--primary","button_size":""}},"row_rDeU7T":{"type":"row","settings":{"image":"shopify:\/\/shop_images\/sneldrogend-compact.png","heading":"Sneldrogend en compact,<em> ideaal voor vakantie of wellness<\/em>","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h1","heading_color":"","subheading":"Waarom kiezen voor hamamdoeken?","description":"","button_label":"","button_link":"","button_style":"btn--primary","button_size":""}},"row_P8qPC3":{"type":"row","settings":{"image":"shopify:\/\/shop_images\/Gemini_Generated_Image_bpos85bpos85bpos.png","heading":"Meer dan 1300 <em>vijfsterren reviews<\/em>","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h1","heading_color":"","subheading":"Waarom kiezen voor hamamdoeken?","description":"","button_label":"","button_link":"","button_style":"btn--primary","button_size":""}}},"block_order":["row_GF9Wbh","row_rDeU7T","row_P8qPC3"],"settings":{"color_schema":"scheme-5","image_aspect_ratio":"4\/3","vertical_alignment":"center","padding_top":74,"padding_bottom":74,"show_section_divider":false,"divider_width":"container","custom_id":"","custom_class":""}},"scrolling_promotion_PcUJCR":{"type":"scrolling-promotion","blocks":{"announcement_7iQk3h":{"type":"announcement","settings":{"text":"Niet relaxed? <em>Geld terug. <\/em>","font_family":"heading","text_size":18,"text_link":"","use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"divider_NqKJGB":{"type":"divider","settings":{"width":32,"use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"announcement_kLHdYz":{"type":"announcement","settings":{"text":"<em>Gratis verstuurd <\/em> vanaf €40,- (NL)","font_family":"heading","text_size":18,"text_link":"","use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"divider_9EKxz7":{"type":"divider","settings":{"width":32,"use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"announcement_ygj3Gt":{"type":"announcement","settings":{"text":"Voor 21:00 uur besteld =  <em>morgen in huis <\/em>","font_family":"heading","text_size":18,"text_link":"","use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"divider_gThdCc":{"type":"divider","settings":{"width":32,"use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"announcement_Wk6HEH":{"type":"announcement","settings":{"text":"<em>Grietje<\/em> helpt je graag!","font_family":"heading","text_size":18,"text_link":"","use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"divider_HmX9E7":{"type":"divider","settings":{"width":32,"use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}}},"block_order":["announcement_7iQk3h","divider_NqKJGB","announcement_kLHdYz","divider_9EKxz7","announcement_ygj3Gt","divider_gThdCc","announcement_Wk6HEH","divider_HmX9E7"],"settings":{"container":"container-full","color_schema":"background-2","section_header_padding_bottom":"small","section_header_content_spacing":"medium","heading":"","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h3","heading_color":"","subheading":"","description":"","alignment":"center","direction":"left","pause_on_hover":true,"speed":0.1,"item_gap":74,"item_gap_mobile":20,"padding_top":24,"padding_bottom":24,"use_custom_mobile_padding":true,"padding_top_mobile":20,"padding_bottom_mobile":20,"show_section_divider":true,"divider_width":"container-full","custom_id":"","custom_class":""}},"17803156782d3378ca":{"type":"apps","blocks":{"judge_me_reviews_cards_carousel_7VFqFm":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/cards_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{"show_sample_reviews":true,"reviews_selection":"all","products":[],"star_rating":"all","show_review_media":false,"display_order":"media_first","no_image_fallback":"review_text_only","max_reviews":20,"review_length":"small","text_size":"small","image_ratio":"1","reviews_shown":3,"show_reviewer_name":true,"show_product_name":true,"hide_arrows_mobile":true,"arrows_position":"sides","max_width":1100,"corner_styling":"round","header_text_color":"#0b1d23","text_color":"#163946","card_color":"#f7f2ed","stars_color":"#7a6a58","arrows_color":"#000000","transition_speed":5,"header_text":"Beoordelingen","show_average_rating":true}}},"block_order":["judge_me_reviews_cards_carousel_7VFqFm"],"settings":{"container":"container","color_schema":"","heading":"","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h2","heading_color":"","description":"","padding_top":40,"padding_bottom":40}},"product-recommendations":{"type":"product-recommendations","custom_css":[],"settings":{"container":"container","color_schema":"background-1","remove_params":false,"section_header_padding_bottom":"medium","section_header_content_spacing":"medium","heading":"Anderen kochten ook","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h1","heading_color":"","description":"","limit":8,"columns":4,"column_gap":"double-extra-small","row_gap":"medium","enable_slider":true,"show_nav":true,"show_dots":false,"enable_swipe_mobile":true,"column_mobile":"1","padding_top":0,"padding_bottom":84,"show_section_divider":false,"divider_width":"container","animations":"inherit"}},"apps_rNXL93":{"type":"apps","blocks":{"judge_me_reviews_all_reviews_text_PLCxfE":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/all_reviews_text\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{}}},"block_order":["judge_me_reviews_all_reviews_text_PLCxfE"],"disabled":true,"settings":{"container":"container","color_schema":"background-1","heading":"","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h2","heading_color":"","description":"","padding_top":0,"padding_bottom":64}},"178100726114fbd887":{"type":"apps","settings":{"container":"container","color_schema":"","heading":"","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h2","heading_color":"","description":"","padding_top":40,"padding_bottom":40}}},"order":["main","73c8e618-10a0-43bf-b1d9-fa6707a4b913","collapsible_tabs_VXwmxt","layered_images_UJjPRV","scrolling_promotion_PcUJCR","17803156782d3378ca","product-recommendations","apps_rNXL93","178100726114fbd887"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "c67b7c41-4a92-419d-85c6-c970bb43bf2d": {
+          "type": "badge",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "text_ic7ynF": {
+          "type": "text",
+          "settings": {
+            "icon": "box",
+            "text": "{{ product.metafields.custom.levertijd.value }}",
+            "text_style": "body"
+          }
+        },
+        "59ca3415-b1aa-4301-b178-ad6e434ba477": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 10,
+            "show_as_progress": true,
+            "enable_inventory_transfer": true
+          }
+        },
+        "c9d012f0-f3f5-4c1b-b197-e7c8f9de13ac": {
+          "type": "richtext",
+          "settings": {
+            "text": "{{ product.metafields.custom.korte_beschrijving_product | metafield_tag }}"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "variant_picker_show_selected": true,
+            "variant_picker_dont_select_the_default_variant": false,
+            "size_title": "Maattabel",
+            "size_chart_from_page": "maattabel"
+          }
+        },
+        "4813cc96-81ff-4094-bd6a-4bf96eab69e9": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Bestel samen met:",
+            "make_collapsible_row": false,
+            "icon": "none",
+            "product_list_limit": 4,
+            "products_per_page": 1,
+            "enable_slider": true,
+            "image_ratio": "1/1",
+            "enable_quick_add": true,
+            "enable_quick_view": true,
+            "pcard_show_color_swatch": true
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_sale_badge": false,
+            "sale_badge_type": "percentage"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_atc_button": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "essential_countdown_timer_app_block_Jdx7tr": {
+          "type": "shopify://apps/essential-countdown-timer/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "settings": {
+            "id": "cmqjicr39000qwz5ge65f2xrk"
+          }
+        },
+        "staffelkorting_app_staffel_table_K83nrr": {
+          "type": "shopify://apps/staffelkorting-app/blocks/staffel_table/019e4a4f-34ea-740e-bbeb-ba82012ff376",
+          "settings": {}
+        },
+        "text_iihwrL": {
+          "type": "text",
+          "settings": {
+            "icon": "check_mark",
+            "text": "Niet relaxed? Geld terug",
+            "text_style": "body"
+          }
+        },
+        "text_KkwrDm": {
+          "type": "text",
+          "settings": {
+            "icon": "box",
+            "text": "Gratis verstuurd vanaf €40 (NL)",
+            "text_style": "body"
+          }
+        },
+        "text_QKhr8X": {
+          "type": "text",
+          "settings": {
+            "icon": "truck",
+            "text": "Voor 12:00 uur besteld = morgen bezorgd",
+            "text_style": "body"
+          }
+        },
+        "text_8aczyU": {
+          "type": "text",
+          "settings": {
+            "icon": "heart",
+            "text": "Grietje helpt je graag!",
+            "text_style": "body"
+          }
+        },
+        "f11043ac-1746-42ad-a36b-91ff4cc9f432": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "heading": "SIZE & SPECS",
+            "content": "<p>Use this accordion to add info such as Materials, Sizing, Features, and Specifications.</p>",
+            "liquid": "",
+            "page": "",
+            "default_open": false
+          }
+        },
+        "0bd176fb-80b2-42ce-ae4e-db8cb55fe024": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "heading": "CORE FEATURES",
+            "content": "",
+            "liquid": "{{ product.description }}",
+            "page": "",
+            "default_open": true
+          }
+        },
+        "e303936e-d82d-4e37-8b83-e227d48fbb3d": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "heading": "SHIPPING & RETURN",
+            "content": "",
+            "liquid": "",
+            "page": "shipping-return",
+            "default_open": false
+          }
+        },
+        "addons": {
+          "type": "addons",
+          "disabled": true,
+          "settings": {
+            "show_share": true,
+            "show_ask_question": true
+          }
+        }
+      },
+      "block_order": [
+        "c67b7c41-4a92-419d-85c6-c970bb43bf2d",
+        "title",
+        "text_ic7ynF",
+        "59ca3415-b1aa-4301-b178-ad6e434ba477",
+        "c9d012f0-f3f5-4c1b-b197-e7c8f9de13ac",
+        "variant_picker",
+        "4813cc96-81ff-4094-bd6a-4bf96eab69e9",
+        "price",
+        "quantity_selector",
+        "buy_buttons",
+        "essential_countdown_timer_app_block_Jdx7tr",
+        "staffelkorting_app_staffel_table_K83nrr",
+        "text_iihwrL",
+        "text_KkwrDm",
+        "text_QKhr8X",
+        "text_8aczyU",
+        "f11043ac-1746-42ad-a36b-91ff4cc9f432",
+        "0bd176fb-80b2-42ce-ae4e-db8cb55fe024",
+        "e303936e-d82d-4e37-8b83-e227d48fbb3d",
+        "addons"
+      ],
+      "custom_css": [],
+      "settings": {
+        "container": "container",
+        "show_breadcrumb": true,
+        "enable_sticky_info": true,
+        "media_layout": "carousel",
+        "media_size": "medium",
+        "mobile_thumbnails": "hide",
+        "enable_image_zoom": true,
+        "enable_video_looping": false,
+        "show_featured_media": false
+      }
+    },
+    "73c8e618-10a0-43bf-b1d9-fa6707a4b913": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "74dc4299-fedb-45c6-9455-f3dd358440e7": {
+          "type": "image",
+          "settings": {
+            "image_height": 24,
+            "image_link": "",
+            "use_custom_spacing": true,
+            "margin_left": 0,
+            "margin_right": 10,
+            "margin_left_mobile": 0,
+            "margin_right_mobile": 10
+          }
+        },
+        "c31917cb-ef90-4fe6-8c66-6d4f3a7d8874": {
+          "type": "announcement",
+          "settings": {
+            "text": "Made From Recycled Materials",
+            "font_family": "body",
+            "text_size": 15,
+            "text_link": "",
+            "use_custom_spacing": true,
+            "margin_left": 0,
+            "margin_right": 60,
+            "margin_left_mobile": 0,
+            "margin_right_mobile": 40
+          }
+        },
+        "26b52c8a-5533-4cee-a9e2-b2cfc3830b8a": {
+          "type": "image",
+          "settings": {
+            "image_height": 24,
+            "image_link": "",
+            "use_custom_spacing": true,
+            "margin_left": 0,
+            "margin_right": 10,
+            "margin_left_mobile": 0,
+            "margin_right_mobile": 10
+          }
+        },
+        "8d95b262-4168-4c7f-9457-5897c7935129": {
+          "type": "announcement",
+          "settings": {
+            "text": "Ethically Made In Certified Factories",
+            "font_family": "body",
+            "text_size": 15,
+            "text_link": "",
+            "use_custom_spacing": true,
+            "margin_left": 0,
+            "margin_right": 60,
+            "margin_left_mobile": 0,
+            "margin_right_mobile": 40
+          }
+        }
+      },
+      "block_order": [
+        "74dc4299-fedb-45c6-9455-f3dd358440e7",
+        "c31917cb-ef90-4fe6-8c66-6d4f3a7d8874",
+        "26b52c8a-5533-4cee-a9e2-b2cfc3830b8a",
+        "8d95b262-4168-4c7f-9457-5897c7935129"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "container": "container-full",
+        "color_schema": "",
+        "section_header_padding_bottom": "medium",
+        "section_header_content_spacing": "medium",
+        "heading": "",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h2",
+        "heading_color": "",
+        "subheading": "",
+        "description": "",
+        "alignment": "center",
+        "direction": "left",
+        "pause_on_hover": true,
+        "speed": 0.3,
+        "item_gap": 50,
+        "item_gap_mobile": 30,
+        "padding_top": 18,
+        "padding_bottom": 18,
+        "use_custom_mobile_padding": true,
+        "padding_top_mobile": 18,
+        "padding_bottom_mobile": 18,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "border-top border-bottom"
+      }
+    },
+    "collapsible_tabs_VXwmxt": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "content_FMQy4B": {
+          "type": "content",
+          "settings": {
+            "icon": "none",
+            "title": "Product beschrijving",
+            "content": "{{ product.description }}",
+            "custom_liquid": "",
+            "content_page": "",
+            "open": true
+          }
+        },
+        "content_xqAhEC": {
+          "type": "content",
+          "settings": {
+            "icon": "none",
+            "title": "Wasvoorschriften",
+            "content": "{{ product.metafields.custom.wasvoorschriften | metafield_tag }}",
+            "custom_liquid": "",
+            "content_page": "",
+            "open": false
+          }
+        },
+        "content_LJLLJm": {
+          "type": "content",
+          "settings": {
+            "icon": "none",
+            "title": "Specificaties",
+            "content": "",
+            "custom_liquid": "",
+            "content_page": "",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "content_FMQy4B",
+        "content_xqAhEC",
+        "content_LJLLJm"
+      ],
+      "name": "Collapsible tabs",
+      "settings": {
+        "container": "container-narrow",
+        "color_schema": "background-2",
+        "section_header_padding_bottom": "medium",
+        "section_header_content_spacing": "medium",
+        "heading": "Over dit product",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h1",
+        "heading_color": "",
+        "subheading": "",
+        "description": "",
+        "item_heading_font": "body",
+        "item_heading_size": "h6",
+        "column_gap": "medium",
+        "content_width": "full",
+        "padding_top": 84,
+        "padding_bottom": 84,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "layered_images_UJjPRV": {
+      "type": "layered-images",
+      "blocks": {
+        "row_GF9Wbh": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/ambachtelijk-geweven_19ddb75a-7bf7-4b91-b9ad-c66fb00cf77e.png",
+            "heading": "Ambachtelijk geweven <em> in kleine oplages</em>",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h1",
+            "heading_color": "",
+            "subheading": "Waarom kiezen voor hamamdoeken?",
+            "description": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_size": ""
+          }
+        },
+        "row_rDeU7T": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/sneldrogend-compact.png",
+            "heading": "Sneldrogend en compact,<em> ideaal voor vakantie of wellness</em>",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h1",
+            "heading_color": "",
+            "subheading": "Waarom kiezen voor hamamdoeken?",
+            "description": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_size": ""
+          }
+        },
+        "row_P8qPC3": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_bpos85bpos85bpos.png",
+            "heading": "Meer dan 1300 <em>vijfsterren reviews</em>",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h1",
+            "heading_color": "",
+            "subheading": "Waarom kiezen voor hamamdoeken?",
+            "description": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_GF9Wbh",
+        "row_rDeU7T",
+        "row_P8qPC3"
+      ],
+      "settings": {
+        "color_schema": "scheme-5",
+        "image_aspect_ratio": "4/3",
+        "vertical_alignment": "center",
+        "padding_top": 74,
+        "padding_bottom": 74,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "scrolling_promotion_PcUJCR": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "announcement_7iQk3h": {
+          "type": "announcement",
+          "settings": {
+            "text": "Niet relaxed? <em>Geld terug. </em>",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_NqKJGB": {
+          "type": "divider",
+          "settings": {
+            "width": 32,
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "announcement_kLHdYz": {
+          "type": "announcement",
+          "settings": {
+            "text": "<em>Gratis verstuurd </em> vanaf €40,- (NL)",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_9EKxz7": {
+          "type": "divider",
+          "settings": {
+            "width": 32,
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "announcement_ygj3Gt": {
+          "type": "announcement",
+          "settings": {
+            "text": "Voor 21:00 uur besteld =  <em>morgen in huis </em>",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_gThdCc": {
+          "type": "divider",
+          "settings": {
+            "width": 32,
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "announcement_Wk6HEH": {
+          "type": "announcement",
+          "settings": {
+            "text": "<em>Grietje</em> helpt je graag!",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_HmX9E7": {
+          "type": "divider",
+          "settings": {
+            "width": 32,
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "announcement_7iQk3h",
+        "divider_NqKJGB",
+        "announcement_kLHdYz",
+        "divider_9EKxz7",
+        "announcement_ygj3Gt",
+        "divider_gThdCc",
+        "announcement_Wk6HEH",
+        "divider_HmX9E7"
+      ],
+      "settings": {
+        "container": "container-full",
+        "color_schema": "background-2",
+        "section_header_padding_bottom": "small",
+        "section_header_content_spacing": "medium",
+        "heading": "",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h3",
+        "heading_color": "",
+        "subheading": "",
+        "description": "",
+        "alignment": "center",
+        "direction": "left",
+        "pause_on_hover": true,
+        "speed": 0.1,
+        "item_gap": 74,
+        "item_gap_mobile": 20,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "use_custom_mobile_padding": true,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "show_section_divider": true,
+        "divider_width": "container-full",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "17803156782d3378ca": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_cards_carousel_7VFqFm": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "all",
+            "products": [],
+            "star_rating": "all",
+            "show_review_media": false,
+            "display_order": "media_first",
+            "no_image_fallback": "review_text_only",
+            "max_reviews": 20,
+            "review_length": "small",
+            "text_size": "small",
+            "image_ratio": "1",
+            "reviews_shown": 3,
+            "show_reviewer_name": true,
+            "show_product_name": true,
+            "hide_arrows_mobile": true,
+            "arrows_position": "sides",
+            "max_width": 1100,
+            "corner_styling": "round",
+            "header_text_color": "#0b1d23",
+            "text_color": "#163946",
+            "card_color": "#f7f2ed",
+            "stars_color": "#7a6a58",
+            "arrows_color": "#000000",
+            "transition_speed": 5,
+            "header_text": "Beoordelingen",
+            "show_average_rating": true
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_cards_carousel_7VFqFm"
+      ],
+      "settings": {
+        "container": "container",
+        "color_schema": "",
+        "heading": "",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h2",
+        "heading_color": "",
+        "description": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "custom_css": [],
+      "settings": {
+        "container": "container",
+        "color_schema": "background-1",
+        "remove_params": false,
+        "section_header_padding_bottom": "medium",
+        "section_header_content_spacing": "medium",
+        "heading": "Anderen kochten ook",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h1",
+        "heading_color": "",
+        "description": "",
+        "limit": 8,
+        "columns": 4,
+        "column_gap": "double-extra-small",
+        "row_gap": "medium",
+        "enable_slider": true,
+        "show_nav": true,
+        "show_dots": false,
+        "enable_swipe_mobile": true,
+        "column_mobile": "1",
+        "padding_top": 0,
+        "padding_bottom": 84,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "animations": "inherit"
+      }
+    },
+    "apps_rNXL93": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_all_reviews_text_PLCxfE": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_all_reviews_text_PLCxfE"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "color_schema": "background-1",
+        "heading": "",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h2",
+        "heading_color": "",
+        "description": "",
+        "padding_top": 0,
+        "padding_bottom": 64
+      }
+    },
+    "178100726114fbd887": {
+      "type": "apps",
+      "settings": {
+        "container": "container",
+        "color_schema": "",
+        "heading": "",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h2",
+        "heading_color": "",
+        "description": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "73c8e618-10a0-43bf-b1d9-fa6707a4b913",
+    "collapsible_tabs_VXwmxt",
+    "layered_images_UJjPRV",
+    "scrolling_promotion_PcUJCR",
+    "17803156782d3378ca",
+    "product-recommendations",
+    "apps_rNXL93",
+    "178100726114fbd887"
+  ]
+}

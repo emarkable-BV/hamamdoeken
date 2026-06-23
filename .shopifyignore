@@ -1,0 +1,7 @@
+# Bestanden die NIET naar Shopify gesynced mogen worden (Shopify CLI: theme push/dev).
+# Deze blijven wel gewoon in git staan.
+
+CLAUDE.md
+README.md
+.shopifyignore
+.gitignore

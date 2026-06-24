@@ -1,0 +1,125 @@
+{%- comment -%}
+  CUSTOM (Hamamdoeken): rendert de rich-text content van de pagina (page.content),
+  geformatteerd via .rte, in een smalle kolom. Geen page-titel (die staat in de header).
+{%- endcomment -%}
+{{ 'page-content.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign section_id = section.settings.custom_id | default: section.id
+  assign custom_class = section.settings.custom_class
+
+  assign animation_effect = settings.animations
+  if animation_effect != 'none' and section.settings.animations != 'inherit'
+    assign animation_effect = section.settings.animations
+  endif
+-%}
+<div
+  id="{{ section_id }}"
+  class="f-page-content f-section-padding color-{{ section.settings.color_schema }}{% if custom_class != blank %} {{ custom_class }}{% endif %}"
+  style="--section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="{{ section.settings.container }}">
+    <motion-element
+      class="block f-page-content__inner rte text-{{ section.settings.text_alignment }}"
+      data-motion="{{ animation_effect }}"
+      style="--content-max-width: {{ section.settings.content_width }}px;"
+    >
+      {{ page.content }}
+    </motion-element>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Pagina-content",
+  "settings": [
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container breedte",
+      "default": "container",
+      "options": [
+        { "value": "container", "label": "Vast" },
+        { "value": "container-fluid", "label": "Uitgerekt" },
+        { "value": "container-full", "label": "Volledige breedte" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "label": "Max. breedte content",
+      "min": 480,
+      "max": 1100,
+      "step": 20,
+      "unit": "px",
+      "default": 760
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Uitlijning",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Links" },
+        { "value": "center", "label": "Midden" }
+      ]
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_schema",
+      "label": "Kleurschema",
+      "default": "background-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding boven",
+      "default": 64,
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding onder",
+      "default": 40,
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Geavanceerd"
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Custom ID"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom class"
+    },
+    {
+      "type": "select",
+      "id": "animations",
+      "label": "Animatie",
+      "default": "inherit",
+      "options": [
+        { "value": "inherit", "label": "Overnemen van thema" },
+        { "value": "fade-in", "label": "Fade in" },
+        { "value": "fade-in-up", "label": "Fade in omhoog" },
+        { "value": "fade-in-left", "label": "Fade in links" },
+        { "value": "fade-in-right", "label": "Fade in rechts" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pagina-content"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,171 @@
+/* CUSTOM (Hamamdoeken): PDP — quantity+ATC rij, kleur-selector + modal, offerte-component */
+
+/* Verberg lege block-wrappers (variant-picker bij 1 variant, lege tekst/levertijd) */
+.f-product-single__block:empty {
+  display: none;
+}
+
+/* ---------- Quantity naast ATC ---------- */
+.f-product-buy-row {
+  gap: 1.2rem;
+  align-items: stretch;
+  margin-top: 0.8rem;
+}
+.f-product-buy-row .f-product-form {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.f-product-buy-row .f-product-form__buttons {
+  height: 100%;
+}
+.f-product-buy-row .f-product-form__submit {
+  width: 100%;
+  height: 100%;
+  min-height: 5.2rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 1.5rem;
+  background: rgb(var(--color-foreground));
+  color: var(--color-background);
+  border-color: rgb(var(--color-foreground));
+}
+.f-product-buy-row .f-product-form__submit:hover {
+  background: rgb(var(--color-foreground));
+  border-color: rgb(var(--color-foreground));
+  opacity: 0.9;
+}
+.f-quantity--inline {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(var(--color-foreground), 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.f-quantity--inline .f-quantity__button {
+  width: 4.4rem;
+  height: 100%;
+  min-height: 5.2rem;
+  border-radius: 0;
+  color: rgb(var(--color-foreground));
+}
+.f-quantity--inline .f-quantity__input {
+  width: 4.4rem;
+  border: 0;
+  border-radius: 0;
+  text-align: center;
+  background: transparent;
+  font-weight: 600;
+}
+
+/* ---------- Kleur-selector ---------- */
+.f-color-select {
+  margin-top: 0.4rem;
+}
+.f-color-select__head {
+  margin-bottom: 1.2rem;
+  gap: 1rem;
+}
+.f-color-select__all {
+  font-weight: 600;
+  white-space: nowrap;
+}
+.f-color-select__row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.f-color-select__thumb {
+  display: block;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  background: rgba(var(--color-foreground), 0.05);
+  transition: border-color 0.2s ease;
+}
+.f-color-select__thumb:hover {
+  border-color: rgba(var(--color-foreground), 0.4);
+}
+.f-color-select__thumb.is-active {
+  border-color: rgb(var(--color-foreground));
+}
+.f-color-select__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Kleur-modal ---------- */
+.f-color-select__modal-heading {
+  margin: 0 0 2rem;
+}
+.f-color-select__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 2.4rem;
+}
+.f-color-select__card {
+  display: block;
+}
+.f-color-select__card-img {
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(var(--color-foreground), 0.05);
+}
+.f-color-select__card.is-active .f-color-select__card-img {
+  outline: 2px solid rgb(var(--color-foreground));
+  outline-offset: -2px;
+}
+.f-color-select__card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.f-color-select__card-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+.f-color-select__card:hover .f-color-select__card-btn,
+.f-color-select__card:focus-visible .f-color-select__card-btn {
+  opacity: 1;
+}
+.f-color-select__card-name {
+  display: block;
+  margin-top: 0.8rem;
+}
+
+/* ---------- Offerte-component ---------- */
+.f-offerte-cta {
+  gap: 1.6rem;
+  background: var(--offerte-bg, #f7f2ed);
+  border-radius: 12px;
+  padding: 1.6rem 2rem;
+}
+.f-offerte-cta__icon {
+  flex: 0 0 auto;
+  color: rgb(var(--color-foreground));
+  display: inline-flex;
+}
+.f-offerte-cta__title {
+  margin: 0 0 0.2rem;
+}
+.f-offerte-cta__link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 767.98px) {
+  .f-color-select__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

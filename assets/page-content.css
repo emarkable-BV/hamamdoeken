@@ -1,0 +1,11 @@
+/* CUSTOM (Hamamdoeken): geformatteerde pagina-content */
+.f-page-content__inner {
+  max-width: var(--content-max-width, 760px);
+  margin-inline: auto;
+}
+.f-page-content__inner > :first-child {
+  margin-top: 0;
+}
+.f-page-content__inner > :last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,79 @@
+/* CUSTOM (Hamamdoeken): artikel-header — full-bleed gekleurde band achter titel + meta,
+   met de featured image die met een negatieve marge omhoog over de band heen valt (overlap),
+   en de onderkant op de pagina-achtergrond doorloopt. Plus afgeronde image-hoeken. */
+
+.f-article-hero {
+  position: relative;
+}
+
+/* Full-bleed gekleurde band (kleur komt van color-{{scheme}} klasse). */
+.f-article-hero__band {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-top: var(--hero-padding-top, 48px);
+  padding-bottom: calc(var(--hero-overlap, 220px) + 3.2rem);
+}
+.f-article-hero__head {
+  position: relative;
+  z-index: 1;
+}
+.f-article-hero__title {
+  margin: 0;
+}
+
+/* Meta-regel */
+.f-article-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem 0;
+  margin-top: 1.6rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--article-meta-color, rgba(var(--color-foreground), 0.65));
+}
+.f-article-hero__head.text-left .f-article-hero__meta {
+  justify-content: flex-start;
+}
+.f-article-hero__head.text-right .f-article-hero__meta {
+  justify-content: flex-end;
+}
+.f-article-hero__meta-item {
+  display: inline-flex;
+  align-items: center;
+}
+.f-article-hero__meta-item:not(:last-child)::after {
+  content: "•";
+  margin: 0 1.2rem;
+  opacity: 0.6;
+}
+
+/* Image overlapt de band: trek 'm omhoog over de onderrand van de cream. */
+.f-article-hero__image-wrap {
+  position: relative;
+  z-index: 1;
+  margin-top: calc(-1 * var(--hero-overlap, 220px));
+}
+.f-article-hero__image,
+.f-article-image-rounded {
+  border-radius: var(--hero-radius, 16px);
+  overflow: hidden;
+}
+
+@media (max-width: 767.98px) {
+  .f-article-hero__band {
+    padding-bottom: calc(var(--hero-overlap-mobile, 120px) + 2.4rem);
+  }
+  .f-article-hero__image-wrap {
+    margin-top: calc(-1 * var(--hero-overlap-mobile, 120px));
+  }
+  .f-article-hero__meta {
+    font-size: 1.1rem;
+  }
+  .f-article-hero__meta-item:not(:last-child)::after {
+    margin: 0 0.9rem;
+  }
+}

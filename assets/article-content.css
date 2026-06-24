@@ -1,0 +1,32 @@
+/* CUSTOM (Hamamdoeken): artikel-content opmaak + ingesloten product-rijen */
+
+/* Lead/intro: de eerste alinea groter en in de heading-stijl (serif) */
+.f-article-template__content > .rte:first-of-type > p:first-child {
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style, normal);
+  font-size: clamp(1.9rem, 1.1rem + 1.4vw, 2.6rem);
+  line-height: 1.45;
+  color: rgb(var(--color-foreground));
+  margin-bottom: 2.8rem;
+}
+
+/* Afgeronde hoeken op afbeeldingen in de content */
+.f-article-template__content .rte img {
+  border-radius: 12px;
+}
+
+/* Verberg lege alinea's die rond een shortcode kunnen ontstaan */
+.f-article-template__content .rte p:empty {
+  display: none;
+}
+
+/* Ingesloten product-rijen */
+.f-article-products {
+  margin: 2.4rem 0 3.6rem;
+}
+
+@media (max-width: 767.98px) {
+  .f-article-products {
+    margin: 2rem 0 2.8rem;
+  }
+}

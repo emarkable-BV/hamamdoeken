@@ -1,0 +1,214 @@
+{%- comment -%}
+  CUSTOM (Hamamdoeken): pagina-header met smalle teal-content + nav-pills (links).
+  Herbruikbaar over klantenservice-pagina's. De actieve pill wordt automatisch bepaald
+  op basis van de huidige URL (request.path), met handmatige override per pill.
+{%- endcomment -%}
+{{ 'page-hero-nav.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign section_id = section.settings.custom_id | default: section.id
+  assign custom_class = section.settings.custom_class
+
+  assign animation_effect = settings.animations
+  if animation_effect != 'none' and section.settings.animations != 'inherit'
+    assign animation_effect = section.settings.animations
+  endif
+
+  assign current_path = request.path
+-%}
+<div
+  id="{{ section_id }}"
+  class="f-page-hero f-section-padding color-{{ section.settings.color_schema }}{% if custom_class != blank %} {{ custom_class }}{% endif %}"
+  style="--section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="container">
+    <div
+      class="f-page-hero__inner text-{{ section.settings.text_alignment }}"
+      style="--content-max-width: {{ section.settings.content_width }}px;"
+    >
+      {%- if section.settings.heading != blank -%}
+        <motion-element class="block" data-motion="{{ animation_effect }}">
+          <h1 class="f-page-hero__heading {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h1>
+        </motion-element>
+      {%- endif -%}
+
+      {%- if section.settings.description != blank -%}
+        <motion-element class="block f-page-hero__description rte" data-motion="{{ animation_effect }}" data-motion-delay="50">
+          {{ section.settings.description }}
+        </motion-element>
+      {%- endif -%}
+
+      {%- if section.blocks.size > 0 -%}
+        <motion-element class="block" data-motion="{{ animation_effect }}" data-motion-delay="100">
+          <nav class="f-page-hero__nav" aria-label="{{ section.settings.heading | escape }}">
+            {%- for block in section.blocks -%}
+              {%- liquid
+                assign is_active = false
+                if block.settings.active_state == 'active'
+                  assign is_active = true
+                elsif block.settings.active_state == 'auto' and block.settings.link != blank
+                  assign link_path = block.settings.link | split: '?' | first
+                  if link_path == current_path
+                    assign is_active = true
+                  endif
+                endif
+              -%}
+              <a
+                class="f-page-hero__pill{% if is_active %} is-active{% endif %}"
+                href="{{ block.settings.link | default: '#' }}"
+                {% if is_active %}aria-current="page"{% endif %}
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.label | escape }}
+              </a>
+            {%- endfor -%}
+          </nav>
+        </motion-element>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Pagina header + nav",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_schema",
+      "label": "Kleurschema",
+      "default": "scheme-5"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titel",
+      "default": "Klantenservice"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Titelgrootte",
+      "default": "h-xl",
+      "options": [
+        { "value": "h2", "label": "Medium (H2)" },
+        { "value": "h1", "label": "Groot (H1)" },
+        { "value": "h0", "label": "Extra groot (H0)" },
+        { "value": "h-xl", "label": "Display (XL)" }
+      ]
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Omschrijving"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Uitlijning",
+      "default": "center",
+      "options": [
+        { "value": "left", "label": "Links" },
+        { "value": "center", "label": "Midden" },
+        { "value": "right", "label": "Rechts" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "label": "Max. breedte content",
+      "min": 480,
+      "max": 1100,
+      "step": 20,
+      "unit": "px",
+      "default": 760
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding boven",
+      "default": 72,
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding onder",
+      "default": 64,
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Geavanceerd"
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Custom ID"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom class"
+    },
+    {
+      "type": "select",
+      "id": "animations",
+      "label": "Animatie",
+      "default": "inherit",
+      "options": [
+        { "value": "inherit", "label": "Overnemen van thema" },
+        { "value": "fade-in", "label": "Fade in" },
+        { "value": "fade-in-up", "label": "Fade in omhoog" },
+        { "value": "fade-in-left", "label": "Fade in links" },
+        { "value": "fade-in-right", "label": "Fade in rechts" }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "nav_link",
+      "name": "Nav-pill",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Pagina"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "select",
+          "id": "active_state",
+          "label": "Actieve staat",
+          "default": "auto",
+          "info": "Automatisch = actief als de link de huidige pagina is.",
+          "options": [
+            { "value": "auto", "label": "Automatisch (op URL)" },
+            { "value": "active", "label": "Altijd actief" },
+            { "value": "inactive", "label": "Nooit actief" }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pagina header + nav",
+      "blocks": [
+        { "type": "nav_link" },
+        { "type": "nav_link" },
+        { "type": "nav_link" }
+      ]
+    }
+  ]
+}
+{% endschema %}

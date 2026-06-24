@@ -1,6 +1,8 @@
 {%- liquid
   assign current_variant = product.selected_or_first_available_variant
 -%}
+{%- comment %} CUSTOM (Hamamdoeken): styling voor color_selector, offerte_cta, inline quantity, variant buttons {% endcomment -%}
+{{ 'pdp-custom.css' | asset_url | stylesheet_tag }}
 <div
   id="ProductInfo-{{ section.id }}"
   class="f-product-single__blocks{% if enable_sticky_info %} sticky-element{% endif %}"
@@ -17,6 +19,8 @@
         {%- when 'rating' -%}
           {%- render 'product-rating', product: product, block: block -%}
         {%- when 'text' -%}
+          {%- comment %} CUSTOM (Hamamdoeken): verberg de hele regel (incl. icoon) als de tekst leeg is, bijv. lege levertijd-metafield {% endcomment -%}
+          {%- if block.settings.text != blank -%}
           <p
             class="f-product__text flex items-center{% if block.settings.text_style == 'uppercase' %} text-upper{% elsif block.settings.text_style == 'subtitle' %} text-upper text-subtext{% endif %}"
             {{ block.shopify_attributes }}
@@ -26,6 +30,7 @@
             {% endunless %}
             <span>{{- block.settings.text -}}</span>
           </p>
+          {%- endif -%}
         {%- when 'richtext' -%}
           {% if block.settings.text != blank %}
             <div class="rte">
@@ -636,6 +641,8 @@
               assign show_size_chart = true
             endif
           %}
+          {%- comment %} CUSTOM (Hamamdoeken): verberg de variant-keuze als er maar 1 variant is {% endcomment -%}
+          {%- if product.variants.size > 1 -%}
           {% render 'variant-picker',
             product: product,
             show_selected_value: block.settings.variant_picker_show_selected,
@@ -670,6 +677,7 @@
               </div>
             </modal-dialog>
           {% endif %}
+          {%- endif -%}
         {%- when 'buy_buttons' -%}
           <div {{ block.shopify_attributes }}>
             {%- liquid
@@ -684,6 +692,42 @@
               endif
             -%}
             {% if block.settings.show_atc_button or show_dynamic_checkout %}
+              {%- comment %} CUSTOM (Hamamdoeken): quantity-stepper naast de ATC {% endcomment -%}
+              {%- if block.settings.show_inline_quantity -%}
+                {%- assign inline_min = product.selected_or_first_available_variant.quantity_rule.min -%}
+                <label class="form-label font-body-bolder quantity__label" for="Quantity-{{ section.id }}-{{ product.id }}">
+                  {{ 'products.product.quantity.label' | t }}
+                </label>
+                <div class="f-product-buy-row flex items-stretch">
+                  <quantity-input class="f-quantity f-quantity--inline" data-product-id="{{ product.id }}" data-section-id="{{ section.id }}">
+                    <button class="f-quantity__button btn btn--plain no-js-hidden" name="minus" type="button">
+                      <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+                      <svg width="16" height="16" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.6875 7H12.3125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <input
+                      id="Quantity-{{ section.id }}-{{ product.id }}"
+                      class="f-quantity__input quantity__input form-control"
+                      type="number"
+                      name="quantity"
+                      inputmode="numeric"
+                      autocomplete="off"
+                      data-quantity-variant-id="{{ product.selected_or_first_available_variant.id }}"
+                      data-min="{{ inline_min }}"
+                      min="{{ inline_min }}"
+                      {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
+                        data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+                        max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+                      {% endif %}
+                      step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
+                      value="{{ inline_min }}"
+                      form="{{ product_form_id }}"
+                    >
+                    <button class="f-quantity__button btn btn--plain no-js-hidden" name="plus" type="button">
+                      <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+                      <svg width="16" height="16" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.6875 7H12.3125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 2.1875V11.8125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                  </quantity-input>
+              {%- endif -%}
               <product-form class="f-product-form f-main-product-form">
                 {%- form 'product',
                   product,
@@ -740,6 +784,9 @@
                   </div>
                 {%- endform -%}
               </product-form>
+              {%- if block.settings.show_inline_quantity -%}
+                </div>
+              {%- endif -%}
             {% endif %}
             <link
               rel="stylesheet"
@@ -1028,6 +1075,146 @@
                   </span>
                 {% endif %}
               {% endfor %}
+            </div>
+          {%- endif -%}
+        {%- comment %} CUSTOM (Hamamdoeken): "Selecteer een kleur" — thumbnails van gerelateerde kleur-producten + modal {% endcomment -%}
+        {%- when 'color_selector' -%}
+          {%- liquid
+            assign modal_id = 'ColorSelect-' | append: section.id
+            assign placeholder_count = block.settings.placeholder_count | default: 5
+            assign select_label = block.settings.select_label | default: 'Selecteer'
+
+            # Basis = titel minus laatste woord (de kleur). "hamamdoek zeegroen" -> "hamamdoek".
+            # Exacte basis-match houdt "hamamdoek" netjes los van "hamamdoek XL".
+            assign title_words = product.title | split: ' '
+            assign last_word = title_words | last
+            assign base_title = product.title | remove_last: last_word | strip | downcase
+
+            assign self_title = product.title | escape
+            assign self_img = product.featured_image | image_url: width: 360
+
+            assign thumbs_html = ''
+            assign cards_html = ''
+            assign seen = '|' | append: product.id | append: '|'
+            assign sibling_count = 0
+            assign row_count = 1
+
+            if base_title != blank
+              for coll in product.collections limit: 8
+                for cp in coll.products limit: 50
+                  assign idkey = '|' | append: cp.id | append: '|'
+                  unless seen contains idkey
+                    assign cw = cp.title | split: ' '
+                    assign clast = cw | last
+                    assign cbase = cp.title | remove_last: clast | strip | downcase
+                    if cbase == base_title
+                      assign seen = seen | append: cp.id | append: '|'
+                      assign sibling_count = sibling_count | plus: 1
+                      assign ct = cp.title | escape
+                      assign cimg = cp.featured_image | image_url: width: 360
+                      if row_count < 5
+                        assign thumb = '<a href="' | append: cp.url | append: '" class="f-color-select__thumb" aria-label="' | append: ct | append: '"><img src="' | append: cimg | append: '" alt="' | append: ct | append: '" width="100" height="100" loading="lazy"></a>'
+                        assign thumbs_html = thumbs_html | append: thumb
+                        assign row_count = row_count | plus: 1
+                      endif
+                      assign card = '<a href="' | append: cp.url | append: '" class="f-color-select__card"><span class="f-color-select__card-img"><img src="' | append: cimg | append: '" alt="' | append: ct | append: '" width="180" height="180" loading="lazy"><span class="f-color-select__card-btn btn btn--primary">' | append: select_label | append: '</span></span><span class="f-color-select__card-name font-body-bolder">' | append: ct | append: '</span></a>'
+                      assign cards_html = cards_html | append: card
+                    endif
+                  endunless
+                endfor
+              endfor
+            endif
+          -%}
+          <div class="f-color-select">
+            <div class="f-color-select__head flex items-center justify-between">
+              <span class="f-color-select__heading font-body-bolder">{{ block.settings.heading | default: 'Selecteer een kleur:' }}</span>
+              <modal-opener class="no-js-hidden" data-modal="#PopupModal-{{ modal_id }}">
+                <button type="button" class="f-color-select__all btn btn--underline" aria-haspopup="dialog">
+                  {{ block.settings.view_all_label | default: 'Bekijk alle kleuren' }}
+                </button>
+              </modal-opener>
+            </div>
+            <div class="f-color-select__row">
+              {%- if sibling_count > 0 -%}
+                <a href="{{ product.url }}" class="f-color-select__thumb is-active" aria-label="{{ self_title }}">
+                  {%- if product.featured_image -%}
+                    <img src="{{ self_img }}" alt="{{ self_title }}" width="100" height="100" loading="lazy">
+                  {%- endif -%}
+                </a>
+                {{ thumbs_html }}
+              {%- else -%}
+                {%- for i in (1..placeholder_count) -%}
+                  <a href="{{ product.url }}" class="f-color-select__thumb{% if forloop.first %} is-active{% endif %}" aria-label="{{ product.title | escape }}">
+                    {%- if product.featured_image -%}
+                      <img src="{{ product.featured_image | image_url: width: 200 }}" alt="{{ product.title | escape }}" width="100" height="100" loading="lazy">
+                    {%- endif -%}
+                  </a>
+                {%- endfor -%}
+              {%- endif -%}
+            </div>
+          </div>
+          <modal-dialog id="PopupModal-{{ modal_id }}" class="f-modal hidden" style="--modal-width: 880px">
+            <div class="f-modal__content" role="dialog" aria-label="{{ block.settings.heading | default: 'Selecteer een kleur:' }}" aria-modal="true" tabindex="-1">
+              <div class="scroll-container">
+                <button id="ModalClose-{{ modal_id }}" type="button" class="f-modal__close" aria-label="{{ 'accessibility.close' | t }}">
+                  {% comment %} theme-check-disable {% endcomment %}
+                  {{ 'icon-close.svg' | inline_asset_content }}
+                  {% comment %} theme-check-enable {% endcomment %}
+                </button>
+                <div class="f-modal__inner">
+                  <h3 class="f-color-select__modal-heading h4">{{ block.settings.heading | default: 'Selecteer een kleur:' }}</h3>
+                  <div class="f-color-select__grid">
+                    {%- if sibling_count > 0 -%}
+                      <a href="{{ product.url }}" class="f-color-select__card is-active">
+                        <span class="f-color-select__card-img">
+                          {%- if product.featured_image -%}
+                            <img src="{{ self_img }}" alt="{{ self_title }}" width="180" height="180" loading="lazy">
+                          {%- endif -%}
+                          <span class="f-color-select__card-btn btn btn--primary">{{ select_label }}</span>
+                        </span>
+                        <span class="f-color-select__card-name font-body-bolder">{{ self_title }}</span>
+                      </a>
+                      {{ cards_html }}
+                    {%- else -%}
+                      {%- assign modal_placeholders = block.settings.modal_placeholder_count | default: 12 -%}
+                      {%- for i in (1..modal_placeholders) -%}
+                        <a href="{{ product.url }}" class="f-color-select__card{% if forloop.first %} is-active{% endif %}">
+                          <span class="f-color-select__card-img">
+                            {%- if product.featured_image -%}
+                              <img src="{{ product.featured_image | image_url: width: 360 }}" alt="{{ product.title | escape }}" width="180" height="180" loading="lazy">
+                            {%- endif -%}
+                            <span class="f-color-select__card-btn btn btn--primary">{{ block.settings.select_label | default: 'Selecteer' }}</span>
+                          </span>
+                          <span class="f-color-select__card-name font-body-bolder">Kleurnaam</span>
+                        </a>
+                      {%- endfor -%}
+                    {%- endif -%}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </modal-dialog>
+        {%- comment %} CUSTOM (Hamamdoeken): offerte-component {% endcomment -%}
+        {%- when 'offerte_cta' -%}
+          {%- if block.settings.heading != blank or block.settings.link_label != blank -%}
+            <div class="f-offerte-cta flex items-center">
+              <span class="f-offerte-cta__icon" aria-hidden="true">
+                {%- if block.settings.icon != blank and block.settings.icon != 'none' -%}
+                  {% render 'icon', name: block.settings.icon %}
+                {%- else -%}
+                  <svg width="44" height="34" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M-4.88281e-05 25.6068C0.200342 24.9429 0.66001 24.4454 1.37104 24.3415L21.4356 24.3318L22.4209 18.9537C22.6081 16.7841 21.1702 15.547 19.0898 15.4827L6.39839 14.4279V15.7284C6.39839 16.3236 5.96245 16.5702 5.90796 16.8546C5.84028 17.2076 5.94487 17.7315 5.90532 18.1181C5.83589 18.8014 5.45269 19.0954 4.93325 19.4661C4.82339 20.2841 5.04224 21.3337 4.91743 22.1217C4.82515 22.7029 4.07983 22.7566 3.91372 22.2195C3.69575 21.5151 3.98931 20.2348 3.85571 19.4653C3.35737 19.1298 2.95483 18.7547 2.88276 18.1181C2.8397 17.7377 2.96626 17.0324 2.88276 16.7269C2.86782 16.6714 2.71665 16.6212 2.65249 16.5217C2.46001 16.2232 2.34224 15.3198 2.42134 14.9844C2.50044 14.6489 2.83003 14.4825 3.14556 14.619C3.56743 14.8021 3.42241 15.5312 3.44526 15.9027H5.3437L5.76821 7.99318C5.77612 7.93419 5.69526 7.81796 5.66011 7.81796H3.0937L3.23433 11.9317C3.24224 12.5084 2.35278 12.5401 2.25083 11.9995C2.08647 11.126 2.14448 9.83255 2.10845 8.90802C2.10317 8.77242 2.03989 8.63771 2.0355 8.48802C2.01265 7.54588 2.09263 6.81683 3.23433 6.83356C3.02075 4.70978 5.90269 4.7001 5.69438 6.83356C6.34917 6.79393 6.84663 7.39268 6.74907 8.02928L20.5514 6.90048C20.8766 7.23154 20.7887 7.65947 20.3493 7.81268L6.68667 9.09029L6.4977 13.3757L20.2051 14.5749C22.209 14.9412 23.6276 16.7736 23.4738 18.811L22.4982 24.3388H30.0919V10.4568C30.0919 9.73746 29.3431 8.5567 28.7894 8.10324C27.1608 6.77016 25.2729 7.48777 23.3753 7.53972C22.8963 7.57142 22.7496 6.81683 23.1345 6.59406C23.4755 6.39683 24.43 6.49104 24.8537 6.41532C24.9336 6.40123 24.996 6.38978 25.0189 6.29997L25.0286 5.64224C24.5698 5.70387 24.0477 5.27683 23.9783 4.82865C23.8737 4.15154 23.8877 1.67029 23.9721 0.965003C24.0451 0.353053 24.5759 0.0695314 25.1349 0.0184622C25.8275 -0.0440535 26.9639 0.0158207 27.0694 0.894563C27.1599 1.64915 27.1661 4.08815 27.0615 4.82689C26.9797 5.40626 26.5464 5.57268 26.0437 5.70739L26.0129 6.27444H27.1028C27.3603 6.27444 28.2805 6.6011 28.5468 6.72878C29.968 7.40676 31.086 9.03569 31.0754 10.6338H32.1301V7.99758C32.1301 7.77129 32.3666 7.24211 32.5151 7.04664C33.5707 5.65897 35.5702 6.21808 35.9973 7.82148V16.3985C35.6299 17.6074 34.417 18.332 33.2068 17.7474C32.7199 17.5123 32.1301 16.7744 32.1301 16.2224V13.5861H31.1458V24.3424H32.8684C33.1136 24.3424 33.6682 24.8029 33.8062 25.0212C34.5735 26.2354 33.8651 28.0414 32.305 27.9964L1.78765 28C0.8604 27.9331 0.28208 27.565 -0.00268555 26.6616V25.6068H-4.88281e-05ZM26.0859 1.07154H25.0312V4.65695H26.0859V1.07154ZM4.28901 6.8362C5.17144 6.94626 4.4437 5.924 4.30044 6.38978L4.28901 6.8362ZM33.4221 16.6547C33.8405 17.0738 34.6754 16.9514 34.8899 16.3773L34.94 8.00022C34.7194 7.125 33.626 7.02727 33.2419 7.83997L33.1848 16.1528C33.1962 16.3131 33.3131 16.5455 33.4212 16.6547H33.4221ZM32.1328 11.6869H31.1484V12.5304H32.1328V11.6869ZM4.85151 16.9602H3.93745V18.1903C3.93745 18.2748 4.26968 18.4756 4.39448 18.4756C4.51929 18.4756 4.85151 18.2748 4.85151 18.1903V16.9602ZM32.8842 26.7796C33.2815 26.4159 33.0714 25.1991 32.3112 25.3232L1.47476 25.3593C0.82876 25.5046 0.866553 26.9319 1.58022 26.9442L32.3824 26.946C32.5379 26.9442 32.7717 26.8826 32.8842 26.7796Z" fill="currentColor"/><path d="M28.3517 16.0269C28.3517 17.0861 27.4921 17.9455 26.4331 17.9455C25.374 17.9455 24.5144 17.0861 24.5144 16.0269C24.5144 14.9676 25.374 14.1083 26.4331 14.1083C27.4921 14.1083 28.3517 14.9676 28.3517 16.0269ZM27.3234 16.0251C27.3234 15.5338 26.9244 15.1349 26.4331 15.1349C25.9417 15.1349 25.5427 15.5338 25.5427 16.0251C25.5427 16.5165 25.9417 16.9153 26.4331 16.9153C26.9244 16.9153 27.3234 16.5165 27.3234 16.0251Z" fill="currentColor"/><path d="M28.3509 21.0836C28.3509 22.1429 27.4922 23.0014 26.4332 23.0014C25.3741 23.0014 24.5154 22.1429 24.5154 21.0836C24.5154 20.0244 25.3741 19.1659 26.4332 19.1659C27.4922 19.1659 28.3509 20.0244 28.3509 21.0836ZM27.3252 21.0845C27.3252 20.5914 26.9253 20.1926 26.4332 20.1926C25.941 20.1926 25.5411 20.5923 25.5411 21.0845C25.5411 21.5767 25.941 21.9765 26.4332 21.9765C26.9253 21.9765 27.3252 21.5767 27.3252 21.0845Z" fill="currentColor"/></svg>
+                {%- endif -%}
+              </span>
+              <div class="f-offerte-cta__body">
+                {%- if block.settings.heading != blank -%}
+                  <p class="f-offerte-cta__title font-body-bolder">{{ block.settings.heading }}</p>
+                {%- endif -%}
+                {%- if block.settings.link_label != blank -%}
+                  <a href="{{ block.settings.link | default: '/pages/offerte-aanvragen' }}" class="f-offerte-cta__link">
+                    {{ block.settings.link_label }}
+                  </a>
+                {%- endif -%}
+              </div>
             </div>
           {%- endif -%}
         {% else %}

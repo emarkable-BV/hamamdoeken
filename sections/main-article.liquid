@@ -1,15 +1,92 @@
 {{ 'blog.css' | asset_url | stylesheet_tag }}
+{%- comment %} CUSTOM (Hamamdoeken): gekleurde header-band + afgeronde image-hoeken + content-opmaak {% endcomment -%}
+{{ 'article-hero.css' | asset_url | stylesheet_tag }}
+{{ 'article-content.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  # CUSTOM (Hamamdoeken): zoek de title- en featured_image-blocks zodat we de header zelf kunnen opbouwen
+  assign hero_enabled = section.settings.enable_hero_background
+  assign title_block = null
+  assign image_block = null
+  for b in section.blocks
+    if b.type == 'title'
+      assign title_block = b
+    elsif b.type == 'featured_image'
+      assign image_block = b
+    endif
+  endfor
+
+  assign title_align = 'center'
+  assign title_heading_size = 'h1'
+  assign show_date = false
+  assign show_author = false
+  assign show_reading_time = false
+  if title_block
+    assign title_align = title_block.settings.title_text_align
+    assign title_heading_size = title_block.settings.heading_size
+    assign show_date = title_block.settings.blog_show_date
+    assign show_author = title_block.settings.blog_show_author
+    assign show_reading_time = title_block.settings.blog_show_reading_time
+  endif
+  assign show_meta = false
+  if show_date or show_author or show_reading_time
+    assign show_meta = true
+  endif
+
+  assign words = article.content | strip_html | strip | split: ' ' | size
+  assign reading_time = words | plus: 224 | divided_by: 225 | at_least: 1
+-%}
 
 {% if section.settings.show_breadcrumb %}
   {% render 'breadcrumb', container: section.settings.brc_container, justify: section.settings.brc_text_alignment %}
 {% endif %}
-<article 
-  class="f-article-template f-section-padding" 
-  itemscope 
-  itemtype="http://schema.org/BlogPosting" 
+<article
+  class="f-article-template f-section-padding"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
   style="--section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px;"
 >
+  {%- comment %} CUSTOM (Hamamdoeken): zelfgebouwde header met gekleurde band + overlappende image {% endcomment -%}
+  {%- if hero_enabled -%}
+    <div
+      class="f-article-hero f-article-template__block-item"
+      style="--hero-overlap: {{ section.settings.hero_overlap }}px; --hero-overlap-mobile: {{ section.settings.hero_overlap_mobile }}px; --hero-padding-top: {{ section.settings.hero_padding_top }}px; --hero-radius: {{ section.settings.image_border_radius }}px;{% if section.settings.meta_color != blank %}--article-meta-color: {{ section.settings.meta_color }};{% endif %}"
+    >
+      <div class="f-article-hero__band color-{{ section.settings.hero_color_scheme }}">
+        <header class="f-article-hero__head container-narrow text-{{ title_align }}">
+          <h1 class="f-article-hero__title {{ title_heading_size }}" itemprop="headline">{{ article.title | escape }}</h1>
+          {%- if show_meta -%}
+            <div class="f-article-hero__meta">
+              {%- if show_reading_time -%}
+                <span class="f-article-hero__meta-item">{{ reading_time }} min. leestijd</span>
+              {%- endif -%}
+              {%- if show_author -%}
+                <span class="f-article-hero__meta-item" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <span itemprop="name">door {{ article.author }}</span>
+                </span>
+              {%- endif -%}
+              {%- if show_date -%}
+                <span class="f-article-hero__meta-item" itemprop="datePublished">
+                  {{- article.published_at | time_tag: format: 'date' -}}
+                </span>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </header>
+      </div>
+      {%- if article.image and image_block -%}
+        <div class="f-article-hero__image-wrap {{ image_block.settings.image_width }}">
+          <div class="f-article-hero__image f-article-template__hero--{{ image_block.settings.image_height }}">
+            {% render 'responsive-image', image: article.image, section_index: section.index, index: 1 %}
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
   {%- for block in section.blocks -%}
+    {%- comment %} CUSTOM (Hamamdoeken): title + featured_image zitten al in de custom header {% endcomment -%}
+    {%- if hero_enabled and block.type == 'title' -%}{%- continue -%}{%- endif -%}
+    {%- if hero_enabled and block.type == 'featured_image' -%}{%- continue -%}{%- endif -%}
     {%- case block.type -%}
       {%- when '@app' -%}
         <div class="container-narrow">
@@ -19,7 +96,7 @@
         {%- if article.image -%}
           <div class="f-article-template__hero-container f-article-template__block-item" {{ block.shopify_attributes }}>
             <div class="{{ block.settings.image_width }}">
-              <div class="f-article-template__hero--{{ block.settings.image_height }}">
+              <div class="f-article-template__hero--{{ block.settings.image_height }} f-article-image-rounded" style="--hero-radius: {{ section.settings.image_border_radius }}px;">
                 {% render 'responsive-image', image: article.image, section_index: section.index, index: 1 %}
               </div>
             </div>
@@ -52,12 +129,13 @@
           <h1 class="f-article-template__title {{ block.settings.heading_size }}" itemprop="headline">{{ article.title | escape }}</h1>
         </header>
       {%- when 'content' -%}
+        {%- comment %} CUSTOM (Hamamdoeken): content via article-body zodat [products:...] shortcodes renderen {% endcomment -%}
         <div
-          class="f-article-template__content container-narrow rte f-article-template__block-item"
+          class="f-article-template__content container-narrow f-article-template__block-item"
           itemprop="articleBody"
           {{ block.shopify_attributes }}
         >
-          {{ article.content }}
+          {% render 'article-body', content: article.content, columns: block.settings.product_columns %}
         </div>
       {%- when 'tags-share' -%}
         <div class="container-narrow f-article-template__block-item" {{ block.shopify_attributes }}>
@@ -402,6 +480,69 @@
       "step": 2,
       "unit": "px"
     },
+    {
+      "type": "header",
+      "content": "Artikel-header (custom)"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_hero_background",
+      "label": "Gekleurde header-band achter titel + image",
+      "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "hero_color_scheme",
+      "label": "Kleurschema header-band",
+      "default": "background-2"
+    },
+    {
+      "type": "range",
+      "id": "hero_overlap",
+      "label": "Image over de band (desktop)",
+      "info": "Hoeveel px van de bovenkant van de image op de gekleurde band valt. Hoger = band bedekt meer van de image.",
+      "default": 220,
+      "min": 0,
+      "max": 500,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "hero_overlap_mobile",
+      "label": "Image over de band (mobiel)",
+      "default": 120,
+      "min": 0,
+      "max": 400,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "hero_padding_top",
+      "label": "Padding boven titel",
+      "default": 48,
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "meta_color",
+      "label": "Kleur meta-regel (leestijd/auteur/datum)",
+      "info": "Leeg = afgeleid van de tekstkleur."
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Afronding hoeken featured image",
+      "default": 16,
+      "min": 0,
+      "max": 48,
+      "step": 1,
+      "unit": "px"
+    }
   ],
   "blocks": [
     {
@@ -528,12 +669,35 @@
             }
           ]
         },
+        {
+          "type": "checkbox",
+          "id": "blog_show_reading_time",
+          "default": true,
+          "label": "Toon leestijd"
+        }
       ]
     },
     {
       "type": "content",
       "name": "t:sections.main-article.blocks.content.name",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Producten in de tekst: typ in de blog-editor op een eigen regel [products:handle-1,handle-2,handle-3]"
+        },
+        {
+          "type": "select",
+          "id": "product_columns",
+          "label": "Producten per rij (desktop)",
+          "default": "3",
+          "options": [
+            { "value": "2", "label": "2" },
+            { "value": "3", "label": "3" },
+            { "value": "4", "label": "4" }
+          ]
+        }
+      ]
     },
     {
       "type": "tags-share",

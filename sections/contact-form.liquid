@@ -177,6 +177,38 @@
                      {{- form.body -}}
                   </textarea>
                   </div>
+                {%- comment %} CUSTOM (Hamamdoeken): generiek extra veld (input of tekstvak), o.a. voor "producttitels" op de offerte-pagina. {% endcomment -%}
+                {%- when 'custom_field' -%}
+                  <div class="{{ form_field_class }}" {{ block.shopify_attributes }}>
+                    <label
+                      class="form-label{% if hide_label %} visually-hidden{% endif %}"
+                      for="ContactForm-custom-{{ block.id }}"
+                    >
+                      {{- block.settings.label }}
+                      {%- if required %}
+                        <span aria-hidden="true">*</span>
+                      {%- endif -%}
+                    </label>
+                    {%- if block.settings.field_type == 'textarea' -%}
+                      <textarea
+                        class="form-control form-control--textarea"
+                        {% if required %}required aria-required="true"{% endif %}
+                        rows="{{ block.settings.rows | default: 3 }}"
+                        id="ContactForm-custom-{{ block.id }}"
+                        name="contact[{{ block.settings.label | escape }}]"
+                        placeholder="{{ block.settings.placeholder }}"
+                      ></textarea>
+                    {%- else -%}
+                      <input
+                        class="form-control"
+                        {% if required %}required aria-required="true"{% endif %}
+                        type="text"
+                        id="ContactForm-custom-{{ block.id }}"
+                        name="contact[{{ block.settings.label | escape }}]"
+                        placeholder="{{ block.settings.placeholder }}"
+                      >
+                    {%- endif -%}
+                  </div>
               {%- endcase -%}
             {%- endfor -%}
             {%- if section.blocks.size > 0 -%}
@@ -705,6 +737,66 @@
         {
           "type": "paragraph",
           "content": "t:sections.contact-form.blocks.field_message.info"
+        }
+      ]
+    },
+    {
+      "type": "custom_field",
+      "name": "Aangepast veld",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "info": "Wordt ook als veldnaam in de e-mail getoond. Houd labels uniek.",
+          "default": "Aangepast veld"
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "Placeholder"
+        },
+        {
+          "type": "select",
+          "id": "field_type",
+          "label": "Veldtype",
+          "default": "text",
+          "options": [
+            { "value": "text", "label": "Eén regel" },
+            { "value": "textarea", "label": "Tekstvak" }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "rows",
+          "label": "Hoogte (rijen)",
+          "min": 2,
+          "max": 10,
+          "step": 1,
+          "default": 3,
+          "visible_if": "{{ block.settings.field_type == 'textarea' }}"
+        },
+        {
+          "type": "select",
+          "id": "field_width",
+          "label": "Breedte",
+          "default": "full",
+          "options": [
+            { "value": "full", "label": "100%" },
+            { "value": "1/2", "label": "50%" }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_label",
+          "label": "Verberg label",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "required",
+          "label": "Verplicht",
+          "default": false
         }
       ]
     }

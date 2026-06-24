@@ -1,0 +1,30 @@
+/* CUSTOM (Hamamdoeken): download-knoppen */
+.f-downloads__inner {
+  max-width: var(--content-max-width, 760px);
+  margin-inline: auto;
+}
+.f-downloads__heading {
+  margin: 0 0 1.2rem;
+}
+.f-downloads__description {
+  margin-bottom: 2rem;
+}
+.f-downloads__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+}
+.f-downloads__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.f-downloads__icon {
+  flex-shrink: 0;
+}
+
+@media (max-width: 767.98px) {
+  .f-downloads__list {
+    gap: 1rem;
+  }
+}

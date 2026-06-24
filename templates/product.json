@@ -54,6 +54,16 @@
             "size_chart_from_page": "maattabel"
           }
         },
+        "color_selector": {
+          "type": "color_selector", 
+          "settings": {
+            "heading": "Selecteer een kleur:",
+            "view_all_label": "Bekijk alle kleuren",
+            "select_label": "Selecteer",
+            "placeholder_count": 5,
+            "modal_placeholder_count": 12
+          }
+        },
         "4813cc96-81ff-4094-bd6a-4bf96eab69e9": {
           "type": "complementary",
           "settings": {
@@ -78,6 +88,7 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
+          "disabled": true,
           "settings": {}
         },
         "buy_buttons": {
@@ -85,7 +96,16 @@
           "settings": {
             "show_atc_button": true,
             "show_dynamic_checkout": false,
-            "show_gift_card_recipient": true
+            "show_gift_card_recipient": true,
+            "show_inline_quantity": true
+          }
+        },
+        "offerte_cta": {
+          "type": "offerte_cta",
+          "settings": {
+            "heading": "Dit product laten bedrukken of borduren?",
+            "link_label": "Vraag vrijblijvend een offerte aan",
+            "link": "/pages/offerte-aanvragen"
           }
         },
         "essential_countdown_timer_app_block_Jdx7tr": {
@@ -178,20 +198,22 @@
       "block_order": [
         "c67b7c41-4a92-419d-85c6-c970bb43bf2d",
         "title",
-        "text_ic7ynF",
         "59ca3415-b1aa-4301-b178-ad6e434ba477",
+        "text_ic7ynF",
         "c9d012f0-f3f5-4c1b-b197-e7c8f9de13ac",
         "variant_picker",
+        "color_selector",
         "4813cc96-81ff-4094-bd6a-4bf96eab69e9",
         "price",
-        "quantity_selector",
         "buy_buttons",
+        "offerte_cta",
         "essential_countdown_timer_app_block_Jdx7tr",
         "staffelkorting_app_staffel_table_K83nrr",
         "text_iihwrL",
         "text_KkwrDm",
         "text_QKhr8X",
         "text_8aczyU",
+        "quantity_selector",
         "f11043ac-1746-42ad-a36b-91ff4cc9f432",
         "0bd176fb-80b2-42ce-ae4e-db8cb55fe024",
         "e303936e-d82d-4e37-8b83-e227d48fbb3d",

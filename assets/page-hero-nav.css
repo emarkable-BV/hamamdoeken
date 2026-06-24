@@ -1,0 +1,68 @@
+/* CUSTOM (Hamamdoeken): pagina-header met nav-pills */
+.f-page-hero__inner {
+  max-width: var(--content-max-width, 760px);
+  margin-inline: auto;
+}
+.f-page-hero__heading {
+  margin: 0;
+}
+.f-page-hero__description {
+  margin-top: 1.6rem;
+}
+.f-page-hero__description > :first-child {
+  margin-top: 0;
+}
+.f-page-hero__description > :last-child {
+  margin-bottom: 0;
+}
+
+/* Nav-pills */
+.f-page-hero__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 3.2rem;
+}
+.f-page-hero__inner.text-center .f-page-hero__nav {
+  justify-content: center;
+}
+.f-page-hero__inner.text-right .f-page-hero__nav {
+  justify-content: flex-end;
+}
+
+.f-page-hero__pill {
+  display: inline-block;
+  line-height: 1;
+  padding: 1.1rem 2rem;
+  border-radius: 6px;
+  border: 1px solid rgba(var(--color-foreground), 0.4);
+  background: transparent;
+  color: rgb(var(--color-foreground));
+  text-transform: none;
+  letter-spacing: normal;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.f-page-hero__pill:hover {
+  text-decoration: none;
+  border-color: rgb(var(--color-foreground));
+  background: rgba(var(--color-foreground), 0.08);
+}
+.f-page-hero__pill:focus-visible {
+  outline: 2px solid rgb(var(--color-foreground));
+  outline-offset: 2px;
+}
+.f-page-hero__pill.is-active {
+  background: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  border-color: var(--color-btn-bg);
+}
+
+@media (max-width: 767.98px) {
+  .f-page-hero__nav {
+    margin-top: 2.4rem;
+    gap: 1rem;
+  }
+  .f-page-hero__pill {
+    padding: 1rem 1.6rem;
+  }
+}

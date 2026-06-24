@@ -1,0 +1,32 @@
+{%- comment -%}
+  CUSTOM (Hamamdoeken): rendert de artikel-content en vervangt product-shortcodes door een rij
+  product-cards op exact die plek in de tekst.
+
+  Gebruik in de blog-editor (op een eigen regel):
+    [products:handle-1,handle-2,handle-3]
+  De handles zijn de product-handles (het laatste deel van de product-URL /products/<handle>).
+
+  Tekstdelen worden in losse .rte-wrappers gezet zodat de .rte-styling de product-cards niet raakt.
+
+  Params:
+    content  (string)  - de te renderen HTML (meestal article.content)
+    columns  (int)     - aantal kolommen op desktop (default 3)
+{%- endcomment -%}
+{%- assign body_columns = columns | default: 3 -%}
+{%- assign segments = content | split: '[products:' -%}
+<div class="rte">{{ segments[0] }}</div>
+{%- for segment in segments offset: 1 -%}
+  {%- assign raw_handles = segment | split: ']' | first -%}
+  {%- assign rest = segment | remove_first: raw_handles | remove_first: ']' -%}
+  {%- assign handles = raw_handles | split: ',' -%}
+  <div class="f-article-products f-grid f-grid-2-cols lg:f-grid-{{ body_columns }}-cols f-grid--gap-medium f-grid--row-gap-large">
+    {%- for h in handles -%}
+      {%- assign handle = h | strip -%}
+      {%- assign card_product = all_products[handle] -%}
+      {%- if card_product != blank and card_product != empty -%}
+        {% render 'product-card', product: card_product, index: forloop.index %}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+  <div class="rte">{{ rest }}</div>
+{%- endfor -%}

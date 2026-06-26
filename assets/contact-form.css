@@ -1,3 +1,8 @@
+/* CUSTOM (Hamamdoeken): offerte-form achtergrond #F3F3F3 (tekstkleuren van het kleurschema blijven) */
+.f-contact-form.offerte-form-bg {
+  background-color: #f3f3f3;
+}
+
 .f-contact-form__fields .form-field {
   margin: 0;
 }

@@ -223,8 +223,8 @@
   position: relative;
   display: flex;
   align-items: flex-start;
-  gap: 1.2rem;
-  padding: 1.6rem;
+  gap: 1.6rem;
+  padding: 1.6rem 3.2rem;
   border: 1px solid rgba(var(--color-foreground), 0.2);
   border-radius: 12px;
   cursor: pointer;

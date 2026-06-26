@@ -1,0 +1,209 @@
+{%- comment -%}
+  CUSTOM (Hamamdoeken): feature-reveal.
+  Click-based reveal (zoals waabi.ai): links een beeld, rechts een lijst titels. De actieve titel is
+  vol/uitgeklapt (met eyebrow + omschrijving), de rest gedimd. Bij klik op een titel schuift het bijbehorende
+  beeld over het vorige (slide-over). Geen scroll-trigger.
+{%- endcomment -%}
+{{ 'feature-reveal.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'feature-reveal.js' | asset_url }}" defer="defer"></script>
+{%- liquid
+  assign section_id = section.settings.custom_id | default: section.id
+  assign ratio = section.settings.image_aspect_ratio | default: '3/2'
+-%}
+{%- if section.blocks.size > 0 -%}
+  <feature-reveal
+    id="{{ section_id }}"
+    class="f-feature-reveal f-section-padding color-{{ section.settings.color_schema }}{% if section.settings.image_position == 'right' %} f-feature-reveal--image-right{% endif %}{% if section.settings.custom_class != blank %} {{ section.settings.custom_class }}{% endif %}"
+    style="--section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+  >
+    <div class="{{ section.settings.container }}">
+      <div class="f-feature-reveal__grid">
+        <div class="f-feature-reveal__media" style="--fr-ratio: {{ ratio }};">
+          {%- for block in section.blocks -%}
+            <div
+              class="f-feature-reveal__media-item{% if forloop.first %} is-current{% endif %}"
+              data-fr-media
+              {{ block.shopify_attributes }}
+            >
+              {%- if block.settings.image != blank -%}
+                {% render 'responsive-image',
+                  image: block.settings.image,
+                  aspect_ratio: ratio,
+                  section_index: section.index,
+                  index: forloop.index
+                %}
+              {%- else -%}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+
+        <div class="f-feature-reveal__content">
+          {%- if section.settings.eyebrow != blank -%}
+            <p class="f-feature-reveal__eyebrow">{{ section.settings.eyebrow }}</p>
+          {%- endif -%}
+          <div class="f-feature-reveal__list">
+            {%- for block in section.blocks -%}
+              <div
+                class="f-feature-reveal__item{% if forloop.first %} is-active{% endif %}"
+                data-fr-item
+                {{ block.shopify_attributes }}
+              >
+                <button
+                  type="button"
+                  class="f-feature-reveal__title-btn"
+                  data-fr-title
+                  aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}"
+                >
+                  <span class="f-feature-reveal__title {{ block.settings.heading_size | default: 'h2' }}">
+                    {{ block.settings.heading }}
+                  </span>
+                </button>
+                {%- if block.settings.description != blank -%}
+                  <div class="f-feature-reveal__desc rte">{{ block.settings.description }}</div>
+                {%- endif -%}
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </feature-reveal>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Feature reveal",
+  "settings": [
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container breedte",
+      "default": "container",
+      "options": [
+        { "value": "container", "label": "Vast" },
+        { "value": "container-fluid", "label": "Uitgerekt" },
+        { "value": "container-full", "label": "Volledige breedte" }
+      ]
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_schema",
+      "label": "Kleurschema",
+      "default": "background-1"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow (vast, boven de titels)",
+      "default": "Waarom kiezen voor hamamdoeken?"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Positie beeld",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Links" },
+        { "value": "right", "label": "Rechts" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Beeldverhouding",
+      "default": "3/2",
+      "options": [
+        { "value": "3/2", "label": "Liggend (3:2)" },
+        { "value": "4/3", "label": "Liggend (4:3)" },
+        { "value": "1/1", "label": "Vierkant (1:1)" },
+        { "value": "16/9", "label": "Breed (16:9)" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding boven",
+      "default": 80,
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding onder",
+      "default": 80,
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Geavanceerd"
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Custom ID"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom class"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Afbeelding"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Eyebrow (boven titel)"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Titel",
+          "default": "Titel"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Titelgrootte",
+          "default": "h2",
+          "options": [
+            { "value": "h3", "label": "H3" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h1", "label": "H1" }
+          ]
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Omschrijving"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature reveal",
+      "blocks": [
+        { "type": "item" },
+        { "type": "item" },
+        { "type": "item" }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,124 @@
+/* CUSTOM (Hamamdoeken): feature-reveal — click-based reveal met slide-over beeld */
+.f-feature-reveal {
+  display: block;
+}
+.f-feature-reveal__grid {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+.f-feature-reveal--image-right .f-feature-reveal__grid {
+  flex-direction: row-reverse;
+}
+
+/* Beeld-stapel: actieve vol, de rest iets kleiner geschaald en omhoog (peek) */
+.f-feature-reveal__media {
+  --fr-peek: 3.2rem;
+  flex: 1 1 55%;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: var(--fr-ratio, 3 / 2);
+}
+.f-feature-reveal__media-item {
+  position: absolute;
+  top: var(--fr-peek);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  transform-origin: center center;
+  transform: translateY(calc(-1 * var(--fr-peek))) scale(0.92);
+  transition: transform 0.6s cubic-bezier(0.7, 0, 0.2, 1);
+}
+.f-feature-reveal__media-item.is-current {
+  z-index: 2;
+  transform: translateY(0) scale(1);
+}
+.f-feature-reveal__media-item > *,
+.f-feature-reveal__media-item responsive-image,
+.f-feature-reveal__media-item .f-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.f-feature-reveal__media-item img,
+.f-feature-reveal__media-item svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tekstkolom */
+.f-feature-reveal__content {
+  flex: 1 1 45%;
+  min-width: 0;
+}
+.f-feature-reveal__eyebrow {
+  display: block;
+  margin: 0 0 1.6rem;
+  color: rgb(var(--color-foreground));
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.f-feature-reveal__title-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+}
+.f-feature-reveal__content .f-feature-reveal__title {
+  display: block;
+  margin: 0;
+  line-height: 1.2;
+  color: rgba(var(--color-foreground), 0.4);
+  transition: color 0.3s ease;
+}
+.f-feature-reveal__title-btn:hover .f-feature-reveal__title {
+  color: rgba(var(--color-foreground), 0.7);
+}
+.f-feature-reveal__item.is-active .f-feature-reveal__title {
+  color: rgb(var(--color-foreground));
+}
+.f-feature-reveal__desc {
+  margin-top: 0;
+  max-width: 46ch;
+  color: rgba(var(--color-foreground), 0.85);
+}
+.f-feature-reveal__desc > :first-child {
+  margin-top: 0;
+}
+.f-feature-reveal__desc > :last-child {
+  margin-bottom: 0;
+}
+.f-feature-reveal__item:not(.is-active) .f-feature-reveal__desc {
+  display: none;
+}
+.f-feature-reveal__item + .f-feature-reveal__item {
+  margin-top: 1.6rem;
+}
+
+@media (max-width: 991.98px) {
+  .f-feature-reveal__grid,
+  .f-feature-reveal--image-right .f-feature-reveal__grid {
+    flex-direction: column;
+    gap: 3.2rem;
+    align-items: stretch;
+  }
+  .f-feature-reveal__media,
+  .f-feature-reveal__content {
+    flex: none;
+    width: 100%;
+  }
+  .f-feature-reveal__item + .f-feature-reveal__item {
+    margin-top: 2rem;
+  }
+}

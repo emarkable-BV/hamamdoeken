@@ -17,23 +17,28 @@
 .f-downloads__btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   width: auto;
   flex: 0 0 auto;
   min-height: 4.6rem;
   padding: 0 2rem;
+  border: 0;
   border-radius: 12px;
   font-size: 1.5rem;
   font-weight: 700;
+  line-height: 1.2;
   text-transform: none;
+  text-decoration: none;
   letter-spacing: normal;
+  cursor: pointer;
   background: var(--download-btn-bg, #023A47);
   color: #fff;
-  border-color: var(--download-btn-bg, #023A47);
+  transition: opacity 0.2s ease;
 }
 .f-downloads__btn:hover {
-  background: var(--download-btn-bg, #023A47);
-  border-color: var(--download-btn-bg, #023A47);
+  color: #fff;
+  text-decoration: none;
   opacity: 0.92;
 }
 .f-downloads__icon {

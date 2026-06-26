@@ -480,7 +480,8 @@
         "divider_width": "container",
         "custom_id": "",
         "custom_class": ""
-      }
+      },
+      "disabled": true
     },
     "scrolling_promotion_PcUJCR": {
       "type": "scrolling-promotion",
@@ -747,12 +748,64 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "feature_reveal": {
+      "type": "feature-reveal",
+      "blocks": {
+        "fr_1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/ambachtelijk-geweven_19ddb75a-7bf7-4b91-b9ad-c66fb00cf77e.png",
+            "subheading": "Waarom kiezen voor hamamdoeken?",
+            "heading": "Ambachtelijk geweven",
+            "heading_size": "h2",
+            "description": "<p>Onze producten zijn ambachtelijk geweven in kleine oplages.</p>"
+          }
+        },
+        "fr_2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/sneldrogend-compact.png",
+            "subheading": "Waarom kiezen voor hamamdoeken?",
+            "heading": "Sneldrogend &amp; compact",
+            "heading_size": "h2",
+            "description": "<p>Ideaal voor vakantie of wellness — droogt snel en neemt weinig ruimte in.</p>"
+          }
+        },
+        "fr_3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_bpos85bpos85bpos.png",
+            "subheading": "Waarom kiezen voor hamamdoeken?",
+            "heading": "Reviews van onze klanten",
+            "heading_size": "h2",
+            "description": "<p>Meer dan 1300 klanten gaven ons vijf sterren.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "fr_1",
+        "fr_2",
+        "fr_3"
+      ],
+      "settings": {
+        "container": "container",
+        "color_schema": "scheme-5",
+        "image_position": "left",
+        "image_aspect_ratio": "3/2",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "custom_id": "",
+        "custom_class": "",
+        "eyebrow": "Waarom kiezen voor hamamdoeken?"
+      }
     }
   },
   "order": [
     "main",
     "73c8e618-10a0-43bf-b1d9-fa6707a4b913",
     "collapsible_tabs_VXwmxt",
+    "feature_reveal",
     "layered_images_UJjPRV",
     "scrolling_promotion_PcUJCR",
     "17803156782d3378ca",

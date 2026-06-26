@@ -1,1 +1,271 @@
-{"sections":{"main":{"type":"main-article","blocks":{"title":{"type":"title","settings":{"blog_show_date":true,"blog_show_author":true,"blog_show_reading_time":true,"title_text_align":"center","heading_size":"h1"}},"featured_image":{"type":"featured_image","settings":{"image_width":"container-narrow","image_height":"adapt"}},"content":{"type":"content","settings":{}},"share":{"type":"tags-share","settings":{"show_tags":true,"show_share":true}},"next-prev-article":{"type":"next-prev-article","settings":{}}},"block_order":["title","featured_image","content","share","next-prev-article"],"custom_css":[],"settings":{"show_breadcrumb":false,"brc_container":"container","brc_text_alignment":"center","enable_hero_background":true,"hero_color_scheme":"background-2","hero_overlap":240,"hero_overlap_mobile":140,"hero_padding_top":48,"meta_color":"#8a7a64","image_border_radius":16,"padding_top":0,"padding_bottom":100}},"scrolling_promotion":{"type":"scrolling-promotion","blocks":{"announcement_1":{"type":"announcement","settings":{"text":"Niet relaxed? <em>Geld terug. <\/em>","font_family":"heading","text_size":18,"text_link":"","use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"divider_1":{"type":"divider","settings":{"width":32,"use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"announcement_2":{"type":"announcement","settings":{"text":"<em>Gratis verstuurd <\/em> vanaf €40,- (NL)","font_family":"heading","text_size":18,"text_link":"","use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"divider_2":{"type":"divider","settings":{"width":32,"use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"announcement_3":{"type":"announcement","settings":{"text":"Voor 21:00 uur besteld =  <em>morgen in huis <\/em>","font_family":"heading","text_size":18,"text_link":"","use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"divider_3":{"type":"divider","settings":{"width":32,"use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"announcement_4":{"type":"announcement","settings":{"text":"<em>Grietje<\/em> helpt je graag!","font_family":"heading","text_size":18,"text_link":"","use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"divider_4":{"type":"divider","settings":{"width":32,"use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}}},"block_order":["announcement_1","divider_1","announcement_2","divider_2","announcement_3","divider_3","announcement_4","divider_4"],"settings":{"container":"container-full","color_schema":"background-2","section_header_padding_bottom":"small","section_header_content_spacing":"medium","heading":"","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h3","heading_color":"","subheading":"","description":"","alignment":"center","direction":"left","pause_on_hover":true,"speed":0.1,"item_gap":74,"item_gap_mobile":20,"padding_top":24,"padding_bottom":24,"use_custom_mobile_padding":true,"padding_top_mobile":20,"padding_bottom_mobile":20,"show_section_divider":true,"divider_width":"container-full","custom_id":"","custom_class":""}},"faq":{"type":"faq","blocks":{"faq_1":{"type":"faq_item","settings":{"title":"Hier een veelgestelde vraag","content":"<p>Vul hier het antwoord op de vraag in.</p>","open":false}},"faq_2":{"type":"faq_item","settings":{"title":"Hier een veelgestelde vraag","content":"<p>Vul hier het antwoord op de vraag in.</p>","open":false}},"faq_3":{"type":"faq_item","settings":{"title":"Hier een veelgestelde vraag","content":"<p>Vul hier het antwoord op de vraag in.</p>","open":false}}},"block_order":["faq_1","faq_2","faq_3"],"settings":{"container":"container","content_width":"full","color_schema":"background-2","heading":"Veelgestelde vragen","heading_size":"h2","heading_alignment":"left","item_heading_font":"body","item_heading_size":"h6","source":"auto","metafield_namespace":"custom","metafield_key":"faqs","metaobject_question_key":"vraag","metaobject_answer_key":"antwoord","padding_top":60,"padding_bottom":80}}},"order":["main","scrolling_promotion","faq"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": true,
+            "blog_show_author": true,
+            "blog_show_reading_time": true,
+            "title_text_align": "center",
+            "heading_size": "h1"
+          }
+        },
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_width": "container-narrow",
+            "image_height": "adapt"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        },
+        "share": {
+          "type": "tags-share",
+          "settings": {
+            "show_tags": true,
+            "show_share": true
+          }
+        },
+        "next-prev-article": {
+          "type": "next-prev-article",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "featured_image",
+        "content",
+        "share",
+        "next-prev-article"
+      ],
+      "custom_css": [],
+      "settings": {
+        "show_breadcrumb": false,
+        "brc_container": "container",
+        "brc_text_alignment": "center",
+        "enable_hero_background": true,
+        "hero_color_scheme": "background-2",
+        "hero_overlap": 240,
+        "hero_overlap_mobile": 140,
+        "hero_padding_top": 48,
+        "meta_color": "#8a7a64",
+        "image_border_radius": 16,
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "scrolling_promotion": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "announcement_1": {
+          "type": "announcement",
+          "settings": {
+            "text": "Niet relaxed? <em>Geld terug. </em>",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_1": {
+          "type": "divider",
+          "settings": {
+            "width": 32,
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "announcement_2": {
+          "type": "announcement",
+          "settings": {
+            "text": "<em>Gratis verstuurd </em> vanaf €40,- (NL)",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_2": {
+          "type": "divider",
+          "settings": {
+            "width": 32,
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "announcement_3": {
+          "type": "announcement",
+          "settings": {
+            "text": "Voor 21:00 uur besteld =  <em>morgen in huis </em>",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_3": {
+          "type": "divider",
+          "settings": {
+            "width": 32,
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "announcement_4": {
+          "type": "announcement",
+          "settings": {
+            "text": "<em>Grietje</em> helpt je graag!",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_4": {
+          "type": "divider",
+          "settings": {
+            "width": 32,
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "announcement_1",
+        "divider_1",
+        "announcement_2",
+        "divider_2",
+        "announcement_3",
+        "divider_3",
+        "announcement_4",
+        "divider_4"
+      ],
+      "settings": {
+        "container": "container-full",
+        "color_schema": "background-2",
+        "section_header_padding_bottom": "small",
+        "section_header_content_spacing": "medium",
+        "heading": "",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h3",
+        "heading_color": "",
+        "subheading": "",
+        "description": "",
+        "alignment": "center",
+        "direction": "left",
+        "pause_on_hover": true,
+        "speed": 0.1,
+        "item_gap": 74,
+        "item_gap_mobile": 20,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "use_custom_mobile_padding": true,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "show_section_divider": true,
+        "divider_width": "container-full",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Hier een veelgestelde vraag",
+            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "open": false
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Hier een veelgestelde vraag",
+            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "open": false
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Hier een veelgestelde vraag",
+            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "container": "container",
+        "content_width": "full",
+        "color_schema": "background-2",
+        "heading": "Veelgestelde vragen",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "item_heading_font": "body",
+        "item_heading_size": "h6",
+        "source": "auto",
+        "metafield_namespace": "custom",
+        "metafield_key": "faqs",
+        "metaobject_question_key": "vraag",
+        "metaobject_answer_key": "antwoord",
+        "padding_top": 60,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "main",
+    "scrolling_promotion",
+    "faq"
+  ]
+}

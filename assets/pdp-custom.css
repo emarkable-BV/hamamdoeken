@@ -5,6 +5,11 @@
   display: none;
 }
 
+/* App-blocks (bv. verborgen OPTIS) altijd zonder marge */
+.f-product-single__block[class~="f-product-single__block--@app"] {
+  margin: 0 !important;
+}
+
 /* ---------- Quantity naast ATC ---------- */
 .f-product-buy-row {
   gap: 1.2rem;
@@ -69,10 +74,13 @@
 .f-color-select__all {
   font-weight: 600;
   white-space: nowrap;
+  text-transform: none;
+  letter-spacing: normal;
 }
 .f-color-select__row {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 97px));
+  justify-content: start;
   gap: 1rem;
 }
 .f-color-select__thumb {
@@ -98,7 +106,31 @@
 
 /* ---------- Kleur-modal ---------- */
 .f-color-select__modal-heading {
-  margin: 0 0 2rem;
+  margin: 0 0 3.2rem;
+}
+
+/* Kleur-modal: afgerond (boven + onder), ruimere padding, cream sluitknop in de hoek */
+.f-color-select__modal .f-modal__content {
+  border-radius: 16px;
+  overflow: hidden;
+}
+.f-color-select__modal .f-modal__inner {
+  border-radius: 16px;
+  padding: 3.2rem;
+}
+.f-color-select__modal .f-modal__close {
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: #f7f2ed;
+  box-shadow: none;
+  border-radius: 0 0 0 2.2rem;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+}
+@media (max-width: 639.98px) {
+  .f-color-select__modal .f-modal__inner {
+    padding: 2.4rem 1.6rem;
+  }
 }
 .f-color-select__grid {
   display: grid;
@@ -128,12 +160,17 @@
 .f-color-select__card-btn {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 1.4rem;
+  top: auto;
+  transform: translateX(-50%);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease;
   white-space: nowrap;
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #1a1a1a;
+  text-transform: none;
 }
 .f-color-select__card:hover .f-color-select__card-btn,
 .f-color-select__card:focus-visible .f-color-select__card-btn {
@@ -162,6 +199,105 @@
 .f-offerte-cta__link {
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+/* Verberg de standaard OPTIS (BSS Product Options) UI op de PDP — we tonen onze eigen UI */
+.bss-po-option-set,
+.bss-po-product-page {
+  display: none !important;
+}
+
+/* ---------- OPTIS-optie (radio-cards), bv. plastic-vrije verzending ---------- */
+.f-optis-option {
+  margin-top: 0.4rem;
+}
+.f-optis-option__title {
+  margin: 0 0 1.2rem;
+}
+.f-optis-option__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+.f-optis-option__card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.6rem;
+  border: 1px solid rgba(var(--color-foreground), 0.2);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.f-optis-option__card:hover {
+  border-color: rgba(var(--color-foreground), 0.45);
+}
+.f-optis-option__card:has(.f-optis-option__input:checked) {
+  border-color: rgb(var(--color-foreground));
+  box-shadow: inset 0 0 0 1px rgb(var(--color-foreground));
+}
+.f-optis-option__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.f-optis-option__check {
+  flex: 0 0 auto;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-top: 0.2rem;
+  border: 1px solid rgba(var(--color-foreground), 0.3);
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.f-optis-option__check svg {
+  opacity: 0;
+}
+.f-optis-option__card:has(.f-optis-option__input:checked) .f-optis-option__check {
+  background: #3aa655;
+  border-color: #3aa655;
+}
+.f-optis-option__card:has(.f-optis-option__input:checked) .f-optis-option__check svg {
+  opacity: 1;
+}
+.f-optis-option__input:focus-visible + .f-optis-option__check {
+  outline: 2px solid rgb(var(--color-foreground));
+  outline-offset: 2px;
+}
+.f-optis-option__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.f-optis-option__label {
+  font-weight: 700;
+}
+.f-optis-option__price {
+  color: rgba(var(--color-foreground), 0.7);
+}
+.f-optis-option__price.is-green {
+  color: #3aa655;
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .f-optis-option__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Bestel samen met: quick-action knoppen (oog / tasje) — beide afgerond + kleine gap */
+.f-complementary-products .product-card__actions {
+  gap: 0.6rem;
+  overflow: visible;
+}
+.f-complementary-products .product-card__actions .product-card__action-button {
+  border-radius: 10px;
 }
 
 @media (max-width: 767.98px) {

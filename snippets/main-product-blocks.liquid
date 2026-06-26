@@ -3,6 +3,7 @@
 -%}
 {%- comment %} CUSTOM (Hamamdoeken): styling voor color_selector, offerte_cta, inline quantity, variant buttons {% endcomment -%}
 {{ 'pdp-custom.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'optis-option.js' | asset_url }}" defer="defer"></script>
 <div
   id="ProductInfo-{{ section.id }}"
   class="f-product-single__blocks{% if enable_sticky_info %} sticky-element{% endif %}"
@@ -692,6 +693,20 @@
               endif
             -%}
             {% if block.settings.show_atc_button or show_dynamic_checkout %}
+              {%- comment %} CUSTOM (Hamamdoeken): prijs onder de OPTIS-opties, direct boven de ATC {% endcomment -%}
+              {%- if block.settings.show_inline_price -%}
+                <div id="Price-{{ section.id }}" role="status" class="f-product-buy-price">
+                  {%- render 'price',
+                    product: product,
+                    use_variant: true,
+                    show_soldout_badge: true,
+                    price_class: 'f-price--large text-lg sm:text-xl'
+                  -%}
+                </div>
+                {%- if shop.taxes_included -%}
+                  <div class="f-product-single__block-tax text-subtext">{{ 'products.product.include_taxes' | t }}</div>
+                {%- endif -%}
+              {%- endif -%}
               {%- comment %} CUSTOM (Hamamdoeken): quantity-stepper naast de ATC {% endcomment -%}
               {%- if block.settings.show_inline_quantity -%}
                 {%- assign inline_min = product.selected_or_first_available_variant.quantity_rule.min -%}
@@ -1045,6 +1060,68 @@
           {% if settings.pcard_show_quickview_button == false and block.settings.enable_quick_view %}
             <script src="{{ 'quick-view.js' | asset_url }}" defer="defer"></script>
           {% endif %}
+        {%- comment %} CUSTOM (Hamamdoeken): "Bestel samen met" gevuld via metaveld custom.bestel_samen_met (lijst van producten) {% endcomment -%}
+        {%- when 'bestel_samen_met' -%}
+          {%- liquid
+            assign cross_products = product.metafields.custom.bestel_samen_met.value
+            assign has_cross = false
+            if cross_products != blank and cross_products != empty
+              assign has_cross = true
+            endif
+          -%}
+          {%- if has_cross -%}
+            {%- liquid
+              assign per_page = block.settings.products_per_page | default: 1
+              assign total = cross_products.size
+              if block.settings.product_list_limit and total > block.settings.product_list_limit
+                assign total = block.settings.product_list_limit
+              endif
+              assign number_of_slides = total | plus: 0.0 | divided_by: per_page | ceil
+              assign enable_slider = false
+              if number_of_slides > 1 and block.settings.enable_slider
+                assign enable_slider = true
+              endif
+            -%}
+            <div class="f-complementary-products block relative">
+              {% unless block.settings.block_heading == blank %}
+                <h3 class="f-complementary-products__block-heading font-body-bolder h6">
+                  {{ block.settings.block_heading }}
+                </h3>
+              {% endunless %}
+              <flickity-component
+                class="f-grid f-grid-1-cols{% if enable_slider %} flickity-enable{% endif %}"
+                data-slider-options='{"pageDots": true, "prevNextButtons": false, "groupCells": 1, "cellSelector": ".f-complementary-products__slide", "wrapAround": true, "adaptiveHeight": true}'
+                data-slider-columns="1"
+                data-enable-slider="{{ enable_slider }}"
+                style="--pagination-width: 2.5rem;--button-size: 3.6rem;--button-size-mobile: 3.6rem;"
+              >
+                {%- for i in (1..number_of_slides) -%}
+                  <div class="f-complementary-products__slide w-full">
+                    {%- for cp in cross_products limit: per_page offset: continue -%}
+                      <div class="f-column">
+                        {% render 'product-card',
+                          product: cp,
+                          custom_class: 'bg-secondary',
+                          is_complementary: true,
+                          list_layout: true,
+                          index: forloop.index,
+                          section_index: section.index,
+                          image_ratio: block.settings.image_ratio,
+                          enable_quick_add: block.settings.enable_quick_add,
+                          enable_quick_view: block.settings.enable_quick_view,
+                          color_schema: 'background-1',
+                          show_product_option: block.settings.pcard_show_color_swatch
+                        %}
+                      </div>
+                    {%- endfor -%}
+                  </div>
+                {%- endfor -%}
+              </flickity-component>
+            </div>
+            {% if settings.pcard_show_quickview_button == false and block.settings.enable_quick_view %}
+              <script src="{{ 'quick-view.js' | asset_url }}" defer="defer"></script>
+            {% endif %}
+          {%- endif -%}
         {%- when 'inventory_status' -%}
           {%- render 'product-inventory',
             product: product,
@@ -1153,7 +1230,7 @@
               {%- endif -%}
             </div>
           </div>
-          <modal-dialog id="PopupModal-{{ modal_id }}" class="f-modal hidden" style="--modal-width: 880px">
+          <modal-dialog id="PopupModal-{{ modal_id }}" class="f-modal f-color-select__modal hidden" style="--modal-width: 720px; --color-overlay-alpha: 22;">
             <div class="f-modal__content" role="dialog" aria-label="{{ block.settings.heading | default: 'Selecteer een kleur:' }}" aria-modal="true" tabindex="-1">
               <div class="scroll-container">
                 <button id="ModalClose-{{ modal_id }}" type="button" class="f-modal__close" aria-label="{{ 'accessibility.close' | t }}">
@@ -1162,7 +1239,7 @@
                   {% comment %} theme-check-enable {% endcomment %}
                 </button>
                 <div class="f-modal__inner">
-                  <h3 class="f-color-select__modal-heading h4">{{ block.settings.heading | default: 'Selecteer een kleur:' }}</h3>
+                  <h3 class="f-color-select__modal-heading h3">{{ block.settings.heading | default: 'Selecteer een kleur:' }}</h3>
                   <div class="f-color-select__grid">
                     {%- if sibling_count > 0 -%}
                       <a href="{{ product.url }}" class="f-color-select__card is-active">
@@ -1216,6 +1293,52 @@
                 {%- endif -%}
               </div>
             </div>
+          {%- endif -%}
+        {%- comment %} CUSTOM (Hamamdoeken): OPTIS-optie met eigen UI (radio-cards) — submit via line item property zodat OPTIS de toeslag toepast {% endcomment -%}
+        {%- when 'optis_option' -%}
+          {%- if block.settings.title != blank and block.settings.choice_1_label != blank -%}
+            {%- assign prop_name = block.settings.property_name | default: block.settings.title -%}
+            {%- assign default_n = block.settings.default_choice | plus: 0 -%}
+            <optis-option class="f-optis-option" data-optis-key="po_{{ prop_name | escape }}">
+              {%- if block.settings.title != blank -%}
+                <p class="f-optis-option__title font-body-bolder">{{ block.settings.title }}</p>
+              {%- endif -%}
+              <div class="f-optis-option__cards">
+                {%- for n in (1..3) -%}
+                  {%- liquid
+                    assign lkey = 'choice_' | append: n | append: '_label'
+                    assign vkey = 'choice_' | append: n | append: '_value'
+                    assign pkey = 'choice_' | append: n | append: '_price'
+                    assign gkey = 'choice_' | append: n | append: '_price_green'
+                    assign clabel = block.settings[lkey]
+                    assign cvalue = block.settings[vkey] | default: clabel
+                    assign cprice = block.settings[pkey]
+                    assign cgreen = block.settings[gkey]
+                  -%}
+                  {%- if clabel != blank -%}
+                    <label class="f-optis-option__card">
+                      <input
+                        type="radio"
+                        class="f-optis-option__input"
+                        name="optis-ui-{{ block.id }}"
+                        value="{{ cvalue | escape }}"
+                        data-optis-value="{{ cvalue | escape }}"
+                        {% if default_n == n %}checked{% endif %}
+                      >
+                      <span class="f-optis-option__check" aria-hidden="true">
+                        <svg viewBox="0 0 16 16" width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </span>
+                      <span class="f-optis-option__text">
+                        <span class="f-optis-option__label">{{ clabel }}</span>
+                        {%- if cprice != blank -%}
+                          <span class="f-optis-option__price{% if cgreen %} is-green{% endif %}">{{ cprice }}</span>
+                        {%- endif -%}
+                      </span>
+                    </label>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            </optis-option>
           {%- endif -%}
         {% else %}
       {%- endcase -%}

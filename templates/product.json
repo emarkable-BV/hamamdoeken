@@ -22,20 +22,20 @@
             "heading_size": "h1"
           }
         },
-        "text_ic7ynF": {
-          "type": "text",
-          "settings": {
-            "icon": "box",
-            "text": "{{ product.metafields.custom.levertijd.value }}",
-            "text_style": "body"
-          }
-        },
         "59ca3415-b1aa-4301-b178-ad6e434ba477": {
           "type": "inventory_status",
           "settings": {
             "inventory_threshold": 10,
             "show_as_progress": true,
             "enable_inventory_transfer": true
+          }
+        },
+        "text_ic7ynF": {
+          "type": "text",
+          "settings": {
+            "icon": "box",
+            "text": "{{ product.metafields.custom.levertijd.value }}",
+            "text_style": "body"
           }
         },
         "c9d012f0-f3f5-4c1b-b197-e7c8f9de13ac": {
@@ -55,7 +55,7 @@
           }
         },
         "color_selector": {
-          "type": "color_selector", 
+          "type": "color_selector",
           "settings": {
             "heading": "Selecteer een kleur:",
             "view_all_label": "Bekijk alle kleuren",
@@ -64,12 +64,10 @@
             "modal_placeholder_count": 12
           }
         },
-        "4813cc96-81ff-4094-bd6a-4bf96eab69e9": {
-          "type": "complementary",
+        "bestel_samen_met": {
+          "type": "bestel_samen_met",
           "settings": {
             "block_heading": "Bestel samen met:",
-            "make_collapsible_row": false,
-            "icon": "none",
             "product_list_limit": 4,
             "products_per_page": 1,
             "enable_slider": true,
@@ -79,16 +77,28 @@
             "pcard_show_color_swatch": true
           }
         },
-        "price": {
-          "type": "price",
+        "optis_plasticvrij": {
+          "type": "optis_option",
           "settings": {
-            "show_sale_badge": false,
-            "sale_badge_type": "percentage"
+            "title": "Kies voor een plastic-vrije verzending",
+            "property_name": "Plasticvrije verzending",
+            "default_choice": "1",
+            "choice_1_label": "Ja, ik wil een plasticvrije verzending",
+            "choice_1_value": "",
+            "choice_1_price": "+ €5,00",
+            "choice_1_price_green": true,
+            "choice_2_label": "Nee, ik wil geen plasticvrije verzending",
+            "choice_2_value": "",
+            "choice_2_price": "+ €0,00",
+            "choice_2_price_green": false,
+            "choice_3_label": "",
+            "choice_3_value": "",
+            "choice_3_price": "",
+            "choice_3_price_green": false
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "disabled": true,
+        "optis_product_options_option_set_mgGPKg": {
+          "type": "shopify://apps/optis-product-options/blocks/option-set/2c446099-c349-4e73-80cd-49c9770b7807",
           "settings": {}
         },
         "buy_buttons": {
@@ -97,7 +107,8 @@
             "show_atc_button": true,
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true,
-            "show_inline_quantity": true
+            "show_inline_quantity": true,
+            "show_inline_price": true
           }
         },
         "offerte_cta": {
@@ -149,6 +160,11 @@
             "text": "Grietje helpt je graag!",
             "text_style": "body"
           }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
         },
         "f11043ac-1746-42ad-a36b-91ff4cc9f432": {
           "type": "collapsible_tab",
@@ -203,8 +219,9 @@
         "c9d012f0-f3f5-4c1b-b197-e7c8f9de13ac",
         "variant_picker",
         "color_selector",
-        "4813cc96-81ff-4094-bd6a-4bf96eab69e9",
-        "price",
+        "bestel_samen_met",
+        "optis_plasticvrij",
+        "optis_product_options_option_set_mgGPKg",
         "buy_buttons",
         "offerte_cta",
         "essential_countdown_timer_app_block_Jdx7tr",
@@ -639,7 +656,8 @@
             "arrows_color": "#000000",
             "transition_speed": 5,
             "header_text": "Beoordelingen",
-            "show_average_rating": true
+            "show_average_rating": true,
+            "rating_display": "default"
           }
         }
       },

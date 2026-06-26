@@ -406,6 +406,13 @@
           "default": false,
           "label": "Hoeveelheid-selector naast ATC tonen",
           "info": "Zet ook het losse 'Quantity selector'-block uit om dubbele te voorkomen."
+        },
+        {
+          "type": "checkbox",
+          "id": "show_inline_price",
+          "default": false,
+          "label": "Prijs tonen boven de ATC",
+          "info": "Toont de prijs onderaan (onder de OPTIS-opties). Zet het losse 'Price'-block uit om dubbele te voorkomen."
         }
       ]
     },
@@ -478,6 +485,190 @@
           "id": "link",
           "label": "Link",
           "info": "Standaard: /pages/offerte-aanvragen"
+        }
+      ]
+    },
+    {
+      "type": "bestel_samen_met",
+      "name": "Bestel samen met",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Vul per product het metaveld custom.bestel_samen_met (lijst van producten). Leeg = block verschijnt niet."
+        },
+        {
+          "type": "text",
+          "id": "block_heading",
+          "label": "Titel",
+          "default": "Bestel samen met:"
+        },
+        {
+          "type": "range",
+          "id": "product_list_limit",
+          "label": "Max. aantal producten",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 4
+        },
+        {
+          "type": "range",
+          "id": "products_per_page",
+          "label": "Producten per slide",
+          "min": 1,
+          "max": 3,
+          "step": 1,
+          "default": 1
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_slider",
+          "label": "Slider inschakelen",
+          "default": true
+        },
+        {
+          "type": "select",
+          "id": "image_ratio",
+          "label": "Beeldverhouding",
+          "default": "1/1",
+          "options": [
+            { "value": "adapt", "label": "Origineel" },
+            { "value": "1/1", "label": "Vierkant (1:1)" },
+            { "value": "3/4", "label": "Portret (3:4)" },
+            { "value": "4/3", "label": "Liggend (4:3)" }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_quick_add",
+          "label": "Snel toevoegen-knop",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_quick_view",
+          "label": "Quick view-knop",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "pcard_show_color_swatch",
+          "label": "Kleur-swatches tonen",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "optis_option",
+      "name": "OPTIS optie (custom)",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Eigen UI voor een OPTIS (BSS) optie. De keuze klikt automatisch OPTIS' verborgen radio aan (OPTIS-UI is via CSS verborgen). 'Property naam' = exacte OPTIS-optienaam; elke 'Waarde' = exacte OPTIS-waarde. Laat Waarde leeg om het label te gebruiken (dan moet de OPTIS-waarde gelijk zijn aan het label)."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titel",
+          "default": "Kies voor een plastic-vrije verzending"
+        },
+        {
+          "type": "text",
+          "id": "property_name",
+          "label": "Property naam (= OPTIS optienaam)",
+          "default": "Plasticvrije verzending"
+        },
+        {
+          "type": "select",
+          "id": "default_choice",
+          "label": "Standaard geselecteerd",
+          "default": "1",
+          "options": [
+            { "value": "1", "label": "Keuze 1" },
+            { "value": "2", "label": "Keuze 2" },
+            { "value": "3", "label": "Keuze 3 (geen)" }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "Keuze 1"
+        },
+        {
+          "type": "text",
+          "id": "choice_1_label",
+          "label": "Label",
+          "default": "Ja, ik wil een plasticvrije verzending"
+        },
+        {
+          "type": "text",
+          "id": "choice_1_value",
+          "label": "Waarde (= OPTIS waarde)",
+          "info": "Leeg = gebruik het label."
+        },
+        {
+          "type": "text",
+          "id": "choice_1_price",
+          "label": "Prijs-tekst",
+          "default": "+ €5,00"
+        },
+        {
+          "type": "checkbox",
+          "id": "choice_1_price_green",
+          "label": "Prijs groen tonen",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Keuze 2"
+        },
+        {
+          "type": "text",
+          "id": "choice_2_label",
+          "label": "Label",
+          "default": "Nee, ik wil geen plasticvrije verzending"
+        },
+        {
+          "type": "text",
+          "id": "choice_2_value",
+          "label": "Waarde (= OPTIS waarde)"
+        },
+        {
+          "type": "text",
+          "id": "choice_2_price",
+          "label": "Prijs-tekst",
+          "default": "+ €0,00"
+        },
+        {
+          "type": "checkbox",
+          "id": "choice_2_price_green",
+          "label": "Prijs groen tonen",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "Keuze 3 (optioneel)"
+        },
+        {
+          "type": "text",
+          "id": "choice_3_label",
+          "label": "Label"
+        },
+        {
+          "type": "text",
+          "id": "choice_3_value",
+          "label": "Waarde (= OPTIS waarde)"
+        },
+        {
+          "type": "text",
+          "id": "choice_3_price",
+          "label": "Prijs-tekst"
+        },
+        {
+          "type": "checkbox",
+          "id": "choice_3_price_green",
+          "label": "Prijs groen tonen",
+          "default": false
         }
       ]
     },

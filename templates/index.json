@@ -1,1 +1,1061 @@
-{"sections":{"scrolling_promotion_iTai8F":{"type":"scrolling-promotion","blocks":{"announcement_LLfN6U":{"type":"announcement","settings":{"text":"Niet relaxed? <em>Geld terug. <\/em>","font_family":"heading","text_size":18,"text_link":"","use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"divider_iakTx3":{"type":"divider","settings":{"width":32,"use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"announcement_a9HqUw":{"type":"announcement","settings":{"text":"<em>Gratis verstuurd <\/em> vanaf €40,- (NL)","font_family":"heading","text_size":18,"text_link":"","use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"divider_heKmMB":{"type":"divider","settings":{"width":32,"use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"announcement_U4PbAD":{"type":"announcement","settings":{"text":"Voor 21:00 uur besteld =  <em>morgen in huis <\/em>","font_family":"heading","text_size":18,"text_link":"","use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"divider_M7NwA8":{"type":"divider","settings":{"width":32,"use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"announcement_ciphpc":{"type":"announcement","settings":{"text":"<em>Grietje<\/em> helpt je graag!","font_family":"heading","text_size":18,"text_link":"","use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}},"divider_XFHkUL":{"type":"divider","settings":{"width":32,"use_custom_spacing":false,"margin_left":15,"margin_right":15,"margin_left_mobile":10,"margin_right_mobile":10}}},"block_order":["announcement_LLfN6U","divider_iakTx3","announcement_a9HqUw","divider_heKmMB","announcement_U4PbAD","divider_M7NwA8","announcement_ciphpc","divider_XFHkUL"],"settings":{"container":"container-full","color_schema":"background-2","section_header_padding_bottom":"small","section_header_content_spacing":"medium","heading":"","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h3","heading_color":"","subheading":"","description":"","alignment":"center","direction":"left","pause_on_hover":true,"speed":0.1,"item_gap":74,"item_gap_mobile":20,"padding_top":24,"padding_bottom":24,"use_custom_mobile_padding":true,"padding_top_mobile":20,"padding_bottom_mobile":20,"show_section_divider":true,"divider_width":"container-full","custom_id":"","custom_class":""}},"d8a17c2d-b43a-460f-b740-f56e8cc11111":{"type":"collection-list","blocks":{"template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-1":{"type":"featured_collection","settings":{"collection":"hamamdoek","image":"{{ block.settings.collection.image }}","title":"Hamamdoeken"}},"template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-3":{"type":"featured_collection","settings":{"collection":"badjas","image":"{{ block.settings.collection.image }}","title":"Badjassen"}},"template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-4":{"type":"featured_collection","settings":{"collection":"beachwear-1","image":"{{ block.settings.collection.image }}","title":"Beachwear"}},"template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-5":{"type":"featured_collection","settings":{"collection":"bestsellers","image":"{{ block.settings.collection.image }}","title":"Bestsellers"}},"template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-2":{"type":"featured_collection","settings":{"collection":"specials","image":"{{ block.settings.collection.image }}","title":"Specials"}}},"block_order":["template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-1","template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-3","template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-4","template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-5","template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-2"],"custom_css":[".section__header--text {max-width: 77rem; margin-inline: auto;}"],"settings":{"container":"container","color_schema":"background-2","section_header_padding_bottom":"medium","section_header_content_spacing":"medium","header_layout":"vertical","heading":"Gemaakt van <em>pure materialen<\/em> die zacht aanvoelen en luxe uitstralen. Ontdek de collectie die rust, comfort en stijl samenbrengt.","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h3","heading_color":"","subheading":"","description":"","title_font":"heading","title_size":"h4","card_style":"4","text_alignment":"left","text_color":"#ffffff","image_ratio":"3\/4","show_count":false,"inline_count":false,"columns":5,"column_gap":"double-extra-small","row_gap":"double-extra-small","show_all_button_on_top":true,"button_label":"","button_url":"","button_style":"btn--underline","enable_slider":true,"show_dots":false,"show_nav":true,"enable_swipe_mobile":true,"column_mobile":"2","padding_top":70,"padding_bottom":70,"padding_top_mobile":54,"padding_bottom_mobile":54,"show_section_divider":false,"divider_width":"container","custom_id":"","custom_class":"","animations":"inherit"}},"uneven_image_cards_FktnTR":{"type":"uneven-image-cards","blocks":{"image_with_text_9MkQMh":{"type":"image_with_text","settings":{"image":"shopify:\/\/shop_images\/43789600-6eac-4d53-ae3b-030837362231-2026-05-27.png","image_ratio":"4\/3","sub_heading":"","heading":"Over Hamamdoeken.com","highlight_style":"underline","enable_highlight_text_color":false,"heading_size":"h3","heading_color":"","description":"<p>Hamamdoeken.com is ontstaan vanuit een simpele gedachte: producten aanbieden die bijdragen aan rustmomenten in je dag. Of je nu naar de sauna gaat, op reis bent of thuis even tijd voor jezelf neemt.<\/p>","button_label":"Meer over ons","button_link":"#","button_style":"btn--primary","text_alignment":"left","content_spacing":"medium"}},"image_card_KJWVn9":{"type":"image_card","settings":{"layout":"layout1","text_color":"#ffffff","image_ratio":"adapt","image_overlay_opacity":0,"sub_heading":"","heading":"Image card","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h2","heading_color":"#ffffff","description":"<p>Combine images with text and a stand-out offer<\/p>","button_label":"Button label","button_link":"","button_style":"btn--primary","vertical_content_padding":40,"vertical_content_padding_mobile":40}}},"block_order":["image_with_text_9MkQMh","image_card_KJWVn9"],"disabled":true,"name":"t:sections.uneven-image-cards.name","settings":{"color_schema":"inverse","section_header_padding_bottom":"medium","section_header_content_spacing":"medium","heading":"","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h1","heading_color":"","subheading":"","description":"","vertical_alignment":"center","padding_top":84,"padding_bottom":84,"show_section_divider":false,"divider_width":"container","custom_id":"","custom_class":"","animations":"inherit"}},"product_tabs_DbXGit":{"type":"product-tabs","blocks":{"tab_gX7DNe":{"type":"tab","settings":{"title":"Kikoy","collection":"kikoy-3"}},"tab_9BqXTy":{"type":"tab","settings":{"title":"Reishanddoeken","collection":"reis-handdoeken"}},"tab_YJ464H":{"type":"tab","settings":{"title":"Saunadoeken","collection":"saunadoeken-1"}},"tab_8q6nBX":{"type":"tab","settings":{"title":"Strandlakens","collection":"strandlakens-1"}},"tab_K48hrW":{"type":"tab","settings":{"title":"Toilet handdoekjes","collection":"toilet-handdoekjes-1"}}},"block_order":["tab_gX7DNe","tab_9BqXTy","tab_YJ464H","tab_8q6nBX","tab_K48hrW"],"settings":{"container":"container","color_schema":"","layout":"vertical","heading":"Onze best verkochte <em>hamamdoeken<\/em>","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h1","heading_color":"","subheading":"","description":"","limit":6,"columns":4,"column_gap":"double-extra-small","row_gap":"medium","enable_slider":true,"show_nav":false,"show_dots":false,"pcard_image_ratio":"","show_vendor":false,"button_label":"","button_style":"btn--primary","enable_swipe_mobile":true,"column_mobile":"1","padding_top":70,"padding_bottom":100,"show_section_divider":false,"divider_width":"container","custom_id":"","custom_class":"","animations":"inherit"}},"collage_tabs_gGLqFt":{"type":"collage-tabs","blocks":{"tab_6ffiRX":{"type":"tab","settings":{"content_color_schema":"","navigation_title":"Tab 2","image":"shopify:\/\/shop_images\/vaderdag.jpg","heading":"Speciaal voor <em>vaderdag<\/em>","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h2","heading_color":"","subheading":"","description":"<p>Vaders zeggen altijd dat ze niets nodig hebben. Maar een badjas die voelt als thuiskomen, of een hamamdoek die meegaat op elke reis — dat is geen luxe. Dat is gewoon goed.<\/p><p>Of je nu zoekt voor je vader, schoonvader of die ene man die altijd voor iedereen klaarstaat: wij helpen je kiezen. Van los cadeau tot complete set.<\/p>","text_alignment":"left","button_label":"Bekijk de giftsets","button_link":"#","button_style":"btn--primary","mobile_text_alignment":"inherit"}}},"block_order":["tab_6ffiRX"],"name":"t:sections.collage-tabs.presets.name","settings":{"container":"container","color_schema":"","tab_heading_size":"h4","desktop_navigation_alignment":"center","desktop_image_position":"left","desktop_image_width":50,"image_aspect_ratio":"adapt","padding_top":0,"padding_bottom":0,"show_section_divider":false,"divider_width":"container","custom_id":"","custom_class":"","animations":"inherit"}},"product_tabs_iE3mUL":{"type":"product-tabs","blocks":{"tab_TRUxMg":{"type":"tab","settings":{"title":"Strandponcho's","collection":"strandponcho-s-voor-strand-zwembad-en-sauna"}},"tab_aYyiGN":{"type":"tab","settings":{"title":"Strandtunieken","collection":"strandtunieken-2"}},"tab_jNJ8bN":{"type":"tab","settings":{"title":"Strandtassen","collection":"strandtassen-2"}},"tab_kX4KWE":{"type":"tab","settings":{"title":"Strand accessoires","collection":"sauna-accessoires"}}},"block_order":["tab_TRUxMg","tab_aYyiGN","tab_jNJ8bN","tab_kX4KWE"],"settings":{"container":"container","color_schema":"","layout":"vertical","heading":"Populair voor <em>dit seizoen<\/em>","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h1","heading_color":"","subheading":"","description":"","limit":6,"columns":4,"column_gap":"double-extra-small","row_gap":"medium","enable_slider":true,"show_nav":false,"show_dots":false,"pcard_image_ratio":"","show_vendor":false,"button_label":"","button_style":"btn--primary","enable_swipe_mobile":true,"column_mobile":"1","padding_top":84,"padding_bottom":100,"show_section_divider":false,"divider_width":"container","custom_id":"","custom_class":"","animations":"inherit"}},"collections_showcase_FFFDEF":{"type":"collections-showcase","blocks":{"collection_xg6m7A":{"type":"collection","settings":{"collection":"","heading":"Active tops","heading_size":"h-xl","subheading":"Your style, your <em>happy place<\/em>","subheading_size":"h1","text":"<p>Discover the latest arrivals, solve your style dilemmas, and create the perfect outfit for any occasion—effortless fashion and lasting confidence start here.<\/p>","button_label":"Shop all items","button_style":"btn--underline"}},"collection_phjCxF":{"type":"collection","settings":{"collection":"","heading":"Working girl","heading_size":"h-xl","subheading":"Where fashion <em>meets happiness<\/em>","subheading_size":"h1","text":"<p>From trendsetting pieces to wardrobe staples, we help you find looks you love while making style decisions easy, exciting, and truly stress-free every day.<\/p>","button_label":"Shop all items","button_style":"btn--underline"}},"collection_PdRqrM":{"type":"collection","settings":{"collection":"","heading":"Classic","heading_size":"h-xl","subheading":"Effortless style, <em>endless confidence<\/em>","subheading_size":"h1","text":"<p>Stay ahead of trends with expert-curated outfits, must-have essentials, and bold statement fashion finds designed to make you feel and look your absolute best.<\/p>","button_label":"Shop all items","button_style":"btn--underline"}},"collection_6TBGfa":{"type":"collection","settings":{"collection":"","heading":"Biker shorts","heading_size":"h-xl","subheading":"Perfectly curated <em>selection for you<\/em>","subheading_size":"h1","text":"<p>Unlock a world of fashion tailored to your unique style as you shop fresh arrivals, refine your wardrobe, and fully embrace confidence with every outfit choice.<\/p>","button_label":"Shop all items","button_style":"btn--underline"}}},"block_order":["collection_xg6m7A","collection_phjCxF","collection_PdRqrM","collection_6TBGfa"],"disabled":true,"custom_css":["@media (min-width: 1024px) and (max-width: 1279px) {.collections-showcase .f-grid {gap: 5rem; }}"],"settings":{"container":"container","color_schema":"background-2","heading":"","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h2","heading_color":"","subheading":"Customer Favorites","description":"","image_ratio":"adapt","padding_top":100,"padding_bottom":100,"show_section_divider":false,"divider_width":"container","custom_id":"","custom_class":"","animations":"inherit"}},"ca86682f-4e38-4a06-bfea-4ae1b2f63985":{"type":"scrolling-promotion","blocks":{"template--17157701533922__ca86682f-4e38-4a06-bfea-4ae1b2f63985-image-1":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/image.webp","image_height":74,"image_link":"#","use_custom_spacing":false,"margin_left":10,"margin_right":10,"margin_left_mobile":10,"margin_right_mobile":10}},"c882f440-e3c1-41cf-b46b-dd0f63b9d9e9":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/image-1.webp","image_height":62,"image_link":"","use_custom_spacing":false,"margin_left":10,"margin_right":10,"margin_left_mobile":10,"margin_right_mobile":10}},"e6a0916a-52af-45c2-8839-c6877445a6d7":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/image-2.webp","image_height":92,"image_link":"","use_custom_spacing":false,"margin_left":10,"margin_right":10,"margin_left_mobile":10,"margin_right_mobile":10}},"image_MgzMz6":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/hamamdoeken-logo.svg","image_height":20,"image_link":"","use_custom_spacing":false,"margin_left":10,"margin_right":10,"margin_left_mobile":10,"margin_right_mobile":10}},"image_tf4tek":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/image-3.webp","image_height":68,"image_link":"","use_custom_spacing":false,"margin_left":10,"margin_right":10,"margin_left_mobile":10,"margin_right_mobile":10}},"image_dUhXei":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/image-4.webp","image_height":68,"image_link":"","use_custom_spacing":false,"margin_left":10,"margin_right":10,"margin_left_mobile":10,"margin_right_mobile":10}},"image_cNGBLy":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/image-5.webp","image_height":80,"image_link":"","use_custom_spacing":false,"margin_left":10,"margin_right":10,"margin_left_mobile":10,"margin_right_mobile":10}}},"block_order":["template--17157701533922__ca86682f-4e38-4a06-bfea-4ae1b2f63985-image-1","c882f440-e3c1-41cf-b46b-dd0f63b9d9e9","e6a0916a-52af-45c2-8839-c6877445a6d7","image_MgzMz6","image_tf4tek","image_dUhXei","image_cNGBLy"],"custom_css":[],"settings":{"container":"container-full","color_schema":"background-1","section_header_padding_bottom":"small","section_header_content_spacing":"small","heading":"Onze merken","highlight_style":"none","enable_highlight_text_color":true,"heading_size":"h3","heading_color":"","subheading":"","description":"","alignment":"center","direction":"left","pause_on_hover":true,"speed":0.1,"item_gap":70,"item_gap_mobile":40,"padding_top":46,"padding_bottom":46,"use_custom_mobile_padding":true,"padding_top_mobile":24,"padding_bottom_mobile":24,"show_section_divider":true,"divider_width":"container-full","custom_id":"","custom_class":""}},"layered_images_qfGire":{"type":"layered-images","blocks":{"row_yTLzP4":{"type":"row","settings":{"image":"shopify:\/\/shop_images\/ambachtelijk-geweven_19ddb75a-7bf7-4b91-b9ad-c66fb00cf77e.png","heading":"Ambachtelijk geweven <em> in kleine oplages<\/em>","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h1","heading_color":"","subheading":"Waarom kiezen voor hamamdoeken?","description":"","button_label":"","button_link":"","button_style":"btn--primary","button_size":""}},"row_3C6rQR":{"type":"row","settings":{"image":"shopify:\/\/shop_images\/sneldrogend-compact.png","heading":"Sneldrogend en compact,<em> ideaal voor vakantie of wellness<\/em>","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h1","heading_color":"","subheading":"Waarom kiezen voor hamamdoeken?","description":"","button_label":"","button_link":"","button_style":"btn--primary","button_size":""}},"row_kWffPX":{"type":"row","settings":{"image":"shopify:\/\/shop_images\/Gemini_Generated_Image_bpos85bpos85bpos.png","heading":"Meer dan 1300 <em>vijfsterren reviews<\/em>","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h1","heading_color":"","subheading":"Waarom kiezen voor hamamdoeken?","description":"","button_label":"","button_link":"","button_style":"btn--primary","button_size":""}}},"block_order":["row_yTLzP4","row_3C6rQR","row_kWffPX"],"settings":{"color_schema":"scheme-5","image_aspect_ratio":"4\/3","vertical_alignment":"center","padding_top":74,"padding_bottom":74,"show_section_divider":false,"divider_width":"container","custom_id":"","custom_class":""}},"featured_blog_WpJLmP":{"type":"featured-blog","name":"t:sections.featured-blog.presets.name","settings":{"container":"container","color_schema":"background-2","heading":"Lees onze <em>blogs<\/em>","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h1","heading_color":"","subheading":"","description":"","blog":"news","image_aspect_ratio":"4\/3","article_heading_size":"h5","show_date":true,"show_excerpt":false,"show_readmore":true,"button_label":"","button_style":"btn--underline","limit":4,"columns":4,"column_gap":"medium","row_gap":"medium","enable_slider":false,"show_dots":false,"show_nav":false,"enable_swipe_mobile":false,"column_mobile":"1","show_excerpt_mobile":false,"padding_top":74,"padding_bottom":90,"show_section_divider":false,"divider_width":"container","custom_id":"","custom_class":"","animations":"inherit"}},"1779974222d5fcffce":{"type":"apps","blocks":{"judge_me_reviews_all_reviews_text_wfWfdM":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/all_reviews_text\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{}}},"block_order":["judge_me_reviews_all_reviews_text_wfWfdM"],"settings":{"container":"container","color_schema":"background-2","heading":"","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h2","heading_color":"","description":"","padding_top":0,"padding_bottom":64}},"custom_content_9ypmPF":{"type":"custom-content","blocks":{"image_card_pVjRL9":{"type":"image_card","settings":{"layout":"layout1","text_color":"#ffffff","image":"shopify:\/\/shop_images\/ambachtelijk-geweven_19ddb75a-7bf7-4b91-b9ad-c66fb00cf77e.png","image_ratio":"4\/3","image_overlay_opacity":40,"sub_heading":"","heading":"Ambachtelijk geweven","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h3","heading_color":"","description":"<p>Onze producten zijn ambachtelijk geweven in kleine oplages, dit zorgt voor verschillende structuren en zachtheid.<\/p>","button_label":"","button_link":"","button_style":"btn--primary","vertical_content_padding":32,"vertical_content_padding_mobile":24,"alignment":"center","width":"33%","animations":"inherit"}},"image_card_aFQgJX":{"type":"image_card","settings":{"layout":"layout1","text_color":"#ffffff","image":"shopify:\/\/shop_images\/sneldrogend-compact.png","image_ratio":"4\/3","image_overlay_opacity":42,"sub_heading":"","heading":"Sneldrogend en compact","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h3","heading_color":"","description":"<p>Door het snelle drogen en het minimale gewicht zijn onze producten perfect voor sauna of vakantie. <\/p>","button_label":"","button_link":"","button_style":"btn--primary","vertical_content_padding":32,"vertical_content_padding_mobile":24,"alignment":"center","width":"33%","animations":"inherit"}},"image_card_9aMFBx":{"type":"image_card","settings":{"layout":"layout1","text_color":"#ffffff","image":"shopify:\/\/shop_images\/bestsellers.png","image_ratio":"4\/3","image_overlay_opacity":50,"sub_heading":"","heading":"Klanten geven ons een 9.2","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h3","heading_color":"","description":"<p>Meer dan 1300 reviews van klanten die ons gemiddeld beoordelen met een 9.2!<\/p>","button_label":"","button_link":"","button_style":"btn--primary","vertical_content_padding":32,"vertical_content_padding_mobile":24,"alignment":"center","width":"33%","animations":"inherit"}}},"block_order":["image_card_pVjRL9","image_card_aFQgJX","image_card_9aMFBx"],"disabled":true,"settings":{"container":"container","color_schema":"background-1","section_header_padding_bottom":"large","section_header_content_spacing":"medium","heading":"Waarom kiezen voor <em>Hamamdoeken.com?<\/em>","highlight_style":"none","enable_highlight_text_color":false,"heading_size":"h1","heading_color":"","subheading":"","description":"","column_gap":"small","row_gap":"extra-large","enable_swipe_mobile":true,"column_mobile":"1","padding_top":82,"padding_bottom":82,"show_section_divider":false,"divider_width":"container","custom_id":"","custom_class":""}}},"order":["scrolling_promotion_iTai8F","d8a17c2d-b43a-460f-b740-f56e8cc11111","uneven_image_cards_FktnTR","product_tabs_DbXGit","collage_tabs_gGLqFt","product_tabs_iE3mUL","collections_showcase_FFFDEF","ca86682f-4e38-4a06-bfea-4ae1b2f63985","layered_images_qfGire","featured_blog_WpJLmP","1779974222d5fcffce","custom_content_9ypmPF"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "scrolling_promotion_iTai8F": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "announcement_LLfN6U": {
+          "type": "announcement",
+          "settings": {
+            "text": "Niet relaxed? <em>Geld terug. </em>",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_iakTx3": {
+          "type": "divider",
+          "settings": {
+            "width": 32,
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "announcement_a9HqUw": {
+          "type": "announcement",
+          "settings": {
+            "text": "<em>Gratis verstuurd </em> vanaf €40,- (NL)",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_heKmMB": {
+          "type": "divider",
+          "settings": {
+            "width": 32,
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "announcement_U4PbAD": {
+          "type": "announcement",
+          "settings": {
+            "text": "Voor 21:00 uur besteld =  <em>morgen in huis </em>",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_M7NwA8": {
+          "type": "divider",
+          "settings": {
+            "width": 32,
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "announcement_ciphpc": {
+          "type": "announcement",
+          "settings": {
+            "text": "<em>Grietje</em> helpt je graag!",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_XFHkUL": {
+          "type": "divider",
+          "settings": {
+            "width": 32,
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "announcement_LLfN6U",
+        "divider_iakTx3",
+        "announcement_a9HqUw",
+        "divider_heKmMB",
+        "announcement_U4PbAD",
+        "divider_M7NwA8",
+        "announcement_ciphpc",
+        "divider_XFHkUL"
+      ],
+      "settings": {
+        "container": "container-full",
+        "color_schema": "background-2",
+        "section_header_padding_bottom": "small",
+        "section_header_content_spacing": "medium",
+        "heading": "",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h3",
+        "heading_color": "",
+        "subheading": "",
+        "description": "",
+        "alignment": "center",
+        "direction": "left",
+        "pause_on_hover": true,
+        "speed": 0.1,
+        "item_gap": 74,
+        "item_gap_mobile": 20,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "use_custom_mobile_padding": true,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "show_section_divider": true,
+        "divider_width": "container-full",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "countdown_timer_waENWz": {
+      "type": "countdown-timer",
+      "blocks": {
+        "heading_qN96eX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Deze actie duurt nog:",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h2"
+          }
+        },
+        "text_6abMK4": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "timer_reCcnk": {
+          "type": "timer",
+          "settings": {
+            "type": "fixed_time",
+            "style": "minimal",
+            "number_size": "h3",
+            "number_spacing": "medium",
+            "duration": "every_month",
+            "time": "2026/08/05 20:30:00"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qN96eX",
+        "text_6abMK4",
+        "timer_reCcnk"
+      ],
+      "name": "t:sections.countdown-timer.presets.name",
+      "settings": {
+        "container": "container",
+        "color_schema": "scheme-5",
+        "use_content_container": false,
+        "position": "center",
+        "text_alignment": "center",
+        "image_overlay_opacity": 0,
+        "show_bg_video": false,
+        "video_type": "shopify",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit",
+        "enable_bg_zoom_effect": true
+      }
+    },
+    "d8a17c2d-b43a-460f-b740-f56e8cc11111": {
+      "type": "collection-list",
+      "blocks": {
+        "template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "hamamdoek",
+            "image": "{{ block.settings.collection.image }}",
+            "title": "Hamamdoeken"
+          }
+        },
+        "template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "badjas",
+            "image": "{{ block.settings.collection.image }}",
+            "title": "Badjassen"
+          }
+        },
+        "template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "beachwear-1",
+            "image": "{{ block.settings.collection.image }}",
+            "title": "Beachwear"
+          }
+        },
+        "template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-5": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bestsellers",
+            "image": "{{ block.settings.collection.image }}",
+            "title": "Bestsellers"
+          }
+        },
+        "template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "specials",
+            "image": "{{ block.settings.collection.image }}",
+            "title": "Specials"
+          }
+        }
+      },
+      "block_order": [
+        "template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-1",
+        "template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-3",
+        "template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-4",
+        "template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-5",
+        "template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-2"
+      ],
+      "custom_css": [
+        ".section__header--text {max-width: 77rem; margin-inline: auto;}"
+      ],
+      "settings": {
+        "container": "container",
+        "color_schema": "background-2",
+        "use_subcollecties_metafield": false,
+        "subcollecties_namespace": "custom",
+        "subcollecties_key": "subcollecties",
+        "section_header_padding_bottom": "medium",
+        "section_header_content_spacing": "medium",
+        "header_layout": "vertical",
+        "heading": "Gemaakt van <em>pure materialen</em> die zacht aanvoelen en luxe uitstralen. Ontdek de collectie die rust, comfort en stijl samenbrengt.",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h3",
+        "heading_color": "",
+        "subheading": "",
+        "description": "",
+        "title_font": "heading",
+        "title_size": "h4",
+        "card_style": "4",
+        "text_alignment": "left",
+        "text_color": "#ffffff",
+        "image_ratio": "3/4",
+        "show_count": false,
+        "inline_count": false,
+        "columns": 5,
+        "column_gap": "double-extra-small",
+        "row_gap": "double-extra-small",
+        "show_all_button_on_top": true,
+        "button_label": "",
+        "button_url": "",
+        "button_style": "btn--underline",
+        "enable_slider": true,
+        "show_dots": false,
+        "show_nav": true,
+        "enable_swipe_mobile": true,
+        "column_mobile": "2",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_top_mobile": 54,
+        "padding_bottom_mobile": 54,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "uneven_image_cards_FktnTR": {
+      "type": "uneven-image-cards",
+      "blocks": {
+        "image_with_text_9MkQMh": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/43789600-6eac-4d53-ae3b-030837362231-2026-05-27.png",
+            "image_ratio": "4/3",
+            "sub_heading": "",
+            "heading": "Over Hamamdoeken.com",
+            "highlight_style": "underline",
+            "enable_highlight_text_color": false,
+            "heading_size": "h3",
+            "heading_color": "",
+            "description": "<p>Hamamdoeken.com is ontstaan vanuit een simpele gedachte: producten aanbieden die bijdragen aan rustmomenten in je dag. Of je nu naar de sauna gaat, op reis bent of thuis even tijd voor jezelf neemt.</p>",
+            "button_label": "Meer over ons",
+            "button_link": "#",
+            "button_style": "btn--primary",
+            "text_alignment": "left",
+            "content_spacing": "medium"
+          }
+        },
+        "image_card_KJWVn9": {
+          "type": "image_card",
+          "settings": {
+            "layout": "layout1",
+            "text_color": "#ffffff",
+            "image_ratio": "adapt",
+            "image_overlay_opacity": 0,
+            "sub_heading": "",
+            "heading": "Image card",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h2",
+            "heading_color": "#ffffff",
+            "description": "<p>Combine images with text and a stand-out offer</p>",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "vertical_content_padding": 40,
+            "vertical_content_padding_mobile": 40
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_9MkQMh",
+        "image_card_KJWVn9"
+      ],
+      "disabled": true,
+      "name": "t:sections.uneven-image-cards.name",
+      "settings": {
+        "color_schema": "inverse",
+        "section_header_padding_bottom": "medium",
+        "section_header_content_spacing": "medium",
+        "heading": "",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h1",
+        "heading_color": "",
+        "subheading": "",
+        "description": "",
+        "vertical_alignment": "center",
+        "padding_top": 84,
+        "padding_bottom": 84,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "product_tabs_DbXGit": {
+      "type": "product-tabs",
+      "blocks": {
+        "tab_gX7DNe": {
+          "type": "tab",
+          "settings": {
+            "title": "Kikoy",
+            "collection": "kikoy-3"
+          }
+        },
+        "tab_9BqXTy": {
+          "type": "tab",
+          "settings": {
+            "title": "Reishanddoeken",
+            "collection": "reis-handdoeken"
+          }
+        },
+        "tab_YJ464H": {
+          "type": "tab",
+          "settings": {
+            "title": "Saunadoeken",
+            "collection": "saunadoeken-1"
+          }
+        },
+        "tab_8q6nBX": {
+          "type": "tab",
+          "settings": {
+            "title": "Strandlakens",
+            "collection": "strandlakens-1"
+          }
+        },
+        "tab_K48hrW": {
+          "type": "tab",
+          "settings": {
+            "title": "Toilet handdoekjes",
+            "collection": "toilet-handdoekjes-1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_gX7DNe",
+        "tab_9BqXTy",
+        "tab_YJ464H",
+        "tab_8q6nBX",
+        "tab_K48hrW"
+      ],
+      "settings": {
+        "container": "container",
+        "color_schema": "",
+        "layout": "vertical",
+        "heading": "Onze best verkochte <em>hamamdoeken</em>",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h1",
+        "heading_color": "",
+        "subheading": "",
+        "description": "",
+        "limit": 6,
+        "columns": 4,
+        "column_gap": "double-extra-small",
+        "row_gap": "medium",
+        "enable_slider": true,
+        "show_nav": false,
+        "show_dots": false,
+        "pcard_image_ratio": "",
+        "show_vendor": false,
+        "button_label": "",
+        "button_style": "btn--primary",
+        "enable_swipe_mobile": true,
+        "column_mobile": "1",
+        "padding_top": 70,
+        "padding_bottom": 100,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "collage_tabs_gGLqFt": {
+      "type": "collage-tabs",
+      "blocks": {
+        "tab_6ffiRX": {
+          "type": "tab",
+          "settings": {
+            "content_color_schema": "",
+            "navigation_title": "Tab 2",
+            "image": "shopify://shop_images/vaderdag.jpg",
+            "heading": "Speciaal voor <em>vaderdag</em>",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h2",
+            "heading_color": "",
+            "subheading": "",
+            "description": "<p>Vaders zeggen altijd dat ze niets nodig hebben. Maar een badjas die voelt als thuiskomen, of een hamamdoek die meegaat op elke reis — dat is geen luxe. Dat is gewoon goed.</p><p>Of je nu zoekt voor je vader, schoonvader of die ene man die altijd voor iedereen klaarstaat: wij helpen je kiezen. Van los cadeau tot complete set.</p>",
+            "text_alignment": "left",
+            "button_label": "Bekijk de giftsets",
+            "button_link": "#",
+            "button_style": "btn--primary",
+            "mobile_text_alignment": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "tab_6ffiRX"
+      ],
+      "name": "t:sections.collage-tabs.presets.name",
+      "settings": {
+        "container": "container",
+        "color_schema": "",
+        "tab_heading_size": "h4",
+        "desktop_navigation_alignment": "center",
+        "desktop_image_position": "left",
+        "desktop_image_width": 50,
+        "image_aspect_ratio": "adapt",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "product_tabs_iE3mUL": {
+      "type": "product-tabs",
+      "blocks": {
+        "tab_TRUxMg": {
+          "type": "tab",
+          "settings": {
+            "title": "Strandponcho's",
+            "collection": "strandponcho-s-voor-strand-zwembad-en-sauna"
+          }
+        },
+        "tab_aYyiGN": {
+          "type": "tab",
+          "settings": {
+            "title": "Strandtunieken",
+            "collection": "strandtunieken-2"
+          }
+        },
+        "tab_jNJ8bN": {
+          "type": "tab",
+          "settings": {
+            "title": "Strandtassen",
+            "collection": "strandtassen-2"
+          }
+        },
+        "tab_kX4KWE": {
+          "type": "tab",
+          "settings": {
+            "title": "Strand accessoires",
+            "collection": "sauna-accessoires"
+          }
+        }
+      },
+      "block_order": [
+        "tab_TRUxMg",
+        "tab_aYyiGN",
+        "tab_jNJ8bN",
+        "tab_kX4KWE"
+      ],
+      "settings": {
+        "container": "container",
+        "color_schema": "",
+        "layout": "vertical",
+        "heading": "Populair voor <em>dit seizoen</em>",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h1",
+        "heading_color": "",
+        "subheading": "",
+        "description": "",
+        "limit": 6,
+        "columns": 4,
+        "column_gap": "double-extra-small",
+        "row_gap": "medium",
+        "enable_slider": true,
+        "show_nav": false,
+        "show_dots": false,
+        "pcard_image_ratio": "",
+        "show_vendor": false,
+        "button_label": "",
+        "button_style": "btn--primary",
+        "enable_swipe_mobile": true,
+        "column_mobile": "1",
+        "padding_top": 84,
+        "padding_bottom": 100,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "collections_showcase_FFFDEF": {
+      "type": "collections-showcase",
+      "blocks": {
+        "collection_xg6m7A": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "Active tops",
+            "heading_size": "h-xl",
+            "subheading": "Your style, your <em>happy place</em>",
+            "subheading_size": "h1",
+            "text": "<p>Discover the latest arrivals, solve your style dilemmas, and create the perfect outfit for any occasion—effortless fashion and lasting confidence start here.</p>",
+            "button_label": "Shop all items",
+            "button_style": "btn--underline"
+          }
+        },
+        "collection_phjCxF": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "Working girl",
+            "heading_size": "h-xl",
+            "subheading": "Where fashion <em>meets happiness</em>",
+            "subheading_size": "h1",
+            "text": "<p>From trendsetting pieces to wardrobe staples, we help you find looks you love while making style decisions easy, exciting, and truly stress-free every day.</p>",
+            "button_label": "Shop all items",
+            "button_style": "btn--underline"
+          }
+        },
+        "collection_PdRqrM": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "Classic",
+            "heading_size": "h-xl",
+            "subheading": "Effortless style, <em>endless confidence</em>",
+            "subheading_size": "h1",
+            "text": "<p>Stay ahead of trends with expert-curated outfits, must-have essentials, and bold statement fashion finds designed to make you feel and look your absolute best.</p>",
+            "button_label": "Shop all items",
+            "button_style": "btn--underline"
+          }
+        },
+        "collection_6TBGfa": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "Biker shorts",
+            "heading_size": "h-xl",
+            "subheading": "Perfectly curated <em>selection for you</em>",
+            "subheading_size": "h1",
+            "text": "<p>Unlock a world of fashion tailored to your unique style as you shop fresh arrivals, refine your wardrobe, and fully embrace confidence with every outfit choice.</p>",
+            "button_label": "Shop all items",
+            "button_style": "btn--underline"
+          }
+        }
+      },
+      "block_order": [
+        "collection_xg6m7A",
+        "collection_phjCxF",
+        "collection_PdRqrM",
+        "collection_6TBGfa"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media (min-width: 1024px) and (max-width: 1279px) {.collections-showcase .f-grid {gap: 5rem; }}"
+      ],
+      "settings": {
+        "container": "container",
+        "color_schema": "background-2",
+        "heading": "",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h2",
+        "heading_color": "",
+        "subheading": "Customer Favorites",
+        "description": "",
+        "image_ratio": "adapt",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "ca86682f-4e38-4a06-bfea-4ae1b2f63985": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "template--17157701533922__ca86682f-4e38-4a06-bfea-4ae1b2f63985-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image.webp",
+            "image_height": 74,
+            "image_link": "#",
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "c882f440-e3c1-41cf-b46b-dd0f63b9d9e9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image-1.webp",
+            "image_height": 62,
+            "image_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "e6a0916a-52af-45c2-8839-c6877445a6d7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image-2.webp",
+            "image_height": 92,
+            "image_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "image_MgzMz6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/hamamdoeken-logo.svg",
+            "image_height": 20,
+            "image_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "image_tf4tek": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image-3.webp",
+            "image_height": 68,
+            "image_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "image_dUhXei": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image-4.webp",
+            "image_height": 68,
+            "image_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "image_cNGBLy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image-5.webp",
+            "image_height": 80,
+            "image_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "template--17157701533922__ca86682f-4e38-4a06-bfea-4ae1b2f63985-image-1",
+        "c882f440-e3c1-41cf-b46b-dd0f63b9d9e9",
+        "e6a0916a-52af-45c2-8839-c6877445a6d7",
+        "image_MgzMz6",
+        "image_tf4tek",
+        "image_dUhXei",
+        "image_cNGBLy"
+      ],
+      "custom_css": [],
+      "settings": {
+        "container": "container-full",
+        "color_schema": "background-1",
+        "section_header_padding_bottom": "small",
+        "section_header_content_spacing": "small",
+        "heading": "Onze merken",
+        "highlight_style": "none",
+        "enable_highlight_text_color": true,
+        "heading_size": "h3",
+        "heading_color": "",
+        "subheading": "",
+        "description": "",
+        "alignment": "center",
+        "direction": "left",
+        "pause_on_hover": true,
+        "speed": 0.1,
+        "item_gap": 70,
+        "item_gap_mobile": 40,
+        "padding_top": 46,
+        "padding_bottom": 46,
+        "use_custom_mobile_padding": true,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24,
+        "show_section_divider": true,
+        "divider_width": "container-full",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "layered_images_qfGire": {
+      "type": "layered-images",
+      "blocks": {
+        "row_yTLzP4": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/ambachtelijk-geweven_19ddb75a-7bf7-4b91-b9ad-c66fb00cf77e.png",
+            "heading": "Ambachtelijk geweven <em> in kleine oplages</em>",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h1",
+            "heading_color": "",
+            "subheading": "Waarom kiezen voor hamamdoeken?",
+            "description": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_size": ""
+          }
+        },
+        "row_3C6rQR": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/sneldrogend-compact.png",
+            "heading": "Sneldrogend en compact,<em> ideaal voor vakantie of wellness</em>",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h1",
+            "heading_color": "",
+            "subheading": "Waarom kiezen voor hamamdoeken?",
+            "description": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_size": ""
+          }
+        },
+        "row_kWffPX": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_bpos85bpos85bpos.png",
+            "heading": "Meer dan 1300 <em>vijfsterren reviews</em>",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h1",
+            "heading_color": "",
+            "subheading": "Waarom kiezen voor hamamdoeken?",
+            "description": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_yTLzP4",
+        "row_3C6rQR",
+        "row_kWffPX"
+      ],
+      "settings": {
+        "color_schema": "scheme-5",
+        "image_aspect_ratio": "4/3",
+        "vertical_alignment": "center",
+        "padding_top": 74,
+        "padding_bottom": 74,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "featured_blog_WpJLmP": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "container": "container",
+        "color_schema": "background-2",
+        "heading": "Lees onze <em>blogs</em>",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h1",
+        "heading_color": "",
+        "subheading": "",
+        "description": "",
+        "blog": "news",
+        "image_aspect_ratio": "4/3",
+        "article_heading_size": "h5",
+        "show_date": true,
+        "show_excerpt": false,
+        "show_readmore": true,
+        "button_label": "",
+        "button_style": "btn--underline",
+        "limit": 4,
+        "columns": 4,
+        "column_gap": "medium",
+        "row_gap": "medium",
+        "enable_slider": false,
+        "show_dots": false,
+        "show_nav": false,
+        "enable_swipe_mobile": false,
+        "column_mobile": "1",
+        "show_excerpt_mobile": false,
+        "padding_top": 74,
+        "padding_bottom": 90,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "1779974222d5fcffce": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_all_reviews_text_wfWfdM": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_all_reviews_text_wfWfdM"
+      ],
+      "settings": {
+        "container": "container",
+        "color_schema": "background-2",
+        "heading": "",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h2",
+        "heading_color": "",
+        "description": "",
+        "padding_top": 0,
+        "padding_bottom": 64
+      }
+    },
+    "custom_content_9ypmPF": {
+      "type": "custom-content",
+      "blocks": {
+        "image_card_pVjRL9": {
+          "type": "image_card",
+          "settings": {
+            "layout": "layout1",
+            "text_color": "#ffffff",
+            "image": "shopify://shop_images/ambachtelijk-geweven_19ddb75a-7bf7-4b91-b9ad-c66fb00cf77e.png",
+            "image_ratio": "4/3",
+            "image_overlay_opacity": 40,
+            "sub_heading": "",
+            "heading": "Ambachtelijk geweven",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h3",
+            "heading_color": "",
+            "description": "<p>Onze producten zijn ambachtelijk geweven in kleine oplages, dit zorgt voor verschillende structuren en zachtheid.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "vertical_content_padding": 32,
+            "vertical_content_padding_mobile": 24,
+            "alignment": "center",
+            "width": "33%",
+            "animations": "inherit"
+          }
+        },
+        "image_card_aFQgJX": {
+          "type": "image_card",
+          "settings": {
+            "layout": "layout1",
+            "text_color": "#ffffff",
+            "image": "shopify://shop_images/sneldrogend-compact.png",
+            "image_ratio": "4/3",
+            "image_overlay_opacity": 42,
+            "sub_heading": "",
+            "heading": "Sneldrogend en compact",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h3",
+            "heading_color": "",
+            "description": "<p>Door het snelle drogen en het minimale gewicht zijn onze producten perfect voor sauna of vakantie. </p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "vertical_content_padding": 32,
+            "vertical_content_padding_mobile": 24,
+            "alignment": "center",
+            "width": "33%",
+            "animations": "inherit"
+          }
+        },
+        "image_card_9aMFBx": {
+          "type": "image_card",
+          "settings": {
+            "layout": "layout1",
+            "text_color": "#ffffff",
+            "image": "shopify://shop_images/bestsellers.png",
+            "image_ratio": "4/3",
+            "image_overlay_opacity": 50,
+            "sub_heading": "",
+            "heading": "Klanten geven ons een 9.2",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h3",
+            "heading_color": "",
+            "description": "<p>Meer dan 1300 reviews van klanten die ons gemiddeld beoordelen met een 9.2!</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "vertical_content_padding": 32,
+            "vertical_content_padding_mobile": 24,
+            "alignment": "center",
+            "width": "33%",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "image_card_pVjRL9",
+        "image_card_aFQgJX",
+        "image_card_9aMFBx"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "color_schema": "background-1",
+        "section_header_padding_bottom": "large",
+        "section_header_content_spacing": "medium",
+        "heading": "Waarom kiezen voor <em>Hamamdoeken.com?</em>",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h1",
+        "heading_color": "",
+        "subheading": "",
+        "description": "",
+        "column_gap": "small",
+        "row_gap": "extra-large",
+        "enable_swipe_mobile": true,
+        "column_mobile": "1",
+        "padding_top": 82,
+        "padding_bottom": 82,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "scrolling_promotion_iTai8F",
+    "countdown_timer_waENWz",
+    "d8a17c2d-b43a-460f-b740-f56e8cc11111",
+    "uneven_image_cards_FktnTR",
+    "product_tabs_DbXGit",
+    "collage_tabs_gGLqFt",
+    "product_tabs_iE3mUL",
+    "collections_showcase_FFFDEF",
+    "ca86682f-4e38-4a06-bfea-4ae1b2f63985",
+    "layered_images_qfGire",
+    "featured_blog_WpJLmP",
+    "1779974222d5fcffce",
+    "custom_content_9ypmPF"
+  ]
+}

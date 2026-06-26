@@ -110,6 +110,9 @@
       "settings": {
         "container": "container",
         "color_schema": "",
+        "use_subcollecties_metafield": true,
+        "subcollecties_namespace": "custom",
+        "subcollecties_key": "subcollecties",
         "section_header_padding_bottom": "medium",
         "section_header_content_spacing": "medium",
         "header_layout": "vertical",
@@ -148,10 +151,7 @@
         "divider_width": "container",
         "custom_id": "",
         "custom_class": "",
-        "animations": "inherit",
-        "use_subcollecties_metafield": true,
-        "subcollecties_namespace": "custom",
-        "subcollecties_key": "subcollecties"
+        "animations": "inherit"
       }
     },
     "product-grid": {
@@ -388,6 +388,7 @@
         },
         "row_HybpAd": {
           "type": "row",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/sneldrogend-compact.png",
             "heading": "Sneldrogend en compact,<em> ideaal voor vakantie of wellness</em>",
@@ -405,6 +406,7 @@
         },
         "row_4zHriN": {
           "type": "row",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Gemini_Generated_Image_bpos85bpos85bpos.png",
             "heading": "Meer dan 1300 <em>vijfsterren reviews</em>",

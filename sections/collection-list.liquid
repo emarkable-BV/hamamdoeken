@@ -50,8 +50,18 @@
   if button_label != blank and show_all_button_on_top
     assign motion_delay = motion_delay | plus: 50
   endif
--%}
 
+  # CUSTOM (Hamamdoeken): subcollecties uit een collectie-metaveld + de sectie verbergen als dat metaveld leeg is
+  assign use_mf = section.settings.use_subcollecties_metafield
+  assign sc_ns = section.settings.subcollecties_namespace | default: 'custom'
+  assign sc_key = section.settings.subcollecties_key | default: 'subcollecties'
+  assign subcols = collection.metafields[sc_ns][sc_key].value
+  assign hide_section = false
+  if use_mf and subcols == blank
+    assign hide_section = true  
+  endif
+-%}
+{%- unless hide_section -%}
 {% style %}
   #{{ section_id }} {
     --section-padding-top: {{ section.settings.padding_top }}px;
@@ -98,23 +108,41 @@
         data-calc-button-position="true"
         data-enable-slider="{{ enable_slider }}"
       >
-        {%- for block in section.blocks -%}
-          {%- assign title = block.settings.title -%}
-          {% render 'collection-card',
-            collection: block.settings.collection,
-            image: block.settings.image,
-            image_ratio: image_ratio,
-            card_style: card_style,
-            text_alignment: text_alignment,
-            show_count: show_count,
-            text_color: text_color,
-            title: title,
-            inline_count: inline_count,
-            index: forloop.index,
-            title_font: title_font_default,
-            title_size: title_size
-          %}
-        {%- endfor -%}
+        {%- if use_mf -%}
+          {%- comment %} CUSTOM (Hamamdoeken): kaarten uit het subcollecties-metaveld {% endcomment -%}
+          {%- for col in subcols -%}
+            {% render 'collection-card',
+              collection: col,
+              image_ratio: image_ratio,
+              card_style: card_style,
+              text_alignment: text_alignment,
+              show_count: show_count,
+              text_color: text_color,
+              inline_count: inline_count,
+              index: forloop.index,
+              title_font: title_font_default,
+              title_size: title_size
+            %}
+          {%- endfor -%}
+        {%- else -%}
+          {%- for block in section.blocks -%}
+            {%- assign title = block.settings.title -%}
+            {% render 'collection-card',
+              collection: block.settings.collection,
+              image: block.settings.image,
+              image_ratio: image_ratio,
+              card_style: card_style,
+              text_alignment: text_alignment,
+              show_count: show_count,
+              text_color: text_color,
+              title: title,
+              inline_count: inline_count,
+              index: forloop.index,
+              title_font: title_font_default,
+              title_size: title_size
+            %}
+          {%- endfor -%}
+        {%- endif -%}
       </flickity-component>
     </grid-list>
     {%- if button_label != blank and show_all_button_on_top == false -%}
@@ -130,6 +158,7 @@
     {%- endif -%}
   </div>
 </div>
+{%- endunless -%}
 {% schema %}
 {
   "name": "t:sections.collection-list.name",
@@ -170,6 +199,29 @@
       "id": "color_schema",
       "label": "t:sections.common.color_schema.label",
       "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "Subcollecties (metaveld)"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_subcollecties_metafield",
+      "label": "Subcollecties uit collectie-metaveld halen",
+      "info": "Toont de collecties uit het metaveld op de huidige collectie. De sectie verdwijnt automatisch als het metaveld leeg is.",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "subcollecties_namespace",
+      "label": "Metaveld namespace",
+      "default": "custom"
+    },
+    {
+      "type": "text",
+      "id": "subcollecties_key",
+      "label": "Metaveld key",
+      "default": "subcollecties"
     },
     {
       "type": "header",

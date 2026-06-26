@@ -37,8 +37,9 @@
                 {% if block.settings.file != blank %}href="{{ block.settings.file }}" download{% else %}aria-disabled="true"{% endif %}
                 {{ block.shopify_attributes }}
               >
-                <svg class="f-downloads__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                  <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg class="f-downloads__icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M14.625 13.5V15.75H3.375V13.5H2.25V15.75C2.25 16.0484 2.36853 16.3345 2.5795 16.5455C2.79048 16.7565 3.07663 16.875 3.375 16.875H14.625C14.9234 16.875 15.2095 16.7565 15.4205 16.5455C15.6315 16.3345 15.75 16.0484 15.75 15.75V13.5H14.625Z" fill="currentColor"/>
+                  <path d="M14.625 7.875L13.8319 7.08187L9.5625 11.3456V1.125H8.4375V11.3456L4.16812 7.08187L3.375 7.875L9 13.5L14.625 7.875Z" fill="currentColor"/>
                 </svg>
                 <span>{{ block.settings.label | escape }}</span>
               </a>

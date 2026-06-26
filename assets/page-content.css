@@ -9,3 +9,21 @@
 .f-page-content__inner > :last-child {
   margin-bottom: 0;
 }
+
+/* Consistente afstanden: kop dicht op z'n alinea, meer ruimte boven een nieuwe kop */
+.f-page-content__inner h1,
+.f-page-content__inner h2,
+.f-page-content__inner h3,
+.f-page-content__inner h4 {
+  margin-top: 4rem;
+  margin-bottom: 1.6rem;
+}
+.f-page-content__inner p,
+.f-page-content__inner ul,
+.f-page-content__inner ol {
+  margin-top: 0;
+  margin-bottom: 1.6rem;
+}
+.f-page-content__inner li {
+  margin-bottom: 0.4rem;
+}

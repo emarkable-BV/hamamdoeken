@@ -107,7 +107,7 @@
             "show_atc_button": true,
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true,
-            "show_inline_quantity": true,
+            "show_inline_quantity": false,
             "show_inline_price": true
           }
         },

@@ -1202,6 +1202,8 @@
               endfor
             endif
           -%}
+          {%- comment %} CUSTOM (Hamamdoeken): geen kleur-broertjes gevonden -> sectie volledig weglaten (geen placeholders) {% endcomment -%}
+          {%- if sibling_count > 0 -%}
           <div class="f-color-select">
             <div class="f-color-select__head flex items-center justify-between">
               <span class="f-color-select__heading font-body-bolder">{{ block.settings.heading | default: 'Selecteer een kleur:' }}</span>
@@ -1271,6 +1273,7 @@
               </div>
             </div>
           </modal-dialog>
+          {%- endif -%}
         {%- comment %} CUSTOM (Hamamdoeken): offerte-component {% endcomment -%}
         {%- when 'offerte_cta' -%}
           {%- if block.settings.heading != blank or block.settings.link_label != blank -%}

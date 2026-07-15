@@ -64,6 +64,30 @@
             "modal_placeholder_count": 12
           }
         },
+        "optis_option_B3mQLn": {
+          "type": "optis_option",
+          "settings": {
+            "title": "Kies voor een plastic-vrije verzending",
+            "property_name": "Plasticvrije verzending",
+            "default_choice": "1",
+            "choice_1_label": "Ja, ik wil een plasticvrije verzending",
+            "choice_1_value": "",
+            "choice_1_price": "+ €5,00",
+            "choice_1_price_green": true,
+            "choice_2_label": "Nee, ik wil geen plasticvrije verzending",
+            "choice_2_value": "",
+            "choice_2_price": "+ €0,00",
+            "choice_2_price_green": false,
+            "choice_3_label": "",
+            "choice_3_value": "",
+            "choice_3_price": "",
+            "choice_3_price_green": false
+          }
+        },
+        "optis_product_options_option_set_mgGPKg": {
+          "type": "shopify://apps/optis-product-options/blocks/option-set/2c446099-c349-4e73-80cd-49c9770b7807",
+          "settings": {}
+        },
         "bestel_samen_met": {
           "type": "bestel_samen_met",
           "settings": {
@@ -76,10 +100,6 @@
             "enable_quick_view": true,
             "pcard_show_color_swatch": true
           }
-        },
-        "optis_product_options_option_set_mgGPKg": {
-          "type": "shopify://apps/optis-product-options/blocks/option-set/2c446099-c349-4e73-80cd-49c9770b7807",
-          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -199,8 +219,9 @@
         "c9d012f0-f3f5-4c1b-b197-e7c8f9de13ac",
         "variant_picker",
         "color_selector",
-        "bestel_samen_met",
+        "optis_option_B3mQLn",
         "optis_product_options_option_set_mgGPKg",
+        "bestel_samen_met",
         "buy_buttons",
         "offerte_cta",
         "essential_countdown_timer_app_block_Jdx7tr",

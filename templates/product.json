@@ -77,50 +77,6 @@
             "pcard_show_color_swatch": true
           }
         },
-        "optis_plasticvrij": {
-          "type": "optis_option",
-          "settings": {
-            "title": "Kies voor een plastic-vrije verzending",
-            "property_name": "Plasticvrije verzending",
-            "default_choice": "1",
-            "choice_1_label": "Ja, ik wil een plasticvrije verzending",
-            "choice_1_value": "",
-            "choice_1_price": "+ €5,00",
-            "choice_1_price_green": true,
-            "choice_2_label": "Nee, ik wil geen plasticvrije verzending",
-            "choice_2_value": "",
-            "choice_2_price": "+ €0,00",
-            "choice_2_price_green": false,
-            "choice_3_label": "",
-            "choice_3_value": "",
-            "choice_3_price": "",
-            "choice_3_price_green": false
-          }
-        },
-        "optis_product_options_option_set_RLRBwc": {
-          "type": "shopify://apps/optis-product-options/blocks/option-set/2c446099-c349-4e73-80cd-49c9770b7807",
-          "settings": {}
-        },
-        "optis_option_LnfkMJ": {
-          "type": "optis_option",
-          "settings": {
-            "title": "",
-            "property_name": "Plasticvrije verzending",
-            "default_choice": "1",
-            "choice_1_label": "Ja, ik wil een plasticvrije verzending",
-            "choice_1_value": "",
-            "choice_1_price": "+ €5,00",
-            "choice_1_price_green": true,
-            "choice_2_label": "Nee, ik wil geen plasticvrije verzending",
-            "choice_2_value": "",
-            "choice_2_price": "+ €0,00",
-            "choice_2_price_green": false,
-            "choice_3_label": "",
-            "choice_3_value": "",
-            "choice_3_price": "",
-            "choice_3_price_green": false
-          }
-        },
         "optis_product_options_option_set_mgGPKg": {
           "type": "shopify://apps/optis-product-options/blocks/option-set/2c446099-c349-4e73-80cd-49c9770b7807",
           "settings": {}
@@ -244,9 +200,6 @@
         "variant_picker",
         "color_selector",
         "bestel_samen_met",
-        "optis_plasticvrij",
-        "optis_product_options_option_set_RLRBwc",
-        "optis_option_LnfkMJ",
         "optis_product_options_option_set_mgGPKg",
         "buy_buttons",
         "offerte_cta",

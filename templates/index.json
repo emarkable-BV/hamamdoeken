@@ -180,12 +180,22 @@
             "duration": "every_month",
             "time": "2026/08/05 20:30:00"
           }
+        },
+        "button_cWDfLg": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop de sale",
+            "button_link": "shopify://collections/zomersale",
+            "button_style": "btn--primary",
+            "button_size": ""
+          }
         }
       },
       "block_order": [
         "heading_qN96eX",
         "text_6abMK4",
-        "timer_reCcnk"
+        "timer_reCcnk",
+        "button_cWDfLg"
       ],
       "name": "t:sections.countdown-timer.presets.name",
       "settings": {

@@ -24,7 +24,7 @@
           "type": "nav_link",
           "settings": {
             "label": "Retourneren",
-            "link": "",
+            "link": "shopify://pages/retourneren",
             "active_state": "auto"
           }
         },
@@ -40,7 +40,7 @@
           "type": "nav_link",
           "settings": {
             "label": "Wasvoorschriften",
-            "link": "",
+            "link": "shopify://pages/wasvoorschriften",
             "active_state": "active"
           }
         },
@@ -77,7 +77,10 @@
         "text_alignment": "center",
         "content_width": 760,
         "padding_top": 72,
-        "padding_bottom": 64
+        "padding_bottom": 64,
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
       }
     },
     "content": {
@@ -88,7 +91,10 @@
         "text_alignment": "left",
         "color_schema": "background-1",
         "padding_top": 64,
-        "padding_bottom": 24
+        "padding_bottom": 24,
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
       }
     },
     "downloads": {
@@ -170,7 +176,10 @@
         "description": "",
         "button_style": "btn--primary",
         "padding_top": 8,
-        "padding_bottom": 64
+        "padding_bottom": 64,
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
       }
     },
     "scrolling_promotion": {
@@ -382,7 +391,12 @@
         "metaobject_question_key": "vraag",
         "metaobject_answer_key": "antwoord",
         "padding_top": 64,
-        "padding_bottom": 100
+        "padding_bottom": 100,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
       }
     }
   },

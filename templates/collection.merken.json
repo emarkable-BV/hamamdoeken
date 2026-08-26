@@ -45,117 +45,6 @@
         "enable_bg_zoom_effect": true
       }
     },
-    "collection_list_eAALae": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_fmVmYB": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "title": ""
-          }
-        },
-        "featured_collection_4VzPJa": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "title": ""
-          }
-        },
-        "featured_collection_K4ttYq": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "title": ""
-          }
-        },
-        "featured_collection_mkGYwT": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "title": ""
-          }
-        },
-        "featured_collection_hiHPFD": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "title": ""
-          }
-        },
-        "featured_collection_GEDmtY": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "title": ""
-          }
-        },
-        "featured_collection_B3NkQy": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "title": ""
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_fmVmYB",
-        "featured_collection_4VzPJa",
-        "featured_collection_K4ttYq",
-        "featured_collection_mkGYwT",
-        "featured_collection_hiHPFD",
-        "featured_collection_GEDmtY",
-        "featured_collection_B3NkQy"
-      ],
-      "disabled": true,
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "container": "container",
-        "color_schema": "",
-        "use_subcollecties_metafield": true,
-        "subcollecties_namespace": "custom",
-        "subcollecties_key": "subcollecties",
-        "section_header_padding_bottom": "medium",
-        "section_header_content_spacing": "medium",
-        "header_layout": "vertical",
-        "heading": "",
-        "highlight_style": "none",
-        "enable_highlight_text_color": false,
-        "heading_size": "h2",
-        "heading_color": "",
-        "subheading": "",
-        "description": "",
-        "title_font": "heading",
-        "title_size": "h6",
-        "card_style": "1",
-        "text_alignment": "center",
-        "text_color": "#000000",
-        "image_ratio": "1/1",
-        "show_count": false,
-        "inline_count": false,
-        "columns": 7,
-        "column_gap": "small",
-        "row_gap": "medium",
-        "show_all_button_on_top": false,
-        "button_label": "",
-        "button_url": "",
-        "button_style": "btn--primary",
-        "enable_slider": true,
-        "show_dots": false,
-        "show_nav": false,
-        "enable_swipe_mobile": true,
-        "column_mobile": "1",
-        "padding_top": 20,
-        "padding_bottom": 0,
-        "padding_top_mobile": 14,
-        "padding_bottom_mobile": 32,
-        "show_section_divider": false,
-        "divider_width": "container",
-        "custom_id": "",
-        "custom_class": "",
-        "animations": "inherit"
-      }
-    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "disabled": true,
@@ -179,6 +68,114 @@
         "paginate_type": "number",
         "padding_top": 0,
         "padding_bottom": 84
+      }
+    },
+    "collection_list_XQj8Uk": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_hnJckg": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "call-it-fouta-beachwear",
+            "image": "{{ block.settings.collection.image }}",
+            "title": ""
+          }
+        },
+        "featured_collection_KwDNjH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "batucada-beachwear",
+            "image": "{{ block.settings.collection.image }}",
+            "title": ""
+          }
+        },
+        "featured_collection_B7YJK3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "hamams-own-badjassen",
+            "image": "{{ block.settings.collection.image }}",
+            "title": ""
+          }
+        },
+        "featured_collection_bJtcPN": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "lalay-beachwear",
+            "image": "{{ block.settings.collection.image }}",
+            "title": ""
+          }
+        },
+        "featured_collection_zxYWt9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ottomania-beachwear",
+            "image": "{{ block.settings.collection.image }}",
+            "title": ""
+          }
+        },
+        "featured_collection_K4C8MK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mzury-beachwear",
+            "image": "{{ block.settings.collection.image }}",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_hnJckg",
+        "featured_collection_KwDNjH",
+        "featured_collection_B7YJK3",
+        "featured_collection_bJtcPN",
+        "featured_collection_zxYWt9",
+        "featured_collection_K4C8MK"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "container": "container",
+        "color_schema": "accent",
+        "use_subcollecties_metafield": false,
+        "subcollecties_namespace": "custom",
+        "subcollecties_key": "subcollecties",
+        "section_header_padding_bottom": "medium",
+        "section_header_content_spacing": "medium",
+        "header_layout": "vertical",
+        "heading": "Shop onze merken",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h0",
+        "heading_color": "",
+        "subheading": "",
+        "description": "<p>Ieder merk heeft zijn eigen stijl, verhaal en kijk op comfort. Van authentiek geweven hamamdoeken tot moderne designs voor strand, sauna en wellness. Ontdek onze merken en laat je inspireren door de collectie.</p>",
+        "title_font": "body",
+        "title_size": "h6",
+        "card_style": "1",
+        "text_alignment": "center",
+        "text_color": "#000000",
+        "image_ratio": "4/3",
+        "show_count": false,
+        "inline_count": false,
+        "columns": 4,
+        "column_gap": "medium",
+        "row_gap": "medium",
+        "show_all_button_on_top": false,
+        "button_label": "",
+        "button_url": "",
+        "button_style": "btn--primary",
+        "enable_slider": false,
+        "show_dots": false,
+        "show_nav": false,
+        "enable_swipe_mobile": false,
+        "column_mobile": "1",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
       }
     },
     "scrolling_promotion_RkiHwj": {
@@ -295,7 +292,6 @@
         "announcement_Y6mtLh",
         "divider_KL4pDC"
       ],
-      "disabled": true,
       "settings": {
         "container": "container-full",
         "color_schema": "background-2",
@@ -344,7 +340,6 @@
       "block_order": [
         "content_KE4Kxe"
       ],
-      "disabled": true,
       "name": "Collapsible tabs",
       "settings": {
         "container": "container",
@@ -433,7 +428,6 @@
         "row_HybpAd",
         "row_4zHriN"
       ],
-      "disabled": true,
       "settings": {
         "color_schema": "scheme-5",
         "image_aspect_ratio": "4/3",
@@ -459,7 +453,6 @@
       "block_order": [
         "text_dbjwEc"
       ],
-      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "container": "container",
@@ -473,124 +466,15 @@
         "custom_class": "",
         "animations": "inherit"
       }
-    },
-    "collection_list_XQj8Uk": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_hnJckg": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "call-it-fouta-beachwear",
-            "image": "{{ block.settings.collection.image }}",
-            "title": ""
-          }
-        },
-        "featured_collection_KwDNjH": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "batucada-beachwear",
-            "image": "{{ block.settings.collection.image }}",
-            "title": ""
-          }
-        },
-        "featured_collection_B7YJK3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "hamams-own-badjassen",
-            "image": "{{ block.settings.collection.image }}",
-            "title": ""
-          }
-        },
-        "featured_collection_bJtcPN": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "lalay-beachwear",
-            "image": "{{ block.settings.collection.image }}",
-            "title": ""
-          }
-        },
-        "featured_collection_zxYWt9": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "ottomania-beachwear",
-            "image": "{{ block.settings.collection.image }}",
-            "title": ""
-          }
-        },
-        "featured_collection_K4C8MK": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "mzury-beachwear",
-            "image": "{{ block.settings.collection.image }}",
-            "title": ""
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_hnJckg",
-        "featured_collection_KwDNjH",
-        "featured_collection_B7YJK3",
-        "featured_collection_bJtcPN",
-        "featured_collection_zxYWt9",
-        "featured_collection_K4C8MK"
-      ],
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "container": "container",
-        "color_schema": "accent",
-        "use_subcollecties_metafield": false,
-        "subcollecties_namespace": "custom",
-        "subcollecties_key": "subcollecties",
-        "section_header_padding_bottom": "medium",
-        "section_header_content_spacing": "medium",
-        "header_layout": "vertical",
-        "heading": "Shop onze merken",
-        "highlight_style": "none",
-        "enable_highlight_text_color": false,
-        "heading_size": "h0",
-        "heading_color": "",
-        "subheading": "",
-        "description": "<p>Ieder merk heeft zijn eigen stijl, verhaal en kijk op comfort. Van authentiek geweven hamamdoeken tot moderne designs voor strand, sauna en wellness. Ontdek onze merken en laat je inspireren door de collectie.</p>",
-        "title_font": "body",
-        "title_size": "h6",
-        "card_style": "1",
-        "text_alignment": "center",
-        "text_color": "#000000",
-        "image_ratio": "4/3",
-        "show_count": false,
-        "inline_count": false,
-        "columns": 4,
-        "column_gap": "medium",
-        "row_gap": "medium",
-        "show_all_button_on_top": false,
-        "button_label": "",
-        "button_url": "",
-        "button_style": "btn--primary",
-        "enable_slider": false,
-        "show_dots": false,
-        "show_nav": false,
-        "enable_swipe_mobile": false,
-        "column_mobile": "1",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_mobile": 60,
-        "padding_bottom_mobile": 60,
-        "show_section_divider": false,
-        "divider_width": "container",
-        "custom_id": "",
-        "custom_class": "",
-        "animations": "inherit"
-      }
     }
   },
   "order": [
     "banner",
-    "collection_list_eAALae",
     "product-grid",
+    "collection_list_XQj8Uk",
     "scrolling_promotion_RkiHwj",
     "collapsible_tabs_f7yBFK",
     "layered_images_YMyzmV",
-    "rich_text_NGWWEV",
-    "collection_list_XQj8Uk"
+    "rich_text_NGWWEV"
   ]
 }

@@ -77,7 +77,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "call-it-fouta-beachwear",
-            "image": "{{ block.settings.collection.image }}",
+            "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",
             "title": ""
           }
         },
@@ -85,7 +85,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "batucada-beachwear",
-            "image": "{{ block.settings.collection.image }}",
+            "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",
             "title": ""
           }
         },
@@ -93,7 +93,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "hamams-own-badjassen",
-            "image": "{{ block.settings.collection.image }}",
+            "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",
             "title": ""
           }
         },
@@ -101,7 +101,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "lalay-beachwear",
-            "image": "{{ block.settings.collection.image }}",
+            "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",
             "title": ""
           }
         },
@@ -109,7 +109,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "ottomania-beachwear",
-            "image": "{{ block.settings.collection.image }}",
+            "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",
             "title": ""
           }
         },
@@ -117,7 +117,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "mzury-beachwear",
-            "image": "{{ block.settings.collection.image }}",
+            "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",
             "title": ""
           }
         }

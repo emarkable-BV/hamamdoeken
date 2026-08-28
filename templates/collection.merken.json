@@ -73,6 +73,14 @@
     "collection_list_XQj8Uk": {
       "type": "collection-list",
       "blocks": {
+        "featured_collection_Xpqx6E": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "call-it-fouta-beachwear",
+            "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",
+            "title": "Hier aanpassen van de naam"
+          }
+        },
         "featured_collection_hnJckg": {
           "type": "featured_collection",
           "settings": {
@@ -123,6 +131,7 @@
         }
       },
       "block_order": [
+        "featured_collection_Xpqx6E",
         "featured_collection_hnJckg",
         "featured_collection_KwDNjH",
         "featured_collection_B7YJK3",

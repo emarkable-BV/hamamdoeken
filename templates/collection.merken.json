@@ -116,7 +116,7 @@
         "featured_collection_zxYWt9": {
           "type": "featured_collection",
           "settings": {
-            "collection": "ottomania-beachwear",
+            "collection": "ottomania",
             "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",
             "title": ""
           }

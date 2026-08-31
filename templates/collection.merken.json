@@ -78,7 +78,7 @@
           "settings": {
             "collection": "ottomania",
             "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",
-            "title": ""
+            "title": "Ottomania"
           }
         },
         "featured_collection_Xpqx6E": {

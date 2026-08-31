@@ -17,9 +17,9 @@
           "settings": {
             "blog_show_date": true,
             "blog_show_author": true,
-            "blog_show_reading_time": true,
             "title_text_align": "center",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "blog_show_reading_time": true
           }
         },
         "featured_image": {
@@ -31,7 +31,9 @@
         },
         "content": {
           "type": "content",
-          "settings": {}
+          "settings": {
+            "product_columns": "3"
+          }
         },
         "share": {
           "type": "tags-share",
@@ -57,15 +59,15 @@
         "show_breadcrumb": false,
         "brc_container": "container",
         "brc_text_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 100,
         "enable_hero_background": true,
         "hero_color_scheme": "background-2",
         "hero_overlap": 240,
         "hero_overlap_mobile": 140,
         "hero_padding_top": 48,
         "meta_color": "#8a7a64",
-        "image_border_radius": 16,
-        "padding_top": 0,
-        "padding_bottom": 100
+        "image_border_radius": 16
       }
     },
     "scrolling_promotion": {
@@ -259,7 +261,12 @@
         "metaobject_question_key": "vraag",
         "metaobject_answer_key": "antwoord",
         "padding_top": 60,
-        "padding_bottom": 80
+        "padding_bottom": 80,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
       }
     }
   },

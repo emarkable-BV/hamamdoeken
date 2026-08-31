@@ -76,9 +76,9 @@
         "featured_collection_Xpqx6E": {
           "type": "featured_collection",
           "settings": {
-            "collection": "call-it-fouta-beachwear",
+            "collection": "ottomania-badjassen",
             "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",
-            "title": "Hier aanpassen van de naam"
+            "title": "Ottomania - badjassen"
           }
         },
         "featured_collection_hnJckg": {

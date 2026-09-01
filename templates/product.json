@@ -372,7 +372,7 @@
           "settings": {
             "icon": "none",
             "title": "Specificaties",
-            "content": "",
+            "content": "{{ product.metafields.custom.specificaties | metafield_tag }}",
             "custom_liquid": "",
             "content_page": "",
             "open": false

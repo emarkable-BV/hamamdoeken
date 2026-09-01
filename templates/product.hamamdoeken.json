@@ -361,8 +361,8 @@
           "settings": {
             "icon": "none",
             "title": "Wasvoorschriften",
-            "content": "{{ product.metafields.custom.wasvoorschriften | metafield_tag }}",
-            "custom_liquid": "",
+            "content": "",
+            "custom_liquid": "{{ product.metafields.custom.wasvoorschriften | metafield_tag }}",
             "content_page": "",
             "open": false
           }

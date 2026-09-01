@@ -96,6 +96,11 @@
     assign loading = 'eager'
     assign fetchpriority = 'high'
   endif
+
+  assign choose_options_text = 'products.product.select_options' | t
+  if collection.handle == 'hamamdoek'
+    assign choose_options_text = 'products.product.add_to_cart' | t
+  endif
 -%}
 {%- capture atc_icon -%}{% render 'icon-cart', name: settings.cart_icon %}{%- endcapture -%}
 <div class="product-card{% if list_layout %} product-card--list{% endif %} grid-list__column {{ custom_class }}">
@@ -264,7 +269,7 @@
                       </svg>
                     </span>
                     <span class="product-card__atc-text product-card__action-text">
-                      {{- 'products.product.select_options' | t -}}
+                      {{- choose_options_text -}}
                     </span>
                   </{{ choose_options_tag }}>
                 {%- else -%}
@@ -339,7 +344,7 @@
                     </svg>
                   </span>
                   <span class="product-card__atc-text product-card__action-text">
-                    {{- 'products.product.select_options' | t -}}
+                    {{- choose_options_text -}}
                   </span>
                 </{{ choose_options_tag }}>
               {%- endif -%}
@@ -434,7 +439,7 @@
                     data-product-quickview="{{ product.handle }}"
                   >
                     <span class="product-card__atc-text">
-                      {{- 'products.product.select_options' | t -}}
+                      {{- choose_options_text -}}
                     </span>
                     <span class="product-card__atc-icon hidden">
                       {% if is_complementary %}
@@ -500,7 +505,7 @@
                   data-product-quickview="{{ product.handle }}"
                 >
                   <span class="product-card__atc-text">
-                    {{- 'products.product.select_options' | t -}}
+                    {{- choose_options_text -}}
                   </span>
                   <span class="product-card__atc-icon hidden">
                     {% if is_complementary %}

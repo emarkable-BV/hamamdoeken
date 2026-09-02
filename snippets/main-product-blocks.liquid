@@ -1276,6 +1276,7 @@
           {%- endif -%}
         {%- comment %} CUSTOM (Hamamdoeken): offerte-component {% endcomment -%}
         {%- when 'offerte_cta' -%}
+          {%- unless product.metafields.custom.verberg_offerte_cta.value == true -%}
           {%- if block.settings.heading != blank or block.settings.link_label != blank -%}
             <div class="f-offerte-cta flex items-center">
               <span class="f-offerte-cta__icon" aria-hidden="true">
@@ -1297,6 +1298,7 @@
               </div>
             </div>
           {%- endif -%}
+          {%- endunless -%}
         {%- comment %} CUSTOM (Hamamdoeken): OPTIS-optie met eigen UI (radio-cards) — submit via line item property zodat OPTIS de toeslag toepast {% endcomment -%}
         {%- when 'optis_option' -%}
           {%- if block.settings.title != blank and block.settings.choice_1_label != blank -%}

@@ -40,7 +40,7 @@
         "announcement_a9HqUw": {
           "type": "announcement",
           "settings": {
-            "text": "<em>Gratis verstuurd </em> vanaf €40,- (NL)",
+            "text": "<em>Gratis verstuurd </em> vanaf €55,- (NL)",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
@@ -831,7 +831,7 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/sneldrogend-compact.png",
-            "heading": "Sneldrogend en compact,<em> ideaal voor vakantie of wellness</em>",
+            "heading": "Sneldrogend en compact,<em> ideaal voor vakantie & wellness</em>",
             "highlight_style": "none",
             "enable_highlight_text_color": false,
             "heading_size": "h1",
@@ -853,7 +853,7 @@
             "enable_highlight_text_color": false,
             "heading_size": "h1",
             "heading_color": "",
-            "subheading": "Waarom kiezen voor hamamdoeken?",
+            "subheading": "Waarom kiezen voor hamamdoeken.com?",
             "description": "",
             "button_label": "",
             "button_link": "",

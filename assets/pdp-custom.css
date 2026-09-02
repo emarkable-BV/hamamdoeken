@@ -224,11 +224,13 @@
   display: flex;
   align-items: flex-start;
   gap: 1.6rem;
-  padding: 1.6rem 3.2rem;
+  padding: 1.4rem 2rem;
   border: 1px solid rgba(var(--color-foreground), 0.2);
   border-radius: 12px;
   cursor: pointer;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 .f-optis-option__card:hover {
   border-color: rgba(var(--color-foreground), 0.45);
@@ -254,16 +256,21 @@
   justify-content: center;
   color: #fff;
   background: transparent;
-  transition: background-color 0.15s ease, border-color 0.15s ease;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
 }
 .f-optis-option__check svg {
   opacity: 0;
 }
-.f-optis-option__card:has(.f-optis-option__input:checked) .f-optis-option__check {
+.f-optis-option__card:has(.f-optis-option__input:checked)
+  .f-optis-option__check {
   background: #3aa655;
   border-color: #3aa655;
 }
-.f-optis-option__card:has(.f-optis-option__input:checked) .f-optis-option__check svg {
+.f-optis-option__card:has(.f-optis-option__input:checked)
+  .f-optis-option__check
+  svg {
   opacity: 1;
 }
 .f-optis-option__input:focus-visible + .f-optis-option__check {
@@ -277,6 +284,7 @@
 }
 .f-optis-option__label {
   font-weight: 700;
+  font-size: 1.2rem;
 }
 .f-optis-option__price {
   color: rgba(var(--color-foreground), 0.7);

@@ -52,10 +52,7 @@
   assign animation_effect = settings.animations
 -%}
 {%- if section.settings.show_breadcrumb -%}
-  {%- render 'breadcrumb',
-    container: section.settings.container,
-    justify: 'center'
-  -%}
+  {%- render 'breadcrumb', container: section.settings.container, justify: 'center' -%}
 {%- endif -%}
 <product-info
   id="MainProduct-{{ section.id }}"
@@ -1488,7 +1485,7 @@
       "settings": [
         {
           "type": "paragraph",
-          "content": "t:sections.main-product.blocks.complementary_products.settings.paragraph.content"
+          "content": "CUSTOM (Hamamdoeken): toont een rij thumbnails + 'bekijk alles'-knop die een modal opent, in hetzelfde uiterlijk als de kleur-selector."
         },
         {
           "type": "text",
@@ -1497,14 +1494,20 @@
           "label": "t:sections.main-product.blocks.complementary_products.settings.heading.label"
         },
         {
-          "type": "checkbox",
-          "id": "make_collapsible_row",
-          "default": false,
-          "label": "t:sections.main-product.blocks.complementary_products.settings.make_collapsible_row.label"
+          "type": "text",
+          "id": "view_all_label",
+          "label": "Label 'bekijk alles'",
+          "default": "Bekijk alles"
+        },
+        {
+          "type": "text",
+          "id": "card_label",
+          "label": "Label knop (modal)",
+          "default": "Selecteer"
         },
         {
           "type": "select",
-          "id": "icon",
+          "id": "icon_unused_placeholder_do_not_use",
           "options": [
             {
               "value": "none",

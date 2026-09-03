@@ -83,7 +83,6 @@
         },
         "color_selector": {
           "type": "color_selector",
-          "disabled": true,
           "settings": {
             "heading": "Selecteer een kleur:",
             "view_all_label": "Bekijk alle kleuren",

@@ -44,8 +44,35 @@
             "text": "{{ product.metafields.custom.korte_beschrijving_product | metafield_tag }}"
           }
         },
+        "complementary_FcXHwh": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": false,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "enable_slider": false,
+            "image_ratio": "adapt",
+            "enable_quick_add": false,
+            "enable_quick_view": false,
+            "pcard_show_color_swatch": true
+          }
+        },
+        "meta_6MhJQe": {
+          "type": "meta",
+          "settings": {
+            "show_availability": false,
+            "show_sku": false,
+            "show_collections": false,
+            "show_tags": false,
+            "show_vendor": false,
+            "show_type": false
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button",
             "variant_picker_show_selected": true,
@@ -56,6 +83,7 @@
         },
         "color_selector": {
           "type": "color_selector",
+          "disabled": true,
           "settings": {
             "heading": "Selecteer een kleur:",
             "view_all_label": "Bekijk alle kleuren",
@@ -217,6 +245,8 @@
         "59ca3415-b1aa-4301-b178-ad6e434ba477",
         "text_ic7ynF",
         "c9d012f0-f3f5-4c1b-b197-e7c8f9de13ac",
+        "complementary_FcXHwh",
+        "meta_6MhJQe",
         "variant_picker",
         "color_selector",
         "optis_option_B3mQLn",

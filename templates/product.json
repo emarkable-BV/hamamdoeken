@@ -44,7 +44,7 @@
             "text": "{{ product.metafields.custom.korte_beschrijving_product | metafield_tag }}"
           }
         },
-        "complementary_FcXHwh": {
+        "complementary_YzKcmM": {
           "type": "complementary",
           "settings": {
             "block_heading": "Pairs well with",
@@ -52,7 +52,7 @@
             "icon": "price_tag",
             "product_list_limit": 10,
             "products_per_page": 3,
-            "enable_slider": false,
+            "enable_slider": true,
             "image_ratio": "adapt",
             "enable_quick_add": false,
             "enable_quick_view": false,
@@ -244,7 +244,7 @@
         "59ca3415-b1aa-4301-b178-ad6e434ba477",
         "text_ic7ynF",
         "c9d012f0-f3f5-4c1b-b197-e7c8f9de13ac",
-        "complementary_FcXHwh",
+        "complementary_YzKcmM",
         "meta_6MhJQe",
         "variant_picker",
         "color_selector",

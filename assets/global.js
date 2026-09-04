@@ -1827,19 +1827,16 @@ class ProductRecommendations extends HTMLElement {
         .then((text) => {
           const html = generateDomFromString(text);
           const recommendations = html.querySelector("product-recommendations");
+          const hasContent = recommendations && recommendations.innerHTML.trim().length > 0;
 
-          if (recommendations && recommendations.innerHTML.trim().length) {
+          if (hasContent) {
             this.innerHTML = recommendations.innerHTML;
             __reInitTooltip(this);
-          }
-
-          if (html.querySelector(".product-card")) {
             this.classList.add("product-recommendations--loaded");
-            document.dispatchEvent(new CustomEvent("recommendations:loaded"));
           } else {
             this.classList.add("f-hidden");
-            document.dispatchEvent(new CustomEvent("recommendations:loaded"));
           }
+          document.dispatchEvent(new CustomEvent("recommendations:loaded"));
         })
         .catch((e) => {
           console.error(e);

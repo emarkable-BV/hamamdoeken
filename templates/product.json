@@ -47,9 +47,10 @@
         "complementary_YzKcmM": {
           "type": "complementary",
           "settings": {
-            "block_heading": "Pairs well with",
-            "make_collapsible_row": false,
-            "icon": "price_tag",
+            "block_heading": "Selecteer een kleur:",
+            "view_all_label": "Alle kleuren",
+            "card_label": "Selecteer",
+            "icon_unused_placeholder_do_not_use": "price_tag",
             "product_list_limit": 10,
             "products_per_page": 3,
             "enable_slider": true,
@@ -83,6 +84,7 @@
         },
         "color_selector": {
           "type": "color_selector",
+          "disabled": true,
           "settings": {
             "heading": "Selecteer een kleur:",
             "view_all_label": "Bekijk alle kleuren",

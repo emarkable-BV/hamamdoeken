@@ -395,20 +395,6 @@
     "product_tabs_DbXGit": {
       "type": "product-tabs",
       "blocks": {
-        "tab_gX7DNe": {
-          "type": "tab",
-          "settings": {
-            "title": "Kikoy",
-            "collection": "kikoy"
-          }
-        },
-        "tab_9BqXTy": {
-          "type": "tab",
-          "settings": {
-            "title": "Reishanddoeken",
-            "collection": "reis-handdoeken"
-          }
-        },
         "tab_YJ464H": {
           "type": "tab",
           "settings": {
@@ -423,6 +409,20 @@
             "collection": "strandlakens-1"
           }
         },
+        "tab_9BqXTy": {
+          "type": "tab",
+          "settings": {
+            "title": "Reishanddoeken",
+            "collection": "reis-handdoeken"
+          }
+        },
+        "tab_gX7DNe": {
+          "type": "tab",
+          "settings": {
+            "title": "Kikoy",
+            "collection": "kikoy"
+          }
+        },
         "tab_K48hrW": {
           "type": "tab",
           "settings": {
@@ -432,10 +432,10 @@
         }
       },
       "block_order": [
-        "tab_gX7DNe",
-        "tab_9BqXTy",
         "tab_YJ464H",
         "tab_8q6nBX",
+        "tab_9BqXTy",
+        "tab_gX7DNe",
         "tab_K48hrW"
       ],
       "settings": {

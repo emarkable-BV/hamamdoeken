@@ -20,6 +20,10 @@
     "color_badge_hot": "#222222",
     "color_badge_new": "#24725b",
     "color_badge_soldout": "#b7b7b7",
+    "action_label_1_tags": "Populair",
+    "action_label_2_tags": "Nieuw",
+    "action_label_3_tags": "Seizoensaanbieding",
+    "action_label_4_tags": "Gratis verzending",
     "color_cart_bubble": "#222222",
     "color_overlay_bg": "#000000",
     "type_body_font": "archivo_n4",
@@ -129,18 +133,10 @@
         "disabled": false,
         "settings": {}
       },
-      "1530068250781986104": {
-        "type": "shopify://apps/fbp-fast-bundle/blocks/fast_bundle/9e87fbe2-9041-4c23-acf5-322413994cef",
-        "disabled": false,
-        "settings": {
-          "home": false
-        }
-      },
       "316487575649303945": {
         "type": "shopify://apps/easify-options/blocks/app-embed-block/d2288b18-c1ba-42f5-b3b3-26c75c8820bf",
         "disabled": false,
         "settings": {
-          "theme_app_version": "none",
           "path_loading_mode": "include",
           "page_paths": ""
         }

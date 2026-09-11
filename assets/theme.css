@@ -5941,8 +5941,9 @@ details[open]:not(.parent-group)
   position: absolute;
   inset-inline-start: 1rem;
   top: 1rem;
+  max-width: calc(100% - 2rem);
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   gap: 0.5rem;
 }
 .product-card__reviews {

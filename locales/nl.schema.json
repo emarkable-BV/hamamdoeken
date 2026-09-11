@@ -403,11 +403,17 @@
         "action_label_1_color": {
           "label": "Actielabel 1 - kleur"
         },
+        "action_label_1_text_color": {
+          "label": "Actielabel 1 - tekstkleur"
+        },
         "action_label_2_tags": {
           "label": "Actielabel 2 - tags"
         },
         "action_label_2_color": {
           "label": "Actielabel 2 - kleur"
+        },
+        "action_label_2_text_color": {
+          "label": "Actielabel 2 - tekstkleur"
         },
         "action_label_3_tags": {
           "label": "Actielabel 3 - tags"
@@ -415,11 +421,17 @@
         "action_label_3_color": {
           "label": "Actielabel 3 - kleur"
         },
+        "action_label_3_text_color": {
+          "label": "Actielabel 3 - tekstkleur"
+        },
         "action_label_4_tags": {
           "label": "Actielabel 4 - tags"
         },
         "action_label_4_color": {
           "label": "Actielabel 4 - kleur"
+        },
+        "action_label_4_text_color": {
+          "label": "Actielabel 4 - tekstkleur"
         },
         "header_other_color": {
           "content": "Andere kleuren"

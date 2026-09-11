@@ -403,11 +403,17 @@
         "action_label_1_color": {
           "label": "Action label 1 - color"
         },
+        "action_label_1_text_color": {
+          "label": "Action label 1 - text color"
+        },
         "action_label_2_tags": {
           "label": "Action label 2 - tags"
         },
         "action_label_2_color": {
           "label": "Action label 2 - color"
+        },
+        "action_label_2_text_color": {
+          "label": "Action label 2 - text color"
         },
         "action_label_3_tags": {
           "label": "Action label 3 - tags"
@@ -415,11 +421,17 @@
         "action_label_3_color": {
           "label": "Action label 3 - color"
         },
+        "action_label_3_text_color": {
+          "label": "Action label 3 - text color"
+        },
         "action_label_4_tags": {
           "label": "Action label 4 - tags"
         },
         "action_label_4_color": {
           "label": "Action label 4 - color"
+        },
+        "action_label_4_text_color": {
+          "label": "Action label 4 - text color"
         },
         "header_other_color": {
           "content": "Other colors"

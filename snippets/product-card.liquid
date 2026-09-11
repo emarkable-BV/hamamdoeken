@@ -85,7 +85,9 @@
     if action_label_match != blank
       assign action_label_color_key = 'action_label_' | append: action_label_index | append: '_color'
       assign action_label_color = settings[action_label_color_key]
-      assign action_label_entry = action_label_match | append: '::' | append: action_label_color
+      assign action_label_text_color_key = 'action_label_' | append: action_label_index | append: '_text_color'
+      assign action_label_text_color = settings[action_label_text_color_key]
+      assign action_label_entry = action_label_match | append: '::' | append: action_label_color | append: '::' | append: action_label_text_color
       if action_labels_data == blank
         assign action_labels_data = action_label_entry
       else
@@ -232,7 +234,7 @@
               {%- assign action_label_parts = action_label_entry | split: '::' -%}
               <span
                 class="f-badge f-badge--action"
-                style="background-color: {{ action_label_parts[1] }};"
+                style="background-color: {{ action_label_parts[1] }}; color: {{ action_label_parts[2] }};"
                 aria-hidden="true"
               >
                 {{- action_label_parts[0] -}}

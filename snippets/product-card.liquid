@@ -64,6 +64,11 @@
 
   assign custom_tags = product.tags | where: 'tag__'
   assign action_label = product.metafields.custom.actielabel.value
+  assign action_label_class = 'f-badge f-badge--action'
+  assign action_label_color = product.metafields.custom.actielabel_kleur.value
+  if action_label_color == '1' or action_label_color == '2' or action_label_color == '3'
+    assign action_label_class = action_label_class | append: ' f-badge--action-' | append: action_label_color
+  endif
 
   assign choose_options_tag = 'a'
   unless settings.pcard_choose_options_actions == 'product_page'
@@ -195,7 +200,7 @@
       {% if product.available == false or on_sale or custom_tags.size > 0 or action_label != blank %}
         <div class="product-card__badge">
           {% if action_label != blank and list_layout != true %}
-            <span class="f-badge f-badge--action" aria-hidden="true">
+            <span class="{{ action_label_class }}" aria-hidden="true">
               {{- action_label -}}
             </span>
           {% endif %}

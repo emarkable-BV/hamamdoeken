@@ -388,6 +388,15 @@
         "badge_new_color": {
           "label": "Nieuw"
         },
+        "badge_action_1_color": {
+          "label": "Actielabel - kleur 1"
+        },
+        "badge_action_2_color": {
+          "label": "Actielabel - kleur 2"
+        },
+        "badge_action_3_color": {
+          "label": "Actielabel - kleur 3"
+        },
         "header_other_color": {
           "content": "Andere kleuren"
         },

@@ -379,6 +379,24 @@
         "default": "#212121"
       },
       {
+        "type": "color",
+        "id": "color_badge_action_1",
+        "label": "t:settings_schema.colors.settings.badge_action_1_color.label",
+        "default": "#7A6A58"
+      },
+      {
+        "type": "color",
+        "id": "color_badge_action_2",
+        "label": "t:settings_schema.colors.settings.badge_action_2_color.label",
+        "default": "#5B7A58"
+      },
+      {
+        "type": "color",
+        "id": "color_badge_action_3",
+        "label": "t:settings_schema.colors.settings.badge_action_3_color.label",
+        "default": "#4E6C99"
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.colors.settings.header_other_color.content"
       },

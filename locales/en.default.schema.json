@@ -388,14 +388,38 @@
         "badge_new_color": {
           "label": "New"
         },
-        "badge_action_1_color": {
-          "label": "Action label - color 1"
+        "header_action_labels": {
+          "content": "Action labels"
         },
-        "badge_action_2_color": {
-          "label": "Action label - color 2"
+        "action_labels_info": {
+          "content": "Assign a color to a set of product tags. Any product with one of these exact tags shows a badge with that tag as text, in the matching color."
         },
-        "badge_action_3_color": {
-          "label": "Action label - color 3"
+        "action_label_tags": {
+          "info": "Comma-separated list of exact product tags, e.g. New, Promo"
+        },
+        "action_label_1_tags": {
+          "label": "Action label 1 - tags"
+        },
+        "action_label_1_color": {
+          "label": "Action label 1 - color"
+        },
+        "action_label_2_tags": {
+          "label": "Action label 2 - tags"
+        },
+        "action_label_2_color": {
+          "label": "Action label 2 - color"
+        },
+        "action_label_3_tags": {
+          "label": "Action label 3 - tags"
+        },
+        "action_label_3_color": {
+          "label": "Action label 3 - color"
+        },
+        "action_label_4_tags": {
+          "label": "Action label 4 - tags"
+        },
+        "action_label_4_color": {
+          "label": "Action label 4 - color"
         },
         "header_other_color": {
           "content": "Other colors"

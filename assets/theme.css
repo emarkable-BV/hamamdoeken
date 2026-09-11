@@ -5278,15 +5278,6 @@ shopify-accelerated-checkout-cart {
   text-transform: UPPERCASE;
   border-radius: var(--btn-rounded, 0);
 }
-.f-badge--action-1 {
-  background-color: var(--color-badge-action-1);
-}
-.f-badge--action-2 {
-  background-color: var(--color-badge-action-2);
-}
-.f-badge--action-3 {
-  background-color: var(--color-badge-action-3);
-}
 .f-badge span[data-sale-value] {
   margin-inline-start: 0.4rem;
 }

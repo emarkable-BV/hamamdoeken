@@ -388,14 +388,38 @@
         "badge_new_color": {
           "label": "Nieuw"
         },
-        "badge_action_1_color": {
-          "label": "Actielabel - kleur 1"
+        "header_action_labels": {
+          "content": "Actielabels"
         },
-        "badge_action_2_color": {
-          "label": "Actielabel - kleur 2"
+        "action_labels_info": {
+          "content": "Koppel een kleur aan een set producttags. Elk product met een van deze exacte tags krijgt een badge met die tag als tekst, in de bijbehorende kleur."
         },
-        "badge_action_3_color": {
-          "label": "Actielabel - kleur 3"
+        "action_label_tags": {
+          "info": "Komma-gescheiden lijst van exacte producttags, bijv. Nieuw, Actie"
+        },
+        "action_label_1_tags": {
+          "label": "Actielabel 1 - tags"
+        },
+        "action_label_1_color": {
+          "label": "Actielabel 1 - kleur"
+        },
+        "action_label_2_tags": {
+          "label": "Actielabel 2 - tags"
+        },
+        "action_label_2_color": {
+          "label": "Actielabel 2 - kleur"
+        },
+        "action_label_3_tags": {
+          "label": "Actielabel 3 - tags"
+        },
+        "action_label_3_color": {
+          "label": "Actielabel 3 - kleur"
+        },
+        "action_label_4_tags": {
+          "label": "Actielabel 4 - tags"
+        },
+        "action_label_4_color": {
+          "label": "Actielabel 4 - kleur"
         },
         "header_other_color": {
           "content": "Andere kleuren"

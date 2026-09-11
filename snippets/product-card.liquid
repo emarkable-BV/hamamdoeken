@@ -63,12 +63,32 @@
   assign mobile_hide_quick_view = settings.pcard_mobile_hide_quick_view
 
   assign custom_tags = product.tags | where: 'tag__'
-  assign action_label = product.metafields.custom.actielabel.value
-  assign action_label_class = 'f-badge f-badge--action'
-  assign action_label_color = product.metafields.custom.actielabel_kleur.value
-  if action_label_color == '1' or action_label_color == '2' or action_label_color == '3'
-    assign action_label_class = action_label_class | append: ' f-badge--action-' | append: action_label_color
-  endif
+
+  assign action_label = blank
+  assign action_label_color = blank
+  for action_label_index in (1..4)
+    unless action_label == blank
+      break
+    endunless
+    assign action_label_tags_key = 'action_label_' | append: action_label_index | append: '_tags'
+    assign action_label_tags_setting = settings[action_label_tags_key]
+    if action_label_tags_setting == blank
+      continue
+    endif
+    assign action_label_tags_list = action_label_tags_setting | split: ','
+    for action_label_tag in action_label_tags_list
+      assign action_label_tag = action_label_tag | strip
+      if action_label_tag == blank
+        continue
+      endif
+      if product.tags contains action_label_tag
+        assign action_label = action_label_tag
+        assign action_label_color_key = 'action_label_' | append: action_label_index | append: '_color'
+        assign action_label_color = settings[action_label_color_key]
+        break
+      endif
+    endfor
+  endfor
 
   assign choose_options_tag = 'a'
   unless settings.pcard_choose_options_actions == 'product_page'
@@ -200,7 +220,11 @@
       {% if product.available == false or on_sale or custom_tags.size > 0 or action_label != blank %}
         <div class="product-card__badge">
           {% if action_label != blank and list_layout != true %}
-            <span class="{{ action_label_class }}" aria-hidden="true">
+            <span
+              class="f-badge f-badge--action"
+              style="background-color: {{ action_label_color }};"
+              aria-hidden="true"
+            >
               {{- action_label -}}
             </span>
           {% endif %}

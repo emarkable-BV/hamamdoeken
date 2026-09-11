@@ -63,6 +63,7 @@
   assign mobile_hide_quick_view = settings.pcard_mobile_hide_quick_view
 
   assign custom_tags = product.tags | where: 'tag__'
+  assign action_label = product.metafields.custom.actielabel.value
 
   assign choose_options_tag = 'a'
   unless settings.pcard_choose_options_actions == 'product_page'
@@ -191,8 +192,13 @@
         </div>
       {% endif %}
 
-      {% if product.available == false or on_sale or custom_tags.size > 0 %}
+      {% if product.available == false or on_sale or custom_tags.size > 0 or action_label != blank %}
         <div class="product-card__badge">
+          {% if action_label != blank and list_layout != true %}
+            <span class="f-badge f-badge--action" aria-hidden="true">
+              {{- action_label -}}
+            </span>
+          {% endif %}
           {%- if product.available == false
             and show_soldout
             and list_layout != true

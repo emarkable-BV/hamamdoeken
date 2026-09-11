@@ -5171,6 +5171,10 @@ shopify-accelerated-checkout-cart {
 .f-badge--new {
   background-color: var(--color-badge-new, #008c62);
 }
+.f-badge--action {
+  background-color: var(--color-primary);
+  border-radius: var(--btn-rounded, 0);
+}
 .f-badge span[data-sale-value] {
   margin-inline-start: 0.4rem;
 }

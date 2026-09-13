@@ -395,18 +395,18 @@
     "product_tabs_DbXGit": {
       "type": "product-tabs",
       "blocks": {
-        "tab_YJ464H": {
-          "type": "tab",
-          "settings": {
-            "title": "Saunadoeken",
-            "collection": "saunadoeken"
-          }
-        },
         "tab_8q6nBX": {
           "type": "tab",
           "settings": {
             "title": "Strandlakens",
             "collection": "strandlakens"
+          }
+        },
+        "tab_YJ464H": {
+          "type": "tab",
+          "settings": {
+            "title": "Saunadoeken",
+            "collection": "saunadoeken"
           }
         },
         "tab_9BqXTy": {
@@ -432,8 +432,8 @@
         }
       },
       "block_order": [
-        "tab_YJ464H",
         "tab_8q6nBX",
+        "tab_YJ464H",
         "tab_9BqXTy",
         "tab_gX7DNe",
         "tab_K48hrW"
@@ -474,13 +474,33 @@
     "collage_tabs_gGLqFt": {
       "type": "collage-tabs",
       "blocks": {
+        "tab_ErnHWr": {
+          "type": "tab",
+          "settings": {
+            "content_color_schema": "background-2",
+            "navigation_title": "Sinterklaas",
+            "image": "shopify://shop_images/sauna-cadeaubox-sinterklaas.jpg_20260912144042.jpg",
+            "heading": "Speciaal voor <em>Sinterklaas</em>",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h2",
+            "heading_color": "",
+            "subheading": "",
+            "description": "<p>Tell your brand's story through images</p>",
+            "text_alignment": "center",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "mobile_text_alignment": "inherit"
+          }
+        },
         "tab_6ffiRX": {
           "type": "tab",
           "settings": {
             "content_color_schema": "",
-            "navigation_title": "Tab 2",
+            "navigation_title": "Vaderdag",
             "image": "shopify://shop_images/vaderdag.jpg",
-            "heading": "Speciaal voor <em>vaderdag</em>",
+            "heading": "Speciaal voor de <em>feestdagen</em>",
             "highlight_style": "none",
             "enable_highlight_text_color": false,
             "heading_size": "h2",
@@ -496,6 +516,7 @@
         }
       },
       "block_order": [
+        "tab_ErnHWr",
         "tab_6ffiRX"
       ],
       "name": "t:sections.collage-tabs.presets.name",
@@ -504,7 +525,7 @@
         "color_schema": "",
         "tab_heading_size": "h4",
         "desktop_navigation_alignment": "center",
-        "desktop_image_position": "left",
+        "desktop_image_position": "right",
         "desktop_image_width": 50,
         "image_aspect_ratio": "adapt",
         "padding_top": 0,

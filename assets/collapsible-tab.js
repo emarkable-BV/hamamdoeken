@@ -128,14 +128,51 @@ if (!customElements.get('collapsible-tab')) {
 				if( parent ) {
 					const allItems = parent.querySelectorAll('collapsible-tab')
 					if (allItems.length) {
+						const anchorTop = this.getBoundingClientRect().top
+						let hasOpenItemAbove = false
 						allItems.forEach(item => {
 							if (item !== this && item.selected) {
+								if (item.compareDocumentPosition(this) & Node.DOCUMENT_POSITION_FOLLOWING) {
+									hasOpenItemAbove = true
+								}
 								item.close()
 							}
 						})
+						// An item collapsing above this one shrinks the page, which visually
+						// shifts the clicked tab up. Keep it pinned while that animation runs.
+						if (hasOpenItemAbove) {
+							this.keepInPlace(anchorTop)
+						}
 					}
 				}
 			}
+		}
+
+		getScrollContainer() {
+			let el = this.parentElement
+			while (el && el !== document.body) {
+				const overflowY = getComputedStyle(el).overflowY
+				if (/(auto|scroll|overlay)/.test(overflowY) && el.scrollHeight > el.clientHeight) {
+					return el
+				}
+				el = el.parentElement
+			}
+			return window
+		}
+
+		keepInPlace(anchorTop, duration = 500) {
+			const container = this.getScrollContainer()
+			const start = performance.now()
+			const step = () => {
+				const delta = this.getBoundingClientRect().top - anchorTop
+				if (Math.abs(delta) > 0.5) {
+					container.scrollBy(0, delta)
+				}
+				if (performance.now() - start < duration) {
+					requestAnimationFrame(step)
+				}
+			}
+			requestAnimationFrame(step)
 		}
 
 		close() {

@@ -476,6 +476,7 @@
       "blocks": {
         "tab_bqVrJm": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "content_color_schema": "background-2",
             "navigation_title": "Sauna",
@@ -1093,6 +1094,34 @@
         "custom_id": "",
         "custom_class": ""
       }
+    },
+    "video_i8wnCg": {
+      "type": "video",
+      "disabled": true,
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "container": "container",
+        "section_header_padding_bottom": "medium",
+        "section_header_content_spacing": "medium",
+        "heading": "Video",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h2",
+        "heading_color": "",
+        "subheading": "",
+        "description": "",
+        "video_type": "external",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_ratio": "adapt",
+        "autoplay_video": false,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
+      }
     }
   },
   "order": [
@@ -1108,6 +1137,7 @@
     "layered_images_qfGire",
     "featured_blog_WpJLmP",
     "1779974222d5fcffce",
-    "custom_content_9ypmPF"
+    "custom_content_9ypmPF",
+    "video_i8wnCg"
   ]
 }

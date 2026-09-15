@@ -476,11 +476,10 @@
       "blocks": {
         "tab_bqVrJm": {
           "type": "tab",
-          "disabled": true,
           "settings": {
             "content_color_schema": "background-2",
-            "navigation_title": "Herfst",
-            "heading": "Herfst",
+            "navigation_title": "Sauna",
+            "heading": "Speciaal voor de <em>sauna</em>",
             "highlight_style": "none",
             "enable_highlight_text_color": false,
             "heading_size": "h2",
@@ -488,7 +487,7 @@
             "subheading": "",
             "description": "<p>Tell your brand's story through images</p>",
             "text_alignment": "center",
-            "button_label": "Button label",
+            "button_label": "Bekijk saunafavorieten",
             "button_link": "",
             "button_style": "btn--primary",
             "mobile_text_alignment": "inherit"

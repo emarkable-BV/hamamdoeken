@@ -62,6 +62,14 @@
             "show_divider": false
           }
         },
+        "empty_column_4XUjhQ": {
+          "type": "empty_column",
+          "disabled": true,
+          "settings": {
+            "width": 30,
+            "custom_class": ""
+          }
+        },
         "logo_qkW7Ef": {
           "type": "logo",
           "disabled": true,
@@ -73,6 +81,7 @@
         "025c08b7-b131-45af-8214-e5c1828a0c29",
         "footer-1",
         "link_list_BzjcyB",
+        "empty_column_4XUjhQ",
         "logo_qkW7Ef"
       ],
       "custom_css": [],

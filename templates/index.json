@@ -474,6 +474,26 @@
     "collage_tabs_gGLqFt": {
       "type": "collage-tabs",
       "blocks": {
+        "tab_bqVrJm": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "content_color_schema": "background-2",
+            "navigation_title": "Herfst",
+            "heading": "Herfst",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h2",
+            "heading_color": "",
+            "subheading": "",
+            "description": "<p>Tell your brand's story through images</p>",
+            "text_alignment": "center",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "mobile_text_alignment": "inherit"
+          }
+        },
         "tab_ErnHWr": {
           "type": "tab",
           "disabled": true,
@@ -517,6 +537,7 @@
         }
       },
       "block_order": [
+        "tab_bqVrJm",
         "tab_ErnHWr",
         "tab_6ffiRX"
       ],

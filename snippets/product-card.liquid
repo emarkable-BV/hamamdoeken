@@ -64,6 +64,42 @@
 
   assign custom_tags = product.tags | where: 'tag__'
 
+  assign action_labels_data = blank
+  for action_label_index in (1..4)
+    assign action_label_tags_key = 'action_label_' | append: action_label_index | append: '_tags'
+    assign action_label_tags_setting = settings[action_label_tags_key]
+    if action_label_tags_setting == blank
+      continue
+    endif
+    assign action_label_tags_list = action_label_tags_setting | split: ','
+    assign action_label_match = blank
+    for action_label_tag in action_label_tags_list
+      assign action_label_tag = action_label_tag | strip
+      if action_label_tag == blank
+        continue
+      endif
+      if action_label_match == blank and product.tags contains action_label_tag
+        assign action_label_match = action_label_tag
+      endif
+    endfor
+    if action_label_match != blank
+      assign action_label_color_key = 'action_label_' | append: action_label_index | append: '_color'
+      assign action_label_color = settings[action_label_color_key]
+      assign action_label_text_color_key = 'action_label_' | append: action_label_index | append: '_text_color'
+      assign action_label_text_color = settings[action_label_text_color_key]
+      assign action_label_entry = action_label_match | append: '::' | append: action_label_color | append: '::' | append: action_label_text_color
+      if action_labels_data == blank
+        assign action_labels_data = action_label_entry
+      else
+        assign action_labels_data = action_labels_data | append: ';;' | append: action_label_entry
+      endif
+    endif
+  endfor
+  assign action_labels_list = blank
+  unless action_labels_data == blank
+    assign action_labels_list = action_labels_data | split: ';;'
+  endunless
+
   assign choose_options_tag = 'a'
   unless settings.pcard_choose_options_actions == 'product_page'
     assign choose_options_tag = 'button'
@@ -191,20 +227,26 @@
         </div>
       {% endif %}
 
-      {% if product.available == false or on_sale or custom_tags.size > 0 %}
+      {% if product.available == false or on_sale or custom_tags.size > 0 or action_labels_list.size > 0 %}
         <div class="product-card__badge">
-          {%- if product.available == false
-            and show_soldout
-            and list_layout != true
-          -%}
+          {% if list_layout != true %}
+            {% for action_label_entry in action_labels_list %}
+              {%- assign action_label_parts = action_label_entry | split: '::' -%}
+              <span
+                class="f-badge f-badge--action"
+                style="background-color: {{ action_label_parts[1] }}; color: {{ action_label_parts[2] }};"
+                aria-hidden="true"
+              >
+                {{- action_label_parts[0] -}}
+              </span>
+            {% endfor %}
+          {% endif %}
+          {%- if product.available == false and show_soldout and list_layout != true -%}
             <span class="f-badge f-badge--soldout" aria-hidden="true">
               {{ 'products.product.sold_out' | t }}
             </span>
           {% endif %}
-          {% if show_on_sale_badge
-            and product.available
-            and list_layout != true
-          %}
+          {% if show_on_sale_badge and product.available and list_layout != true %}
             {% liquid
               assign sale_badge = ''
               assign amount = 0
@@ -242,13 +284,9 @@
           <div class="product-card__actions{{ actions_class }}">
             {% if enable_quick_add %}
               {%- if product.has_only_default_variant -%}
-                {%- if product.selected_or_first_available_variant.quantity_rule.min
-                    > 1
-                -%}
+                {%- if product.selected_or_first_available_variant.quantity_rule.min > 1 -%}
                   <{{ choose_options_tag }}
-                    {% if settings.pcard_choose_options_actions
-                        == 'product_page'
-                    %}
+                    {% if settings.pcard_choose_options_actions == 'product_page' %}
                       href="{{- product_url -}}"
                     {% else %}
                       data-product-quickview="{{ product.handle }}"
@@ -322,8 +360,7 @@
                 {%- endif -%}
               {% else %}
                 <{{ choose_options_tag }}
-                  {% if settings.pcard_choose_options_actions == 'product_page'
-                  %}
+                  {% if settings.pcard_choose_options_actions == 'product_page' %}
                     href="{{- product_url -}}"
                   {% else %}
                     data-product-quickview="{{ product.handle }}"
@@ -406,16 +443,10 @@
           {%- render 'product-rating', product: product -%}
         </div>
       {% endif %}
-      {% render 'price',
-        product: product,
-        alignment: settings.pcard_content_alignment
-      %}
+      {% render 'price', product: product, alignment: settings.pcard_content_alignment %}
       {% if is_complementary and show_product_option %}
         <div class="product-card__options relative text-left block">
-          {% render 'product-card-swatch',
-            product: product,
-            product_url: product_url
-          %}
+          {% render 'product-card-swatch', product: product, product_url: product_url %}
         </div>
       {% endif %}
       {% if list_layout or is_lookbook %}
@@ -426,13 +457,9 @@
           <div class="product-card__actions{{ actions_class }}">
             {% if enable_quick_add %}
               {%- if product.has_only_default_variant -%}
-                {%- if product.selected_or_first_available_variant.quantity_rule.min
-                    > 1
-                -%}
+                {%- if product.selected_or_first_available_variant.quantity_rule.min > 1 -%}
                   <{{ choose_options_tag }}
-                    {% if settings.pcard_choose_options_actions
-                        == 'product_page'
-                    %}
+                    {% if settings.pcard_choose_options_actions == 'product_page' %}
                       href="{{- product_url -}}"
                     {% endif %}
                     class="product-card__atc btn {{ button_class }} btn--small no-color-schema"
@@ -497,8 +524,7 @@
                 {%- endif -%}
               {% else %}
                 <{{ choose_options_tag }}
-                  {% if settings.pcard_choose_options_actions == 'product_page'
-                  %}
+                  {% if settings.pcard_choose_options_actions == 'product_page' %}
                     href="{{- product_url -}}"
                   {% endif %}
                   class="product-card__atc btn {{ button_class }} btn--small no-color-schema"
@@ -563,10 +589,7 @@
       {% endif %}
       {% if is_lookbook and show_product_option %}
         <div class="product-card__options relative text-center block md:hidden">
-          {% render 'product-card-swatch',
-            product: product,
-            product_url: product_url
-          %}
+          {% render 'product-card-swatch', product: product, product_url: product_url %}
         </div>
       {% endif %}
     </div>
@@ -574,10 +597,7 @@
 
   {% if show_product_option and is_complementary == false %}
     <div class="product-card__options relative text-{{ settings.pcard_content_alignment }}">
-      {%- render 'product-card-swatch',
-        product: product,
-        product_url: product_url
-      -%}
+      {%- render 'product-card-swatch', product: product, product_url: product_url -%}
     </div>
   {% endif %}
 </div>

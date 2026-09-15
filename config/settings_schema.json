@@ -380,6 +380,86 @@
       },
       {
         "type": "header",
+        "content": "t:settings_schema.colors.settings.header_action_labels.content"
+      },
+      {
+        "type": "paragraph",
+        "content": "t:settings_schema.colors.settings.action_labels_info.content"
+      },
+      {
+        "type": "text",
+        "id": "action_label_1_tags",
+        "label": "t:settings_schema.colors.settings.action_label_1_tags.label",
+        "info": "t:settings_schema.colors.settings.action_label_tags.info"
+      },
+      {
+        "type": "color",
+        "id": "action_label_1_color",
+        "label": "t:settings_schema.colors.settings.action_label_1_color.label",
+        "default": "#7A6A58"
+      },
+      {
+        "type": "color",
+        "id": "action_label_1_text_color",
+        "label": "t:settings_schema.colors.settings.action_label_1_text_color.label",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "text",
+        "id": "action_label_2_tags",
+        "label": "t:settings_schema.colors.settings.action_label_2_tags.label",
+        "info": "t:settings_schema.colors.settings.action_label_tags.info"
+      },
+      {
+        "type": "color",
+        "id": "action_label_2_color",
+        "label": "t:settings_schema.colors.settings.action_label_2_color.label",
+        "default": "#5B7A58"
+      },
+      {
+        "type": "color",
+        "id": "action_label_2_text_color",
+        "label": "t:settings_schema.colors.settings.action_label_2_text_color.label",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "text",
+        "id": "action_label_3_tags",
+        "label": "t:settings_schema.colors.settings.action_label_3_tags.label",
+        "info": "t:settings_schema.colors.settings.action_label_tags.info"
+      },
+      {
+        "type": "color",
+        "id": "action_label_3_color",
+        "label": "t:settings_schema.colors.settings.action_label_3_color.label",
+        "default": "#4E6C99"
+      },
+      {
+        "type": "color",
+        "id": "action_label_3_text_color",
+        "label": "t:settings_schema.colors.settings.action_label_3_text_color.label",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "text",
+        "id": "action_label_4_tags",
+        "label": "t:settings_schema.colors.settings.action_label_4_tags.label",
+        "info": "t:settings_schema.colors.settings.action_label_tags.info"
+      },
+      {
+        "type": "color",
+        "id": "action_label_4_color",
+        "label": "t:settings_schema.colors.settings.action_label_4_color.label",
+        "default": "#9D572C"
+      },
+      {
+        "type": "color",
+        "id": "action_label_4_text_color",
+        "label": "t:settings_schema.colors.settings.action_label_4_text_color.label",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "header",
         "content": "t:settings_schema.colors.settings.header_other_color.content"
       },
       {

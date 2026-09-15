@@ -476,6 +476,7 @@
       "blocks": {
         "tab_ErnHWr": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "content_color_schema": "background-2",
             "navigation_title": "Sinterklaas",

@@ -19,7 +19,7 @@
           "settings": {
             "heading": "Ontvang 10% korting op je eerste bestelling v.a. €75",
             "heading_size": "h5",
-            "subheading": "<p>Schrijf je in en ontvang een persoonlijke kortingscode voor je eerste bestelling, plus inspiratie voor ontspanning, sauna en vakantie.</p>",
+            "subheading": "<p>Schrijf je in en ontvang een persoonlijke code voor je korting op je eerste bestelling plus inspiratie voor ontspanning, sauna en vakantie.</p>",
             "description": "",
             "email_placeholder": "Vul hier je e-mailadres in",
             "hide_label": true,
@@ -62,6 +62,14 @@
             "show_divider": false
           }
         },
+        "empty_column_4XUjhQ": {
+          "type": "empty_column",
+          "disabled": true,
+          "settings": {
+            "width": 30,
+            "custom_class": ""
+          }
+        },
         "logo_qkW7Ef": {
           "type": "logo",
           "disabled": true,
@@ -73,6 +81,7 @@
         "025c08b7-b131-45af-8214-e5c1828a0c29",
         "footer-1",
         "link_list_BzjcyB",
+        "empty_column_4XUjhQ",
         "logo_qkW7Ef"
       ],
       "custom_css": [],
@@ -173,6 +182,7 @@
         "popup-2",
         "social_aGfwnF"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "design_mode": false,

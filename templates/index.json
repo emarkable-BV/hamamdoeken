@@ -395,18 +395,18 @@
     "product_tabs_DbXGit": {
       "type": "product-tabs",
       "blocks": {
-        "tab_YJ464H": {
-          "type": "tab",
-          "settings": {
-            "title": "Saunadoeken",
-            "collection": "saunadoeken"
-          }
-        },
         "tab_8q6nBX": {
           "type": "tab",
           "settings": {
             "title": "Strandlakens",
             "collection": "strandlakens"
+          }
+        },
+        "tab_YJ464H": {
+          "type": "tab",
+          "settings": {
+            "title": "Saunadoeken",
+            "collection": "saunadoeken"
           }
         },
         "tab_9BqXTy": {
@@ -432,8 +432,8 @@
         }
       },
       "block_order": [
-        "tab_YJ464H",
         "tab_8q6nBX",
+        "tab_YJ464H",
         "tab_9BqXTy",
         "tab_gX7DNe",
         "tab_K48hrW"
@@ -474,13 +474,54 @@
     "collage_tabs_gGLqFt": {
       "type": "collage-tabs",
       "blocks": {
+        "tab_bqVrJm": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "content_color_schema": "background-2",
+            "navigation_title": "Sauna",
+            "heading": "Speciaal voor de <em>sauna</em>",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h2",
+            "heading_color": "",
+            "subheading": "",
+            "description": "<p>Tell your brand's story through images</p>",
+            "text_alignment": "center",
+            "button_label": "Bekijk saunafavorieten",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "mobile_text_alignment": "inherit"
+          }
+        },
+        "tab_ErnHWr": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "content_color_schema": "background-2",
+            "navigation_title": "Sinterklaas",
+            "image": "shopify://shop_images/sauna-cadeaubox-sinterklaas.jpg_20260912144042.jpg",
+            "heading": "Sinterklaascadeaus die <em>ontspanning  </em>brengen in de decemberdrukte",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h2",
+            "heading_color": "",
+            "subheading": "",
+            "description": "<p>December is gezellig, maar ook vol — en juist daarom zijn cadeaus die rust brengen zo fijn om te geven. Een badjas die omarmt, een hamamdoek die licht aanvoelt en snel droogt: zachte, warme cadeaus voor mannen én vrouwen die midden in de decemberdrukte even willen ontsnappen. Of dat nu is tijdens een saunabezoek deze maand, of in januari wanneer de feestdagen achter de rug zijn en echte ontspanning weer welkom voelt. Cadeaus die je met aandacht kiest, en die nog lang daarna rust blijven brengen.</p>",
+            "text_alignment": "center",
+            "button_label": "BEKIJK DE GIFTSETS",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "mobile_text_alignment": "inherit"
+          }
+        },
         "tab_6ffiRX": {
           "type": "tab",
           "settings": {
             "content_color_schema": "",
-            "navigation_title": "Tab 2",
+            "navigation_title": "Vaderdag",
             "image": "shopify://shop_images/vaderdag.jpg",
-            "heading": "Speciaal voor <em>vaderdag</em>",
+            "heading": "Speciaal voor de <em>feestdagen</em>",
             "highlight_style": "none",
             "enable_highlight_text_color": false,
             "heading_size": "h2",
@@ -496,6 +537,8 @@
         }
       },
       "block_order": [
+        "tab_bqVrJm",
+        "tab_ErnHWr",
         "tab_6ffiRX"
       ],
       "name": "t:sections.collage-tabs.presets.name",
@@ -504,7 +547,7 @@
         "color_schema": "",
         "tab_heading_size": "h4",
         "desktop_navigation_alignment": "center",
-        "desktop_image_position": "left",
+        "desktop_image_position": "right",
         "desktop_image_width": 50,
         "image_aspect_ratio": "adapt",
         "padding_top": 0,
@@ -522,28 +565,28 @@
         "tab_TRUxMg": {
           "type": "tab",
           "settings": {
-            "title": "Strandponcho's",
-            "collection": "strandponcho-s-voor-strand-zwembad-en-sauna"
+            "title": "Badjassen",
+            "collection": "badjas"
           }
         },
         "tab_aYyiGN": {
           "type": "tab",
           "settings": {
-            "title": "Strandtunieken",
-            "collection": "strandtunieken-2"
+            "title": "Saunaponcho's",
+            "collection": "strandponchos"
           }
         },
         "tab_jNJ8bN": {
           "type": "tab",
           "settings": {
-            "title": "Strandtassen",
-            "collection": "strandtassen-2"
+            "title": "Plaids & kussentjes",
+            "collection": "woonaccessoires-1"
           }
         },
         "tab_kX4KWE": {
           "type": "tab",
           "settings": {
-            "title": "Strand accessoires",
+            "title": "Sauna accessoires",
             "collection": "sauna-accessoires"
           }
         }
@@ -558,7 +601,7 @@
         "container": "container",
         "color_schema": "",
         "layout": "vertical",
-        "heading": "Populair voor <em>dit seizoen</em>",
+        "heading": "Populair voor <em>de herfst</em>",
         "highlight_style": "none",
         "enable_highlight_text_color": false,
         "heading_size": "h1",
@@ -848,7 +891,7 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/Gemini_Generated_Image_bpos85bpos85bpos.png",
-            "heading": "Meer dan 1300 <em>vijfsterren reviews</em>",
+            "heading": "Meer dan 1400 <em>vijfsterren reviews</em>",
             "highlight_style": "none",
             "enable_highlight_text_color": false,
             "heading_size": "h1",
@@ -1051,6 +1094,34 @@
         "custom_id": "",
         "custom_class": ""
       }
+    },
+    "video_i8wnCg": {
+      "type": "video",
+      "disabled": true,
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "container": "container",
+        "section_header_padding_bottom": "medium",
+        "section_header_content_spacing": "medium",
+        "heading": "Video",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h2",
+        "heading_color": "",
+        "subheading": "",
+        "description": "",
+        "video_type": "external",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_ratio": "adapt",
+        "autoplay_video": false,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
+      }
     }
   },
   "order": [
@@ -1066,6 +1137,7 @@
     "layered_images_qfGire",
     "featured_blog_WpJLmP",
     "1779974222d5fcffce",
-    "custom_content_9ypmPF"
+    "custom_content_9ypmPF",
+    "video_i8wnCg"
   ]
 }

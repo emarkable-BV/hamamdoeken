@@ -40,7 +40,7 @@
           "type": "nav_link",
           "settings": {
             "label": "Wasvoorschriften",
-            "link": "",
+            "link": "shopify://pages/wasvoorschriften",
             "active_state": "auto"
           }
         },

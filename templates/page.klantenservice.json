@@ -24,7 +24,7 @@
           "type": "nav_link",
           "settings": {
             "label": "Retourneren",
-            "link": "shopify://pages/retourneren",
+            "link": "shopify://pages/retourneren-bij-hamamdoeken-com",
             "active_state": "auto"
           }
         },

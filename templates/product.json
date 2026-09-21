@@ -12,6 +12,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "richtext_MpBN7N": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.merk.value }}</p>"
+          }
+        },
         "c67b7c41-4a92-419d-85c6-c970bb43bf2d": {
           "type": "badge",
           "settings": {}
@@ -240,6 +246,7 @@
         }
       },
       "block_order": [
+        "richtext_MpBN7N",
         "c67b7c41-4a92-419d-85c6-c970bb43bf2d",
         "title",
         "59ca3415-b1aa-4301-b178-ad6e434ba477",

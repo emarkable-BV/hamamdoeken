@@ -1225,6 +1225,15 @@
             assign sibling_count = 0
             assign row_count = 1
 
+            # CUSTOM (Hamamdoeken): handmatige koppeling (Search & Discovery > aanvullende producten) gaat voor.
+            # Het 'complementary'-block toont die dan al; hier overslaan om een dubbele kleurrij te voorkomen.
+            # Alleen als dat block ook echt actief is in deze template, anders blijft de automatische match het vangnet.
+            assign complementary_blocks = section.blocks | where: 'type', 'complementary'
+            assign manual_links = product.metafields['shopify--discovery--product_recommendation'].complementary_products.value
+            if complementary_blocks.size > 0 and manual_links != blank and manual_links != empty
+              assign base_title = ''
+            endif
+
             if base_title != blank
               for coll in product.collections limit: 8
                 for cp in coll.products limit: 50

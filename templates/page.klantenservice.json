@@ -305,8 +305,8 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Ik heb geen bestelbevestiging ontvangen, wat nu?",
+            "content": "<p><br/>Check eerst je spamfolder, daar belandt-ie soms per ongeluk. Nog niets ontvangen? Neem contact op via het formulier bovenaan deze pagina, dan zoeken we het voor je uit.</p>",
             "open": false
           }
         },

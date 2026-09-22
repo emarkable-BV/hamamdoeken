@@ -325,12 +325,75 @@
             "content": "<p>Ja, dat kan. Bel ons op 06-12679808. Geen gehoor? Stuur dan gerust een appje naar hetzelfde nummer, dan reageren we zo snel mogelijk.</p>",
             "open": false
           }
+        },
+        "faq_item_MkfEnx": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Kan ik mijn bestelling laten inpakken als cadeau?",
+            "content": "<p>Vul hier het antJa, dat kan. Bij het product zie je de opties \"Cadeauverpakking toevoegen\" (+€4,95) en \"Persoonlijk kaartje toevoegen\" (+€2,95), vink aan wat je wilt voordat je hem aan je winkelwagen toevoegt.</p>",
+            "open": false
+          }
+        },
+        "faq_item_zTtBTa": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Hier een veelgestelde vraag",
+            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "open": false
+          }
+        },
+        "faq_item_merdK6": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Hier een veelgestelde vraag",
+            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "open": false
+          }
+        },
+        "faq_item_FwRAaE": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Hier een veelgestelde vraag",
+            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "open": false
+          }
+        },
+        "faq_item_tmRLFr": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Hier een veelgestelde vraag",
+            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "open": false
+          }
+        },
+        "faq_item_QM7njK": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Hier een veelgestelde vraag",
+            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "open": false
+          }
+        },
+        "faq_item_hWitmQ": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Hier een veelgestelde vraag",
+            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "open": false
+          }
         }
       },
       "block_order": [
         "faq_1",
         "faq_3",
-        "faq_2"
+        "faq_2",
+        "faq_item_MkfEnx",
+        "faq_item_zTtBTa",
+        "faq_item_merdK6",
+        "faq_item_FwRAaE",
+        "faq_item_tmRLFr",
+        "faq_item_QM7njK",
+        "faq_item_hWitmQ"
       ],
       "settings": {
         "container": "container",

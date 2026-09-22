@@ -16,7 +16,7 @@
           "type": "nav_link",
           "settings": {
             "label": "Contact met de klantenservice",
-            "link": "",
+            "link": "/pages/contact",
             "active_state": "auto"
           }
         },

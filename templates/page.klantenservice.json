@@ -321,8 +321,8 @@
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Ik heb een kortingscode of cadeaubon gekregen, hoe kan ik deze gebruiken?",
+            "content": "<p>Bij het afrekenen zie je het veld \"Kortingscode of cadeaubon\", vul daar je code in en klik op \"Toepassen\". Let op: dit veld is alleen voor kortingscodes, niet voor de Webshop Giftcard, een VVV-cadeaukaart of een DE-cadeaubon. Die kies je verderop bij de betaalmogelijkheden.</p>",
             "open": false
           }
         }

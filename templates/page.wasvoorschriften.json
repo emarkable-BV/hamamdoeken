@@ -331,16 +331,16 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Kun je een badjas wassen?",
+            "content": "<p>Ja, gewoon in de machine. Was op 30-40°C, check altijd het waslabel van jouw specifieke badjas voor de exacte instructie, en gebruik liever geen wasverzachter, die laat een laagje achter waardoor de stof minder goed vocht opneemt. Was hem binnenstebuiten, dan blijft de stof langer mooi.</p>",
             "open": false
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Hoe vaak moet je je badjas wassen?",
+            "content": "<p>Er is geen vaste regel, was hem zodra hij niet meer fris ruikt of zichtbaar vuil is. Bij dagelijks gebruik komt dat meestal neer op ongeveer één keer per één tot twee weken. Na een saunabezoek is het aan te raden je badjas gelijk uit te wassen. Lukt dat even niet? Haal hem dan in ieder geval direct uit de tas om te drogen, zo voorkom je dat hij muf gaat ruiken. Vaker wassen dan nodig is niet erg voor de stof, zolang je zonder wasverzachter wast.</p>",
             "open": false
           }
         },

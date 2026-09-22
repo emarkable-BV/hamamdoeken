@@ -40,7 +40,7 @@
           "type": "nav_link",
           "settings": {
             "label": "Wasvoorschriften",
-            "link": "",
+            "link": "/pages/wasvoorschriften",
             "active_state": "auto"
           }
         },
@@ -48,7 +48,7 @@
           "type": "nav_link",
           "settings": {
             "label": "Veilig betalen",
-            "link": "",
+            "link": "/pages/veilig-betalen",
             "active_state": "auto"
           }
         },
@@ -56,7 +56,7 @@
           "type": "nav_link",
           "settings": {
             "label": "Veelgestelde vragen",
-            "link": "",
+            "link": "/pages/veelgestelde-vragen",
             "active_state": "auto"
           }
         }

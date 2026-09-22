@@ -294,24 +294,24 @@
         "faq_item_pRRcgJ": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Zijn alle prijzen inclusief btw?",
+            "content": "<p>Ja, alle prijzen op de site zijn inclusief btw. Geen verrassingen bij het afrekenen.</p>",
             "open": false
           }
         },
         "faq_item_GFpmHX": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Mijn korting wordt niet goed berekend.",
+            "content": "<p>Per bestelling kun je gebruikmaken van één aanbieding of kortingscode. Klopt er toch iets niet? Neem gerust even contact met ons op, dan kijken we ernaar.</p>",
             "open": false
           }
         },
         "faq_item_DYtwPc": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Bieden jullie ook een pre-order mogelijkheid aan, en hoe gaan jullie om met deelleveringen?",
+            "content": "<p>Ja, pre-orderen kan. Je ziet die mogelijkheid dan direct bij het product staan. Bestel je meerdere producten waarvan er eentje een langere levertijd heeft? Dan sturen we alles in één keer op zodra je hele bestelling compleet is. Wil je liever niet wachten en toch alvast ontvangen wat al op voorraad is? Dan kan dat tegen de volledige verzendkosten van €7,95 voor de deellevering.</p>",
             "open": false
           }
         }

@@ -373,6 +373,14 @@
             "content": "<p>Cadeaukaarten kies je bij het afrekenen tussen de betaalmogelijkheden, niet bij het kortingscodeveld. Dit geldt voor de Webshop Giftcard, een VVV-cadeaukaart en een DE-cadeaubon. Een cadeaukaart is gewoon te combineren met een kortingscode.</p>",
             "open": false
           }
+        },
+        "faq_item_yDEdTb": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Bieden jullie een pre-order mogelijkheid, en hoe gaan jullie om met deelleveringen?",
+            "content": "<p>Ja, pre-orderen kan. Je ziet die mogelijkheid dan direct bij het product staan. Bestel je meerdere producten waarvan er eentje een langere levertijd heeft? Dan sturen we alles in één keer op zodra je hele bestelling compleet is. Wil je liever niet wachten en toch alvast ontvangen wat al op voorraad is? Dan kan dat tegen de volledige verzendkosten van €7,95 voor de deellevering.</p>",
+            "open": false
+          }
         }
       },
       "block_order": [
@@ -384,7 +392,8 @@
         "faq_item_merdK6",
         "faq_item_FwRAaE",
         "faq_item_tmRLFr",
-        "faq_item_QM7njK"
+        "faq_item_QM7njK",
+        "faq_item_yDEdTb"
       ],
       "settings": {
         "container": "container",

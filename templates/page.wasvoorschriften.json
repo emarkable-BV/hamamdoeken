@@ -355,16 +355,16 @@
         "faq_4": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Kun je een hamamdoek wassen?",
+            "content": "<p>Ja, gewoon met de rest van de was. Was liever zonder wasverzachter, die vermindert de absorptie van het katoen. Loop vooral de eerste keer even de knoopjes van de franjes na en trek ze eventueel iets aan, dan blijven ze mooi op hun plek zitten.</p>",
             "open": false
           }
         },
         "faq_5": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Moet ik mijn hamamdoek voor het eerste gebruik wassen?",
+            "content": "<p>Even weken of een eerste wasbeurt geven geeft de beste absorptie vanaf het begin. Voeg een scheutje azijn toe aan het weekwater of de eerste wasbeurt, dat helpt de kleuren mooi vast te zetten en geeft de absorptie een extra zetje.</p>",
             "open": false
           }
         }

@@ -367,6 +367,14 @@
             "content": "<p>Even weken of een eerste wasbeurt geven geeft de beste absorptie vanaf het begin. Voeg een scheutje azijn toe aan het weekwater of de eerste wasbeurt, dat helpt de kleuren mooi vast te zetten en geeft de absorptie een extra zetje.</p>",
             "open": false
           }
+        },
+        "faq_item_yWdyDX": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Kan ik een hamamdoek strijken?",
+            "content": "<p>Nodig is het niet, het platgeweven katoen ligt vanzelf al mooi glad. Wil je toch strijken, dan kan dat op een lage temperatuur.</p>",
+            "open": false
+          }
         }
       },
       "block_order": [
@@ -374,7 +382,8 @@
         "faq_2",
         "faq_3",
         "faq_4",
-        "faq_5"
+        "faq_5",
+        "faq_item_yWdyDX"
       ],
       "settings": {
         "container": "container",

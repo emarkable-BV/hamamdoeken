@@ -59,14 +59,6 @@
             "link": "",
             "active_state": "auto"
           }
-        },
-        "nav_link_qNzY7m": {
-          "type": "nav_link",
-          "settings": {
-            "label": "Contact",
-            "link": "",
-            "active_state": "auto"
-          }
         }
       },
       "block_order": [
@@ -75,8 +67,7 @@
         "nav_verzend",
         "nav_was",
         "nav_betalen",
-        "nav_faq",
-        "nav_link_qNzY7m"
+        "nav_faq"
       ],
       "settings": {
         "color_schema": "scheme-5",
@@ -150,7 +141,7 @@
         "heading_size": "h2",
         "heading_color": "",
         "subheading": "",
-        "description": "<p><strong>Liever bellen of WhatsAppen? Je bereikt ons op werkdagen via 06 - 12 67 98 08.</strong></p>",
+        "description": "<p><strong>Liever bellen of WhatsAppen? Op werkdagen bereik je ons via 06 - 12 67 98 08.</strong></p>",
         "form_design": "design-1",
         "form_width": 770,
         "form_alignment": "center",

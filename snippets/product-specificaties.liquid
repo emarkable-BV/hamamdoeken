@@ -1,0 +1,168 @@
+{%- comment -%}
+  Renders the "Specificaties" collapsible tab content on the product page.
+
+  Builds a two column table: the label on the left, the value on the right.
+  Rows come from two sources, in this order:
+
+  1. Every single_line_text_field metafield in custom, one row per field.
+     list.single_line_text_field values are joined with a comma.
+  2. The combined custom.specificaties field. That field is a list where every
+     entry reads "Label: waarde", so each entry becomes one row. Entries whose
+     label is internal (see specs_hidden below) are skipped.
+
+  If neither yields a row, the raw specificaties field is rendered as is, so
+  the content is never lost. Only if that is empty too do the block settings
+  take over.
+
+  Accepts:
+  - product: {Object} Product object
+  - block: {Object} The collapsible-tabs 'content' block, used as fallback content
+
+  Usage:
+  {% render 'product-specificaties', product: product, block: block %}
+{%- endcomment -%}
+
+{{ 'product-specificaties.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  comment
+    Labels that live in the specificaties list but are not specifications.
+    Add a label here (lowercase) to keep it out of the table.
+  endcomment
+  assign specs_hidden = 'pros,cons' | split: ','
+  assign specs_hidden_prefix = 'custom_details_'
+
+  assign specs_combined = product.metafields.custom.specificaties
+  assign specs_combined_type = specs_combined.type
+  assign specs_entries = ''
+  assign specs_row_count = 0
+  assign specs_seen = ""
+
+  if specs_combined_type == 'list.single_line_text_field'
+    assign specs_entries = specs_combined.value
+  elsif specs_combined_type == 'multi_line_text_field'
+    assign specs_entries = specs_combined.value | newline_to_br | strip_newlines | split: '<br />'
+  endif
+-%}
+
+{%- capture specs_rows -%}
+
+  {%- comment -%} 1. One row per single_line_text_field metafield {%- endcomment -%}
+  {%- for specs_field in product.metafields.custom -%}
+    {%- liquid
+      assign specs_key = specs_field[0]
+      assign specs_metafield = specs_field[1]
+      assign specs_type = specs_metafield.type
+
+      if specs_key == 'specificaties'
+        continue
+      endif
+
+      if specs_type == 'single_line_text_field'
+        assign specs_value = specs_metafield.value
+      elsif specs_type == 'list.single_line_text_field'
+        assign specs_value = specs_metafield.value | join: ', '
+      else
+        continue
+      endif
+
+      if specs_value == blank
+        continue
+      endif
+
+      assign specs_label = specs_key | replace: '_', ' ' | replace: '-', ' ' | capitalize
+      assign specs_marker = "|" | append: specs_label | downcase | append: "|"
+      if specs_seen contains specs_marker
+        continue
+      endif
+      assign specs_seen = specs_seen | append: specs_marker
+
+      assign specs_row_count = specs_row_count | plus: 1
+      assign specs_value_class = ''
+      assign specs_length = specs_value | size
+      if specs_length > 60
+        assign specs_value_class = ' product-specificaties__value--long'
+      endif
+    -%}
+    <tr>
+      <th class="product-specificaties__label" scope="row">{{ specs_label }}</th>
+      <td class="product-specificaties__value{{ specs_value_class }}">{{ specs_value | escape }}</td>
+    </tr>
+  {%- endfor -%}
+
+  {%- comment -%} 2. One row per entry in the combined specificaties list {%- endcomment -%}
+  {%- for specs_entry in specs_entries -%}
+    {%- liquid
+      assign specs_clean = specs_entry | strip
+
+      if specs_clean == blank
+        continue
+      endif
+
+      assign specs_parts = specs_clean | split: ':'
+
+      if specs_parts.size > 1
+        assign specs_label = specs_parts.first | strip
+        assign specs_value = specs_clean | remove_first: specs_parts.first | remove_first: ':' | strip
+      else
+        assign specs_label = ''
+        assign specs_value = specs_clean
+      endif
+
+      assign specs_label_key = specs_label | downcase
+
+      if specs_label_key contains specs_hidden_prefix
+        continue
+      endif
+
+      if specs_hidden contains specs_label_key
+        continue
+      endif
+
+      if specs_value == blank
+        continue
+      endif
+
+      if specs_label != blank
+        assign specs_marker = "|" | append: specs_label | downcase | append: "|"
+        if specs_seen contains specs_marker
+          continue
+        endif
+        assign specs_seen = specs_seen | append: specs_marker
+      endif
+
+      assign specs_row_count = specs_row_count | plus: 1
+      assign specs_value_class = ''
+      assign specs_length = specs_value | size
+      if specs_length > 60
+        assign specs_value_class = ' product-specificaties__value--long'
+      endif
+    -%}
+    {%- if specs_label != blank -%}
+      <tr>
+        <th class="product-specificaties__label" scope="row">{{ specs_label | escape }}</th>
+        <td class="product-specificaties__value{{ specs_value_class }}">{{ specs_value | escape }}</td>
+      </tr>
+    {%- else -%}
+      <tr>
+        <td class="product-specificaties__note" colspan="2">{{ specs_value | escape }}</td>
+      </tr>
+    {%- endif -%}
+  {%- endfor -%}
+
+{%- endcapture -%}
+
+{%- if specs_row_count > 0 -%}
+  <table class="product-specificaties">
+    <tbody>
+      {{ specs_rows }}
+    </tbody>
+  </table>
+{%- elsif specs_combined != blank -%}
+  {{ specs_combined | metafield_tag }}
+{%- else -%}
+  {{ block.settings.content }}
+  {{ block.settings.custom_liquid }}
+  {{ block.settings.content_page.content }}
+{%- endif -%}
+

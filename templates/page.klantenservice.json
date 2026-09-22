@@ -353,8 +353,8 @@
         "faq_item_FwRAaE": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Zijn alle prijzen inclusief btw?",
+            "content": "<p>Ja, alle prijzen op de site zijn inclusief btw. Geen verrassingen bij het afrekenen.</p>",
             "open": false
           }
         },

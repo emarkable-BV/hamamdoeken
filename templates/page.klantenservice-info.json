@@ -278,8 +278,8 @@
         "faq_item_9bGQBi": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Kan ik mijn bestelling op een ander adres laten afleveren?",
+            "content": "<p>Ja, vul bij het afrekenen gewoon een ander afleveradres in dan je factuuradres. Handig als je iemand wil verrassen.</p>",
             "open": false
           }
         }

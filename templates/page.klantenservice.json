@@ -32,7 +32,7 @@
           "type": "nav_link",
           "settings": {
             "label": "Verzendinformatie",
-            "link": "",
+            "link": "/pages/verzendinformatie",
             "active_state": "auto"
           }
         },

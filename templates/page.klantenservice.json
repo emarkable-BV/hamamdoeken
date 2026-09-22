@@ -345,8 +345,8 @@
         "faq_item_merdK6": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Mijn kortingscode werkt niet, hoe kan dit?",
+            "content": "<p>Check eerst of de code nog geldig is en of je aan de eventuele voorwaarden voldoet, zoals een minimaal bestelbedrag. Werkt het dan nog niet? Neem contact met ons op, dan kijken we met je mee.</p>",
             "open": false
           }
         },

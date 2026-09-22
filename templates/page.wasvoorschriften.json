@@ -347,8 +347,8 @@
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Kan een badjas in de wasdroger?",
+            "content": "<p>Dat hangt af van het materiaal: een badstof badjas kan meestal op lage temperatuur in de droger, een badjas van hydrofiel of wafelkatoen droogt beter aan de lijn of op een rek zodat hij zijn vorm behoudt. Check sowieso het waslabel, dat is leidend per product.</p>",
             "open": false
           }
         },

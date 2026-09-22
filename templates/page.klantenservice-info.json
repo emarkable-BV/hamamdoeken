@@ -266,12 +266,30 @@
             "content": "<p>Ja, dat kan. Bel ons op 06-12679808. Geen gehoor? Stuur dan gerust een appje naar hetzelfde nummer, dan reageren we zo snel mogelijk.</p>",
             "open": false
           }
+        },
+        "faq_item_hrwryt": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Kan ik mijn bestelling laten inpakken als cadeau?",
+            "content": "<p>Ja, dat kan. Bij het product zie je de opties \"Cadeauverpakking toevoegen\" (+€4,95) en \"Persoonlijk kaartje toevoegen\" (+€2,95), vink aan wat je wilt voordat je hem aan je winkelwagen toevoegt.</p>",
+            "open": false
+          }
+        },
+        "faq_item_9bGQBi": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Hier een veelgestelde vraag",
+            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "open": false
+          }
         }
       },
       "block_order": [
         "faq_1",
         "faq_2",
-        "faq_3"
+        "faq_3",
+        "faq_item_hrwryt",
+        "faq_item_9bGQBi"
       ],
       "settings": {
         "container": "container",

@@ -364,7 +364,7 @@
           "type": "faq_item",
           "settings": {
             "title": "Moet ik mijn hamamdoek voor het eerste gebruik wassen?",
-            "content": "<p>Even weken of een eerste wasbeurt geven geeft de beste absorptie vanaf het begin. Voeg een scheutje azijn toe aan het weekwater of de eerste wasbeurt, dat helpt de kleuren mooi vast te zetten en geeft de absorptie een extra zetje.</p>",
+            "content": "<p>Dat verschilt per merk, sommige hamamdoeken komen al voorgewassen, andere niet. Check de productpagina of het waslabel om te zien of dit al voor je is gedaan. Twijfel je? Neem dan gerust contact met ons op. Wil je hem toch even weken of een eerste wasbeurt geven? Voeg dan een scheutje azijn toe aan het weekwater of de eerste wasbeurt, dat helpt de kleuren mooi vast te zetten en geeft de absorptie een extra zetje.</p>",
             "open": false
           }
         },
@@ -375,6 +375,22 @@
             "content": "<p>Nodig is het niet, het platgeweven katoen ligt vanzelf al mooi glad. Wil je toch strijken, dan kan dat op een lage temperatuur.</p>",
             "open": false
           }
+        },
+        "faq_item_apD6mh": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Mag een hamamdoek in de droger?",
+            "content": "<p>Liever niet, lucht drogen is beter voor de vezels en voorkomt krimp. Heb je toch haast? Dan kan het op een laag temperatuurprogramma.</p>",
+            "open": false
+          }
+        },
+        "faq_item_4jmcBD": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Wat is het beste wasmiddel voor mijn badjas of hamamdoek?",
+            "content": "<p>Een mild, kleurecht wasmiddel werkt het beste. Wasverzachter kun je beter overslaan, die vermindert de absorptie, gebruik in plaats daarvan gerust een scheutje azijn.</p>",
+            "open": false
+          }
         }
       },
       "block_order": [
@@ -383,7 +399,9 @@
         "faq_3",
         "faq_4",
         "faq_5",
-        "faq_item_yWdyDX"
+        "faq_item_yWdyDX",
+        "faq_item_apD6mh",
+        "faq_item_4jmcBD"
       ],
       "settings": {
         "container": "container",

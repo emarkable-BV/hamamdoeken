@@ -140,11 +140,16 @@
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when 'content' -%}
+                {%- assign block_title = block.settings.title | downcase | strip -%}
                 {%- capture content -%}
                   <div class="rte">
-                    {{ block.settings.content }}
-                    {{ block.settings.custom_liquid }}
-                    {{ block.settings.content_page.content }}
+                    {%- if block_title == 'specificaties' -%}
+                      {% render 'product-specificaties', product: product, block: block %}
+                    {%- else -%}
+                      {{ block.settings.content }}
+                      {{ block.settings.custom_liquid }}
+                      {{ block.settings.content_page.content }}
+                    {%- endif -%}
                   </div>
                 {%- endcapture -%}
                 {% render 'collapsible-item',

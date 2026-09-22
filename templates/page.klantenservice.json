@@ -361,8 +361,8 @@
         "faq_item_tmRLFr": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Mijn korting wordt niet goed berekend.",
+            "content": "<p>Per bestelling kun je gebruikmaken van één aanbieding of kortingscode. Klopt er toch iets niet? Neem gerust even contact met ons op, dan kijken we ernaar.</p>",
             "open": false
           }
         },

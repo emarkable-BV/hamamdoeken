@@ -373,14 +373,6 @@
             "content": "<p>Cadeaukaarten kies je bij het afrekenen tussen de betaalmogelijkheden, niet bij het kortingscodeveld. Dit geldt voor de Webshop Giftcard, een VVV-cadeaukaart en een DE-cadeaubon. Een cadeaukaart is gewoon te combineren met een kortingscode.</p>",
             "open": false
           }
-        },
-        "faq_item_hWitmQ": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
-            "open": false
-          }
         }
       },
       "block_order": [
@@ -392,8 +384,7 @@
         "faq_item_merdK6",
         "faq_item_FwRAaE",
         "faq_item_tmRLFr",
-        "faq_item_QM7njK",
-        "faq_item_hWitmQ"
+        "faq_item_QM7njK"
       ],
       "settings": {
         "container": "container",

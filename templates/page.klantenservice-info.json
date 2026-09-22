@@ -262,8 +262,8 @@
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Is het mogelijk om telefonisch te bestellen?",
+            "content": "<p>Ja, dat kan. Bel ons op 06-12679808. Geen gehoor? Stuur dan gerust een appje naar hetzelfde nummer, dan reageren we zo snel mogelijk.</p>",
             "open": false
           }
         }

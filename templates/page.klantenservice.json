@@ -310,14 +310,6 @@
             "open": false
           }
         },
-        "faq_2": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
-            "open": false
-          }
-        },
         "faq_3": {
           "type": "faq_item",
           "settings": {
@@ -325,12 +317,20 @@
             "content": "<p>Bij het afrekenen zie je het veld \"Kortingscode of cadeaubon\", vul daar je code in en klik op \"Toepassen\". Let op: dit veld is alleen voor kortingscodes, niet voor de Webshop Giftcard, een VVV-cadeaukaart of een DE-cadeaubon. Die kies je verderop bij de betaalmogelijkheden.</p>",
             "open": false
           }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Is het mogelijk om telefonisch te bestellen?",
+            "content": "<p>Ja, dat kan. Bel ons op 06-12679808. Geen gehoor? Stuur dan gerust een appje naar hetzelfde nummer, dan reageren we zo snel mogelijk.</p>",
+            "open": false
+          }
         }
       },
       "block_order": [
         "faq_1",
-        "faq_2",
-        "faq_3"
+        "faq_3",
+        "faq_2"
       ],
       "settings": {
         "container": "container",

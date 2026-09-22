@@ -665,7 +665,7 @@
               assign show_size_chart = true
             endif
           %}
-          {%- comment %} CUSTOM (Hamamdoeken): verberg de variant-keuze als er maar 1 variant is {%- endcomment %}
+          {%- comment %} CUSTOM (Hamamdoeken): verberg de variant-keuze als er maar 1 variant is, de maattabel blijft wel zichtbaar {%- endcomment %}
           {%- if product.variants.size > 1 -%}
             {% render 'variant-picker',
               product: product,
@@ -679,29 +679,43 @@
               block: block,
               picker_type: block.settings.picker_type
             %}
-            {% if size_chart != blank and show_size_chart %}
-              {% assign modal_id = 'SizeChart-' | append: section.id %}
-              <modal-dialog id="PopupModal-{{ modal_id }}" class="f-modal hidden" style="--modal-width:800px">
-                <div class="f-modal__content" role="dialog" aria-label="{{ label }}" aria-modal="true" tabindex="-1">
-                  <div class="scroll-container">
-                    <button
-                      id="ModalClose-{{ modal_id }}"
-                      type="button"
-                      class="f-modal__close"
-                      aria-label="{{ 'accessibility.close' | t }}"
-                    >
-                      {% comment %} theme-check-disable {% endcomment %}
-                      {{ 'icon-close.svg' | inline_asset_content }}
-                      {% comment %} theme-check-enable {% endcomment %}
-                    </button>
-                    <div class="f-modal__inner">
-                      <div class="rte py-md px-sm">{{ size_chart }}</div>
-                    </div>
+          {%- elsif show_size_chart -%}
+            {%- comment %} CUSTOM (Hamamdoeken): losse maattabel-knop als de variant-keuze verborgen is {%- endcomment %}
+            <div class="f-product-single__size-chart-only">
+              <modal-opener class="no-js-hidden" data-modal="#PopupModal-SizeChart-{{ section.id }}">
+                <button
+                  type="button"
+                  class="btn--link text-sm"
+                  aria-haspopup="dialog"
+                  aria-label="{{ 'products.product.open_size_chart' | t }}"
+                >
+                  <span>{{ 'products.product.open_size_chart' | t }}</span>
+                </button>
+              </modal-opener>
+            </div>
+          {%- endif -%}
+          {% if show_size_chart %}
+            {% assign modal_id = 'SizeChart-' | append: section.id %}
+            <modal-dialog id="PopupModal-{{ modal_id }}" class="f-modal hidden" style="--modal-width:800px">
+              <div class="f-modal__content" role="dialog" aria-label="{{ label }}" aria-modal="true" tabindex="-1">
+                <div class="scroll-container">
+                  <button
+                    id="ModalClose-{{ modal_id }}"
+                    type="button"
+                    class="f-modal__close"
+                    aria-label="{{ 'accessibility.close' | t }}"
+                  >
+                    {% comment %} theme-check-disable {% endcomment %}
+                    {{ 'icon-close.svg' | inline_asset_content }}
+                    {% comment %} theme-check-enable {% endcomment %}
+                  </button>
+                  <div class="f-modal__inner">
+                    <div class="rte py-md px-sm">{{ size_chart }}</div>
                   </div>
                 </div>
-              </modal-dialog>
-            {% endif %}
-          {%- endif -%}
+              </div>
+            </modal-dialog>
+          {% endif %}
         {%- when 'buy_buttons' -%}
           <div {{ block.shopify_attributes }}>
             {%- liquid

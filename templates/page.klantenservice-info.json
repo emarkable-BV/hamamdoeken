@@ -282,6 +282,38 @@
             "content": "<p>Ja, vul bij het afrekenen gewoon een ander afleveradres in dan je factuuradres. Handig als je iemand wil verrassen.</p>",
             "open": false
           }
+        },
+        "faq_item_9btNeF": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Mijn kortingscode werkt niet, hoe kan dit?",
+            "content": "<p>Check eerst of de code nog geldig is en of je aan de eventuele voorwaarden voldoet, zoals een minimaal bestelbedrag. Werkt het dan nog niet? Neem contact met ons op, dan kijken we met je mee.</p>",
+            "open": false
+          }
+        },
+        "faq_item_pRRcgJ": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Hier een veelgestelde vraag",
+            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "open": false
+          }
+        },
+        "faq_item_GFpmHX": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Hier een veelgestelde vraag",
+            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "open": false
+          }
+        },
+        "faq_item_DYtwPc": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Hier een veelgestelde vraag",
+            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "open": false
+          }
         }
       },
       "block_order": [
@@ -289,7 +321,11 @@
         "faq_2",
         "faq_3",
         "faq_item_hrwryt",
-        "faq_item_9bGQBi"
+        "faq_item_9bGQBi",
+        "faq_item_9btNeF",
+        "faq_item_pRRcgJ",
+        "faq_item_GFpmHX",
+        "faq_item_DYtwPc"
       ],
       "settings": {
         "container": "container",

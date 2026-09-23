@@ -282,46 +282,6 @@
             "content": "<p>Stuur het product graag in de originele verpakking terug, samen met de pakbon of iets waaruit blijkt wie de klant is. Dat zorgt voor een vlotte afhandeling.</p>",
             "open": false
           }
-        },
-        "faq_item_9btNeF": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Mijn kortingscode werkt niet, hoe kan dit?",
-            "content": "<p>Check eerst of de code nog geldig is en of je aan de eventuele voorwaarden voldoet, zoals een minimaal bestelbedrag. Werkt het dan nog niet? Neem contact met ons op, dan kijken we met je mee.</p>",
-            "open": false
-          }
-        },
-        "faq_item_pRRcgJ": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Zijn alle prijzen inclusief btw?",
-            "content": "<p>Ja, alle prijzen op de site zijn inclusief btw. Geen verrassingen bij het afrekenen.</p>",
-            "open": false
-          }
-        },
-        "faq_item_GFpmHX": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Mijn korting wordt niet goed berekend.",
-            "content": "<p>Per bestelling kun je gebruikmaken van één aanbieding of kortingscode. Klopt er toch iets niet? Neem gerust even contact met ons op, dan kijken we ernaar.</p>",
-            "open": false
-          }
-        },
-        "faq_item_DYtwPc": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Bieden jullie ook een pre-order mogelijkheid aan, en hoe gaan jullie om met deelleveringen?",
-            "content": "<p>Ja, pre-orderen kan. Je ziet die mogelijkheid dan direct bij het product staan. Bestel je meerdere producten waarvan er eentje een langere levertijd heeft? Dan sturen we alles in één keer op zodra je hele bestelling compleet is. Wil je liever niet wachten en toch alvast ontvangen wat al op voorraad is? Dan kan dat tegen de volledige verzendkosten van €7,95 voor de deellevering.</p>",
-            "open": false
-          }
-        },
-        "faq_item_RkwikX": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Hoe kan ik betalen met een cadeaukaart?",
-            "content": "<p>Cadeaukaarten kies je bij het afrekenen tussen de betaalmogelijkheden, niet bij het kortingscodeveld. Dit geldt voor de Webshop Giftcard en een VVV-cadeaukaart. Een cadeaukaart is gewoon te combineren met een kortingscode.</p>",
-            "open": false
-          }
         }
       },
       "block_order": [
@@ -329,12 +289,7 @@
         "faq_2",
         "faq_3",
         "faq_item_hrwryt",
-        "faq_item_9bGQBi",
-        "faq_item_9btNeF",
-        "faq_item_pRRcgJ",
-        "faq_item_GFpmHX",
-        "faq_item_DYtwPc",
-        "faq_item_RkwikX"
+        "faq_item_9bGQBi"
       ],
       "settings": {
         "container": "container",

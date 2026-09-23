@@ -246,8 +246,8 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "title": "Wat is de levertijd?",
-            "content": "<p>Voor 21:00 uur besteld op werkdagen, en morgen in huis. Dit geldt voor een groot deel van ons assortiment. Uitzonderingen zijn maatwerk, pre-orders en producten met een langere levertijd.</p>",
+            "title": "Wat kost verzending?",
+            "content": "<p>Verzenden naar een PostNL-punt in Nederland kost €3,95. Waar mogelijk versturen we je bestelling als brievenbuspakje, dan valt hij gewoon door de brievenbus. Bestel je voor €55,- of meer? Dan verzenden we gratis naar een PostNL-afhaalpunt. Verzenden naar een afhaalpunt in België kost €5,95.</p>",
             "open": false
           }
         },

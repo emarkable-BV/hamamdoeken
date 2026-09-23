@@ -254,16 +254,32 @@
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "title": "Kan ik mijn bestelling volgen met Track & Trace?",
-            "content": "<p>Ja, zodra je bestelling is verzonden ontvang je een verzendbevestiging met daarin je Track & Trace-code, zo kun je precies volgen waar je pakketje is.</p>",
+            "title": "Hoe ruil ik een product?",
+            "content": "<p>Ook hiervoor heb je 100 dagen de tijd. Neem contact met ons op en geef aan welk product je wilt ruilen, dan leggen we dat alvast voor je apart. Zodra we je retour hebben ontvangen, sturen we het andere item naar je op. Moet je bijbetalen? Dan vragen we je dat bedrag vooraf over te maken, voordat we het nieuwe item versturen. Liever niet wachten? Dan kun je het product ook gewoon retourneren en een nieuwe bestelling plaatsen.</p>",
             "open": false
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "title": "Verzenden jullie ook naar het buitenland?",
-            "content": "<p>Ja, we verzenden naar België, Duitsland, Frankrijk en Spanje. Wil je je bestelling naar een ander land laten sturen? Neem dan even contact met ons op via de chatbutton, dan kijken we wat er mogelijk is.</p><p>De verzendkosten per land:</p><ul><li>België: € 5,95</li><li>Duitsland: €12,50</li><li>Frankrijk: €16,50 tot 2 kg, €21,50 tot 5 kg, €24,50 daarboven</li><li>Spanje: €17,50 tot 2 kg, €20,- tot 5 kg, €26,50 daarboven</li></ul>",
+            "title": "Hoe snel krijg ik mijn geld terug?",
+            "content": "<p>We streven ernaar dit binnen 2 werkdagen na ontvangst van je retour te regelen.</p>",
+            "open": false
+          }
+        },
+        "faq_item_pWzxYp": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Moet ik bellen voordat ik een product retourneer?",
+            "content": "<p>Nee, dat hoeft niet, maar we vinden het wel fijn om te weten dat er iets terugkomt en waarom. Via ons retourportaal kun je de reden voor je retour doorgeven en, indien gewenst, meteen een retourlabel bestellen.</p>",
+            "open": false
+          }
+        },
+        "faq_item_k4m4Wg": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Hier een veelgestelde vraag",
+            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
             "open": false
           }
         }
@@ -271,7 +287,9 @@
       "block_order": [
         "faq_1",
         "faq_2",
-        "faq_3"
+        "faq_3",
+        "faq_item_pWzxYp",
+        "faq_item_k4m4Wg"
       ],
       "settings": {
         "container": "container",

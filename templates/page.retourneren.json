@@ -246,8 +246,8 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "title": "Wat is de levertijd?",
-            "content": "<p>Voor 21:00 uur besteld op werkdagen, en morgen in huis. Dit geldt voor een groot deel van ons assortiment. Uitzonderingen zijn maatwerk, pre-orders en producten met een langere levertijd.</p>",
+            "title": "Hoe retourneer ik een product?",
+            "content": "<p>Ga naar onze <a href=\"/pages/retourneren\" title=\"/pages/retourneren\">retourpagina </a>en volg de stappen daar. Je hebt 100 dagen de tijd om een artikel terug te sturen, en als je het retourlabel via ons regelt, vind je daar ook de kosten.</p>",
             "open": false
           }
         },

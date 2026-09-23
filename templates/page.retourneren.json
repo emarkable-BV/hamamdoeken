@@ -278,8 +278,8 @@
         "faq_item_k4m4Wg": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Moet ik iets meesturen als ik een product ruil of retourneer?",
+            "content": "<p>Stuur het product graag in de originele verpakking terug, samen met de pakbon of iets waaruit blijkt wie de klant is. Dat zorgt voor een vlotte afhandeling.</p>",
             "open": false
           }
         }

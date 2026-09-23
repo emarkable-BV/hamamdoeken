@@ -262,8 +262,8 @@
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "title": "Hoe snel krijg ik mijn geld terug?",
-            "content": "<p>We streven ernaar dit binnen 2 werkdagen na ontvangst van je retour te regelen.</p>",
+            "title": "Verzenden jullie ook naar het buitenland?",
+            "content": "<p>Ja, we verzenden naar België, Duitsland, Frankrijk en Spanje. Wil je je bestelling naar een ander land laten sturen? Neem dan even contact met ons op via de chatbutton, dan kijken we wat er mogelijk is.</p><p>De verzendkosten per land:</p><ul><li>België: € 5,95</li><li>Duitsland: €12,50</li><li>Frankrijk: €16,50 tot 2 kg, €21,50 tot 5 kg, €24,50 daarboven</li><li>Spanje: €17,50 tot 2 kg, €20,- tot 5 kg, €26,50 daarboven</li></ul>",
             "open": false
           }
         },

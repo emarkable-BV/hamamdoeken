@@ -128,10 +128,10 @@
         "announcement_2": {
           "type": "announcement",
           "settings": {
-            "text": "<em>Gratis verstuurd </em> vanaf €55,- (NL)",
+            "text": "Verzending naar een afhaalpunt <em>€3,95</em> (NL)",
             "font_family": "heading",
             "text_size": 18,
-            "text_link": "",
+            "text_link": "shopify://pages/verzendinformatie",
             "use_custom_spacing": false,
             "margin_left": 15,
             "margin_right": 15,

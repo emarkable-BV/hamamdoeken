@@ -251,6 +251,22 @@
             "open": false
           }
         },
+        "faq_item_KdeNMx": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Hoe kan ik betalen met een cadeaukaart?",
+            "content": "<p>Cadeaukaarten kies je bij het afrekenen tussen de betaalmogelijkheden, niet bij het kortingscodeveld. Dit geldt voor de Webshop Giftcard en een VVV-cadeaukaart. Een cadeaukaart is gewoon te combineren met een kortingscode.</p>",
+            "open": false
+          }
+        },
+        "faq_item_HM8bRm": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Hier een veelgestelde vraag",
+            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "open": false
+          }
+        },
         "faq_2": {
           "type": "faq_item",
           "settings": {
@@ -262,14 +278,16 @@
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "title": "Verzenden jullie ook naar het buitenland?",
-            "content": "<p>Ja, we verzenden naar België, Duitsland, Frankrijk en Spanje. Wil je je bestelling naar een ander land laten sturen? Neem dan even contact met ons op via de chatbutton, dan kijken we wat er mogelijk is.</p><p>De verzendkosten per land:</p><ul><li>België: € 5,95</li><li>Duitsland: €12,50</li><li>Frankrijk: €16,50 tot 2 kg, €21,50 tot 5 kg, €24,50 daarboven</li><li>Spanje: €17,50 tot 2 kg, €20,- tot 5 kg, €26,50 daarboven</li></ul>",
+            "title": "Welke betaalmethodes ondersteunen directe levering?",
+            "content": "<p>Bij alle betaalmethodes wordt je bestelling direct verwerkt, behalve bij een overboeking via SEPA (waarbij je zelf het bedrag overmaakt via internetbankieren). Daarbij wachten we tot het bedrag op onze rekening staat voordat we je bestelling versturen.</p>",
             "open": false
           }
         }
       },
       "block_order": [
         "faq_1",
+        "faq_item_KdeNMx",
+        "faq_item_HM8bRm",
         "faq_2",
         "faq_3"
       ],

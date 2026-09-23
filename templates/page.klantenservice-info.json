@@ -266,30 +266,12 @@
             "content": "<p>Ja, we verzenden naar België, Duitsland, Frankrijk en Spanje. Wil je je bestelling naar een ander land laten sturen? Neem dan even contact met ons op via de chatbutton, dan kijken we wat er mogelijk is.</p><p>De verzendkosten per land:</p><ul><li>België: € 5,95</li><li>Duitsland: €12,50</li><li>Frankrijk: €16,50 tot 2 kg, €21,50 tot 5 kg, €24,50 daarboven</li><li>Spanje: €17,50 tot 2 kg, €20,- tot 5 kg, €26,50 daarboven</li></ul>",
             "open": false
           }
-        },
-        "faq_item_hrwryt": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Moet ik bellen voordat ik een product retourneer?",
-            "content": "<p>Nee, dat hoeft niet, maar we vinden het wel fijn om te weten dat er iets terugkomt en waarom. Via ons retourportaal kun je de reden voor je retour doorgeven en, indien gewenst, meteen een retourlabel bestellen.</p>",
-            "open": false
-          }
-        },
-        "faq_item_9bGQBi": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Moet ik iets meesturen als ik een product ruil of retourneer?",
-            "content": "<p>Stuur het product graag in de originele verpakking terug, samen met de pakbon of iets waaruit blijkt wie de klant is. Dat zorgt voor een vlotte afhandeling.</p>",
-            "open": false
-          }
         }
       },
       "block_order": [
         "faq_1",
         "faq_2",
-        "faq_3",
-        "faq_item_hrwryt",
-        "faq_item_9bGQBi"
+        "faq_3"
       ],
       "settings": {
         "container": "container",

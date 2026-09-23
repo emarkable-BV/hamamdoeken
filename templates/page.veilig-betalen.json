@@ -259,14 +259,6 @@
             "open": false
           }
         },
-        "faq_item_HM8bRm": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
-            "open": false
-          }
-        },
         "faq_2": {
           "type": "faq_item",
           "settings": {
@@ -287,7 +279,6 @@
       "block_order": [
         "faq_1",
         "faq_item_KdeNMx",
-        "faq_item_HM8bRm",
         "faq_2",
         "faq_3"
       ],

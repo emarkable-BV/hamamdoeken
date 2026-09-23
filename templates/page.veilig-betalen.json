@@ -246,16 +246,16 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "title": "Wat is de levertijd?",
-            "content": "<p>Voor 21:00 uur besteld op werkdagen, en morgen in huis. Dit geldt voor een groot deel van ons assortiment. Uitzonderingen zijn maatwerk, pre-orders en producten met een langere levertijd.</p>",
+            "title": "Is het mogelijk om achteraf te betalen?",
+            "content": "<p>Ja, dat kan via Klarna. Kies Klarna bij het afrekenen, daar zie je direct de actuele voorwaarden en betaaltermijn die voor jouw bestelling gelden.</p>",
             "open": false
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "title": "Kan ik mijn bestelling volgen met Track & Trace?",
-            "content": "<p>Ja, zodra je bestelling is verzonden ontvang je een verzendbevestiging met daarin je Track & Trace-code, zo kun je precies volgen waar je pakketje is.</p>",
+            "title": "Welke betaalmogelijkheden worden ondersteund?",
+            "content": "<p>Je kunt betalen met iDEAL (Wero), Klarna, creditcard (Visa, Maestro, Mastercard, Amex), PayPal, SEPA-overboeking en diverse cadeaukaarten.</p>",
             "open": false
           }
         },

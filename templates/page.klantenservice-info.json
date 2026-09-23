@@ -254,8 +254,8 @@
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "title": "Ik heb een kortingscode of cadeaubon gekregen, hoe kan ik deze gebruiken?",
-            "content": "<p>Bij het afrekenen zie je het veld \"Kortingscode of cadeaubon\", vul daar je code in en klik op \"Toepassen\". Let op: dit veld is alleen voor kortingscodes, niet voor de Webshop Giftcard, een VVV-cadeaukaart of een DE-cadeaubon. Die kies je verderop bij de betaalmogelijkheden.</p>",
+            "title": "Hoe ruil ik een product?",
+            "content": "<p>Ook hiervoor heb je 100 dagen de tijd. Neem contact met ons op en geef aan welk product je wilt ruilen, dan leggen we dat alvast voor je apart. Zodra we je retour hebben ontvangen, sturen we het andere item naar je op. Moet je bijbetalen? Dan vragen we je dat bedrag vooraf over te maken, voordat we het nieuwe item versturen. Liever niet wachten? Dan kun je het product ook gewoon retourneren en een nieuwe bestelling plaatsen.</p>",
             "open": false
           }
         },

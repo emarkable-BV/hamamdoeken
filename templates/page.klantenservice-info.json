@@ -254,8 +254,8 @@
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "title": "Hoe ruil ik een product?",
-            "content": "<p>Ook hiervoor heb je 100 dagen de tijd. Neem contact met ons op en geef aan welk product je wilt ruilen, dan leggen we dat alvast voor je apart. Zodra we je retour hebben ontvangen, sturen we het andere item naar je op. Moet je bijbetalen? Dan vragen we je dat bedrag vooraf over te maken, voordat we het nieuwe item versturen. Liever niet wachten? Dan kun je het product ook gewoon retourneren en een nieuwe bestelling plaatsen.</p>",
+            "title": "Wat kost verzending?",
+            "content": "<p>Verzenden naar een PostNL-punt kost €3,95. Waar mogelijk versturen we je bestelling als brievenbuspakje, dan valt hij gewoon door de brievenbus. Bestel je voor €55,- of meer? Dan verzenden we gratis naar een PostNL-afhaalpunt.</p><p></p>",
             "open": false
           }
         },

@@ -262,24 +262,24 @@
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "title": "Is het mogelijk om telefonisch te bestellen?",
-            "content": "<p>Ja, dat kan. Bel ons op 06-12679808. Geen gehoor? Stuur dan gerust een appje naar hetzelfde nummer, dan reageren we zo snel mogelijk.</p>",
+            "title": "Hoe snel krijg ik mijn geld terug?",
+            "content": "<p>We streven ernaar dit binnen 2 werkdagen na ontvangst van je retour te regelen.</p>",
             "open": false
           }
         },
         "faq_item_hrwryt": {
           "type": "faq_item",
           "settings": {
-            "title": "Kan ik mijn bestelling laten inpakken als cadeau?",
-            "content": "<p>Ja, dat kan. Bij het product zie je de opties \"Cadeauverpakking toevoegen\" (+€4,95) en \"Persoonlijk kaartje toevoegen\" (+€2,95), vink aan wat je wilt voordat je hem aan je winkelwagen toevoegt.</p>",
+            "title": "Moet ik bellen voordat ik een product retourneer?",
+            "content": "<p>Nee, dat hoeft niet, maar we vinden het wel fijn om te weten dat er iets terugkomt en waarom. Via ons retourportaal kun je de reden voor je retour doorgeven en, indien gewenst, meteen een retourlabel bestellen.</p>",
             "open": false
           }
         },
         "faq_item_9bGQBi": {
           "type": "faq_item",
           "settings": {
-            "title": "Kan ik mijn bestelling op een ander adres laten afleveren?",
-            "content": "<p>Ja, vul bij het afrekenen gewoon een ander afleveradres in dan je factuuradres. Handig als je iemand wil verrassen.</p>",
+            "title": "Moet ik iets meesturen als ik een product ruil of retourneer?",
+            "content": "<p>Stuur het product graag in de originele verpakking terug, samen met de pakbon of iets waaruit blijkt wie de klant is. Dat zorgt voor een vlotte afhandeling.</p>",
             "open": false
           }
         },

@@ -191,10 +191,10 @@
     "search": {
       "most_searched_products": "Meest gezochte producten",
       "close": "Sluiten",
-      "search": "Zoeken",
+      "search": "",
       "submit": "Zoeken",
       "popular_searches": "Populaire zoekopdrachten",
-      "placeholder": "Zoeken",
+      "placeholder": "Waar ben je naar op zoek?",
       "hint_win": "Zoeken (Ctrl + K)",
       "hint_mac": "Zoeken (⌘ + K)"
     },

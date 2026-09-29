@@ -626,9 +626,9 @@
         "announcement_YwgrLV": {
           "type": "announcement",
           "settings": {
-            "text": "<em>Gratis </em>verzending vanaf €75",
-            "font_family": "body",
-            "text_size": 30,
+            "text": "<em>Gratis verzending</em> vanaf €75",
+            "font_family": "heading",
+            "text_size": 18,
             "text_link": "",
             "use_custom_spacing": false,
             "margin_left": 10,

@@ -105,7 +105,7 @@
             "default_choice": "1",
             "choice_1_label": "Ja, ik wil een plasticvrije verzending",
             "choice_1_value": "",
-            "choice_1_price": "+ €5,00",
+            "choice_1_price": "+ €1,95",
             "choice_1_price_green": true,
             "choice_2_label": "Nee, ik wil geen plasticvrije verzending",
             "choice_2_value": "",
@@ -170,27 +170,27 @@
             "text_style": "body"
           }
         },
-        "text_KkwrDm": {
+        "text_8aczyU": {
           "type": "text",
           "settings": {
-            "icon": "box",
-            "text": "Gratis verstuurd vanaf €40 (NL)",
+            "icon": "heart",
+            "text": "Grietje helpt je graag!",
             "text_style": "body"
           }
         },
         "text_QKhr8X": {
           "type": "text",
           "settings": {
-            "icon": "truck",
-            "text": "Voor 12:00 uur besteld = morgen bezorgd",
+            "icon": "star",
+            "text": "1300+ vijf sterren reviews",
             "text_style": "body"
           }
         },
-        "text_8aczyU": {
+        "text_KkwrDm": {
           "type": "text",
           "settings": {
-            "icon": "heart",
-            "text": "Grietje helpt je graag!",
+            "icon": "box",
+            "text": "Gratis verstuurd vanaf €75 (NL)",
             "text_style": "body"
           }
         },
@@ -263,9 +263,9 @@
         "essential_countdown_timer_app_block_Jdx7tr",
         "staffelkorting_app_staffel_table_K83nrr",
         "text_iihwrL",
-        "text_KkwrDm",
-        "text_QKhr8X",
         "text_8aczyU",
+        "text_QKhr8X",
+        "text_KkwrDm",
         "quantity_selector",
         "f11043ac-1746-42ad-a36b-91ff4cc9f432",
         "0bd176fb-80b2-42ce-ae4e-db8cb55fe024",

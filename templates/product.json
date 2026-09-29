@@ -623,6 +623,31 @@
             "margin_right_mobile": 10
           }
         },
+        "announcement_YwgrLV": {
+          "type": "announcement",
+          "settings": {
+            "text": "<em>Gratis </em>verzending vanaf €75",
+            "font_family": "body",
+            "text_size": 30,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_C7cLDc": {
+          "type": "divider",
+          "settings": {
+            "width": 64,
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
         "announcement_ygj3Gt": {
           "type": "announcement",
           "settings": {
@@ -679,6 +704,8 @@
         "divider_NqKJGB",
         "announcement_kLHdYz",
         "divider_9EKxz7",
+        "announcement_YwgrLV",
+        "divider_C7cLDc",
         "announcement_ygj3Gt",
         "divider_gThdCc",
         "announcement_Wk6HEH",

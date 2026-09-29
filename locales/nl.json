@@ -222,9 +222,9 @@
       "load_more": "Meer laden"
     },
     "cart": {
-      "item_added": "Artikel toegevoegd aan uw winkelwagen.",
+      "item_added": "Artikel toegevoegd aan je winkelwagen.",
       "view": "Bekijk mijn winkelwagen ({{ count }})",
-      "qualified_shipping_message": "Gefeliciteerd! Uw bestelling komt in aanmerking voor gratis verzending",
+      "qualified_shipping_message": "Gefeliciteerd! Je bestelling komt in aanmerking voor gratis verzending",
       "gift_wrapping_html": "Voor {{ price }} gelieve de producten in deze volgorde te verpakken.",
       "gift_note_placeholder": "Cadeaubericht (gratis en optioneel)",
       "cart_recommendations": "Misschien vind je dit ook interessant",
@@ -237,8 +237,8 @@
         "remove": "Verwijder {{ code }}",
         "caption": "Voer hier kortingscode in",
         "button": "Toepassen",
-        "duplicate_error_message": "De kortingscode is al op uw winkelwagen toegepast.",
-        "apply_error_message": "De kortingscode kan niet op uw winkelwagen worden toegepast."
+        "duplicate_error_message": "De kortingscode is al op je winkelwagen toegepast.",
+        "apply_error_message": "De kortingscode kan niet op je winkelwagen worden toegepast."
       }
     },
     "breadcrumbs": {

@@ -307,14 +307,14 @@
       },
       "question_form": {
         "label": "Een vraag stellen",
-        "field_message": "Uw bericht",
+        "field_message": "Je bericht",
         "success_message": "Bedankt dat je contact met ons hebt opgenomen. We komen zo snel mogelijk bij je terug.",
         "field_phone": "Jouw telefoon",
         "submit_button": "Stuur vraag",
         "field_email": "Jouw email",
         "note": "De velden gemarkeerd met * zijn verplicht.",
         "form_title": "Een vraag stellen",
-        "field_name": "Uw naam"
+        "field_name": "Je naam"
       },
       "xr_button_label": "Bekijk in uw ruimte, laadt item in augmented reality-venster",
       "product_variants": "Productvarianten",
@@ -348,7 +348,7 @@
         "open_featured_media": "Uitgelichte media openen in galerijweergave"
       },
       "required_field": "Gelieve alle verplichte velden (*) in te vullen.",
-      "variant_selection_needed_text": "Selecteer de variant van uw voorkeur.",
+      "variant_selection_needed_text": "Selecteer de variant van jouw voorkeur.",
       "variant_option_none_text": "Kies een optie",
       "view_more_options": "Bekijk meer",
       "sold_out": "Uitverkocht",
@@ -369,12 +369,12 @@
       "add_all_to_cart": "Voeg alles toe aan winkelwagen",
       "include_taxes": "Inclusief belasting.",
       "share_label": "Deel",
-      "xr_button": "Bekijk in uw ruimte",
+      "xr_button": "Bekijk in je ruimte",
       "unavailable": "Niet beschikbaar",
-      "in_stock_label": "Op voorraad, klaar voor verzending",
+      "in_stock_label": "Leverbaar",
       "stock_label": {
-        "one": "Lage voorraad - {{ count }} artikel links",
-        "other": "Lage voorraad - {{ count }} artikelen links"
+        "one": "Lage voorraad - {{ count }} artikel",
+        "other": "Lage voorraad - {{ count }} artikelen"
       },
       "will_not_ship_until": "Klaar voor verzending {{ date }}",
       "will_be_in_stock_after": "Terug op voorraad {{ date }}",

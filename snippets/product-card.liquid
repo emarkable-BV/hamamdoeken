@@ -444,6 +444,10 @@
         </div>
       {% endif %}
       {% render 'price', product: product, alignment: settings.pcard_content_alignment %}
+      {%- comment %} CUSTOM (Hamamdoeken): levertijd uit metaveld custom.levertijd, alleen tonen als gevuld {%- endcomment %}
+      {%- if product.metafields.custom.levertijd != blank -%}
+        <p class="product-card__levertijd">{{ product.metafields.custom.levertijd.value }}</p>
+      {%- endif -%}
       {% if is_complementary and show_product_option %}
         <div class="product-card__options relative text-left block">
           {% render 'product-card-swatch', product: product, product_url: product_url %}

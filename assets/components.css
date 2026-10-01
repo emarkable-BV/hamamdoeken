@@ -1300,7 +1300,7 @@ details[open]:not(.parent-group) > summary > [data-collapsible-icon] svg:first-c
 /* CUSTOM (Hamamdoeken): levertijd onder de prijs op de productkaart */
 .product-card__levertijd {
   color: rgba(var(--color-foreground), 0.75);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.3;
   margin-block: 0.4rem 0;
 }

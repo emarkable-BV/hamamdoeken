@@ -209,7 +209,7 @@
         "announcement_pbEiiw": {
           "type": "announcement",
           "settings": {
-            "text": "<em>Gratis verstuurd </em> vanaf €40,- (NL)",
+            "text": "Verzending naar een afhaalpunt <em>€3,95</em> (NL)",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
@@ -227,6 +227,31 @@
             "use_custom_spacing": false,
             "margin_left": 15,
             "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "announcement_WUaMkx": {
+          "type": "announcement",
+          "settings": {
+            "text": "<em>Gratis verzending </em>vanaf €75",
+            "font_family": "body",
+            "text_size": 30,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_Pd6bDc": {
+          "type": "divider",
+          "settings": {
+            "width": 64,
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
             "margin_left_mobile": 10,
             "margin_right_mobile": 10
           }
@@ -287,6 +312,8 @@
         "divider_dzFizV",
         "announcement_pbEiiw",
         "divider_7wyJ4J",
+        "announcement_WUaMkx",
+        "divider_Pd6bDc",
         "announcement_bry6Mz",
         "divider_fnKDj7",
         "announcement_Y6mtLh",

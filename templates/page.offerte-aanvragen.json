@@ -119,7 +119,7 @@
           "type": "message",
           "settings": {
             "label": "Extra wensen, vragen of opmerkingen",
-            "placeholder": "Extra wensen, vragen of opmerkingen",
+            "placeholder": "Vertel meer: welke tekst of welk logo, kleuren, plek op het product, verpakking...",
             "hide_label": true
           }
         }

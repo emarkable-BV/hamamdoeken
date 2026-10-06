@@ -147,7 +147,7 @@
         "offerte_cta": {
           "type": "offerte_cta",
           "settings": {
-            "heading": "Dit product met naam, logo of in grote aantallen?",
+            "heading": "Dit product met naam, logo of in bulk?",
             "link_label": "Bekijk de mogelijkheden",
             "link": "/pages/offerte-aanvragen"
           }

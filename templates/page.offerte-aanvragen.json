@@ -40,8 +40,20 @@
           "type": "phone",
           "settings": {
             "label": "Telefoonnummer",
-            "placeholder": "Telefoonnummer",
+            "placeholder": "Telefoonnummer (handig voor snelle vragen)",
             "field_width": "1/2",
+            "hide_label": true,
+            "required": false
+          }
+        },
+        "custom_field_dLwxrd": {
+          "type": "custom_field",
+          "settings": {
+            "label": "Bedrijfsnaam",
+            "placeholder": "Bedrijfsnaam (optioneel)",
+            "field_type": "text",
+            "rows": 3,
+            "field_width": "full",
             "hide_label": true,
             "required": false
           }
@@ -55,12 +67,25 @@
             "hide_label": true
           }
         },
+        "custom_field_X6GyPM": {
+          "type": "custom_field",
+          "settings": {
+            "label": "Aangepast veld",
+            "placeholder": "Waar kunnen we je mee helpen? Opties: Borduren / Bedrukken / Logo op product / Grote aantallen bestellen / Weet ik nog niet, ik wil advies",
+            "field_type": "textarea",
+            "rows": 3,
+            "field_width": "full",
+            "hide_label": true,
+            "required": false
+          }
+        },
         "producttitels": {
           "type": "custom_field",
           "settings": {
             "label": "Producttitels",
-            "placeholder": "Vul hier de producttitels in van de producten die je wilt laten bedrukken",
+            "placeholder": "Om welke producten gaat het? Vul hier de producttitels in van de producten waarin je bent geïnteresseerd",
             "field_type": "text",
+            "rows": 3,
             "field_width": "full",
             "hide_label": true,
             "required": false
@@ -78,7 +103,9 @@
       "block_order": [
         "8a1d85d7-2430-41e0-bb31-8d20e342d1de",
         "565061aa-197f-4276-b9da-2c541b1812f9",
+        "custom_field_dLwxrd",
         "21a662e3-f906-405a-ab49-e293e94acda6",
+        "custom_field_X6GyPM",
         "producttitels",
         "3d980acc-c8a3-45b3-9c2c-69e05bbc14b5"
       ],
@@ -93,7 +120,7 @@
         "heading_size": "h1",
         "heading_color": "",
         "subheading": "",
-        "description": "<p>Wilt u een product laten bedrukken? Vraag een offerte aan en beschrijf uw wensen zo uitgebreid mogelijk. Binnen 2-4 werkdagen geven wij u een prijsindicatie.</p>",
+        "description": "<p>Een hamamdoek met geborduurde naam als cadeau? Badjassen met je logo voor je hotel of sauna? Of een kerst- of zomerpakket voor je team of relaties? Vertel ons wat je in gedachten hebt. Binnen 2 tot 4 werkdagen krijg je een vrijblijvende prijsindicatie.</p><p>✓ Borduren of bedrukken, met naam, tekst of logo<br/>✓ Staffelprijzen bij grotere aantallen<br/>✓ Persoonlijk advies van Grietje, van ontwerp tot levering</p>",
         "form_design": "design-1",
         "form_width": 770,
         "form_alignment": "center",
@@ -139,13 +166,38 @@
         "announcement_TCWV9G": {
           "type": "announcement",
           "settings": {
-            "text": "<em>Gratis verstuurd </em> vanaf €40,- (NL)",
+            "text": "Verzending naar een afhaalpunt <em>€3,95</em> (NL)",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
             "use_custom_spacing": false,
             "margin_left": 15,
             "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_LnWUPb": {
+          "type": "divider",
+          "settings": {
+            "width": 64,
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "announcement_4pbRF6": {
+          "type": "announcement",
+          "settings": {
+            "text": "<em>Gratis verzending</em> vanaf €75",
+            "font_family": "body",
+            "text_size": 30,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
             "margin_left_mobile": 10,
             "margin_right_mobile": 10
           }
@@ -216,6 +268,8 @@
         "announcement_9VYGgU",
         "divider_4wqJUg",
         "announcement_TCWV9G",
+        "divider_LnWUPb",
+        "announcement_4pbRF6",
         "divider_qc8TJX",
         "announcement_iV9PnH",
         "divider_xgmUmb",
@@ -317,7 +371,12 @@
         "metaobject_question_key": "vraag",
         "metaobject_answer_key": "antwoord",
         "padding_top": 80,
-        "padding_bottom": 100
+        "padding_bottom": 100,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
       }
     }
   },

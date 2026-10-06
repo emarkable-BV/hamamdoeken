@@ -147,8 +147,8 @@
         "offerte_cta": {
           "type": "offerte_cta",
           "settings": {
-            "heading": "Dit product laten bedrukken of borduren?",
-            "link_label": "Vraag vrijblijvend een offerte aan",
+            "heading": "Dit product met naam, logo of in grote aantallen?",
+            "link_label": "Wij borduren, bedrukken en leveren in bulk. Vraag vrijblijvend een offerte aan",
             "link": "/pages/offerte-aanvragen"
           }
         },

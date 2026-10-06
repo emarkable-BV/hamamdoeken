@@ -9,6 +9,19 @@
  */
 {
   "sections": {
+    "custom_liquid_qQDtqD": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "container": "container",
+        "color_schema": "",
+        "custom_liquid": "<div class=\"keurmerk-badge\">\n  <a href=\"https://www.keurmerk.info/webwinkel/?key=1629\" target=\"_blank\" rel=\"noopener\">\n    <img src=\"https://sys.keurmerk.info/Resources/Logo/logo_r_small.png?l=nl\"\n         alt=\"Onze vermelding op Keurmerk.info\"\n         loading=\"lazy\">\n  </a>\n</div>\n\n<style>\n  .keurmerk-badge {\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    width: 100%;\n    margin: 1rem 0;\n  }\n  .keurmerk-badge img {\n    display: block;\n    max-width: 100%;\n    height: auto;\n    border: 0;\n  }\n</style>",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "container"
+      }
+    },
     "cart-items": {
       "type": "main-cart-items",
       "settings": {
@@ -45,21 +58,34 @@
       "settings": {
         "container": "container",
         "color_schema": "background-1",
+        "remove_params": false,
+        "section_header_padding_bottom": "medium",
+        "section_header_content_spacing": "medium",
         "heading": "You may also like",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h2",
+        "heading_color": "",
         "description": "",
         "limit": 8,
         "columns": 4,
         "column_gap": "medium",
+        "row_gap": "medium",
         "enable_slider": true,
         "show_nav": true,
         "show_dots": true,
         "enable_swipe_mobile": true,
+        "column_mobile": "1",
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "animations": "inherit"
       }
     }
   },
   "order": [
+    "custom_liquid_qQDtqD",
     "cart-items",
     "cart-footer",
     "product-recommendations"

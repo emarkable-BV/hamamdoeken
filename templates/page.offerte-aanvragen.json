@@ -83,10 +83,34 @@
           "type": "custom_field",
           "settings": {
             "label": "Producttitels",
-            "placeholder": "Om welke producten gaat het? Vul hier de producttitels in van de producten waarin je bent geïnteresseerd",
+            "placeholder": "Om welke producten gaat het? Vul hier de producttitels in van de producten waarin je bent geïnteresseerd.",
             "field_type": "text",
             "rows": 3,
             "field_width": "full",
+            "hide_label": true,
+            "required": false
+          }
+        },
+        "custom_field_MQMkUe": {
+          "type": "custom_field",
+          "settings": {
+            "label": "Aantal",
+            "placeholder": "Hoeveel stuks ongeveer?",
+            "field_type": "text",
+            "rows": 3,
+            "field_width": "1/2",
+            "hide_label": true,
+            "required": false
+          }
+        },
+        "custom_field_9Eaxft": {
+          "type": "custom_field",
+          "settings": {
+            "label": "Deadline",
+            "placeholder": "Wanneer wil je het in huis hebben?",
+            "field_type": "text",
+            "rows": 3,
+            "field_width": "1/2",
             "hide_label": true,
             "required": false
           }
@@ -107,6 +131,8 @@
         "21a662e3-f906-405a-ab49-e293e94acda6",
         "custom_field_X6GyPM",
         "producttitels",
+        "custom_field_MQMkUe",
+        "custom_field_9Eaxft",
         "3d980acc-c8a3-45b3-9c2c-69e05bbc14b5"
       ],
       "settings": {

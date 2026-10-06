@@ -15,8 +15,8 @@
       "settings": {
         "container": "container",
         "color_schema": "",
-        "custom_liquid": "<div class=\"keurmerk-badge\">\n  <a href=\"https://www.keurmerk.info/webwinkel/?key=1629\" target=\"_blank\" rel=\"noopener\">\n    <img src=\"https://sys.keurmerk.info/Resources/Logo/logo_r_small.png?l=nl\"\n         alt=\"Onze vermelding op Keurmerk.info\"\n         loading=\"lazy\">\n  </a>\n</div>\n\n<style>\n  .keurmerk-badge {\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    width: 100%;\n    margin: 1rem 0;\n  }\n  .keurmerk-badge img {\n    display: block;\n    max-width: 100%;\n    height: auto;\n    border: 0;\n  }\n</style>",
-        "padding_top": 0,
+        "custom_liquid": "<div class=\"keurmerk-badge\">\n  <a href=\"https://www.keurmerk.info/webwinkel/?key=1629\" target=\"_blank\" rel=\"noopener\">\n    <img src=\"https://sys.keurmerk.info/Resources/Logo/logo_o_small.png?l=nl\"\n         alt=\"Onze vermelding op Keurmerk.info\"\n         loading=\"lazy\">\n  </a>\n</div>\n\n<style>\n  .keurmerk-badge {\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    width: 100%;\n    margin: 1rem 0;\n  }\n  .keurmerk-badge img {\n    display: block;\n    max-width: 100%;\n    height: auto;\n    border: 0;\n  }\n</style>",
+        "padding_top": 2,
         "padding_bottom": 0,
         "show_section_divider": false,
         "divider_width": "container"

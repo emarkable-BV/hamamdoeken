@@ -59,7 +59,7 @@
     "pcard_image_ratio": "1/1",
     "show_video_instead": true,
     "pcard_show_second_img": true,
-    "pcard_show_color_swatch": true,
+    "pcard_show_color_swatch": false,
     "pcard_show_vendor": false,
     "pcard_show_review_badge": false,
     "pcard_show_cart_button": true,

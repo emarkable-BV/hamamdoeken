@@ -71,7 +71,7 @@
     "pcard_choose_options_actions": "open_popup",
     "pcard_mobile_hide_quick_add": false,
     "pcard_mobile_hide_quick_view": true,
-    "color_swatches_enable": true,
+    "color_swatches_enable": false,
     "color_swatches_trigger": "Kleur, Variant",
     "custom_colors": "red: #ff0000,\nyellow: #ffff00,\nblack: #212121,\nblue: #0000FF,\ngreen: #00ff00,\npurple: #800080,\nsilver: #c0c0c0,\nwhite: #ffffff,\nbrown: #7B3F00,\nlight-brown: #feb035,\ndark-turquoise: #23cddc,\norange: #fe9001,\ntan: #eacea7,\nviolet: #EE82EE,\npink: #FFC0CB,\ngrijs: #808080",
     "qv_show_dynamic_checkout_button": false,

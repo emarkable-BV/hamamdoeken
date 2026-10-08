@@ -281,7 +281,7 @@
         "media_size": "medium",
         "mobile_thumbnails": "hide",
         "enable_image_zoom": true,
-        "enable_video_looping": false,
+        "enable_video_looping": true,
         "show_featured_media": false
       }
     },

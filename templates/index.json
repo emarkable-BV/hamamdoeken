@@ -174,7 +174,7 @@
         "template--17157701533922__d8a17c2d-b43a-460f-b740-f56e8cc11111-featured_collection-4": {
           "type": "featured_collection",
           "settings": {
-            "collection": "beachwear-1",
+            "collection": "beachwear",
             "image": "{{ block.settings.collection.image }}",
             "title": "Beachwear"
           }

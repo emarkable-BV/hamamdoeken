@@ -34,6 +34,9 @@
 /* CUSTOM (Hamamdoeken): video in artikeltekst */
 .f-article-video {
   margin-block: 3rem;
+  padding: 1.6rem;
+  background: #F5F3ED;
+  border-radius: 1.6rem;
 }
 .f-article-video video,
 .f-article-video iframe {
@@ -42,6 +45,16 @@
   height: auto;
   aspect-ratio: 16 / 9;
   border: 0;
-  border-radius: var(--image-radius, 0);
+  border-radius: 0.8rem;
   background: #000;
+}
+@media (max-width: 767.98px) {
+  .f-article-video {
+    padding: 1rem;
+    border-radius: 1.2rem;
+  }
+  .f-article-video video,
+  .f-article-video iframe {
+    border-radius: 0.6rem;
+  }
 }

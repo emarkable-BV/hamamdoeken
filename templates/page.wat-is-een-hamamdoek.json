@@ -246,16 +246,16 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "title": "Wat kost verzending?",
-            "content": "<p>Verzenden naar een PostNL-punt in Nederland kost €3,95. Waar mogelijk versturen we je bestelling als brievenbuspakje, dan valt hij gewoon door de brievenbus. Bestel je voor €55,- of meer? Dan verzenden we gratis naar een PostNL-afhaalpunt. Verzenden naar een afhaalpunt in België kost €5,95.</p>",
+            "title": "Heeft iedere hamamdoek franjes?",
+            "content": "<p>Nee. Geknoopte franjes zijn kenmerkend voor veel traditionele hamamdoeken, maar niet iedere moderne uitvoering heeft dezelfde afwerking. Let daarom ook op de weving en het materiaal, en niet alleen op de franjes.</p>",
             "open": false
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "title": "Kan ik mijn bestelling volgen met Track & Trace?",
-            "content": "<p>Ja, zodra je bestelling is verzonden ontvang je een verzendbevestiging met daarin je Track & Trace-code, zo kun je precies volgen waar je pakketje is.</p>",
+            "title": "Is een hamamdoek hetzelfde als een hydrofiele doek?",
+            "content": "<p>Niet helemaal. Hydrofiel betekent dat een materiaal gemakkelijk vocht aantrekt en opneemt. Een hamamdoek is een type handdoek dat zich onder andere onderscheidt door zijn traditionele weving en vormgeving. De twee begrippen sluiten elkaar dus niet uit.</p><p>De klassieke, vlakgeweven katoenen hamamdoeken van Ottomania noemen we daarom ook wel <strong>hydrofiele hamamdoeken</strong>. Ze zijn dun en soepel, nemen net zo gemakkelijk vocht op en laten zich compact opvouwen. Niet iedere hamamdoek heeft echter dezelfde weving of eigenschappen.</p>",
             "open": false
           }
         },

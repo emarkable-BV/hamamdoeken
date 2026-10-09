@@ -1,0 +1,38 @@
+{%- comment -%}
+  CUSTOM (Hamamdoeken): video in de artikeltekst, uit artikel-metafields.
+    custom.video     (bestand, video)  - Shopify-video, heeft voorrang
+    custom.video_url (URL)             - YouTube- of Vimeo-link
+{%- endcomment -%}
+{%- assign video_file = article.metafields.custom.video.value -%}
+{%- assign video_link = article.metafields.custom.video_url.value | append: '' | strip -%}
+{%- if video_file != blank -%}
+  <div class="f-article-video">
+    {{ video_file | video_tag: controls: true, playsinline: true, preload: 'metadata', image_size: '1200x' }}
+  </div>
+{%- elsif video_link != blank -%}
+  {%- liquid
+    assign embed_url = ''
+    if video_link contains 'youtu'
+      if video_link contains 'v='
+        assign video_id = video_link | split: 'v=' | last | split: '&' | first
+      else
+        assign video_id = video_link | split: '?' | first | split: '/' | last
+      endif
+      assign embed_url = 'https://www.youtube-nocookie.com/embed/' | append: video_id | append: '?rel=0'
+    elsif video_link contains 'vimeo.com'
+      assign video_id = video_link | split: '?' | first | split: '/' | last
+      assign embed_url = 'https://player.vimeo.com/video/' | append: video_id
+    endif
+  -%}
+  {%- if embed_url != blank -%}
+    <div class="f-article-video f-article-video--embed">
+      <iframe
+        src="{{ embed_url }}"
+        title="{{ article.title | escape }}"
+        loading="lazy"
+        allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+        allowfullscreen
+      ></iframe>
+    </div>
+  {%- endif -%}
+{%- endif -%}

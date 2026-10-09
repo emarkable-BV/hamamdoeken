@@ -30,3 +30,18 @@
     margin: 2rem 0 2.8rem;
   }
 }
+
+/* CUSTOM (Hamamdoeken): video in artikeltekst */
+.f-article-video {
+  margin-block: 3rem;
+}
+.f-article-video video,
+.f-article-video iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: var(--image-radius, 0);
+  background: #000;
+}

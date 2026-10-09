@@ -135,7 +135,16 @@
           itemprop="articleBody"
           {{ block.shopify_attributes }}
         >
-          {% render 'article-body', content: article.content, columns: block.settings.product_columns %}
+          {%- liquid
+            assign article_content = article.content
+            if article_content contains '[video]'
+              capture article_video
+                render 'article-video', article: article
+              endcapture
+              assign article_content = article_content | replace: '<p>[video]</p>', article_video | replace: '[video]', article_video
+            endif
+          -%}
+          {% render 'article-body', content: article_content, columns: block.settings.product_columns %}
         </div>
       {%- when 'tags-share' -%}
         <div class="container-narrow f-article-template__block-item" {{ block.shopify_attributes }}>
@@ -685,6 +694,10 @@
         {
           "type": "paragraph",
           "content": "Producten in de tekst: typ in de blog-editor op een eigen regel [products:handle-1,handle-2,handle-3]"
+        },
+        {
+          "type": "paragraph",
+          "content": "Video in de tekst: vul bij het artikel het metafield custom.video (Shopify-video) of custom.video_url (YouTube/Vimeo) in en typ in de blog-editor op een eigen regel [video]"
         },
         {
           "type": "select",

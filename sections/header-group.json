@@ -103,7 +103,7 @@
             "card_style": "1",
             "text_color": "#000000",
             "container": "inherit",
-            "columns": 4,
+            "columns": 5,
             "addon_column": 100,
             "collection_1": "",
             "collection_2": "",
@@ -229,7 +229,10 @@
       ],
       "settings": {
         "color_schema": "inverse",
+        "media_type": "image",
         "image": "shopify://shop_images/hero-hamamdoeken_2b9fbb8f-a4d8-4cb2-a010-4627a75354a0.jpg",
+        "video_type": "shopify",
+        "video_url": "",
         "image_overlay_opacity": 34,
         "animations": "inherit",
         "enable_bg_zoom_effect": true

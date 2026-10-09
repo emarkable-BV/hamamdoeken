@@ -262,8 +262,8 @@
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "title": "Verzenden jullie ook naar het buitenland?",
-            "content": "<p>Ja, we verzenden naar België, Duitsland, Frankrijk en Spanje. Wil je je bestelling naar een ander land laten sturen? Neem dan even contact met ons op via de chatbutton, dan kijken we wat er mogelijk is.</p><p>De verzendkosten per land:</p><ul><li>België: € 5,95</li><li>Duitsland: €12,50</li><li>Frankrijk: €16,50 tot 2 kg, €21,50 tot 5 kg, €24,50 daarboven</li><li>Spanje: €17,50 tot 2 kg, €20,- tot 5 kg, €26,50 daarboven</li></ul>",
+            "title": "Is een hamamdoek altijd van katoen?",
+            "content": "<p>Nee. Traditionele hamamdoeken zijn meestal gemaakt van 100% katoen, maar er bestaan ook uitvoeringen met andere vezels of materiaalmengsels.</p><ul><li><strong>Katoen:</strong> neemt goed vocht op, voelt prettig aan op de huid en is geschikt voor dagelijks gebruik.</li><li><strong>Bamboeviscose:</strong> voelt doorgaans zacht en soepel aan en kan goed vocht opnemen. Het gaat hierbij om viscose die wordt gemaakt van bamboe, niet om rechtstreeks geweven bamboevezels.</li><li><strong>Linnen:</strong> is stevig, neemt vocht op en heeft een herkenbare natuurlijke structuur. Linnen voelt aanvankelijk soms wat stugger aan, maar wordt vaak soepeler door gebruik en wassen.</li><li><strong>Katoen met polyester:</strong> is vaak voordeliger te produceren en kan vormvaster, kreukbestendiger en slijtvaster zijn. Polyester neemt zelf minder vocht op dan katoen, wat invloed kan hebben op het afdrogen.</li></ul><p>Elk materiaal heeft dus zijn eigen eigenschappen. Hoe een hamamdoek uiteindelijk aanvoelt, afdroogt en droogt na gebruik, hangt ook af van de weving, de dikte en de verhouding tussen de gebruikte vezels.</p>",
             "open": false
           }
         }

@@ -17,6 +17,7 @@
   assign text_alignment = section.settings.text_alignment
   assign text_alignment_mobile = section.settings.text_alignment_mobile
   assign image_overlay_opacity = section.settings.image_overlay_opacity
+  assign media_type = section.settings.media_type | default: 'image'
 
   if hero_height == 'adapt' or hero_height_mobile == 'adapt'
     assign aspect_ratio = image.aspect_ratio | default: '21/9'
@@ -25,6 +26,10 @@
   unless image_mobile == blank
     assign aspect_ratio_mobile = image_mobile.aspect_ratio
   endunless
+  if media_type == 'video'
+    assign aspect_ratio = section.settings.shopify_video.aspect_ratio | default: 1.778
+    assign aspect_ratio_mobile = aspect_ratio
+  endif
 
   assign motion_delay = 0
   assign animation_effect = settings.animations
@@ -58,6 +63,51 @@
           style="{% if hero_height == 'adapt' %}--aspect-ratio: {{ aspect_ratio }};{% endif %}{% if hero_height_mobile == 'adapt' %}--aspect-ratio-mobile: {{ aspect_ratio_mobile }};{% endif %}"
         {% endif %}
       >
+        {%- if media_type == 'video' -%}
+          {%- liquid
+            assign data_type = 'mp4'
+            assign video_url = section.settings.shopify_video.sources[1].url
+            if section.settings.video_type == 'external'
+              assign video_url = section.settings.video_url
+              if section.settings.video_url.type == 'youtube'
+                assign data_type = 'youtube'
+              else
+                assign data_type = 'vimeo'
+              endif
+            endif
+          -%}
+          <motion-element
+            data-motion="{% if section.settings.enable_bg_zoom_effect %}zoom-out-sm{% else %}none{% endif %}"
+            class="f-video-wrapper block h-full"
+          >
+            {%- if video_url == blank -%}
+              <div class="f-hero__image f-image h-full">
+                {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+            {%- else -%}
+              <video-component
+                class="f-video__bg"
+                data-init="false"
+                data-type="{{ data_type }}"
+                data-video-id="{{ section.settings.video_url.id }}"
+              >
+                {%- if section.settings.video_type == 'shopify' -%}
+                  <video
+                    class="video-playsinline"
+                    src="{{ video_url }}"
+                    {% if section.settings.shopify_video.preview_image %}
+                      poster="{{ section.settings.shopify_video.preview_image | image_url: width: 1920 }}"
+                    {% endif %}
+                    playsinline
+                    autoplay
+                    muted
+                    loop
+                  ></video>
+                {%- endif -%}
+              </video-component>
+            {%- endif -%}
+          </motion-element>
+        {%- else -%}
         <motion-element
           data-motion="{% if section.settings.enable_bg_zoom_effect %}zoom-out-sm{% else %}none{% endif %}"
           class="block h-full"
@@ -105,6 +155,7 @@
             </div>
           {% endif %}
         </motion-element>
+        {%- endif -%}
         {%- if image_overlay_opacity > 0 -%}
           <div
             class="f-hero__overlay bg-overlay"
@@ -241,14 +292,62 @@
       "label": "t:sections.common.container.label"
     },
     {
+      "type": "select",
+      "id": "media_type",
+      "label": "Media type",
+      "default": "image",
+      "options": [
+        {
+          "value": "image",
+          "label": "Afbeelding"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ]
+    },
+    {
       "type": "image_picker",
       "id": "image",
-      "label": "t:sections.hero.settings.image_settings.image"
+      "label": "t:sections.hero.settings.image_settings.image",
+      "visible_if": "{{ section.settings.media_type != 'video' }}"
     },
     {
       "type": "image_picker",
       "id": "image_mobile",
-      "label": "t:sections.hero.settings.image_settings.image_mobile"
+      "label": "t:sections.hero.settings.image_settings.image_mobile",
+      "visible_if": "{{ section.settings.media_type != 'video' }}"
+    },
+    {
+      "type": "select",
+      "id": "video_type",
+      "label": "t:sections.slideshow.blocks.slide_video.settings.video_type.label",
+      "default": "shopify",
+      "options": [
+        {
+          "value": "shopify",
+          "label": "t:sections.slideshow.blocks.slide_video.settings.video_type.option_2"
+        },
+        {
+          "value": "external",
+          "label": "t:sections.slideshow.blocks.slide_video.settings.video_type.option_1"
+        }
+      ],
+      "visible_if": "{{ section.settings.media_type == 'video' }}"
+    },
+    {
+      "type": "video",
+      "id": "shopify_video",
+      "label": "t:sections.slideshow.blocks.slide_video.settings.shopify_video",
+      "visible_if": "{{ section.settings.media_type == 'video' and section.settings.video_type == 'shopify' }}"
+    },
+    {
+      "type": "video_url",
+      "id": "video_url",
+      "accept": ["youtube", "vimeo"],
+      "label": "t:sections.slideshow.blocks.slide_video.settings.external_video",
+      "visible_if": "{{ section.settings.media_type == 'video' and section.settings.video_type == 'external' }}"
     },
     {
       "type": "range",

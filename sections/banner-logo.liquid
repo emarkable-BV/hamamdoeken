@@ -4,6 +4,18 @@
     assign image = section.settings.image
     assign image_mobile = section.settings.image_mobile
     assign image_overlay_opacity = section.settings.image_overlay_opacity
+    assign media_type = section.settings.media_type | default: 'image'
+
+    assign data_type = 'mp4'
+    assign video_url = section.settings.shopify_video.sources[1].url
+    if section.settings.video_type == 'external'
+      assign video_url = section.settings.video_url
+      if section.settings.video_url.type == 'youtube'
+        assign data_type = 'youtube'
+      else
+        assign data_type = 'vimeo'
+      endif
+    endif
 
     assign motion_delay = 0
     assign animation_effect = settings.animations
@@ -21,7 +33,39 @@
   <banner-logo
     class="banner-logo block relative overflow-hidden color-{{ section.settings.color_schema }}"
   >
-    {%- if image != blank -%}
+    {%- if media_type == 'video' and video_url != blank -%}
+      <motion-element
+        data-motion="{% if section.settings.enable_bg_zoom_effect %}zoom-out-sm{% else %}none{% endif %}"
+        class="f-video-wrapper block absolute w-full h-full"
+      >
+        <video-component
+          class="f-video__bg"
+          data-init="false"
+          data-type="{{ data_type }}"
+          data-video-id="{{ section.settings.video_url.id }}"
+        >
+          {%- if section.settings.video_type == 'shopify' -%}
+            <video
+              class="video-playsinline"
+              src="{{ video_url }}"
+              {% if section.settings.shopify_video.preview_image %}
+                poster="{{ section.settings.shopify_video.preview_image | image_url: width: 1920 }}"
+              {% endif %}
+              playsinline
+              autoplay
+              muted
+              loop
+            ></video>
+          {%- endif -%}
+        </video-component>
+        {%- if image_overlay_opacity > 0 -%}
+          <div
+            class="bg-overlay"
+            style="--color-overlay-alpha: {{ image_overlay_opacity }}"
+          ></div>
+        {%- endif -%}
+      </motion-element>
+    {%- elsif image != blank -%}
       <motion-element
         data-motion="{% if section.settings.enable_bg_zoom_effect %}zoom-out-sm{% else %}none{% endif %}"
         class="block absolute w-full h-full"
@@ -169,14 +213,62 @@
       "content": "t:sections.common.header__background.content"
     },
     {
+      "type": "select",
+      "id": "media_type",
+      "label": "Media type",
+      "default": "image",
+      "options": [
+        {
+          "value": "image",
+          "label": "Afbeelding"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ]
+    },
+    {
       "type": "image_picker",
       "id": "image",
-      "label": "t:sections.hero.settings.image_settings.image"
+      "label": "t:sections.hero.settings.image_settings.image",
+      "visible_if": "{{ section.settings.media_type != 'video' }}"
     },
     {
       "type": "image_picker",
       "id": "image_mobile",
-      "label": "t:sections.hero.settings.image_settings.image_mobile"
+      "label": "t:sections.hero.settings.image_settings.image_mobile",
+      "visible_if": "{{ section.settings.media_type != 'video' }}"
+    },
+    {
+      "type": "select",
+      "id": "video_type",
+      "label": "t:sections.slideshow.blocks.slide_video.settings.video_type.label",
+      "default": "shopify",
+      "options": [
+        {
+          "value": "shopify",
+          "label": "t:sections.slideshow.blocks.slide_video.settings.video_type.option_2"
+        },
+        {
+          "value": "external",
+          "label": "t:sections.slideshow.blocks.slide_video.settings.video_type.option_1"
+        }
+      ],
+      "visible_if": "{{ section.settings.media_type == 'video' }}"
+    },
+    {
+      "type": "video",
+      "id": "shopify_video",
+      "label": "t:sections.slideshow.blocks.slide_video.settings.shopify_video",
+      "visible_if": "{{ section.settings.media_type == 'video' and section.settings.video_type == 'shopify' }}"
+    },
+    {
+      "type": "video_url",
+      "id": "video_url",
+      "accept": ["youtube", "vimeo"],
+      "label": "t:sections.slideshow.blocks.slide_video.settings.external_video",
+      "visible_if": "{{ section.settings.media_type == 'video' and section.settings.video_type == 'external' }}"
     },
     {
       "type": "range",

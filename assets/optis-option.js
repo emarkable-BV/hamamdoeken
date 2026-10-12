@@ -2,8 +2,85 @@
  * De OPTIS-UI zelf is verborgen via CSS; deze component klikt OPTIS' verborgen radio
  * (input[name*="po_radio_button"][key="po_<optienaam>"]) zodat OPTIS de toeslag toepast.
  * De 'value' van onze radio moet exact gelijk zijn aan de OPTIS-waarde.
+ * Daarnaast telt het de toeslagen (uit de 'Prijs-tekst' van elke gekozen optie) op bij
+ * de getoonde productprijs, zodat de prijs het totaal toont.
  */
 if (!customElements.get('optis-option')) {
+  // "+ €5,00" -> 500, "- €1.234,50" -> -123450, leeg/geen getal -> 0
+  const parsePriceText = (text) => {
+    const match = String(text || '').match(/\d[\d.,]*/);
+    if (!match) return 0;
+    const parts = match[0].replace(/[.,]$/, '').split(/[.,]/);
+    let cents;
+    if (parts.length > 1 && parts[parts.length - 1].length <= 2) {
+      const decimals = parts.pop().padEnd(2, '0');
+      cents = parseInt(parts.join('') || '0', 10) * 100 + parseInt(decimals, 10);
+    } else {
+      cents = parseInt(parts.join(''), 10) * 100;
+    }
+    return /-\s*\D?\s*\d/.test(text) ? -cents : cents;
+  };
+
+  const formatCents = (cents) => {
+    const format = window.FoxThemeSettings?.money_format;
+    if (typeof formatMoney === 'function' && format) return formatMoney(cents, format);
+    return (cents / 100).toLocaleString(document.documentElement.lang || 'nl', {
+      style: 'currency',
+      currency: window.FoxThemeSettings?.currency_code || 'EUR',
+    });
+  };
+
+  // Toeslagen van opties die OPTIS zelf toont (bv. checkboxen cadeauverpakking/kaartje), via hun '.po-extra-price'.
+  // Verborgen OPTIS-radio's die door een custom blok worden aangestuurd slaan we over (die tellen al mee).
+  const optisNativeSurcharge = (scope) => {
+    const customKeys = Array.from(scope.querySelectorAll('optis-option')).map((el) => el.dataset.optisKey);
+    let sum = 0;
+    scope.querySelectorAll('.bss-po-option-set input:checked').forEach((input) => {
+      if (customKeys.includes(input.getAttribute('key'))) return;
+      const priceEl = input.closest('label')?.querySelector('.po-extra-price');
+      if (priceEl) sum += parsePriceText(priceEl.textContent);
+    });
+    scope.querySelectorAll('.bss-po-option-set select').forEach((select) => {
+      const option = select.selectedOptions[0];
+      if (option && option.value) sum += parsePriceText(option.textContent.match(/\(([^)]*)\)/)?.[1]);
+    });
+    return sum;
+  };
+
+  // Herberekent de prijs(zen) binnen één product-info: basisprijs variant + som van gekozen toeslagen.
+  const updateTotalPrice = (scope) => {
+    if (!scope) return;
+    const surcharge =
+      Array.from(scope.querySelectorAll('.f-optis-option__input:checked')).reduce(
+        (sum, input) => sum + parsePriceText(input.dataset.optisPrice),
+        0
+      ) + optisNativeSurcharge(scope);
+    scope.querySelectorAll('[id^="Price-"] .f-price[data-base-price]').forEach((priceEl) => {
+      const price = formatCents(parseInt(priceEl.dataset.basePrice, 10) + surcharge);
+      priceEl
+        .querySelectorAll('.f-price__regular .f-price-item--regular, .f-price__sale .f-price-item--sale')
+        .forEach((el) => (el.textContent = price));
+      const compare = parseInt(priceEl.dataset.baseComparePrice, 10);
+      if (compare > 0) {
+        priceEl
+          .querySelectorAll('.f-price__sale s.f-price-item--regular')
+          .forEach((el) => (el.textContent = formatCents(compare + surcharge)));
+      }
+    });
+  };
+
+  // Bij variantwissel vervangt product-info.js de prijs-HTML door de basisprijs: toeslagen opnieuw optellen.
+  document.addEventListener('variant:changed', () => {
+    document.querySelectorAll('product-info').forEach((scope) => {
+      if (scope.querySelector('optis-option, .bss-po-option-set')) updateTotalPrice(scope);
+    });
+  });
+
+  // Keuzes in de OPTIS-UI zelf (checkbox/radio/select)
+  document.addEventListener('change', (event) => {
+    if (event.target.closest?.('.bss-po-option-set')) updateTotalPrice(event.target.closest('product-info'));
+  });
+
   class OptisOption extends HTMLElement {
     connectedCallback() {
       this.key = this.dataset.optisKey;
@@ -11,8 +88,10 @@ if (!customElements.get('optis-option')) {
       this.inputs.forEach((input) => {
         input.addEventListener('change', () => {
           if (input.checked) this.syncToOptis(input.value);
+          updateTotalPrice(this.closest('product-info'));
         });
       });
+      updateTotalPrice(this.closest('product-info'));
       // Wacht tot OPTIS z'n radio's heeft gerenderd, dan de standaardkeuze syncen.
       this.waitForOptis();
     }

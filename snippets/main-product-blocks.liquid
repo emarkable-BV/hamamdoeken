@@ -1249,8 +1249,12 @@
             endif
 
             if base_title != blank
-              for coll in product.collections limit: 8
-                for cp in coll.products limit: 50
+              # coll.products geeft zonder paginate max. 50 producten terug; met paginate max. 250 (Shopify-limiet).
+              # Kleinste (meest specifieke) collecties eerst, zodat kleur-broertjes zo vroeg mogelijk gevonden worden.
+              assign sibling_colls = product.collections | sort: 'products_count'
+              for coll in sibling_colls limit: 8
+                paginate coll.products by 250
+                for cp in coll.products
                   assign idkey = '|' | append: cp.id | append: '|'
                   unless seen contains idkey
                     assign cw = cp.title | split: ' '
@@ -1271,6 +1275,7 @@
                     endif
                   endunless
                 endfor
+                endpaginate
               endfor
             endif
           -%}
@@ -1452,6 +1457,7 @@
                         name="optis-ui-{{ block.id }}"
                         value="{{ cvalue | escape }}"
                         data-optis-value="{{ cvalue | escape }}"
+                        data-optis-price="{{ cprice | escape }}"
                         {% if default_n == n %}
                           checked
                         {% endif %}

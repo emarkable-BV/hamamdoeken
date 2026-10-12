@@ -12,6 +12,10 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "feedback_company_extended_product_widget_g3yTGp": {
+          "type": "shopify://apps/feedback-company/blocks/extended_product_widget/191f1176-5e0f-4ebe-9ae1-604a8926c1bb",
+          "settings": {}
+        },
         "richtext_MpBN7N": {
           "type": "richtext",
           "settings": {
@@ -245,6 +249,7 @@
         }
       },
       "block_order": [
+        "feedback_company_extended_product_widget_g3yTGp",
         "richtext_MpBN7N",
         "c67b7c41-4a92-419d-85c6-c970bb43bf2d",
         "title",

@@ -96,6 +96,23 @@
     "header": {
       "type": "header",
       "blocks": {
+        "collection_pdGRTy": {
+          "type": "collection",
+          "settings": {
+            "heading": "Shop op gebruik",
+            "card_style": "1",
+            "text_color": "#000000",
+            "container": "inherit",
+            "columns": 4,
+            "addon_column": 100,
+            "collection_1": "",
+            "collection_2": "",
+            "collection_3": "",
+            "collection_4": "",
+            "collection_5": "",
+            "collection_6": ""
+          }
+        },
         "collection_kPcJnt": {
           "type": "collection",
           "settings": {
@@ -149,6 +166,7 @@
         }
       },
       "block_order": [
+        "collection_pdGRTy",
         "collection_kPcJnt",
         "collection_4XfcXV",
         "collection_T9njMR"

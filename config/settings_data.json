@@ -61,7 +61,7 @@
     "pcard_show_second_img": true,
     "pcard_show_color_swatch": false,
     "pcard_show_vendor": false,
-    "pcard_show_review_badge": false,
+    "pcard_show_review_badge": true,
     "pcard_show_cart_button": true,
     "pcard_show_quickview_button": false,
     "pcard_show_badge_soldout": true,

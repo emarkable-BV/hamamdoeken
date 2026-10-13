@@ -494,30 +494,6 @@
         "animations": "inherit"
       }
     },
-    "1791890828ccbbe143": {
-      "type": "apps",
-      "blocks": {
-        "feedback_company_company_widget_tjz3zr": {
-          "type": "shopify://apps/feedback-company/blocks/company_widget/191f1176-5e0f-4ebe-9ae1-604a8926c1bb",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "feedback_company_company_widget_tjz3zr"
-      ],
-      "settings": {
-        "container": "container",
-        "color_schema": "",
-        "heading": "",
-        "highlight_style": "none",
-        "enable_highlight_text_color": false,
-        "heading_size": "h2",
-        "heading_color": "",
-        "description": "",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "custom_html_gWMG7M": {
       "type": "custom-html",
       "name": "t:sections.custom-html.presets.name",
@@ -526,13 +502,13 @@
         "color_schema": "",
         "section_header_padding_bottom": "medium",
         "section_header_content_spacing": "medium",
-        "heading": "Custom HTML",
+        "heading": "",
         "highlight_style": "none",
         "enable_highlight_text_color": false,
         "heading_size": "h2",
         "heading_color": "",
         "description": "",
-        "custom_html": "<script type=\"text/javascript\" id=\"__fbcw__6616114b-9600-404e-b5d6-933dd69f1a70\">\n\"use strict\";!function(){\nwindow.FeedbackCompanyWidgets=window.FeedbackCompanyWidgets||{queue:[],loaders:[\n]};var options={uuid:\"6616114b-9600-404e-b5d6-933dd69f1a70\",version:\"1.2.1\",prefix:\"\"};if(\nvoid 0===window.FeedbackCompanyWidget){if(\nwindow.FeedbackCompanyWidgets.queue.push(options),!document.getElementById(\n\"__fbcw_FeedbackCompanyWidget\")){var scriptTag=document.createElement(\"script\")\n;scriptTag.onload=function(){if(window.FeedbackCompanyWidget)for(\n;0<window.FeedbackCompanyWidgets.queue.length;\n)options=window.FeedbackCompanyWidgets.queue.pop(),\nwindow.FeedbackCompanyWidgets.loaders.push(\nnew window.FeedbackCompanyWidgetLoader(options))},\nscriptTag.id=\"__fbcw_FeedbackCompanyWidget\",\nscriptTag.src=\"https://www.feedbackcompany.com/includes/widgets/feedback-company-widget.min.js\"\n,document.body.appendChild(scriptTag)}\n}else window.FeedbackCompanyWidgets.loaders.push(\nnew window.FeedbackCompanyWidgetLoader(options))}();\n</script>",
+        "custom_html": "<style>\n.fbc-reviews .__fbcw__widget.__fbcw__widget--big{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;width:100%!important;min-width:0!important;max-width:none!important;box-sizing:border-box!important}\n.fbc-reviews .__fbcw__widget > .__fbcw__widget__rating-overview{grid-column:1!important;align-self:center!important;margin:30px 24px!important}\n.fbc-reviews .__fbcw__widget .__fbcw__widget__stats-rating .__fbcw__widget__label{font-size:18px!important}\n.fbc-reviews .__fbcw__widget .__fbcw__widget__stats-rating .__fbcw__widget__stats-divider{height:24px!important;margin:0 10px!important}\n.fbc-reviews .__fbcw__widget .__fbcw__widget__review-holder{display:contents!important}\n.fbc-reviews .__fbcw__widget .__fbcw__widget__divider-holder{display:none!important}\n.fbc-reviews .__fbcw__widget .__fbcw__widget__container.__fbcw__widget__container--big{width:auto!important;margin:0!important;padding:30px 32px!important;align-self:center!important;border-left:1px solid #e5e5e5!important}\n.fbc-reviews .__fbcw__widget .__fbcw__review .__fbcw__review__content{max-height:none!important}\n.fbc-reviews .__fbcw__widget .__fbcw__widget__footer.__fbcw__widget__footer--big{grid-column:1 / -1!important}\n@media (max-width:749px){\n.fbc-reviews .__fbcw__widget.__fbcw__widget--big{grid-template-columns:minmax(0,1fr)!important}\n.fbc-reviews .__fbcw__widget > .__fbcw__widget__rating-overview{margin:26px 20px!important}\n.fbc-reviews .__fbcw__widget .__fbcw__widget__container.__fbcw__widget__container--big{padding:20px!important;border-left:0!important;border-top:1px solid #e5e5e5!important}\n}\n</style>\n<div class=\"fbc-reviews\">\n<script type=\"text/javascript\" id=\"__fbcw__6616114b-9600-404e-b5d6-933dd69f1a70\">\n\"use strict\";!function(){\nwindow.FeedbackCompanyWidgets=window.FeedbackCompanyWidgets||{queue:[],loaders:[\n]};var options={uuid:\"6616114b-9600-404e-b5d6-933dd69f1a70\",version:\"1.2.1\",prefix:\"\"};if(\nvoid 0===window.FeedbackCompanyWidget){if(\nwindow.FeedbackCompanyWidgets.queue.push(options),!document.getElementById(\n\"__fbcw_FeedbackCompanyWidget\")){var scriptTag=document.createElement(\"script\")\n;scriptTag.onload=function(){if(window.FeedbackCompanyWidget)for(\n;0<window.FeedbackCompanyWidgets.queue.length;\n)options=window.FeedbackCompanyWidgets.queue.pop(),\nwindow.FeedbackCompanyWidgets.loaders.push(\nnew window.FeedbackCompanyWidgetLoader(options))},\nscriptTag.id=\"__fbcw_FeedbackCompanyWidget\",\nscriptTag.src=\"https://www.feedbackcompany.com/includes/widgets/feedback-company-widget.min.js\"\n,document.body.appendChild(scriptTag)}\n}else window.FeedbackCompanyWidgets.loaders.push(\nnew window.FeedbackCompanyWidgetLoader(options))}();\n</script>\n</div>",
         "padding_top": 40,
         "padding_bottom": 40,
         "show_section_divider": false,
@@ -548,7 +524,6 @@
     "collapsible_tabs_f7yBFK",
     "layered_images_YMyzmV",
     "rich_text_NGWWEV",
-    "1791890828ccbbe143",
     "custom_html_gWMG7M"
   ]
 }

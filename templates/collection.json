@@ -493,6 +493,30 @@
         "custom_class": "",
         "animations": "inherit"
       }
+    },
+    "1791890828ccbbe143": {
+      "type": "apps",
+      "blocks": {
+        "feedback_company_company_widget_tjz3zr": {
+          "type": "shopify://apps/feedback-company/blocks/company_widget/191f1176-5e0f-4ebe-9ae1-604a8926c1bb",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "feedback_company_company_widget_tjz3zr"
+      ],
+      "settings": {
+        "container": "container",
+        "color_schema": "",
+        "heading": "",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h2",
+        "heading_color": "",
+        "description": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
@@ -502,6 +526,7 @@
     "scrolling_promotion_RkiHwj",
     "collapsible_tabs_f7yBFK",
     "layered_images_YMyzmV",
-    "rich_text_NGWWEV"
+    "rich_text_NGWWEV",
+    "1791890828ccbbe143"
   ]
 }

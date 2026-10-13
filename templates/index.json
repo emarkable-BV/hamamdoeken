@@ -1149,6 +1149,30 @@
         "custom_class": "",
         "animations": "inherit"
       }
+    },
+    "179189063047fb3dae": {
+      "type": "apps",
+      "blocks": {
+        "feedback_company_company_widget_3fNL8b": {
+          "type": "shopify://apps/feedback-company/blocks/company_widget/191f1176-5e0f-4ebe-9ae1-604a8926c1bb",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "feedback_company_company_widget_3fNL8b"
+      ],
+      "settings": {
+        "container": "container",
+        "color_schema": "",
+        "heading": "",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h2",
+        "heading_color": "",
+        "description": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
@@ -1165,6 +1189,7 @@
     "featured_blog_WpJLmP",
     "1779974222d5fcffce",
     "custom_content_9ypmPF",
-    "video_i8wnCg"
+    "video_i8wnCg",
+    "179189063047fb3dae"
   ]
 }

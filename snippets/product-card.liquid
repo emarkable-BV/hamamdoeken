@@ -435,14 +435,14 @@
           {{- product.vendor -}}
         </span>
       {%- endif -%}
-      <h3 class="product-card__title text-product-title {{ product_title_class }}">
-        {{- product.title -}}
-      </h3>
       {% if settings.pcard_show_review_badge %}
         <div class="product-card__reviews">
           {%- render 'product-rating', product: product -%}
         </div>
       {% endif %}
+      <h3 class="product-card__title text-product-title {{ product_title_class }}">
+        {{- product.title -}}
+      </h3>
       {% render 'price', product: product, alignment: settings.pcard_content_alignment %}
       {%- comment %} CUSTOM (Hamamdoeken): levertijd uit metaveld custom.levertijd, alleen tonen als gevuld {%- endcomment %}
       {%- if product.metafields.custom.levertijd != blank -%}

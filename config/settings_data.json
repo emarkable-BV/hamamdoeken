@@ -146,7 +146,7 @@
       },
       "8703631750054007177": {
         "type": "shopify://apps/feedback-company/blocks/feedback_script/191f1176-5e0f-4ebe-9ae1-604a8926c1bb",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     },

@@ -135,7 +135,7 @@
             "image_ratio": "1/1",
             "enable_quick_add": true,
             "enable_quick_view": true,
-            "pcard_show_color_swatch": true
+            "pcard_show_color_swatch": false
           }
         },
         "buy_buttons": {

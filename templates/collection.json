@@ -517,6 +517,27 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "custom_html_gWMG7M": {
+      "type": "custom-html",
+      "name": "t:sections.custom-html.presets.name",
+      "settings": {
+        "container": "container",
+        "color_schema": "",
+        "section_header_padding_bottom": "medium",
+        "section_header_content_spacing": "medium",
+        "heading": "Custom HTML",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h2",
+        "heading_color": "",
+        "description": "",
+        "custom_html": "<script type=\"text/javascript\" id=\"__fbcw__6616114b-9600-404e-b5d6-933dd69f1a70\">\n\"use strict\";!function(){\nwindow.FeedbackCompanyWidgets=window.FeedbackCompanyWidgets||{queue:[],loaders:[\n]};var options={uuid:\"6616114b-9600-404e-b5d6-933dd69f1a70\",version:\"1.2.1\",prefix:\"\"};if(\nvoid 0===window.FeedbackCompanyWidget){if(\nwindow.FeedbackCompanyWidgets.queue.push(options),!document.getElementById(\n\"__fbcw_FeedbackCompanyWidget\")){var scriptTag=document.createElement(\"script\")\n;scriptTag.onload=function(){if(window.FeedbackCompanyWidget)for(\n;0<window.FeedbackCompanyWidgets.queue.length;\n)options=window.FeedbackCompanyWidgets.queue.pop(),\nwindow.FeedbackCompanyWidgets.loaders.push(\nnew window.FeedbackCompanyWidgetLoader(options))},\nscriptTag.id=\"__fbcw_FeedbackCompanyWidget\",\nscriptTag.src=\"https://www.feedbackcompany.com/includes/widgets/feedback-company-widget.min.js\"\n,document.body.appendChild(scriptTag)}\n}else window.FeedbackCompanyWidgets.loaders.push(\nnew window.FeedbackCompanyWidgetLoader(options))}();\n</script>",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "show_section_divider": false,
+        "divider_width": "container"
+      }
     }
   },
   "order": [
@@ -527,6 +548,7 @@
     "collapsible_tabs_f7yBFK",
     "layered_images_YMyzmV",
     "rich_text_NGWWEV",
-    "1791890828ccbbe143"
+    "1791890828ccbbe143",
+    "custom_html_gWMG7M"
   ]
 }

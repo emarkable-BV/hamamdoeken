@@ -27,40 +27,16 @@
         "faq_item_mreHMf": {
           "type": "faq_item",
           "settings": {
-            "title": "Hoe werkt retourneren?",
-            "content": "<p>Meld je retour aan via ons <a href=\"https://retour.innosend.eu/hamamdoekencom\" target=\"_blank\" title=\"Retour aanmelden via het retourportaal\">retourportaal</a>. Vul je ordernummer in, kies de vervoerder en verzendoptie die bij je pakket passen, en betaal je retourlabel. Print daarna het label of volg de digitale instructies en lever je pakket in bij een pakketpunt.</p><p>De volledige retourinstructies vind je hierboven op deze pagina.</p>",
+            "title": "Kan ik hamamdoeken of badjassen laten voorzien van een bedrijfslogo?",
+            "content": "<p>Bij veel producten zijn mogelijkheden voor borduren of bedrukken. Welke techniek het meest geschikt is, hangt af van het materiaal, het logo en het gewenste aantal. We adviseren je graag over de mogelijkheden.</p>",
             "open": false
           }
         },
         "faq_item_VYg9ir": {
           "type": "faq_item",
           "settings": {
-            "title": "Moet ik retourkosten betalen?",
-            "content": "<p>Ja, de kosten voor het retourneren zijn voor eigen rekening. Via ons retourportaal kies je zelf de verzendoptie die het beste bij je pakket past.</p>",
-            "open": false
-          }
-        },
-        "faq_item_bMEJtC": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Kan ik mijn bestelling ruilen?",
-            "content": "<p>Ja, je kunt ruilen voor een andere maat, kleur of model. Neem hiervoor contact met ons op via <strong>info@hamamdoeken.com</strong> of de chatbutton op de webshop. Wij reserveren het nieuwe artikel voor je en sturen dit op zodra wij je retour hebben ontvangen.</p>",
-            "open": false
-          }
-        },
-        "faq_item_wAFpfq": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Hoe snel wordt mijn retour verwerkt?",
-            "content": "<p>Na ontvangst en controle verwerken wij je retour meestal binnen één tot twee werkdagen. Daarna storten wij het aankoopbedrag terug via je oorspronkelijke betaalmethode.</p>",
-            "open": false
-          }
-        },
-        "faq_item_mNaKwH": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Wat moet ik doen als mijn bestelling beschadigd, verkeerd of incompleet is geleverd?",
-            "content": "<p>Neem dan zo snel mogelijk contact met ons op voordat je het product retourneert. Vermeld je ordernummer en stuur indien mogelijk een foto mee. Dan kunnen wij samen met jou naar een passende oplossing zoeken.</p>",
+            "title": "Zijn er staffelprijzen voor grotere bestellingen?",
+            "content": "<p>Bij grotere aantallen kunnen we bekijken welke prijs mogelijk is. Dit hangt onder andere af van het gekozen product, de aantallen en eventuele personalisatie of maatwerk. Vraag hiervoor vrijblijvend een offerte aan.</p>",
             "open": false
           }
         }
@@ -68,10 +44,7 @@
       "block_order": [
         "faq_item_6L8X8i",
         "faq_item_mreHMf",
-        "faq_item_VYg9ir",
-        "faq_item_bMEJtC",
-        "faq_item_wAFpfq",
-        "faq_item_mNaKwH"
+        "faq_item_VYg9ir"
       ],
       "name": "FAQ",
       "settings": {

@@ -255,8 +255,8 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "title": "Wat is de levertijd?",
-            "content": "<p>Voor 21:00 uur besteld op werkdagen, en morgen in huis. Dit geldt voor een groot deel van ons assortiment. Uitzonderingen zijn maatwerk, pre-orders en producten met een langere levertijd.</p>",
+            "title": "Kan ik mijn bestelling als cadeau laten verpakken?",
+            "content": "<p>Ja, bij Hamamdoeken.com kun je op de productpagina een cadeauverpakking toevoegen aan je bestelling. Wij kiezen vervolgens een verpakking die bij jouw cadeau past en zorgen voor een mooie afwerking. Zo ontvang je een feestelijk verpakt cadeau dat klaar is om te geven.</p>",
             "open": false
           }
         },

@@ -9,10 +9,11 @@
     endif
 
     assign star_size = block.settings.star_size | default: 10
+    assign star_svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>'
   -%}
   <div
     class="f-product-rating"
-    style="--star-size: {{ star_size | divided_by: 10 }}; --star-color: {{ block.settings.star_color | default: '#222222' }}"
+    style="--star-size: {{ star_size | divided_by: 10 }}; --star-color: {{ block.settings.star_color | default: '#feb806' }}"
   >
     <div
       class="rating"
@@ -23,7 +24,14 @@
         aria-hidden="true"
         class="rating-star"
         style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
-      ></span>
+      >
+        <span class="rating-star__track">{{ star_svg }}{{ star_svg }}{{ star_svg }}{{ star_svg }}{{ star_svg }}</span>
+        <span class="rating-star__fill"
+          ><span class="rating-star__fill-inner"
+            >{{ star_svg }}{{ star_svg }}{{ star_svg }}{{ star_svg }}{{ star_svg }}</span
+          ></span
+        >
+      </span>
     </div>
     <p class="rating-text text-subtext">
       <span aria-hidden="true">

@@ -83,6 +83,7 @@
         },
         "featured_collection_Xpqx6E": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "collection": "ottomania-badjassen",
             "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",

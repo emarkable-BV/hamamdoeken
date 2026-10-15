@@ -51,7 +51,7 @@ if (!customElements.get('optis-option')) {
   const updateTotalPrice = (scope) => {
     if (!scope) return;
     const surcharge =
-      Array.from(scope.querySelectorAll('.f-optis-option__input:checked')).reduce(
+      Array.from(scope.querySelectorAll('optis-option:not([hidden]) .f-optis-option__input:checked')).reduce(
         (sum, input) => sum + parsePriceText(input.dataset.optisPrice),
         0
       ) + optisNativeSurcharge(scope);
@@ -92,7 +92,8 @@ if (!customElements.get('optis-option')) {
         });
       });
       updateTotalPrice(this.closest('product-info'));
-      // Wacht tot OPTIS z'n radio's heeft gerenderd, dan de standaardkeuze syncen.
+      // Wacht tot OPTIS z'n radio's heeft gerenderd, dan blok tonen en de standaardkeuze syncen.
+      // Rendert OPTIS de optie niet (product niet gekoppeld), dan blijft het blok verborgen.
       this.waitForOptis();
     }
 
@@ -109,8 +110,64 @@ if (!customElements.get('optis-option')) {
       if (match && !match.checked) match.click();
     }
 
+    // Toeslag in centen uit de OPTIS-optiedata voor een waarde. null = onbekend of geen vast bedrag.
+    optisPrice(value) {
+      const sets = window.BSS_PO?.optionSets || [];
+      const format = (label) => window.BSS_PO?.helper?.formatOptionLabel?.(label) ?? label;
+      for (const set of sets) {
+        const option = (set.options || []).find(
+          (o) => Array.isArray(o.radio_button_value) && 'po_' + format(o.label_on_product) === this.key
+        );
+        if (!option) continue;
+        const index = option.radio_button_value.indexOf(value);
+        if (index === -1) return null;
+        const extra = option.extra_price || {};
+        if (Number(extra.radio_button_extra_price_type?.[index]) !== 0) return null; // alleen vaste bedragen
+        return Math.round(parseFloat(extra.radio_button_extra_price?.[index] || 0) * 100);
+      }
+      return null;
+    }
+
+    // Keuzes gelijk trekken met OPTIS: keuzes die OPTIS niet kent verbergen, toeslag uit OPTIS overnemen.
+    // Geeft het aantal overgebleven keuzes terug.
+    matchWithOptis() {
+      const optisValues = this.optisRadios().map((radio) => radio.value);
+      let visible = 0;
+      this.inputs.forEach((input) => {
+        const card = input.closest('.f-optis-option__card');
+        const exists = optisValues.includes(input.value);
+        card.hidden = !exists;
+        input.disabled = !exists;
+        if (!exists) {
+          input.checked = false;
+          return;
+        }
+        visible++;
+        const cents = this.optisPrice(input.value);
+        if (cents === null) return;
+        const text = '+ ' + formatCents(cents);
+        input.dataset.optisPrice = text;
+        let priceEl = card.querySelector('.f-optis-option__price');
+        if (!priceEl) {
+          priceEl = document.createElement('span');
+          priceEl.className = 'f-optis-option__price';
+          card.querySelector('.f-optis-option__text')?.appendChild(priceEl);
+        }
+        priceEl.textContent = text;
+      });
+      // Standaardkeuze verborgen? Dan de eerste overgebleven keuze kiezen.
+      if (visible && !this.inputs.some((input) => input.checked)) {
+        this.inputs.find((input) => !input.disabled).checked = true;
+      }
+      return visible;
+    }
+
     waitForOptis(attempt = 0) {
       if (this.optisRadios().length) {
+        // Product is in OPTIS gekoppeld aan deze optie: blok tonen als er keuzes overeenkomen.
+        if (!this.matchWithOptis()) return;
+        this.hidden = false;
+        updateTotalPrice(this.closest('product-info'));
         const checked = this.querySelector('.f-optis-option__input:checked');
         if (checked) this.syncToOptis(checked.value);
         return;

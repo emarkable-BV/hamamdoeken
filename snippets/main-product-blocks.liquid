@@ -1433,7 +1433,8 @@
           {%- if block.settings.title != blank and block.settings.choice_1_label != blank -%}
             {%- assign prop_name = block.settings.property_name | default: block.settings.title -%}
             {%- assign default_n = block.settings.default_choice | plus: 0 -%}
-            <optis-option class="f-optis-option" data-optis-key="po_{{ prop_name | escape }}">
+            {%- comment %} Verborgen tot optis-option.js de bijbehorende OPTIS-optie op de pagina vindt (product gekoppeld in OPTIS) {%- endcomment %}
+            <optis-option class="f-optis-option" data-optis-key="po_{{ prop_name | escape }}" hidden>
               {%- if block.settings.title != blank -%}
                 <p class="f-optis-option__title font-body-bolder">{{ block.settings.title }}</p>
               {%- endif -%}

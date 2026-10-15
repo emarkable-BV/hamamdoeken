@@ -207,7 +207,17 @@
   display: none !important;
 }
 
+/* OPTIS (support-fix) zet zelf `form .bss-po-option-set { display: block !important }`; dit is specifieker.
+   Alleen opties met een eigen optis_option-blok worden getoond; dat blok stuurt de verborgen OPTIS-radio aan. */
+.f-product-single__block form .bss-po-option-set {
+  display: none !important;
+}
+
 /* ---------- OPTIS-optie (radio-cards), bv. plastic-vrije verzending ---------- */
+/* Blok-wrapper ook verbergen zolang de optie verborgen is (product niet gekoppeld in OPTIS), zodat er geen lege ruimte blijft */
+.f-product-single__block:has(> optis-option[hidden]) {
+  display: none;
+}
 .f-optis-option {
   margin-top: 0.4rem;
 }
@@ -288,6 +298,10 @@
 }
 .f-optis-option__price {
   color: rgba(var(--color-foreground), 0.7);
+}
+/* Keuze die niet in OPTIS bestaat (zie optis-option.js) */
+.f-optis-option__card[hidden] {
+  display: none;
 }
 .f-optis-option__price.is-green {
   color: #3aa655;

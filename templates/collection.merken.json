@@ -100,7 +100,7 @@
         "featured_collection_KwDNjH": {
           "type": "featured_collection",
           "settings": {
-            "collection": "batucada-beachwear",
+            "collection": "batucada",
             "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",
             "title": ""
           }

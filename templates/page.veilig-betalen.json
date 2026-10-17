@@ -255,7 +255,7 @@
           "type": "faq_item",
           "settings": {
             "title": "Hoe kan ik betalen met een cadeaukaart?",
-            "content": "<p>Cadeaukaarten kies je bij het afrekenen tussen de betaalmogelijkheden, niet bij het kortingscodeveld. Dit geldt voor de Webshop Giftcard en een VVV-cadeaukaart. Een cadeaukaart is gewoon te combineren met een kortingscode.</p>",
+            "content": "<p>Heb je een Hamamdoeken.com-cadeaubon? Vul de code dan tijdens het afrekenen in bij het daarvoor bestemde veld.</p><p>Heb je een <strong>Webshop Giftcard</strong>? Ga dan eerst naar Webshopgiftcard.nl, kies Hamamdoeken.com en klik op <strong>‘Waarde omzetten’</strong>. Je ontvangt de e-card per e-mail, waarmee je vervolgens bij ons kunt betalen.</p><p>Heb je een <strong>VVV Cadeaukaart</strong>? Kies dan tijdens het afrekenen voor VVV Cadeaukaart bij de betaalmethoden en vul je kaartgegevens in.</p><p><strong>Let op:</strong> vul de code van je Webshop Giftcard of VVV Cadeaukaart niet in bij <em>kortingscode</em>.</p>",
             "open": false
           }
         },

@@ -777,7 +777,7 @@
           "settings": {
             "image": "shopify://shop_images/image-2.webp",
             "image_height": 92,
-            "image_link": "",
+            "image_link": "shopify://collections/ottomania",
             "use_custom_spacing": false,
             "margin_left": 10,
             "margin_right": 10,
@@ -803,7 +803,7 @@
           "settings": {
             "image": "shopify://shop_images/image-3.webp",
             "image_height": 68,
-            "image_link": "",
+            "image_link": "shopify://collections/call-it-fouta-beachwear",
             "use_custom_spacing": false,
             "margin_left": 10,
             "margin_right": 10,

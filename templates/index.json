@@ -751,7 +751,7 @@
           "settings": {
             "image": "shopify://shop_images/image.webp",
             "image_height": 74,
-            "image_link": "#",
+            "image_link": "shopify://collections/lalay",
             "use_custom_spacing": false,
             "margin_left": 10,
             "margin_right": 10,

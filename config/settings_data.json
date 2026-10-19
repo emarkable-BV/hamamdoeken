@@ -56,7 +56,7 @@
     "cart_icon": "shopping-bag",
     "collection_list": [],
     "show_free_shipping_message": true,
-    "pcard_image_ratio": "1/1",
+    "pcard_image_ratio": "3/4",
     "show_video_instead": true,
     "pcard_show_second_img": true,
     "pcard_show_color_swatch": false,
@@ -142,11 +142,6 @@
       "14060646107696862457": {
         "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
-        "settings": {}
-      },
-      "8703631750054007177": {
-        "type": "shopify://apps/feedback-company/blocks/feedback_script/191f1176-5e0f-4ebe-9ae1-604a8926c1bb",
-        "disabled": true,
         "settings": {}
       }
     },

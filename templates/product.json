@@ -285,7 +285,7 @@
         "container": "container",
         "show_breadcrumb": true,
         "enable_sticky_info": true,
-        "media_layout": "carousel",
+        "media_layout": "grid-2-cols",
         "media_size": "medium",
         "mobile_thumbnails": "hide",
         "enable_image_zoom": true,

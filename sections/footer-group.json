@@ -34,7 +34,7 @@
           "settings": {
             "heading": "Shop",
             "heading_size": "h6",
-            "menu": "main-menu",
+            "menu": "shop",
             "width": 15,
             "open_default_collapsible_tab": false,
             "show_divider": false

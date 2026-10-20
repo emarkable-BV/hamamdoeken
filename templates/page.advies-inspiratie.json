@@ -20,14 +20,6 @@
             "active_state": "auto"
           }
         },
-        "nav_link_NWaaJP": {
-          "type": "nav_link",
-          "settings": {
-            "label": "Keuzehulp & inspiratie",
-            "link": "",
-            "active_state": "auto"
-          }
-        },
         "nav_retour": {
           "type": "nav_link",
           "settings": {
@@ -60,6 +52,14 @@
             "active_state": "auto"
           }
         },
+        "nav_link_htjMra": {
+          "type": "nav_link",
+          "settings": {
+            "label": "Onderhoud & gebruik",
+            "link": "",
+            "active_state": "auto"
+          }
+        },
         "nav_faq": {
           "type": "nav_link",
           "settings": {
@@ -71,11 +71,11 @@
       },
       "block_order": [
         "nav_contact",
-        "nav_link_NWaaJP",
         "nav_retour",
         "nav_verzend",
         "nav_was",
         "nav_betalen",
+        "nav_link_htjMra",
         "nav_faq"
       ],
       "settings": {

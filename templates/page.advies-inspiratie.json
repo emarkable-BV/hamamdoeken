@@ -24,7 +24,7 @@
           "type": "nav_link",
           "settings": {
             "label": "Sauna",
-            "link": "",
+            "link": "shopify://pages/sauna",
             "active_state": "auto"
           }
         },

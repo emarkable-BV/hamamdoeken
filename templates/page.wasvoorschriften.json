@@ -97,91 +97,6 @@
         "animations": "inherit"
       }
     },
-    "downloads": {
-      "type": "download-buttons",
-      "blocks": {
-        "dl_hamamdoeken": {
-          "type": "download",
-          "settings": {
-            "label": "Hamamdoeken",
-            "file": ""
-          }
-        },
-        "dl_badjassen": {
-          "type": "download",
-          "settings": {
-            "label": "Badjassen",
-            "file": ""
-          }
-        },
-        "dl_bamboe": {
-          "type": "download",
-          "settings": {
-            "label": "Bamboe",
-            "file": ""
-          }
-        },
-        "dl_lalay": {
-          "type": "download",
-          "settings": {
-            "label": "Lalay collectie",
-            "file": ""
-          }
-        },
-        "dl_kikoy": {
-          "type": "download",
-          "settings": {
-            "label": "Kikoy",
-            "file": ""
-          }
-        },
-        "dl_saunakilts": {
-          "type": "download",
-          "settings": {
-            "label": "Saunakilts",
-            "file": ""
-          }
-        },
-        "dl_strandtunieken": {
-          "type": "download",
-          "settings": {
-            "label": "Strandtunieken / pareo's",
-            "file": ""
-          }
-        },
-        "dl_strandponchos": {
-          "type": "download",
-          "settings": {
-            "label": "Strandponcho's",
-            "file": ""
-          }
-        }
-      },
-      "block_order": [
-        "dl_hamamdoeken",
-        "dl_badjassen",
-        "dl_bamboe",
-        "dl_lalay",
-        "dl_kikoy",
-        "dl_saunakilts",
-        "dl_strandtunieken",
-        "dl_strandponchos"
-      ],
-      "settings": {
-        "container": "container",
-        "content_width": 760,
-        "color_schema": "background-1",
-        "heading": "",
-        "heading_size": "h3",
-        "description": "",
-        "button_style": "btn--primary",
-        "padding_top": 8,
-        "padding_bottom": 64,
-        "custom_id": "",
-        "custom_class": "",
-        "animations": "inherit"
-      }
-    },
     "scrolling_promotion": {
       "type": "scrolling-promotion",
       "blocks": {
@@ -430,7 +345,6 @@
   "order": [
     "hero",
     "content",
-    "downloads",
     "scrolling_promotion",
     "faq"
   ]

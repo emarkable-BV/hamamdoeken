@@ -40,7 +40,7 @@
           "type": "nav_link",
           "settings": {
             "label": "Strand & Zomer",
-            "link": "shopify://collections/meest-gekozen-voor-vakantie-zomer",
+            "link": "shopify://pages/strand-en-zomer",
             "active_state": "auto"
           }
         },

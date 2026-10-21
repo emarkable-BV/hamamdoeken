@@ -48,7 +48,7 @@
           "type": "nav_link",
           "settings": {
             "label": "Vakantie & reizen",
-            "link": "shopify://collections/reis-handdoeken",
+            "link": "shopify://pages/vakantie-en-reizen",
             "active_state": "auto"
           }
         },

@@ -251,6 +251,14 @@
             "open": false
           }
         },
+        "faq_item_WUj9yY": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Welk programma is geschikt voor een badjas wassen?",
+            "content": "<p>Een fijnwas- of katoenprogramma op 30 tot 40°C, zonder wasverzachter. Check altijd het waslabel.</p>",
+            "open": false
+          }
+        },
         "faq_2": {
           "type": "faq_item",
           "settings": {
@@ -270,6 +278,7 @@
       },
       "block_order": [
         "faq_1",
+        "faq_item_WUj9yY",
         "faq_2",
         "faq_3"
       ],

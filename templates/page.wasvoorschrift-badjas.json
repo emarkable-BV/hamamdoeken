@@ -246,64 +246,24 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "title": "Kun je een badjas wassen?",
-            "content": "<p>Ja, gewoon in de machine. Was op 30-40°C, check altijd het waslabel van jouw specifieke badjas voor de exacte instructie, en gebruik liever geen wasverzachter, die laat een laagje achter waardoor de stof minder goed vocht opneemt. Was hem binnenstebuiten, dan blijft de stof langer mooi.</p>",
+            "title": "Kan ik een badjas op 40 graden wassen?",
+            "content": "<p>Alleen als het waslabel 40 °C toestaat. Voor veel badjassen is 30 °C een voorzichtig uitgangspunt, maar de juiste temperatuur verschilt per materiaal en uitvoering.</p>",
             "open": false
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "title": "Hoe vaak moet je je badjas wassen?",
-            "content": "<p>Er is geen vaste regel, was hem zodra hij niet meer fris ruikt of zichtbaar vuil is. Bij dagelijks gebruik komt dat meestal neer op ongeveer één keer per één tot twee weken. Na een saunabezoek is het aan te raden je badjas gelijk uit te wassen. Lukt dat even niet? Haal hem dan in ieder geval direct uit de tas om te drogen, zo voorkom je dat hij muf gaat ruiken. Vaker wassen dan nodig is niet erg voor de stof, zolang je zonder wasverzachter wast.</p>",
+            "title": "Mag iedere badjas in de wasdroger?",
+            "content": "<p>Nee. Controleer altijd het waslabel. Aan de lucht drogen heeft de voorkeur. Wanneer machinaal drogen is toegestaan, kan een geschikt droogprogramma vooral bij badstof helpen om de stof weer luchtiger te maken.</p>",
             "open": false
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "title": "Kan een badjas in de wasdroger?",
-            "content": "<p>Dat hangt af van het materiaal: een badstof badjas kan meestal op lage temperatuur in de droger, een badjas van hydrofiel of wafelkatoen droogt beter aan de lijn of op een rek zodat hij zijn vorm behoudt. Check sowieso het waslabel, dat is leidend per product.</p>",
-            "open": false
-          }
-        },
-        "faq_4": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Kun je een hamamdoek wassen?",
-            "content": "<p>Ja, gewoon met de rest van de was. Was liever zonder wasverzachter, die vermindert de absorptie van het katoen. Loop vooral de eerste keer even de knoopjes van de franjes na en trek ze eventueel iets aan, dan blijven ze mooi op hun plek zitten.</p>",
-            "open": false
-          }
-        },
-        "faq_5": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Moet ik mijn hamamdoek voor het eerste gebruik wassen?",
-            "content": "<p>Dat verschilt per merk, sommige hamamdoeken komen al voorgewassen, andere niet. Check de productpagina of het waslabel om te zien of dit al voor je is gedaan. Twijfel je? Neem dan gerust contact met ons op. Wil je hem toch even weken of een eerste wasbeurt geven? Voeg dan een scheutje azijn toe aan het weekwater of de eerste wasbeurt, dat helpt de kleuren mooi vast te zetten en geeft de absorptie een extra zetje.</p>",
-            "open": false
-          }
-        },
-        "faq_item_yWdyDX": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Kan ik een hamamdoek strijken?",
-            "content": "<p>Nodig is het niet, het platgeweven katoen ligt vanzelf al mooi glad. Wil je toch strijken, dan kan dat op een lage temperatuur.</p>",
-            "open": false
-          }
-        },
-        "faq_item_apD6mh": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Mag een hamamdoek in de droger?",
-            "content": "<p>Liever niet, lucht drogen is beter voor de vezels en voorkomt krimp. Heb je toch haast? Dan kan het op een laag temperatuurprogramma.</p>",
-            "open": false
-          }
-        },
-        "faq_item_4jmcBD": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Wat is het beste wasmiddel voor mijn badjas of hamamdoek?",
-            "content": "<p>Een mild, kleurecht wasmiddel werkt het beste. Wasverzachter kun je beter overslaan, die vermindert de absorptie, gebruik in plaats daarvan gerust een scheutje azijn.</p>",
+            "title": "Mijn badjas voelt hard na het wassen. Wat kan ik doen?",
+            "content": "<p>Controleer of je niet te veel wasmiddel gebruikt en of het wasprogramma geschikt is. Schud de badjas na het wassen uit. Als de droger volgens het waslabel is toegestaan, kan een kort, geschikt droogprogramma soms helpen.</p>",
             "open": false
           }
         }
@@ -311,12 +271,7 @@
       "block_order": [
         "faq_1",
         "faq_2",
-        "faq_3",
-        "faq_4",
-        "faq_5",
-        "faq_item_yWdyDX",
-        "faq_item_apD6mh",
-        "faq_item_4jmcBD"
+        "faq_3"
       ],
       "settings": {
         "container": "container",

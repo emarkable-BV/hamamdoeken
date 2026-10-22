@@ -95,7 +95,7 @@
           "settings": {
             "collection": "call-it-fouta-beachwear",
             "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",
-            "title": ""
+            "title": "Call it Fouta!"
           }
         },
         "featured_collection_KwDNjH": {
@@ -111,7 +111,7 @@
           "settings": {
             "collection": "hamams-own-badjassen",
             "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",
-            "title": ""
+            "title": "Hamams Own"
           }
         },
         "featured_collection_bJtcPN": {
@@ -134,7 +134,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "",
-            "title": ""
+            "title": "PURE Kenya"
           }
         }
       },

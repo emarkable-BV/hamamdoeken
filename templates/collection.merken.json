@@ -110,7 +110,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "hamams-own-badjassen",
-            "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",
+            "image": "shopify://shop_images/logo-hamamdoeken-com.png",
             "title": "Hamams Own"
           }
         },
@@ -126,7 +126,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "mzury-beachwear",
-            "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",
+            "image": "shopify://shop_images/mzury-logo.png",
             "title": "Mzury"
           }
         },

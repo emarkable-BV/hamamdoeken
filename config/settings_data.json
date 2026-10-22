@@ -58,7 +58,7 @@
     "show_free_shipping_message": true,
     "pcard_image_ratio": "3/4",
     "show_video_instead": true,
-    "pcard_show_second_img": true,
+    "pcard_show_second_img": false,
     "pcard_show_color_swatch": false,
     "pcard_show_vendor": false,
     "pcard_show_review_badge": true,

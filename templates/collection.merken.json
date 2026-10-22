@@ -94,7 +94,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "call-it-fouta-beachwear",
-            "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",
+            "image": "shopify://shop_images/Call-it-fouta-logo.jpg",
             "title": "Call it Fouta!"
           }
         },
@@ -127,13 +127,13 @@
           "settings": {
             "collection": "mzury-beachwear",
             "image": "{{ block.settings.collection.metafields.custom.logo_afbeelding.value }}",
-            "title": ""
+            "title": "Mzury"
           }
         },
         "featured_collection_mDw8HX": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "pure-kenya",
             "title": "PURE Kenya"
           }
         }

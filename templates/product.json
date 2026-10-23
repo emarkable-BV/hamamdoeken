@@ -397,6 +397,7 @@
             "content": "{{ product.description }}",
             "custom_liquid": "",
             "content_page": "",
+            "group_duplicate_labels": false,
             "open": true
           }
         },
@@ -408,6 +409,7 @@
             "content": "",
             "custom_liquid": "{{ product.metafields.custom.wasvoorschriften | metafield_tag }}",
             "content_page": "",
+            "group_duplicate_labels": false,
             "open": false
           }
         },
@@ -419,6 +421,7 @@
             "content": "{{ product.metafields.custom.specificaties | metafield_tag }}",
             "custom_liquid": "",
             "content_page": "",
+            "group_duplicate_labels": true,
             "open": false
           }
         }

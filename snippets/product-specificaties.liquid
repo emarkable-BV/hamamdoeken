@@ -2,15 +2,15 @@
   Renders the "Specificaties" collapsible tab content on the product page.
 
   Builds a two column table: the label on the left, the value on the right.
-  Rows come from two sources, in this order:
+  The only source is the custom.specificaties metafield. That field is a list
+  where every entry reads "Label: waarde", so each entry becomes one row.
+  Entries whose label is internal (see specs_hidden below) are skipped.
 
-  1. Every single_line_text_field metafield in custom, one row per field.
-     list.single_line_text_field values are joined with a comma.
-  2. The combined custom.specificaties field. That field is a list where every
-     entry reads "Label: waarde", so each entry becomes one row. Entries whose
-     label is internal (see specs_hidden below) are skipped.
+  With the block setting group_duplicate_labels on, entries that share a label
+  (case insensitive) become one row at the spot of the first one, with their
+  values joined by a comma.
 
-  If neither yields a row, the raw specificaties field is rendered as is, so
+  If that yields no row, the raw specificaties field is rendered as is, so
   the content is never lost. Only if that is empty too do the block settings
   take over.
 
@@ -36,7 +36,8 @@
   assign specs_combined_type = specs_combined.type
   assign specs_entries = ''
   assign specs_row_count = 0
-  assign specs_seen = ""
+  assign specs_group = block.settings.group_duplicate_labels
+  assign specs_seen = ''
 
   if specs_combined_type == 'list.single_line_text_field'
     assign specs_entries = specs_combined.value
@@ -47,50 +48,7 @@
 
 {%- capture specs_rows -%}
 
-  {%- comment -%} 1. One row per single_line_text_field metafield {%- endcomment -%}
-  {%- for specs_field in product.metafields.custom -%}
-    {%- liquid
-      assign specs_key = specs_field[0]
-      assign specs_metafield = specs_field[1]
-      assign specs_type = specs_metafield.type
-
-      if specs_key == 'specificaties'
-        continue
-      endif
-
-      if specs_type == 'single_line_text_field'
-        assign specs_value = specs_metafield.value
-      elsif specs_type == 'list.single_line_text_field'
-        assign specs_value = specs_metafield.value | join: ', '
-      else
-        continue
-      endif
-
-      if specs_value == blank
-        continue
-      endif
-
-      assign specs_label = specs_key | replace: '_', ' ' | replace: '-', ' ' | capitalize
-      assign specs_marker = "|" | append: specs_label | downcase | append: "|"
-      if specs_seen contains specs_marker
-        continue
-      endif
-      assign specs_seen = specs_seen | append: specs_marker
-
-      assign specs_row_count = specs_row_count | plus: 1
-      assign specs_value_class = ''
-      assign specs_length = specs_value | size
-      if specs_length > 60
-        assign specs_value_class = ' product-specificaties__value--long'
-      endif
-    -%}
-    <tr>
-      <th class="product-specificaties__label" scope="row">{{ specs_label }}</th>
-      <td class="product-specificaties__value{{ specs_value_class }}">{{ specs_value | escape }}</td>
-    </tr>
-  {%- endfor -%}
-
-  {%- comment -%} 2. One row per entry in the combined specificaties list {%- endcomment -%}
+  {%- comment -%} One row per entry in the specificaties list {%- endcomment -%}
   {%- for specs_entry in specs_entries -%}
     {%- liquid
       assign specs_clean = specs_entry | strip
@@ -123,12 +81,36 @@
         continue
       endif
 
-      if specs_label != blank
-        assign specs_marker = "|" | append: specs_label | downcase | append: "|"
+      if specs_group and specs_label != blank
+        assign specs_marker = '|' | append: specs_label_key | append: '|'
         if specs_seen contains specs_marker
           continue
         endif
         assign specs_seen = specs_seen | append: specs_marker
+
+        assign specs_value = ''
+        for specs_other in specs_entries
+          assign specs_other_clean = specs_other | strip
+          assign specs_other_parts = specs_other_clean | split: ':'
+          if specs_other_parts.size < 2
+            continue
+          endif
+
+          assign specs_other_key = specs_other_parts.first | strip | downcase
+          if specs_other_key != specs_label_key
+            continue
+          endif
+
+          assign specs_other_value = specs_other_clean | remove_first: specs_other_parts.first | remove_first: ':' | strip
+          if specs_other_value == blank
+            continue
+          endif
+
+          if specs_value != blank
+            assign specs_value = specs_value | append: ', '
+          endif
+          assign specs_value = specs_value | append: specs_other_value
+        endfor
       endif
 
       assign specs_row_count = specs_row_count | plus: 1
@@ -165,4 +147,3 @@
   {{ block.settings.custom_liquid }}
   {{ block.settings.content_page.content }}
 {%- endif -%}
-

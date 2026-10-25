@@ -499,7 +499,7 @@
       "taxes_included_and_shipping_policy_html": "Inclusief belasting. <a href=\"{{ link }}\">Verzending</a> berekend bij het afrekenen.",
       "note_title": "Bestelnotitie toevoegen",
       "view_cart": "Bekijk winkelwagen",
-      "estimate_shipping_button": "Verzendtarieven berekenen",
+      "estimate_shipping_button": "Verzendopties bekijken",
       "update": "Update",
       "cart_quantity_error_html": "U kunt alleen {{ quantity }} van dit artikel aan uw winkelwagentje toevoegen.",
       "estimate_shipping_title": "Verzendopties bekijken"

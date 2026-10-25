@@ -121,7 +121,7 @@
   },
   "templates": {
     "404": {
-      "subtext": "De door u opgevraagde pagina bestaat niet.",
+      "subtext": "De door jou opgevraagde pagina bestaat niet.",
       "title": "404 pagina niet gevonden"
     },
     "search": {

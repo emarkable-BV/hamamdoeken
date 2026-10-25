@@ -54,6 +54,7 @@
     "upper_btn_label": true,
     "predictive_search_collection": "",
     "cart_icon": "shopping-bag",
+    "enable_drawer_shipping_rates": true,
     "collection_list": [],
     "cart_default_country": "Netherlands",
     "show_free_shipping_message": true,

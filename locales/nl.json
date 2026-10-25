@@ -477,8 +477,8 @@
       "cookies_required": "Cookies inschakelen om het winkelwagentje te gebruiken",
       "caption": "Winkelwagen items",
       "empty": "Je winkelwagen is leeg",
-      "shipping_rates_result": "We hebben {{count}} verzendkosten voor uw adres gevonden",
-      "no_found_shipping_rate": "Er zijn geen verzendkosten voor uw adres.",
+      "shipping_rates_result": "We hebben {{count}} verzendopties voor jouw adres gevonden",
+      "no_found_shipping_rate": "Er zijn geen verzendkosten voor jouw adres.",
       "login": {
         "paragraph_html": "<a href=\"{{ link }}\" class=\"btn btn--underline\">Log in</a> om sneller af te rekenen.",
         "title": "Heb je al een account?"
@@ -502,7 +502,7 @@
       "estimate_shipping_button": "Verzendtarieven berekenen",
       "update": "Update",
       "cart_quantity_error_html": "U kunt alleen {{ quantity }} van dit artikel aan uw winkelwagentje toevoegen.",
-      "estimate_shipping_title": "Verzendkosten schatten"
+      "estimate_shipping_title": "Verzendopties bekijken"
     },
     "featured_blog": {
       "onboarding_title": "Blogpost",

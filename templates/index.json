@@ -224,6 +224,7 @@
         "timer_reCcnk",
         "button_cWDfLg"
       ],
+      "disabled": true,
       "name": "t:sections.countdown-timer.presets.name",
       "settings": {
         "container": "container",
@@ -425,8 +426,8 @@
         "tab_8q6nBX": {
           "type": "tab",
           "settings": {
-            "title": "Strandlakens",
-            "collection": "strandlakens"
+            "title": "XL hamamdoeken",
+            "collection": "hamamdoek-xl"
           }
         },
         "tab_YJ464H": {

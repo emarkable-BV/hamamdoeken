@@ -99,17 +99,6 @@
     "scrolling_promotion_LazR3W": {
       "type": "scrolling-promotion",
       "blocks": {
-        "divider_wQFrrW": {
-          "type": "divider",
-          "settings": {
-            "width": 64,
-            "use_custom_spacing": false,
-            "margin_left": 10,
-            "margin_right": 10,
-            "margin_left_mobile": 10,
-            "margin_right_mobile": 10
-          }
-        },
         "announcement_9VYGgU": {
           "type": "announcement",
           "settings": {
@@ -237,7 +226,6 @@
         }
       },
       "block_order": [
-        "divider_wQFrrW",
         "announcement_9VYGgU",
         "divider_KJw7EY",
         "announcement_H68pwC",

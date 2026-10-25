@@ -139,6 +139,31 @@
             "margin_right_mobile": 10
           }
         },
+        "divider_DTg3ji": {
+          "type": "divider",
+          "settings": {
+            "width": 64,
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "announcement_9U8cPx": {
+          "type": "announcement",
+          "settings": {
+            "text": "<em>Gratis verstuurd</em> vanaf €75,- (NL)",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
         "divider_2": {
           "type": "divider",
           "settings": {
@@ -205,6 +230,8 @@
         "announcement_1",
         "divider_1",
         "announcement_2",
+        "divider_DTg3ji",
+        "announcement_9U8cPx",
         "divider_2",
         "announcement_3",
         "divider_3",

@@ -184,6 +184,31 @@
             "margin_right_mobile": 10
           }
         },
+        "announcement_GDCHba": {
+          "type": "announcement",
+          "settings": {
+            "text": "Verzending naar een afhaalpunt <em>€3,95</em> (NL)",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_Mmzqgb": {
+          "type": "divider",
+          "settings": {
+            "width": 64,
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
         "announcement_2": {
           "type": "announcement",
           "settings": {
@@ -263,6 +288,8 @@
       "block_order": [
         "announcement_1",
         "divider_1",
+        "announcement_GDCHba",
+        "divider_Mmzqgb",
         "announcement_2",
         "divider_2",
         "announcement_3",

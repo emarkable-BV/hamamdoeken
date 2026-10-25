@@ -154,8 +154,8 @@
           "type": "announcement",
           "settings": {
             "text": "<em>Gratis verstuurd</em> vanaf €75,- (NL)",
-            "font_family": "body",
-            "text_size": 30,
+            "font_family": "heading",
+            "text_size": 18,
             "text_link": "",
             "use_custom_spacing": false,
             "margin_left": 10,

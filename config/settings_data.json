@@ -57,7 +57,7 @@
     "collection_list": [],
     "cart_default_country": "Netherlands",
     "show_free_shipping_message": true,
-    "free_shipping_message": "Nog {{amount}} tot gratis verzending naar een Post NL punt (België vanaf €85)",
+    "free_shipping_message": "Nog {{amount}} tot gratis verzending naar een Post NL-punt\n(België vanaf €85)",
     "free_shipping_limit": "75",
     "pcard_image_ratio": "3/4",
     "show_video_instead": true,

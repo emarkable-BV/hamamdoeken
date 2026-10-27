@@ -524,12 +524,11 @@
         },
         "tab_ErnHWr": {
           "type": "tab",
-          "disabled": true,
           "settings": {
             "content_color_schema": "background-2",
             "navigation_title": "Sinterklaas",
             "image": "shopify://shop_images/sauna-cadeaubox-sinterklaas.jpg_20260912144042.jpg",
-            "heading": "Sinterklaascadeaus die <em>ontspanning  </em>brengen in de decemberdrukte",
+            "heading": "Sinterklaascadeaus die <em>ontspanning &nbsp;</em>brengen in de decemberdrukte",
             "highlight_style": "none",
             "enable_highlight_text_color": false,
             "heading_size": "h2",
@@ -538,13 +537,14 @@
             "description": "<p>December is gezellig, maar ook vol — en juist daarom zijn cadeaus die rust brengen zo fijn om te geven. Een badjas die omarmt, een hamamdoek die licht aanvoelt en snel droogt: zachte, warme cadeaus voor mannen én vrouwen die midden in de decemberdrukte even willen ontsnappen. Of dat nu is tijdens een saunabezoek deze maand, of in januari wanneer de feestdagen achter de rug zijn en echte ontspanning weer welkom voelt. Cadeaus die je met aandacht kiest, en die nog lang daarna rust blijven brengen.</p>",
             "text_alignment": "center",
             "button_label": "BEKIJK DE GIFTSETS",
-            "button_link": "",
+            "button_link": "shopify://collections/sinterklaascadeaus",
             "button_style": "btn--primary",
             "mobile_text_alignment": "inherit"
           }
         },
         "tab_6ffiRX": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "content_color_schema": "",
             "navigation_title": "Vaderdag",

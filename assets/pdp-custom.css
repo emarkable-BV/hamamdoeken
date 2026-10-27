@@ -201,16 +201,185 @@
   text-underline-offset: 2px;
 }
 
-/* Verberg de standaard OPTIS (BSS Product Options) UI op de PDP — we tonen onze eigen UI */
-.bss-po-option-set,
-.bss-po-product-page {
+/* ---------- OPTIS (BSS Product Options) native UI in dezelfde stijl als het optis_option-blok ---------- */
+/* Opties met een eigen optis_option-blok verbergen; dat blok stuurt de OPTIS-radio aan (class via optis-option.js) */
+.bss-po-option-set .po-stack.is-custom-controlled {
   display: none !important;
 }
-
-/* OPTIS (support-fix) zet zelf `form .bss-po-option-set { display: block !important }`; dit is specifieker.
-   Alleen opties met een eigen optis_option-blok worden getoond; dat blok stuurt de verborgen OPTIS-radio aan. */
-.f-product-single__block form .bss-po-option-set {
+.bss-po-option-set .po-stack {
+  margin-top: 0.4rem;
+}
+.bss-po-option-set .po-stack > .po-label-container {
+  margin: 0 0 1.2rem;
+}
+.bss-po-option-set .po-stack > .po-label-container .po-label {
+  font-weight: 500;
+  font-size: inherit;
+  color: rgb(var(--color-foreground));
+}
+.bss-po-option-set .po-selected-swatch {
   display: none !important;
+}
+.bss-po-option-set .po-option--checkbox-container,
+.bss-po-option-set .po-option--radio-container {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem !important;
+  width: 100%;
+}
+.bss-po-option-set .po-option--checkbox-container > *,
+.bss-po-option-set .po-option--radio-container > * {
+  margin: 0 !important;
+  width: auto !important;
+  min-width: 0;
+}
+/* Alle kaarten in een rij even hoog: wrapper rekt mee met de grid-rij, kaart vult de wrapper */
+.bss-po-option-set .po-option--checkbox-container,
+.bss-po-option-set .po-option--radio-container {
+  align-items: stretch !important;
+}
+.bss-po-option-set .po-option--checkbox-wrapper,
+.bss-po-option-set .po-option--radioButton-wrapper {
+  align-self: stretch !important;
+  height: auto !important;
+}
+.bss-po-option-set .po-option--container .po-value {
+  height: 100% !important;
+}
+/* OPTIS centreert checkbox-inhoud op mobiel; links uitlijnen zoals de radio-kaarten */
+.bss-po-option-set .po-option--container .po-value,
+.bss-po-option-set .po-value .po-label,
+.bss-po-option-set .po-value .po_description {
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+.bss-po-option-set .po-value .po_option_value {
+  align-items: flex-start !important;
+}
+.bss-po-option-set .po-group-container {
+  margin-top: 1.2rem;
+}
+/* OPTIS-groepen zonder accordion: kopje weg, inhoud altijd open */
+.bss-po-option-set .po-group-header {
+  display: none !important;
+}
+.bss-po-option-set .po-group-content {
+  display: block !important;
+}
+/* OPTIS geeft de groep op mobiel/tablet padding (16px <=768px, 12px <=480px); weg zodat het uitlijnt met de rest */
+@media (max-width: 768px) {
+  .bss-po-option-set .po-group-options {
+    padding: 0;
+  }
+}
+.bss-po-option-set .po-value .po-label {
+  position: relative;
+  display: flex !important;
+  align-items: flex-start;
+  gap: 1.6rem;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 1.4rem 2rem;
+  border: 1px solid rgba(var(--color-foreground), 0.2);
+  border-radius: 12px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.bss-po-option-set .po-value .po-label:hover {
+  border-color: rgba(var(--color-foreground), 0.45);
+}
+.bss-po-option-set .po-value .po-label:has(input:checked) {
+  border-color: rgb(var(--color-foreground));
+  box-shadow: inset 0 0 0 1px rgb(var(--color-foreground));
+}
+.bss-po-option-set .po-value .po-label > input {
+  position: absolute !important;
+  opacity: 0 !important;
+  pointer-events: none;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+}
+/* Radio's: eigen OPTIS-rondje weg, we tonen hetzelfde vinkje-vakje als bij checkboxen */
+.bss-po-option-set .po-value .po-radio-circle {
+  display: none !important;
+}
+.bss-po-option-set .po-value .po-label::before {
+  content: '';
+  flex: 0 0 auto;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-top: 0.2rem;
+  border: 1px solid rgba(var(--color-foreground), 0.3);
+  border-radius: 6px;
+  background: transparent center / 1.2rem no-repeat;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+.bss-po-option-set .po-value .po-label:has(input:checked)::before {
+  background-color: #3aa655;
+  border-color: #3aa655;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3 8.5 6.5 12 13 4.5' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.bss-po-option-set .po-value .po-label:has(input:focus-visible)::before {
+  outline: 2px solid rgb(var(--color-foreground));
+  outline-offset: 2px;
+}
+.bss-po-option-set .po-value .po_option_value {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgb(var(--color-foreground));
+}
+.bss-po-option-set .po-value .po-extra-price {
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: rgba(var(--color-foreground), 0.7);
+}
+.bss-po-option-set .po-option--type-text {
+  width: 100%;
+  min-height: 9rem;
+  padding: 1.2rem 1.6rem;
+  border: 1px solid rgba(var(--color-foreground), 0.2);
+  border-radius: 12px;
+  background: transparent;
+  font: inherit;
+  color: rgb(var(--color-foreground));
+}
+.bss-po-option-set .po-option--type-text:focus {
+  outline: none;
+  border-color: rgb(var(--color-foreground));
+}
+@media (max-width: 600px) {
+  .bss-po-option-set .po-option--checkbox-container,
+  .bss-po-option-set .po-option--radio-container {
+    grid-template-columns: 1fr;
+    justify-items: stretch !important;
+    justify-content: stretch !important;
+  }
+  /* OPTIS-wrapper is flex + centreren; op mobiel kaart over de volle breedte en inhoud links */
+  .bss-po-option-set .po-option--checkbox-wrapper,
+  .bss-po-option-set .po-option--radioButton-wrapper {
+    display: block !important;
+    width: 100% !important;
+    justify-self: stretch !important;
+  }
+  .bss-po-option-set .po-option--container .po-value {
+    display: flex !important;
+    width: 100% !important;
+  }
+  .bss-po-option-set .po-option--container .po-value > .po-label {
+    flex: 1 1 auto;
+    width: 100% !important;
+  }
 }
 
 /* ---------- OPTIS-optie (radio-cards), bv. plastic-vrije verzending ---------- */

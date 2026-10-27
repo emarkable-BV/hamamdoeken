@@ -106,6 +106,7 @@
         },
         "optis_option_B3mQLn": {
           "type": "optis_option",
+          "disabled": true,
           "settings": {
             "title": "Kies voor een plastic-vrije verzending",
             "property_name": "Plasticvrije verzending",

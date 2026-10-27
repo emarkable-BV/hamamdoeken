@@ -167,6 +167,8 @@ if (!customElements.get('optis-option')) {
         // Product is in OPTIS gekoppeld aan deze optie: blok tonen als er keuzes overeenkomen.
         if (!this.matchWithOptis()) return;
         this.hidden = false;
+        // De OPTIS-UI van deze optie verbergen; dit blok neemt het over (radio blijft in de DOM voor submit).
+        this.optisRadios()[0].closest('.po-stack')?.classList.add('is-custom-controlled');
         updateTotalPrice(this.closest('product-info'));
         const checked = this.querySelector('.f-optis-option__input:checked');
         if (checked) this.syncToOptis(checked.value);

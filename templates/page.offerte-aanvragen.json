@@ -337,40 +337,32 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Is het aanvragen van een offerte vrijblijvend?",
+            "content": "<p>Ja, je kunt vrijblijvend een offerte aanvragen. Je zit nergens aan vast en beslist zelf of je op ons voorstel wilt ingaan.</p>",
             "open": false
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Welke informatie hebben jullie nodig voor een offerte?",
+            "content": "<p>Vertel ons om welke producten het gaat, hoeveel stuks je ongeveer nodig hebt en wat je wensen zijn. Denk bijvoorbeeld aan een naam, tekst of logo, de gewenste kleuren en eventuele verpakking. Heb je een gewenste leverdatum? Vermeld die dan ook. Hoe duidelijker je aanvraag, hoe gerichter we je kunnen adviseren.</p>",
             "open": false
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Wanneer ontvang ik een reactie op mijn offerteaanvraag?",
+            "content": "<p>Binnen 1 tot 2 werkdagen ontvang je van ons een vrijblijvende prijsindicatie. Hebben we nog vragen over je wensen, dan nemen we contact met je op.</p>",
             "open": false
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
-            "open": false
-          }
-        },
-        "faq_5": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Hier een veelgestelde vraag",
-            "content": "<p>Vul hier het antwoord op de vraag in.</p>",
+            "title": "Kan ik ook een offerte aanvragen als ik nog niet precies weet wat ik wil?",
+            "content": "<p>Jazeker. Je hoeft nog niet alle details te weten. Vertel ons waarvoor je de producten wilt gebruiken en wat je ongeveer in gedachten hebt. We denken graag met je mee over de mogelijkheden.</p>",
             "open": false
           }
         }
@@ -379,8 +371,7 @@
         "faq_1",
         "faq_2",
         "faq_3",
-        "faq_4",
-        "faq_5"
+        "faq_4"
       ],
       "settings": {
         "container": "container",

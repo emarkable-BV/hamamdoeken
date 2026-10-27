@@ -1,0 +1,27 @@
+<script>
+    window.Shopify.loadFeatures([{
+        name: "consent-tracking-api",
+        version: "0.1",
+    }, ], function(error) {
+        if (error)
+            throw error;
+    });
+
+    window.addEventListener("CookiebotOnConsentReady", function() {
+        const C = Cookiebot.consent;
+        let tries = 0;
+        const existConsentShopify = setInterval(function() {
+            if (window.Shopify.customerPrivacy) {
+                clearInterval(existConsentShopify);
+                window.Shopify.customerPrivacy.setTrackingConsent({
+                    "analytics": C["statistics"],
+                    "marketing": C["marketing"],
+                    "preferences": C["preferences"],
+                    "sale_of_data": C["marketing"],
+                }, () => console.log("Consent captured"))
+            } else if (++tries > 100) {
+                clearInterval(existConsentShopify);
+            }
+        }, 100);
+    });
+</script>

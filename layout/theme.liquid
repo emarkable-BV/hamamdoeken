@@ -214,6 +214,10 @@
         role="main"
         tabindex="-1"
       >
+        {%- comment %} CUSTOM (Hamamdoeken): tekst-h1 voor de homepage, visueel verborgen zodat het ontwerp gelijk blijft {% endcomment -%}
+        {%- if request.page_type == 'index' -%}
+          <h1 class="visually-hidden">Hamamdoeken voor sauna, strand en vakantie</h1>
+        {%- endif -%}
         {{ content_for_layout }}
       </main>
       {%- liquid

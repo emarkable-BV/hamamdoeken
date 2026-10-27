@@ -25,9 +25,27 @@
       class="f-page-hero__inner text-{{ section.settings.text_alignment }}"
       style="--content-max-width: {{ section.settings.content_width }}px;"
     >
-      {%- if section.settings.heading != blank -%}
+      {%- comment -%}
+        CUSTOM (Hamamdoeken): de paginatitel is de h1, zodat elke pagina een eigen h1 heeft.
+        De sectietitel (bv. "Klantenservice") staat als label erboven, behalve als die gelijk is aan de paginatitel.
+      {%- endcomment -%}
+      {%- liquid
+        assign hero_title = page.title | default: section.settings.heading
+        assign hero_label = section.settings.heading
+        if hero_label != blank
+          assign hero_label_compare = hero_label | strip | downcase
+          assign hero_title_compare = hero_title | strip | downcase
+          if hero_label_compare == hero_title_compare
+            assign hero_label = ''
+          endif
+        endif
+      -%}
+      {%- if hero_title != blank -%}
         <motion-element class="block" data-motion="{{ animation_effect }}">
-          <h1 class="f-page-hero__heading {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h1>
+          {%- if hero_label != blank -%}
+            <p class="f-page-hero__label">{{ hero_label | escape }}</p>
+          {%- endif -%}
+          <h1 class="f-page-hero__heading {{ section.settings.heading_size }}">{{ hero_title | escape }}</h1>
         </motion-element>
       {%- endif -%}
 

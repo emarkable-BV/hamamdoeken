@@ -198,6 +198,30 @@
 <script type="application/ld+json">
   {{ product | structured_data }}
 </script>
+{%- comment -%}
+  CUSTOM (Hamamdoeken): reviewsterren uit de Judge.me-metafields (reviews.rating / reviews.rating_count),
+  als aanvulling op hetzelfde @id als het native Product-schema hierboven. Alleen bij minimaal 1 review.
+{%- endcomment -%}
+{%- liquid
+  assign review_rating = product.metafields.reviews.rating.value
+  assign review_count = product.metafields.reviews.rating_count.value | plus: 0
+-%}
+{%- if review_rating != blank and review_count > 0 -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": {% if product.has_only_default_variant %}"Product"{% else %}"ProductGroup"{% endif %},
+      "@id": {{ product.url | append: '#product' | json }},
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": {{ review_rating.rating | json }},
+        "bestRating": {{ review_rating.scale_max | json }},
+        "worstRating": {{ review_rating.scale_min | json }},
+        "ratingCount": {{ review_count }}
+      }
+    }
+  </script>
+{%- endif -%}
 {% schema %}
 {
   "name": "t:sections.main-product.name",

@@ -25,13 +25,8 @@
   assign logo_height = section.settings.logo_width | divided_by: logo.aspect_ratio | round
   assign sizes = section.settings.logo_width | append: 'px'
 
+  # CUSTOM (Hamamdoeken): logo nooit als h1; de homepage-h1 staat als tekst in layout/theme.liquid
   assign tag = 'div'
-  if h1_tag == null
-    assign h1_tag = true
-  endif
-  if request.page_type == 'index' and h1_tag
-    assign tag = 'h1'
-  endif
 
   assign mobile_menu = section.settings.mobile_menu | default: section.settings.main_menu
   assign menu_links = linklists[mobile_menu].links

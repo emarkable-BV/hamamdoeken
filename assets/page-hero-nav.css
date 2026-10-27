@@ -6,6 +6,14 @@
 .f-page-hero__heading {
   margin: 0;
 }
+.f-page-hero__label {
+  margin: 0 0 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
 .f-page-hero__description {
   margin-top: 1.6rem;
 }

@@ -24,16 +24,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
     {%- if settings.favicon != blank -%}
-      <link
-        rel="icon"
-        type="image/png"
-        href="{{ settings.favicon | image_url: width: 32, height: 32 }}"
-      >
+      {%- comment %} CUSTOM (Hamamdoeken): juist MIME-type voor SVG; PNG-varianten en apple-touch-icon alleen bij een raster-favicon {% endcomment -%}
+      {%- assign favicon_path = settings.favicon | image_url | split: '?' | first | downcase -%}
+      {%- if favicon_path contains '.svg' -%}
+        <link rel="icon" type="image/svg+xml" href="{{ settings.favicon | image_url }}">
+      {%- else -%}
+        <link
+          rel="icon"
+          type="image/png"
+          href="{{ settings.favicon | image_url: width: 32, height: 32 }}"
+        >
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="{{ settings.favicon | image_url: width: 192, height: 192 }}"
+        >
+        <link rel="apple-touch-icon" href="{{ settings.favicon | image_url: width: 180, height: 180 }}">
+      {%- endif -%}
     {%- endif -%}
 
     {%- unless settings.type_header_font.system?
@@ -45,9 +57,10 @@
     <title>
       {{ page_title }}
       {%- if current_tags %}
-        &ndash; tagged "{{ current_tags | join: ', ' }}"
+        {%- assign title_tags = current_tags | join: ', ' %}
+        &ndash; {{ 'general.meta.tags' | t: tags: title_tags }}
       {%- endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif -%}
       {%- unless page_title contains shop.name %}
         &ndash; {{ shop.name -}}
       {%- endunless -%}

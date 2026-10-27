@@ -53,6 +53,10 @@
       "home": "Home",
       "collections": "Collection"
     },
+    "meta": {
+      "page": "Page {{ page }}",
+      "tags": "tagged \"{{ tags }}\""
+    },
     "search": {
       "search": "Search",
       "placeholder": "Search",

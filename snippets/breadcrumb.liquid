@@ -126,4 +126,80 @@
       {% endif %}
     </nav>
   </div>
+
+  {%- comment %} CUSTOM (Hamamdoeken): BreadcrumbList die hetzelfde pad volgt als de zichtbare kruimels hierboven {% endcomment -%}
+  {%- unless template contains 'search' or template contains 'customers' or template contains '404' -%}
+    {%- liquid
+      assign bc_names = 'general.breadcrumbs.home' | t
+      assign bc_urls = request.origin | append: routes.root_url
+      assign bc_sep = '~~~'
+
+      if template contains 'page'
+        assign bc_names = bc_names | append: bc_sep | append: page.title
+        assign bc_urls = bc_urls | append: bc_sep | append: request.origin | append: page.url
+      elsif template contains 'product'
+        assign bc_collection = nil
+        if primary_collection != blank
+          assign bc_collection = primary_collection.value
+        elsif collection.url != blank
+          assign bc_collection = collection
+        else
+          assign bc_collection = product.collections | first
+        endif
+        if bc_collection
+          assign bc_names = bc_names | append: bc_sep | append: bc_collection.title
+          assign bc_urls = bc_urls | append: bc_sep | append: request.origin | append: bc_collection.url
+        endif
+        assign bc_names = bc_names | append: bc_sep | append: product.title
+        assign bc_urls = bc_urls | append: bc_sep | append: request.origin | append: product.url
+      elsif template contains 'collection' and collection.handle
+        if collection.handle != 'all'
+          assign bc_all_label = 'general.breadcrumbs.collections' | t
+          assign bc_names = bc_names | append: bc_sep | append: bc_all_label
+          assign bc_urls = bc_urls | append: bc_sep | append: request.origin | append: routes.all_products_collection_url
+        endif
+        assign bc_names = bc_names | append: bc_sep | append: collection.title
+        assign bc_urls = bc_urls | append: bc_sep | append: request.origin | append: collection.url
+        if current_tags
+          assign bc_tags = current_tags | join: ' + '
+          assign bc_names = bc_names | append: bc_sep | append: bc_tags
+          assign bc_urls = bc_urls | append: bc_sep | append: canonical_url
+        endif
+      elsif template == 'blog'
+        assign bc_names = bc_names | append: bc_sep | append: blog.title
+        assign bc_urls = bc_urls | append: bc_sep | append: request.origin | append: blog.url
+        if current_tags
+          assign bc_tags = current_tags | join: ' + '
+          assign bc_names = bc_names | append: bc_sep | append: bc_tags
+          assign bc_urls = bc_urls | append: bc_sep | append: canonical_url
+        endif
+      elsif template == 'article'
+        assign bc_names = bc_names | append: bc_sep | append: blog.title | append: bc_sep | append: article.title
+        assign bc_urls = bc_urls | append: bc_sep | append: request.origin | append: blog.url | append: bc_sep | append: request.origin | append: article.url
+      else
+        assign bc_names = bc_names | append: bc_sep | append: page_title
+        assign bc_urls = bc_urls | append: bc_sep | append: canonical_url
+      endif
+
+      assign bc_names = bc_names | split: bc_sep
+      assign bc_urls = bc_urls | split: bc_sep
+    -%}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {%- for bc_name in bc_names -%}
+            {%- assign bc_index = forloop.index0 -%}
+            {
+              "@type": "ListItem",
+              "position": {{ forloop.index }},
+              "name": {{ bc_name | strip_html | strip | json }},
+              "item": {{ bc_urls[bc_index] | json }}
+            }{% unless forloop.last %},{% endunless %}
+          {%- endfor -%}
+        ]
+      }
+    </script>
+  {%- endunless -%}
 {% endunless %}

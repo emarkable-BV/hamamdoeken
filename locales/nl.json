@@ -245,6 +245,10 @@
       "home": "Home",
       "collections": "Collecties"
     },
+    "meta": {
+      "page": "Pagina {{ page }}",
+      "tags": "getagd \"{{ tags }}\""
+    },
     "notifications": {
       "discount_applied": "Kortingscode toegepast. Je ziet de korting bij het afrekenen.",
       "no_script": "Schakel JavaScript in om deze functie te gebruiken"

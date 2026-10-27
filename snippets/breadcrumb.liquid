@@ -184,7 +184,6 @@
       assign bc_names = bc_names | split: bc_sep
       assign bc_urls = bc_urls | split: bc_sep
     -%}
-    {% if false %}
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -202,6 +201,5 @@
         ]
       }
     </script>
-  {% endif %}
   {%- endunless -%}
 {% endunless %}

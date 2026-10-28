@@ -460,9 +460,7 @@
 {%- endif -%}
 {%- comment %} CUSTOM (Hamamdoeken): native Product-schema; niet op productpagina's, daar levert main-product het al {% endcomment -%}
 {%- if featured_product != blank and request.page_type != 'product' -%}
-  <script type="application/ld+json">
-    {{ featured_product | structured_data }}
-  </script>
+  <script type="application/ld+json">{{ featured_product | structured_data }}</script>
 {%- endif -%}
 
 {% schema %}

@@ -416,7 +416,8 @@
     assign same_as = same_as | split: '|'
     assign potential_action_target = shop.url | append: routes.search_url | append: '?q={search_term_string}'
   -%}
-  <script type="application/ld+json">
+  {%- comment -%} JSON-LD op één regel: Googlebot-rendering zet newlines in scripts om naar <br /> {%- endcomment -%}
+  {%- capture organization_schema -%}
     {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -431,8 +432,8 @@
       {%- endif %}
       "url": {{ shop.url | json }}
     }
-  </script>
-  <script type="application/ld+json">
+  {%- endcapture -%}
+  {%- capture website_schema -%}
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
@@ -446,7 +447,9 @@
       },
       "url": {{ shop.url | json }}
     }
-  </script>
+  {%- endcapture -%}
+  <script type="application/ld+json">{{ organization_schema | strip_newlines }}</script>
+  <script type="application/ld+json">{{ website_schema | strip_newlines }}</script>
 {%- endif -%}
 {% schema %}
 {

@@ -184,7 +184,8 @@
       assign bc_names = bc_names | split: bc_sep
       assign bc_urls = bc_urls | split: bc_sep
     -%}
-    <script type="application/ld+json">
+    {%- comment -%} JSON-LD op één regel: Googlebot-rendering zet newlines in scripts om naar <br /> {%- endcomment -%}
+    {%- capture breadcrumb_schema -%}
       {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -200,6 +201,7 @@
           {%- endfor -%}
         ]
       }
-    </script>
+    {%- endcapture -%}
+    <script type="application/ld+json">{{ breadcrumb_schema | strip_newlines }}</script>
   {%- endunless -%}
 {% endunless %}

@@ -195,9 +195,8 @@
     </div>
   </product-modal>
 {%- endif -%}
-<script type="application/ld+json">
-  {{ product | structured_data }}
-</script>
+{%- comment -%} JSON-LD op één regel: Googlebot-rendering zet newlines in scripts om naar <br /> {%- endcomment -%}
+<script type="application/ld+json">{{ product | structured_data }}</script>
 {%- comment -%}
   CUSTOM (Hamamdoeken): reviewsterren uit de Judge.me-metafields (reviews.rating / reviews.rating_count),
   als aanvulling op hetzelfde @id als het native Product-schema hierboven. Alleen bij minimaal 1 review.
@@ -207,7 +206,7 @@
   assign review_count = product.metafields.reviews.rating_count.value | plus: 0
 -%}
 {%- if review_rating != blank and review_count > 0 -%}
-  <script type="application/ld+json">
+  {%- capture rating_schema -%}
     {
       "@context": "https://schema.org",
       "@type": {% if product.has_only_default_variant %}"Product"{% else %}"ProductGroup"{% endif %},
@@ -220,7 +219,8 @@
         "ratingCount": {{ review_count }}
       }
     }
-  </script>
+  {%- endcapture -%}
+  <script type="application/ld+json">{{ rating_schema | strip_newlines }}</script>
 {%- endif -%}
 {% schema %}
 {

@@ -38,8 +38,8 @@
         "59ca3415-b1aa-4301-b178-ad6e434ba477": {
           "type": "inventory_status",
           "settings": {
-            "inventory_threshold": 10,
-            "show_as_progress": true,
+            "inventory_threshold": 0,
+            "show_as_progress": false,
             "enable_inventory_transfer": true
           }
         },

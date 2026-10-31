@@ -52,6 +52,14 @@
             "active_state": "auto"
           }
         },
+        "nav_link_nDCKMV": {
+          "type": "nav_link",
+          "settings": {
+            "label": "Acties & kortingscodes",
+            "link": "/pages/acties-kortingscodes",
+            "active_state": "auto"
+          }
+        },
         "nav_faq": {
           "type": "nav_link",
           "settings": {
@@ -67,6 +75,7 @@
         "nav_verzend",
         "nav_was",
         "nav_betalen",
+        "nav_link_nDCKMV",
         "nav_faq"
       ],
       "settings": {

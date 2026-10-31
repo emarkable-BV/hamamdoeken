@@ -135,6 +135,7 @@
         "custom_field_9Eaxft",
         "3d980acc-c8a3-45b3-9c2c-69e05bbc14b5"
       ],
+      "disabled": true,
       "settings": {
         "container": "container",
         "color_schema": "background-2",
@@ -168,10 +169,10 @@
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
             "form_id": "1226983",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
+            "text_color": "#0c1d23",
+            "button_background_color": "#163946",
             "button_label_color": "#ffffff",
-            "links_color": "#1878b9",
+            "links_color": "#163946",
             "errors_color": "#e02229",
             "text_alignment": "center",
             "form_alignment": "center",
@@ -187,7 +188,7 @@
       ],
       "settings": {
         "container": "container",
-        "color_schema": "",
+        "color_schema": "background-2",
         "heading": "",
         "highlight_style": "none",
         "enable_highlight_text_color": false,

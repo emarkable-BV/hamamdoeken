@@ -1,0 +1,407 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "9afa8596-3ed0-4b39-b08f-161e9d270d09": {
+      "type": "breadcrumb",
+      "settings": {
+        "brc_container": "container",
+        "brc_text_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "blocks": {
+        "8a1d85d7-2430-41e0-bb31-8d20e342d1de": {
+          "type": "name",
+          "settings": {
+            "label": "Volledige naam",
+            "placeholder": "Volledige naam",
+            "field_width": "1/2",
+            "hide_label": true,
+            "required": false
+          }
+        },
+        "565061aa-197f-4276-b9da-2c541b1812f9": {
+          "type": "phone",
+          "settings": {
+            "label": "Telefoonnummer",
+            "placeholder": "Telefoonnummer (handig voor snelle vragen)",
+            "field_width": "1/2",
+            "hide_label": true,
+            "required": false
+          }
+        },
+        "custom_field_dLwxrd": {
+          "type": "custom_field",
+          "settings": {
+            "label": "Bedrijfsnaam",
+            "placeholder": "Bedrijfsnaam (optioneel)",
+            "field_type": "text",
+            "rows": 3,
+            "field_width": "full",
+            "hide_label": true,
+            "required": false
+          }
+        },
+        "21a662e3-f906-405a-ab49-e293e94acda6": {
+          "type": "email",
+          "settings": {
+            "label": "E-mailadres",
+            "placeholder": "E-mailadres",
+            "field_width": "full",
+            "hide_label": true
+          }
+        },
+        "custom_field_X6GyPM": {
+          "type": "custom_field",
+          "settings": {
+            "label": "Aangepast veld",
+            "placeholder": "Waar kunnen we je mee helpen? Opties: Borduren / Bedrukken / Logo op product / Grote aantallen bestellen / Weet ik nog niet, ik wil advies",
+            "field_type": "textarea",
+            "rows": 3,
+            "field_width": "full",
+            "hide_label": true,
+            "required": false
+          }
+        },
+        "producttitels": {
+          "type": "custom_field",
+          "settings": {
+            "label": "Producttitels",
+            "placeholder": "Om welke product(en) gaat het? Vul hier de producttitel(s) in van de producten waarin je bent geïnteresseerd.",
+            "field_type": "text",
+            "rows": 3,
+            "field_width": "full",
+            "hide_label": true,
+            "required": false
+          }
+        },
+        "custom_field_MQMkUe": {
+          "type": "custom_field",
+          "settings": {
+            "label": "Aantal",
+            "placeholder": "Hoeveel stuks ongeveer?",
+            "field_type": "text",
+            "rows": 3,
+            "field_width": "1/2",
+            "hide_label": true,
+            "required": false
+          }
+        },
+        "custom_field_9Eaxft": {
+          "type": "custom_field",
+          "settings": {
+            "label": "Deadline",
+            "placeholder": "Wanneer wil je het in huis hebben?",
+            "field_type": "text",
+            "rows": 3,
+            "field_width": "1/2",
+            "hide_label": true,
+            "required": false
+          }
+        },
+        "3d980acc-c8a3-45b3-9c2c-69e05bbc14b5": {
+          "type": "message",
+          "settings": {
+            "label": "Extra wensen, vragen of opmerkingen",
+            "placeholder": "Vertel meer: welke tekst of welk logo, kleuren, plek op het product, verpakking...",
+            "hide_label": true
+          }
+        }
+      },
+      "block_order": [
+        "8a1d85d7-2430-41e0-bb31-8d20e342d1de",
+        "565061aa-197f-4276-b9da-2c541b1812f9",
+        "custom_field_dLwxrd",
+        "21a662e3-f906-405a-ab49-e293e94acda6",
+        "custom_field_X6GyPM",
+        "producttitels",
+        "custom_field_MQMkUe",
+        "custom_field_9Eaxft",
+        "3d980acc-c8a3-45b3-9c2c-69e05bbc14b5"
+      ],
+      "settings": {
+        "container": "container",
+        "color_schema": "background-2",
+        "section_header_padding_bottom": "medium",
+        "section_header_content_spacing": "medium",
+        "heading": "Vraag een vrijblijvende offerte aan",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h1",
+        "heading_color": "",
+        "subheading": "",
+        "description": "<p>Een hamamdoek met geborduurde naam als cadeau? Badjassen met je logo voor je hotel of sauna? Of een kerst- of zomerpakket voor je team of relaties</p><p>Vertel ons wat je in gedachten hebt. Binnen 2 tot 4 werkdagen krijg je een vrijblijvende prijsindicatie.<br/><em>Heb je al een logo of ontwerp? Mail het alvast naar </em><a href=\"mailto:info@hamamdoeken.com\"><em>info@hamamdoeken.com</em></a><em>.</em></p><p></p><p>✓ Borduren of bedrukken, met naam, tekst of logo<br/>✓ Prijs op maat, afgestemd op jouw aantallen<br/>✓ Persoonlijk advies van Grietje, van ontwerp tot levering</p>",
+        "form_design": "design-1",
+        "form_width": 770,
+        "form_alignment": "center",
+        "button_label": "Offerte aanvragen",
+        "button_style": "btn--primary",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "offerte-form-bg",
+        "animations": "inherit"
+      }
+    },
+    "scrolling_promotion_LazR3W": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "announcement_9VYGgU": {
+          "type": "announcement",
+          "settings": {
+            "text": "Niet relaxed? <em>Geld terug. </em>",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_4wqJUg": {
+          "type": "divider",
+          "settings": {
+            "width": 32,
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "announcement_TCWV9G": {
+          "type": "announcement",
+          "settings": {
+            "text": "Verzending naar een afhaalpunt <em>€3,95</em> (NL)",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_LnWUPb": {
+          "type": "divider",
+          "settings": {
+            "width": 64,
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "announcement_4pbRF6": {
+          "type": "announcement",
+          "settings": {
+            "text": "<em>Gratis verzending</em> vanaf €75",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 10,
+            "margin_right": 10,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_qc8TJX": {
+          "type": "divider",
+          "settings": {
+            "width": 32,
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "announcement_iV9PnH": {
+          "type": "announcement",
+          "settings": {
+            "text": "Voor 21:00 uur besteld =  <em>morgen in huis </em>",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_xgmUmb": {
+          "type": "divider",
+          "settings": {
+            "width": 32,
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "announcement_MTaPPE": {
+          "type": "announcement",
+          "settings": {
+            "text": "<em>Grietje</em> helpt je graag!",
+            "font_family": "heading",
+            "text_size": 18,
+            "text_link": "",
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        },
+        "divider_pjtCiB": {
+          "type": "divider",
+          "settings": {
+            "width": 32,
+            "use_custom_spacing": false,
+            "margin_left": 15,
+            "margin_right": 15,
+            "margin_left_mobile": 10,
+            "margin_right_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "announcement_9VYGgU",
+        "divider_4wqJUg",
+        "announcement_TCWV9G",
+        "divider_LnWUPb",
+        "announcement_4pbRF6",
+        "divider_qc8TJX",
+        "announcement_iV9PnH",
+        "divider_xgmUmb",
+        "announcement_MTaPPE",
+        "divider_pjtCiB"
+      ],
+      "settings": {
+        "container": "container-full",
+        "color_schema": "background-2",
+        "section_header_padding_bottom": "small",
+        "section_header_content_spacing": "medium",
+        "heading": "",
+        "highlight_style": "none",
+        "enable_highlight_text_color": false,
+        "heading_size": "h3",
+        "heading_color": "",
+        "subheading": "",
+        "description": "",
+        "alignment": "center",
+        "direction": "left",
+        "pause_on_hover": true,
+        "speed": 0.1,
+        "item_gap": 74,
+        "item_gap_mobile": 20,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "use_custom_mobile_padding": true,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "show_section_divider": true,
+        "divider_width": "container-full",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Is het aanvragen van een offerte vrijblijvend?",
+            "content": "<p>Ja, je kunt vrijblijvend een offerte aanvragen. Je zit nergens aan vast en beslist zelf of je op ons voorstel wilt ingaan.</p>",
+            "open": false
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Welke informatie hebben jullie nodig voor een offerte?",
+            "content": "<p>Vertel ons om welke producten het gaat, hoeveel stuks je ongeveer nodig hebt en wat je wensen zijn. Denk bijvoorbeeld aan een naam, tekst of logo, de gewenste kleuren en eventuele verpakking. Heb je een gewenste leverdatum? Vermeld die dan ook. Hoe duidelijker je aanvraag, hoe gerichter we je kunnen adviseren.</p>",
+            "open": false
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Wanneer ontvang ik een reactie op mijn offerteaanvraag?",
+            "content": "<p>Binnen 1 tot 2 werkdagen ontvang je van ons een vrijblijvende prijsindicatie. Hebben we nog vragen over je wensen, dan nemen we contact met je op.</p>",
+            "open": false
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "title": "Kan ik ook een offerte aanvragen als ik nog niet precies weet wat ik wil?",
+            "content": "<p>Jazeker. Je hoeft nog niet alle details te weten. Vertel ons waarvoor je de producten wilt gebruiken en wat je ongeveer in gedachten hebt. We denken graag met je mee over de mogelijkheden.</p>",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "container": "container",
+        "content_width": "full",
+        "color_schema": "background-2",
+        "heading": "Veelgestelde vragen",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "item_heading_font": "body",
+        "item_heading_size": "h6",
+        "source": "auto",
+        "metafield_namespace": "custom",
+        "metafield_key": "faqs",
+        "metaobject_question_key": "vraag",
+        "metaobject_answer_key": "antwoord",
+        "padding_top": 80,
+        "padding_bottom": 100,
+        "show_section_divider": false,
+        "divider_width": "container",
+        "custom_id": "",
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "9afa8596-3ed0-4b39-b08f-161e9d270d09",
+    "form",
+    "scrolling_promotion_LazR3W",
+    "faq"
+  ]
+}

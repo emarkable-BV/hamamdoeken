@@ -142,7 +142,7 @@
         "show_dots": false,
         "show_nav": false,
         "enable_swipe_mobile": true,
-        "column_mobile": "1",
+        "column_mobile": "2",
         "padding_top": 20,
         "padding_bottom": 0,
         "padding_top_mobile": 14,
@@ -360,6 +360,7 @@
             "content": "{{ block.repeater.antwoord | metafield_tag }}",
             "custom_liquid": "",
             "content_page": "",
+            "group_duplicate_labels": false,
             "open": false
           }
         }

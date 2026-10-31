@@ -373,6 +373,7 @@
         "faq_3",
         "faq_4"
       ],
+      "disabled": true,
       "settings": {
         "container": "container",
         "content_width": "full",

@@ -17,9 +17,9 @@
         "footer-3": {
           "type": "newsletter",
           "settings": {
-            "heading": "Ontvang 10% korting op je eerste bestelling v.a. €75",
+            "heading": "Een beetje ontspanning in je inbox",
             "heading_size": "h5",
-            "subheading": "<p>Schrijf je in en ontvang een persoonlijke code voor &nbsp;korting op je eerste bestelling plus inspiratie voor ontspanning, sauna en vakantie.</p>",
+            "subheading": "<p>Ontvang inspiratie voor sauna, strand en wellness, handige tips en nieuws over onze nieuwste producten en aanbiedingen.</p>",
             "description": "",
             "email_placeholder": "Vul hier je e-mailadres in",
             "hide_label": true,

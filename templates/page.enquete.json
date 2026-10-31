@@ -29,20 +29,20 @@
         "8a1d85d7-2430-41e0-bb31-8d20e342d1de": {
           "type": "name",
           "settings": {
-            "label": "Volledige naam",
-            "placeholder": "Volledige naam",
-            "field_width": "1/2",
-            "hide_label": true,
+            "label": "1. Wat vind je van de nieuwe uitstraling van onze webshop?",
+            "placeholder": "Wat spreekt je aan? En wat zou je anders doen?",
+            "field_width": "full",
+            "hide_label": false,
             "required": false
           }
         },
         "565061aa-197f-4276-b9da-2c541b1812f9": {
           "type": "phone",
           "settings": {
-            "label": "Telefoonnummer",
+            "label": "2. Hoe gemakkelijk kun je vinden wat je zoekt?",
             "placeholder": "Telefoonnummer (handig voor snelle vragen)",
-            "field_width": "1/2",
-            "hide_label": true,
+            "field_width": "full",
+            "hide_label": false,
             "required": false
           }
         },
@@ -54,7 +54,7 @@
             "field_type": "text",
             "rows": 3,
             "field_width": "full",
-            "hide_label": true,
+            "hide_label": false,
             "required": false
           }
         },
@@ -146,7 +146,7 @@
         "heading_size": "h1",
         "heading_color": "",
         "subheading": "",
-        "description": "<p>Een hamamdoek met geborduurde naam als cadeau? Badjassen met je logo voor je hotel of sauna? Of een kerst- of zomerpakket voor je team of relaties</p><p>Vertel ons wat je in gedachten hebt. Binnen 2 tot 4 werkdagen krijg je een vrijblijvende prijsindicatie.<br/><em>Heb je al een logo of ontwerp? Mail het alvast naar </em><a href=\"mailto:info@hamamdoeken.com\"><em>info@hamamdoeken.com</em></a><em>.</em></p><p></p><p>✓ Borduren of bedrukken, met naam, tekst of logo<br/>✓ Prijs op maat, afgestemd op jouw aantallen<br/>✓ Persoonlijk advies van Grietje, van ontwerp tot levering</p>",
+        "description": "<p>Vertel ons wat je van onze vernieuwde webshop vindt. Ook kritische opmerkingen zijn welkom!</p>",
         "form_design": "design-1",
         "form_width": 770,
         "form_alignment": "center",

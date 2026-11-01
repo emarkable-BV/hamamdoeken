@@ -366,7 +366,7 @@
           "type": "faq_item",
           "settings": {
             "title": "Kan ik mijn bestelling laten inpakken als cadeau?",
-            "content": "<p>Vul hier het antJa, dat kan. Bij het product zie je de opties \"Cadeauverpakking toevoegen\" (+€4,95) en \"Persoonlijk kaartje toevoegen\" (+€2,95), vink aan wat je wilt voordat je hem aan je winkelwagen toevoegt.</p>",
+            "content": "<p>Ja, dat kan. Bij het product zie je de opties \"Cadeauverpakking toevoegen\" (+€6,95) en \"Persoonlijk kaartje toevoegen\" (+€2,95), vink aan wat je wilt voordat je hem aan je winkelwagen toevoegt.</p>",
             "open": false
           }
         },

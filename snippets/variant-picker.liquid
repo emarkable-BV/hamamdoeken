@@ -26,6 +26,18 @@
             assign is_size = true
           endif
 
+          # CUSTOM (Hamamdoeken): ook matchen als de optienaam een size_title bevat, bv. "hamam badjas grijsbeige (Variant)"
+          unless is_size
+            assign size_title_terms = size_title_downcase | split: ','
+            for size_title_term in size_title_terms
+              assign size_title_term = size_title_term | strip
+              if size_title_term != blank and option_name_downcase contains size_title_term
+                assign is_size = true
+                break
+              endif
+            endfor
+          endunless
+
           assign swatch_count = option.values | map: 'swatch' | compact | size
 
           assign type_picker = picker_type

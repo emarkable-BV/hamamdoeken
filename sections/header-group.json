@@ -255,11 +255,64 @@
         "animations": "inherit",
         "enable_bg_zoom_effect": true
       }
+    },
+    "banner_logo_HhbQ6r": {
+      "type": "banner-logo",
+      "blocks": {
+        "subtitle_fW44Xi": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "EEN PERSOONLIJK CADEAU VOOR DE FEESTDAGEN"
+          }
+        },
+        "title_Ec63TR": {
+          "type": "title",
+          "settings": {
+            "title": "&nbsp;Een badjas met naam, een cadeau met aandacht",
+            "highlight_style": "none",
+            "enable_highlight_text_color": false,
+            "heading_size": "h1"
+          }
+        },
+        "text_aMXPMy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ontvang gratis naamborduring bij aankoop van een Krem Sultan hamam badjas.</p><p></p>"
+          }
+        },
+        "button_jMBQme": {
+          "type": "button",
+          "settings": {
+            "button_label": "BEKIJK DE ACTIE",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "subtitle_fW44Xi",
+        "title_Ec63TR",
+        "text_aMXPMy",
+        "button_jMBQme"
+      ],
+      "disabled": true,
+      "name": "t:sections.banner-logo.name",
+      "settings": {
+        "color_schema": "",
+        "media_type": "image",
+        "image": "shopify://shop_images/krem-sultan-hamam-badjas-met-naam-sinterklaas-kerstcadeau.jpg",
+        "video_type": "shopify",
+        "image_overlay_opacity": 34,
+        "animations": "inherit",
+        "enable_bg_zoom_effect": true
+      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "banner_logo_e4bURA"
+    "banner_logo_e4bURA",
+    "banner_logo_HhbQ6r"
   ]
 }

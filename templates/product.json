@@ -94,6 +94,12 @@
             "size_chart_from_page": "{{ product.metafields.custom.foxtheme_size_chart.value }}"
           }
         },
+        "richtext_R6efMi": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.maatadvies.value }}</p>"
+          }
+        },
         "color_selector": {
           "type": "color_selector",
           "settings": {
@@ -263,6 +269,7 @@
         "complementary_YzKcmM",
         "meta_6MhJQe",
         "variant_picker",
+        "richtext_R6efMi",
         "color_selector",
         "optis_option_B3mQLn",
         "optis_product_options_option_set_mgGPKg",

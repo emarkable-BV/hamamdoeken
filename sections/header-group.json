@@ -262,7 +262,7 @@
         "subtitle_fW44Xi": {
           "type": "subtitle",
           "settings": {
-            "subtitle": "EEN PERSOONLIJK CADEAU VOOR DE FEESTDAGEN"
+            "subtitle": "GRATIS NAAMBORDURING"
           }
         },
         "title_Ec63TR": {
@@ -277,14 +277,14 @@
         "text_aMXPMy": {
           "type": "text",
           "settings": {
-            "text": "<p>Gratis een geborduurde naam op de borst bij aankoop van een Krem Sultan hamam badjas.</p>"
+            "text": "<p>Bij de Krem Sultan hamam badjas krijg je een naam op de borst cadeau.&nbsp;</p>"
           }
         },
         "button_jMBQme": {
           "type": "button",
           "settings": {
-            "button_label": "BEKIJK DE ACTIE",
-            "button_link": "",
+            "button_label": "BEKIJK DE BADJASSEN",
+            "button_link": "shopify://collections/hamam-badjas-gratis-naam",
             "button_style": "btn--primary",
             "button_size": ""
           }
@@ -304,7 +304,8 @@
         "image": "shopify://shop_images/krem-sultan-hamam-badjas-met-naam-sinterklaas-kerstcadeau.jpg",
         "image_mobile": "shopify://shop_images/krem-sultan-unisex-hamam-badjas-met-naam-sinterklaas-kerstcadeau.jpg",
         "video_type": "shopify",
-        "image_overlay_opacity": 34,
+        "video_url": "",
+        "image_overlay_opacity": 40,
         "animations": "inherit",
         "enable_bg_zoom_effect": true
       }

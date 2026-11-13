@@ -245,6 +245,7 @@
         "text_d8eWDz",
         "button_E9BrBH"
       ],
+      "disabled": true,
       "settings": {
         "color_schema": "inverse",
         "media_type": "image",
@@ -296,7 +297,6 @@
         "text_aMXPMy",
         "button_jMBQme"
       ],
-      "disabled": true,
       "name": "t:sections.banner-logo.name",
       "settings": {
         "color_schema": "",

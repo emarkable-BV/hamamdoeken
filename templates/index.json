@@ -185,7 +185,7 @@
         "heading_qN96eX": {
           "type": "heading",
           "settings": {
-            "heading": "Deze actie duurt nog:",
+            "heading": "🎁 Voor pakjesavond in huis?",
             "highlight_style": "none",
             "enable_highlight_text_color": false,
             "heading_size": "h2"
@@ -194,7 +194,7 @@
         "text_6abMK4": {
           "type": "text",
           "settings": {
-            "text": ""
+            "text": "<p>BESTEL BINNEN</p>"
           }
         },
         "timer_reCcnk": {
@@ -205,14 +205,14 @@
             "number_size": "h3",
             "number_spacing": "medium",
             "duration": "every_month",
-            "time": "2026/08/05 20:30:00"
+            "time": "2026/11/24 23:59:59"
           }
         },
         "button_cWDfLg": {
           "type": "button",
           "settings": {
-            "button_label": "Shop de sale",
-            "button_link": "shopify://collections/zomersale",
+            "button_label": "BEKIJK DE BADJASSEN",
+            "button_link": "shopify://collections/hamam-badjas-gratis-naam",
             "button_style": "btn--primary",
             "button_size": ""
           }
@@ -224,7 +224,6 @@
         "timer_reCcnk",
         "button_cWDfLg"
       ],
-      "disabled": true,
       "name": "t:sections.countdown-timer.presets.name",
       "settings": {
         "container": "container",

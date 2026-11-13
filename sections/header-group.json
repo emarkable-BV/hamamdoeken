@@ -305,7 +305,7 @@
         "image_mobile": "shopify://shop_images/krem-sultan-unisex-hamam-badjas-met-naam-sinterklaas-kerstcadeau.jpg",
         "video_type": "shopify",
         "video_url": "",
-        "image_overlay_opacity": 40,
+        "image_overlay_opacity": 50,
         "animations": "inherit",
         "enable_bg_zoom_effect": true
       }

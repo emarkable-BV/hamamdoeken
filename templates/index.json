@@ -607,8 +607,8 @@
         "tab_jNJ8bN": {
           "type": "tab",
           "settings": {
-            "title": "Plaids & kussentjes",
-            "collection": "woonaccessoires"
+            "title": "Cadeaus met naam",
+            "collection": "cadeaus-met-naam"
           }
         },
         "tab_kX4KWE": {
@@ -629,7 +629,7 @@
         "container": "container",
         "color_schema": "",
         "layout": "vertical",
-        "heading": "Populair voor <em>de herfst</em>",
+        "heading": "Populair voor <em>de feestdagen</em>",
         "highlight_style": "none",
         "enable_highlight_text_color": false,
         "heading_size": "h1",

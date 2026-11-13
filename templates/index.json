@@ -185,16 +185,16 @@
         "heading_qN96eX": {
           "type": "heading",
           "settings": {
-            "heading": "🎁 Op tijd voor pakjesavond?",
+            "heading": "Deze actie duurt nog:",
             "highlight_style": "none",
             "enable_highlight_text_color": false,
-            "heading_size": "h3"
+            "heading_size": "h2"
           }
         },
         "text_6abMK4": {
           "type": "text",
           "settings": {
-            "text": "<p>&nbsp;Bestel jouw badjas met naam binnen</p>"
+            "text": ""
           }
         },
         "timer_reCcnk": {
@@ -205,14 +205,16 @@
             "number_size": "h3",
             "number_spacing": "medium",
             "duration": "every_month",
-            "time": "2026/11/24 23:59"
+            "time": "2026/08/05 20:30:00"
           }
         },
-        "subheading_aNnTbL": {
-          "type": "subheading",
-          "disabled": true,
+        "button_cWDfLg": {
+          "type": "button",
           "settings": {
-            "subheading": "Voor badjassen met naamborduring"
+            "button_label": "Shop de sale",
+            "button_link": "shopify://collections/zomersale",
+            "button_style": "btn--primary",
+            "button_size": ""
           }
         }
       },
@@ -220,8 +222,9 @@
         "heading_qN96eX",
         "text_6abMK4",
         "timer_reCcnk",
-        "subheading_aNnTbL"
+        "button_cWDfLg"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "t:sections.countdown-timer.presets.name",
       "settings": {
@@ -428,6 +431,13 @@
             "collection": "hamamdoek-xl"
           }
         },
+        "tab_gX7DNe": {
+          "type": "tab",
+          "settings": {
+            "title": "1 + 1 gratis",
+            "collection": "1-1-gratis"
+          }
+        },
         "tab_YJ464H": {
           "type": "tab",
           "settings": {
@@ -442,13 +452,6 @@
             "collection": "reis-handdoeken"
           }
         },
-        "tab_gX7DNe": {
-          "type": "tab",
-          "settings": {
-            "title": "Kikoy",
-            "collection": "kikoy"
-          }
-        },
         "tab_K48hrW": {
           "type": "tab",
           "settings": {
@@ -459,16 +462,16 @@
       },
       "block_order": [
         "tab_8q6nBX",
+        "tab_gX7DNe",
         "tab_YJ464H",
         "tab_9BqXTy",
-        "tab_gX7DNe",
         "tab_K48hrW"
       ],
       "settings": {
         "container": "container",
         "color_schema": "",
         "layout": "vertical",
-        "heading": "Onze best verkochte <em>hamamdoeken</em>",
+        "heading": "Onze best verkochte&nbsp;<em>hamamdoeken</em>",
         "highlight_style": "none",
         "enable_highlight_text_color": false,
         "heading_size": "h1",
@@ -595,6 +598,13 @@
             "collection": "badjas"
           }
         },
+        "tab_aYyiGN": {
+          "type": "tab",
+          "settings": {
+            "title": "Saunaponcho's",
+            "collection": "strandponchos"
+          }
+        },
         "tab_jNJ8bN": {
           "type": "tab",
           "settings": {
@@ -605,23 +615,16 @@
         "tab_kX4KWE": {
           "type": "tab",
           "settings": {
-            "title": "Cadeauboxen & pakketten",
+            "title": "Sauna accessoires",
             "collection": "cadeauboxen-pakketten"
-          }
-        },
-        "tab_aYyiGN": {
-          "type": "tab",
-          "settings": {
-            "title": "Saunaponcho's",
-            "collection": "strandponchos"
           }
         }
       },
       "block_order": [
         "tab_TRUxMg",
+        "tab_aYyiGN",
         "tab_jNJ8bN",
-        "tab_kX4KWE",
-        "tab_aYyiGN"
+        "tab_kX4KWE"
       ],
       "settings": {
         "container": "container",

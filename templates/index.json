@@ -185,16 +185,16 @@
         "heading_qN96eX": {
           "type": "heading",
           "settings": {
-            "heading": "🎁 Voor pakjesavond in huis?",
+            "heading": "🎁 Op tijd voor pakjesavond?",
             "highlight_style": "none",
             "enable_highlight_text_color": false,
-            "heading_size": "h2"
+            "heading_size": "h3"
           }
         },
         "text_6abMK4": {
           "type": "text",
           "settings": {
-            "text": "<p>BESTEL BINNEN</p>"
+            "text": "<p>&nbsp;Bestel jouw badjas met naam binnen</p>"
           }
         },
         "timer_reCcnk": {
@@ -205,16 +205,14 @@
             "number_size": "h3",
             "number_spacing": "medium",
             "duration": "every_month",
-            "time": "2026/11/24 23:59:59"
+            "time": "2026/11/24 23:59"
           }
         },
-        "button_cWDfLg": {
-          "type": "button",
+        "subheading_aNnTbL": {
+          "type": "subheading",
+          "disabled": true,
           "settings": {
-            "button_label": "BEKIJK DE BADJASSEN",
-            "button_link": "shopify://collections/hamam-badjas-gratis-naam",
-            "button_style": "btn--primary",
-            "button_size": ""
+            "subheading": "Voor badjassen met naamborduring"
           }
         }
       },
@@ -222,8 +220,9 @@
         "heading_qN96eX",
         "text_6abMK4",
         "timer_reCcnk",
-        "button_cWDfLg"
+        "subheading_aNnTbL"
       ],
+      "custom_css": [],
       "name": "t:sections.countdown-timer.presets.name",
       "settings": {
         "container": "container",
@@ -596,13 +595,6 @@
             "collection": "badjas"
           }
         },
-        "tab_aYyiGN": {
-          "type": "tab",
-          "settings": {
-            "title": "Saunaponcho's",
-            "collection": "strandponchos"
-          }
-        },
         "tab_jNJ8bN": {
           "type": "tab",
           "settings": {
@@ -613,16 +605,23 @@
         "tab_kX4KWE": {
           "type": "tab",
           "settings": {
-            "title": "Sauna accessoires",
-            "collection": "sauna-accessoires"
+            "title": "Cadeauboxen & pakketten",
+            "collection": "cadeauboxen-pakketten"
+          }
+        },
+        "tab_aYyiGN": {
+          "type": "tab",
+          "settings": {
+            "title": "Saunaponcho's",
+            "collection": "strandponchos"
           }
         }
       },
       "block_order": [
         "tab_TRUxMg",
-        "tab_aYyiGN",
         "tab_jNJ8bN",
-        "tab_kX4KWE"
+        "tab_kX4KWE",
+        "tab_aYyiGN"
       ],
       "settings": {
         "container": "container",

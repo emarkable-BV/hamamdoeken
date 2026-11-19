@@ -289,7 +289,7 @@ this.shopifyDirectCheckoutButton = ['.shopify-payment-button'];
             
             // Override the `open` function.
             xhr.open = function(method, url) {
-                requestURL = url;
+                requestURL = String(url);
                 return origOpen.apply(this, arguments);
             };
     

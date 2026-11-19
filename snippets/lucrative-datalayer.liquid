@@ -176,7 +176,7 @@ this.shopifyDirectCheckoutButton = ['.shopify-payment-button'];
             return originalFetch.apply(this, arguments).then((response) => {
               if (response.ok) {
                 let cloneResponse = response.clone();
-                let requestURL = arguments[0];
+                let requestURL = arguments[0] instanceof Request ? arguments[0].url : String(arguments[0]);
                 
                 if(/.*\/search\/?.*\?.*q=.+/.test(requestURL) && !requestURL.includes('&requestFrom=uldt')) {   
                   const queryString = requestURL.split('?')[1];

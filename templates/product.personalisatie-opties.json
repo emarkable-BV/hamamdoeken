@@ -103,7 +103,7 @@
         "color_selector": {
           "type": "color_selector",
           "settings": {
-            "heading": "Personalisatie",
+            "heading": "Personalisatieopties",
             "view_all_label": "Bekijk alle personalisatieopties",
             "select_label": "Selecteer",
             "placeholder_count": 5,

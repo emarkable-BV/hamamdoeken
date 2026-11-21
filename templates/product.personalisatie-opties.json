@@ -103,8 +103,8 @@
         "color_selector": {
           "type": "color_selector",
           "settings": {
-            "heading": "Selecteer een kleur:",
-            "view_all_label": "Bekijk alle kleuren",
+            "heading": "Personalisatie",
+            "view_all_label": "Bekijk alle personalisatieopties",
             "select_label": "Selecteer",
             "placeholder_count": 5,
             "modal_placeholder_count": 12

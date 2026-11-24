@@ -151,7 +151,7 @@
         "richtext_p3mLDp": {
           "type": "richtext",
           "settings": {
-            "text": "<p>{{ product.metafields.custom.voordeelregel.value | newline_to_br }}</p>"
+            "text": "<p>{{ product.metafields.custom.voordeelregel_opgemaakt | metafield_tag }}</p>"
           }
         },
         "buy_buttons": {

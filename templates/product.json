@@ -148,6 +148,12 @@
             "pcard_show_color_swatch": false
           }
         },
+        "richtext_p3mLDp": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.voordeelregel.value | newline_to_br }}</p>"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -274,6 +280,7 @@
         "optis_option_B3mQLn",
         "optis_product_options_option_set_mgGPKg",
         "bestel_samen_met",
+        "richtext_p3mLDp",
         "buy_buttons",
         "offerte_cta",
         "essential_countdown_timer_app_block_Jdx7tr",

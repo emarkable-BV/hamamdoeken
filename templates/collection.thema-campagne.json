@@ -169,6 +169,9 @@
       "settings": {
         "container": "container",
         "color_schema": "",
+        "use_subcollecties_metafield": false,
+        "subcollecties_namespace": "custom",
+        "subcollecties_key": "subcollecties",
         "section_header_padding_bottom": "medium",
         "section_header_content_spacing": "medium",
         "header_layout": "vertical",
@@ -240,7 +243,7 @@
         "announcement_jmPceb": {
           "type": "announcement",
           "settings": {
-            "text": "Niet relaxed? <em>Geld terug. </em>",
+            "text": "Niet relaxed? <em>Geld terug.</em>",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
@@ -265,7 +268,7 @@
         "announcement_pbEiiw": {
           "type": "announcement",
           "settings": {
-            "text": "<em>Gratis verstuurd </em> vanaf €40,- (NL)",
+            "text": "<em>Gratis naar een PostNL-punt</em> vanaf €75 (NL)",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
@@ -290,7 +293,7 @@
         "announcement_bry6Mz": {
           "type": "announcement",
           "settings": {
-            "text": "Voor 21:00 uur besteld =  <em>morgen in huis </em>",
+            "text": "Uit voorraad vóór 16.00 uur besteld? Op werkdagen <em>dezelfde dag verzonden.</em>",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
@@ -315,7 +318,7 @@
         "announcement_Y6mtLh": {
           "type": "announcement",
           "settings": {
-            "text": "<em>Grietje</em> helpt je graag!",
+            "text": "Grietje helpt je graag!",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
@@ -389,6 +392,7 @@
             "content": "{{ block.repeater.antwoord | metafield_tag }}",
             "custom_liquid": "",
             "content_page": "",
+            "group_duplicate_labels": false,
             "open": false
           }
         }

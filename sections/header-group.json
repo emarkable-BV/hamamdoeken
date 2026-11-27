@@ -44,7 +44,7 @@
           "settings": {
             "text": "<p>Gratis naar een PostNL-punt vanaf €75 (NL)</p>",
             "link": "",
-            "homepage_only": true,
+            "homepage_only": false,
             "hide_on_page": "",
             "show_on_mobile": true,
             "show_on_tablet": true,
@@ -56,7 +56,7 @@
           "settings": {
             "text": "<p>Uit voorraad vóór 16.00 uur besteld? Op werkdagen dezelfde dag verzonden.</p>",
             "link": "",
-            "homepage_only": true,
+            "homepage_only": false,
             "hide_on_page": "",
             "show_on_mobile": true,
             "show_on_tablet": true,

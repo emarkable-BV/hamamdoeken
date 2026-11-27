@@ -103,7 +103,7 @@
         "announcement_1": {
           "type": "announcement",
           "settings": {
-            "text": "Niet relaxed? <em>Geld terug. </em>",
+            "text": "Niet relaxed? <em>Geld terug.</em>",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
@@ -155,7 +155,7 @@
         "announcement_9U8cPx": {
           "type": "announcement",
           "settings": {
-            "text": "Gratis naar een PostNL-punt vanaf €75 (NL)",
+            "text": "<em>Gratis naar een PostNL-punt</em> vanaf €75 (NL)",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
@@ -180,7 +180,7 @@
         "announcement_3": {
           "type": "announcement",
           "settings": {
-            "text": "Uit voorraad vóór 16.00 uur besteld? Op werkdagen dezelfde dag verzonden.",
+            "text": "Uit voorraad vóór 16.00 uur besteld? Op werkdagen <em>dezelfde dag verzonden.</em>",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
@@ -205,7 +205,7 @@
         "announcement_4": {
           "type": "announcement",
           "settings": {
-            "text": "<em>Grietje</em> helpt je graag!",
+            "text": "Grietje helpt je graag!",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",

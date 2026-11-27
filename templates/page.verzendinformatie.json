@@ -274,7 +274,7 @@
           "type": "faq_item",
           "settings": {
             "title": "Wat kost verzending?",
-            "content": "<p>Verzenden naar een PostNL-punt in Nederland kost €3,95. Waar mogelijk versturen we je bestelling als brievenbuspakje, dan valt hij gewoon door de brievenbus. Bestel je voor €75,- of meer? Dan verzenden we gratis naar een PostNL-afhaalpunt. Verzenden naar een afhaalpunt in België kost €5,95.</p>",
+            "content": "<p>Binnen Nederland betaal je €3,95 voor bezorging bij een PostNL-punt. Vanaf €75 is deze verzendoptie gratis. Liever thuisbezorgd? Gewone thuisbezorging kost €4,95.</p><p>Voor België betaal je €5,25 voor bezorging bij een PostNL-punt. Vanaf €85 is deze verzendoptie gratis. Gewone thuisbezorging kost €6,25.</p><p>Naar Duitsland kost gewone thuisbezorging €8,95.</p><p>Eventuele extra bezorgopties en de bijbehorende kosten zie je tijdens het afrekenen.</p>",
             "open": false
           }
         },

@@ -28,6 +28,7 @@
         },
         "announcement_mtkFgn": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "<p>Verzending naar een afhaalpunt <em>€3,95</em> (NL)</p>",
             "link": "shopify://pages/verzendinformatie",
@@ -41,7 +42,7 @@
         "announcement_bNHrCq": {
           "type": "announcement",
           "settings": {
-            "text": "<p><strong>Gratis verzending</strong> vanaf €75</p>",
+            "text": "<p>Gratis naar een PostNL-punt vanaf €75 (NL)</p>",
             "link": "",
             "homepage_only": true,
             "hide_on_page": "",
@@ -53,7 +54,7 @@
         "announcement_eePAfP": {
           "type": "announcement",
           "settings": {
-            "text": "<p>Voor 21.00 uur besteld = <strong>morgen bezorgd</strong></p>",
+            "text": "<p>Uit voorraad vóór 16.00 uur besteld? Op werkdagen dezelfde dag verzonden.</p>",
             "link": "",
             "homepage_only": true,
             "hide_on_page": "",

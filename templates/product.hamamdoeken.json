@@ -361,6 +361,7 @@
             "content": "{{ product.description }}",
             "custom_liquid": "",
             "content_page": "",
+            "group_duplicate_labels": false,
             "open": true
           }
         },
@@ -372,6 +373,7 @@
             "content": "",
             "custom_liquid": "{{ product.metafields.custom.wasvoorschriften | metafield_tag }}",
             "content_page": "",
+            "group_duplicate_labels": false,
             "open": false
           }
         },
@@ -383,6 +385,7 @@
             "content": "{{ product.metafields.custom.specificaties | metafield_tag }}",
             "custom_liquid": "",
             "content_page": "",
+            "group_duplicate_labels": false,
             "open": false
           }
         }
@@ -548,7 +551,7 @@
         "announcement_7iQk3h": {
           "type": "announcement",
           "settings": {
-            "text": "Niet relaxed? <em>Geld terug. </em>",
+            "text": "Niet relaxed? <em>Geld terug.</em>",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
@@ -573,7 +576,7 @@
         "announcement_kLHdYz": {
           "type": "announcement",
           "settings": {
-            "text": "<em>Gratis verstuurd </em> vanaf €40,- (NL)",
+            "text": "<em>Gratis naar een PostNL-punt</em> vanaf €75 (NL)",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
@@ -598,7 +601,7 @@
         "announcement_ygj3Gt": {
           "type": "announcement",
           "settings": {
-            "text": "Voor 21:00 uur besteld =  <em>morgen in huis </em>",
+            "text": "Uit voorraad vóór 16.00 uur besteld? Op werkdagen <em>dezelfde dag verzonden.</em>",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
@@ -623,7 +626,7 @@
         "announcement_Wk6HEH": {
           "type": "announcement",
           "settings": {
-            "text": "<em>Grietje</em> helpt je graag!",
+            "text": "Grietje helpt je graag!",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
@@ -694,6 +697,9 @@
             "show_sample_reviews": true,
             "reviews_selection": "all",
             "products": [],
+            "filter_pinned": false,
+            "filter_featured": false,
+            "filter_custom_tags": "",
             "star_rating": "all",
             "show_review_media": false,
             "display_order": "media_first",

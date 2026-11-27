@@ -116,6 +116,7 @@
         },
         "divider_1": {
           "type": "divider",
+          "disabled": true,
           "settings": {
             "width": 32,
             "use_custom_spacing": false,
@@ -143,7 +144,7 @@
         "divider_DTg3ji": {
           "type": "divider",
           "settings": {
-            "width": 64,
+            "width": 32,
             "use_custom_spacing": false,
             "margin_left": 10,
             "margin_right": 10,

@@ -184,7 +184,7 @@
         "announcement_jmPceb": {
           "type": "announcement",
           "settings": {
-            "text": "Niet relaxed? <em>Geld terug. </em>",
+            "text": "Niet relaxed? <em>Geld terug.</em>",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
@@ -197,6 +197,7 @@
         },
         "divider_dzFizV": {
           "type": "divider",
+          "disabled": true,
           "settings": {
             "width": 32,
             "use_custom_spacing": false,
@@ -208,6 +209,7 @@
         },
         "announcement_pbEiiw": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Verzending naar een afhaalpunt <em>€3,95</em> (NL)",
             "font_family": "heading",
@@ -234,7 +236,7 @@
         "announcement_WUaMkx": {
           "type": "announcement",
           "settings": {
-            "text": "<em>Gratis verzending </em>vanaf €75",
+            "text": "<em>Gratis naar een PostNL-punt</em> vanaf €75 (NL)",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
@@ -248,7 +250,7 @@
         "divider_Pd6bDc": {
           "type": "divider",
           "settings": {
-            "width": 64,
+            "width": 32,
             "use_custom_spacing": false,
             "margin_left": 10,
             "margin_right": 10,
@@ -259,7 +261,7 @@
         "announcement_bry6Mz": {
           "type": "announcement",
           "settings": {
-            "text": "Voor 21:00 uur besteld =  <em>morgen in huis </em>",
+            "text": "Uit voorraad vóór 16.00 uur besteld? Op werkdagen <em>dezelfde dag verzonden.</em>",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
@@ -284,7 +286,7 @@
         "announcement_Y6mtLh": {
           "type": "announcement",
           "settings": {
-            "text": "<em>Grietje</em> helpt je graag!",
+            "text": "Grietje helpt je graag!",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",

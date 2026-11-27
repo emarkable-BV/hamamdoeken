@@ -39,6 +39,7 @@
         },
         "announcement_a9HqUw": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Verzending naar een afhaalpunt <em>€3,95<em> (NL)</em></em>",
             "font_family": "heading",
@@ -65,7 +66,7 @@
         "announcement_BHmrhe": {
           "type": "announcement",
           "settings": {
-            "text": "<em>Gratis verzending</em> vanaf €75",
+            "text": "Gratis naar een PostNL-punt vanaf €75 (NL)",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
@@ -90,7 +91,7 @@
         "announcement_U4PbAD": {
           "type": "announcement",
           "settings": {
-            "text": "Voor 21:00 uur besteld =  <em>morgen in huis </em>",
+            "text": "Uit voorraad vóór 16.00 uur besteld? Op werkdagen dezelfde dag verzonden.",
             "font_family": "heading",
             "text_size": 18,
             "text_link": "",
